@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <Version>0.7.0</Version>
+    <AssemblyName>StellarPerformance</AssemblyName>
+    <Authors>SilentHacks</Authors>
+    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+    <PathMap>$(MSBuildProjectDirectory)=/_/src/StellarPerformance</PathMap>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <Import Project="../../GameReferences.props" />
+  <ItemGroup>
+    <EmbeddedResource Include="../../LICENSE" LogicalName="StellarPerformance.LICENSE" />
+    <EmbeddedResource Include="../../CREDITS.md" LogicalName="StellarPerformance.CREDITS" />
+    <None Include="../../mod.json" Link="mod.json" CopyToOutputDirectory="PreserveNewest" />
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies.net472" Version="1.0.3" PrivateAssets="all" />
+  </ItemGroup>
+</Project>

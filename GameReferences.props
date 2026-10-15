@@ -1,0 +1,18 @@
+<Project>
+  <ItemGroup>
+    <_GameAssembly Include="Assembly-CSharp;CablesMesh;Core;FishNet.Runtime;Items.Model;Planets;Players;Players.Interface;Saving;Ships;Ships.Interface;Tools;Tools.Interface;UI;Unity.InputSystem;Unity.TextMeshPro;UnityEngine.AnimationModule;UnityEngine.CoreModule;UnityEngine.PhysicsModule;UnityEngine.UI;UnityEngine.UIModule;WorldObjects;WorldObjects.Interface;WorldProvision.Interface;WorldTracking;WorldTracking.Interface;com.rlabrecque.steamworks.net" />
+    <Reference Include="@(_GameAssembly)">
+      <HintPath>$(GameManagedDirectory)/%(Identity).dll</HintPath>
+      <Private>false</Private>
+      <Private Condition="'$(IsTestProject)' == 'true'">true</Private>
+    </Reference>
+    <Reference Include="MelonLoader;0Harmony">
+      <HintPath>$(GameDirectory)/MelonLoader/net472/%(Identity).dll</HintPath>
+      <Private>false</Private>
+      <Private Condition="'$(IsTestProject)' == 'true'">true</Private>
+    </Reference>
+  </ItemGroup>
+  <Target Name="CheckLocalGameReferences" BeforeTargets="ResolveAssemblyReferences">
+    <Error Condition="'%(Reference.HintPath)' != '' and !Exists('%(Reference.HintPath)')" Text="Missing local reference %(Reference.HintPath). Set GameDirectory to an installed StellarDrive Demo with MelonLoader; see README.md." />
+  </Target>
+</Project>

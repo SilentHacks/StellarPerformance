@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <IsTestProject>true</IsTestProject>
+    <IsPackable>false</IsPackable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <IncludeOptionalModTests Condition="'$(IncludeOptionalModTests)' == ''">false</IncludeOptionalModTests>
+    <DefineConstants Condition="'$(IncludeOptionalModTests)' == 'true'">$(DefineConstants);OPTIONAL_MOD_TESTS</DefineConstants>
+  </PropertyGroup>
+  <Import Project="../../GameReferences.props" />
+  <ItemGroup>
+    <ProjectReference Include="../../src/StellarPerformance/StellarPerformance.csproj" ReferenceOutputAssembly="false" SkipGetTargetFrameworkProperties="true" />
+    <!-- Execute managed copies, never the old runtime detour layer on CoreCLR. -->
+    <Compile Include="../../src/StellarPerformance/**/*.cs" Exclude="../../src/StellarPerformance/**/bin/**;../../src/StellarPerformance/**/obj/**" Link="Runtime/%(RecursiveDir)%(Filename)%(Extension)" />
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>$(GameManagedDirectory)/UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="SDModKit" Condition="'$(IncludeOptionalModTests)' == 'true'">
+      <HintPath>$(GameDirectory)/Mods/SDModKit.dll</HintPath>
+    </Reference>
+    <Reference Include="ItemLines" Condition="'$(IncludeOptionalModTests)' == 'true'">
+      <HintPath>$(GameDirectory)/Mods/ItemLines.dll</HintPath>
+    </Reference>
+    <Reference Include="$(GameDirectory)/MelonLoader/net472/Mono.Cecil.dll;$(GameDirectory)/MelonLoader/net472/Mono.Cecil.Mdb.dll;$(GameDirectory)/MelonLoader/net472/Mono.Cecil.Pdb.dll;$(GameDirectory)/MelonLoader/net472/Mono.Cecil.Rocks.dll;$(GameDirectory)/MelonLoader/net472/MonoMod.Backports.dll;$(GameDirectory)/MelonLoader/net472/MonoMod.ILHelpers.dll;$(GameDirectory)/MelonLoader/net472/MonoMod.RuntimeDetour.dll;$(GameDirectory)/MelonLoader/net472/MonoMod.Utils.dll" />
+    <AssemblyMetadata Include="GameDirectory" Value="$(GameDirectory)" />
+    <AssemblyMetadata Include="RepositoryRoot" Value="$(MSBuildProjectDirectory)/../.." />
+    <None Include="../../scripts/ComparePerformanceCaptures.ps1" Link="ComparePerformanceCaptures.ps1" CopyToOutputDirectory="PreserveNewest" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.12.0" />
+    <PackageReference Include="xunit" Version="2.9.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" PrivateAssets="all" />
+  </ItemGroup>
+</Project>

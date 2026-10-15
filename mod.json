@@ -1,0 +1,7 @@
+{
+  "id": "stellarperformance",
+  "name": "Stellar Performance",
+  "version": "0.7.0",
+  "author": "SilentHacks",
+  "description": "Performance improvements for the inspected StellarDrive Demo 0.8.2 build: cached ship queries and cable topology, reduced redundant visual work, and native record reuse. Optional incremental room reconstruction and fixed-part mesh batching are experimental and disabled by default. Requires MelonLoader; SDModKit is optional. See the README for compatibility, settings and validation limits."
+}
