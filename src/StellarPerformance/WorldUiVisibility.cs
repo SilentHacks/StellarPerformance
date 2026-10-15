@@ -163,7 +163,7 @@ internal static class WorldUiVisibility
         for (var i = 0; i < display.Groups.Count; i++) visible |= display.Groups[i].Visible;
         var run = display.State.Observe(change.NewState, visible);
         if (run) for (var i = 0; i < display.Groups.Count; i++) display.Groups[i].BoundsReady = false;
-        if (!run) { if (display.State.Pending) Deferred++; else Unchanged++; }
+        if (!run && DiagnosticCounters.Active) { if (display.State.Pending) Deferred++; else Unchanged++; }
         return run;
     }
 
@@ -202,7 +202,7 @@ internal static class WorldUiVisibility
             Cameras[usable] = camera; Masks[usable] = camera.cullingMask;
             CalculatePlanes(camera, Frusta[usable]); usable++;
         }
-        VisibleCanvases = HiddenCanvases = 0;
+        if (DiagnosticCounters.Active) VisibleCanvases = HiddenCanvases = 0;
         for (var i = Groups.Count - 1; i >= 0; i--)
         {
             var group = Groups[i];
@@ -224,10 +224,10 @@ internal static class WorldUiVisibility
                     if ((Masks[j] & (1 << group.Canvas.gameObject.layer)) != 0 && Intersects(bounds, Frusta[j]) &&
                         (MaximumDistance <= 0 || bounds.SqrDistance(Cameras[j].transform.position) <= MaximumDistance * MaximumDistance)) { visible = true; break; }
             group.Visible = visible;
-            if (visible) { group.Restore(); VisibleCanvases++; }
+            if (visible) { group.Restore(); if (DiagnosticCounters.Active) VisibleCanvases++; }
             else
             {
-                HiddenCanvases++;
+                if (DiagnosticCounters.Active) HiddenCanvases++;
                 if (CullCanvases && group.Canvas.enabled) { group.Suppressed = true; group.Canvas.enabled = false; }
             }
         }

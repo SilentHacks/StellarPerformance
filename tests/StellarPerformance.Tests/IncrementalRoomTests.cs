@@ -16,6 +16,7 @@ using Xunit;
 
 namespace StellarPerformance.Tests;
 
+[Collection("Diagnostic counters")]
 public sealed class IncrementalRoomTests
 {
     public class Provider : DispatchProxy
@@ -295,18 +296,24 @@ public sealed class IncrementalRoomTests
     [Fact]
     public void VolumesBeyondExactFloatVoxelCountsUseGeneralReconstruction()
     {
-        var (native, mod) = Pair();
-        foreach (var world in new[] { native, mod })
+        var previous = DiagnosticCounters.Active;
+        DiagnosticCounters.Active = true;
+        try
         {
-            ushort id = world.Tree.GetLeaf(new Vector3Int(1, 1, 1)).RoomId;
-            Assert.True(world.Gases.TryGetRoomGasState(id, out var state));
-            state.RoomVolume = 33554432f * ShipRoomsConstants.GasVolumeCapacityPerVoxel;
-            world.Gases.SetRoomGasContent(id, state);
+            var (native, mod) = Pair();
+            foreach (var world in new[] { native, mod })
+            {
+                ushort id = world.Tree.GetLeaf(new Vector3Int(1, 1, 1)).RoomId;
+                Assert.True(world.Gases.TryGetRoomGasState(id, out var state));
+                state.RoomVolume = 33554432f * ShipRoomsConstants.GasVolumeCapacityPerVoxel;
+                world.Gases.SetRoomGasContent(id, state);
+            }
+            long local = IncrementalRooms.LocalEdits;
+            var edit = new[] { new Vector3Int(3, 3, 3) };
+            native.Edit(edit); mod.Edit(edit); Equivalent(native, mod);
+            Assert.Equal(local, IncrementalRooms.LocalEdits);
         }
-        long local = IncrementalRooms.LocalEdits;
-        var edit = new[] { new Vector3Int(3, 3, 3) };
-        native.Edit(edit); mod.Edit(edit); Equivalent(native, mod);
-        Assert.Equal(local, IncrementalRooms.LocalEdits);
+        finally { DiagnosticCounters.Active = previous; }
     }
 
     [Fact]
@@ -330,18 +337,27 @@ public sealed class IncrementalRoomTests
         var clean = Pair(); clean.native.Edit(edit); clean.mod.Edit(edit); Equivalent(clean.native, clean.mod);
     }
 
-    [Fact]
-    public void LocalAndExteriorEditsAvoidWholeRegionSearches()
+    [Theory]
+    [InlineData(false)]
+    [InlineData(true)]
+    public void LocalAndExteriorEditsAvoidWholeRegionSearches(bool capture)
     {
-        var (native, mod) = Pair(20);
-        long local = IncrementalRooms.LocalEdits, visits = IncrementalRooms.VisitedNodes;
-        var interior = new[] { new Vector3Int(10, 10, 10) };
-        native.Edit(interior); mod.Edit(interior); Equivalent(native, mod);
-        Assert.Equal(local + 1, IncrementalRooms.LocalEdits);
-        Assert.InRange(IncrementalRooms.VisitedNodes - visits, 0, 100);
-        visits = IncrementalRooms.VisitedNodes;
-        var exterior = new[] { new Vector3Int(21, 10, 10) };
-        native.Edit(exterior); mod.Edit(exterior); Equivalent(native, mod);
-        Assert.InRange(IncrementalRooms.VisitedNodes - visits, 1, 500);
+        var previous = DiagnosticCounters.Active;
+        DiagnosticCounters.Active = capture;
+        try
+        {
+            var (native, mod) = Pair(20);
+            long local = IncrementalRooms.LocalEdits, visits = IncrementalRooms.VisitedNodes;
+            var interior = new[] { new Vector3Int(10, 10, 10) };
+            native.Edit(interior); mod.Edit(interior); Equivalent(native, mod);
+            Assert.Equal(local + (capture ? 1 : 0), IncrementalRooms.LocalEdits);
+            Assert.InRange(IncrementalRooms.VisitedNodes - visits, 0, 100);
+            if (!capture) Assert.Equal(visits, IncrementalRooms.VisitedNodes);
+            visits = IncrementalRooms.VisitedNodes;
+            var exterior = new[] { new Vector3Int(21, 10, 10) };
+            native.Edit(exterior); mod.Edit(exterior); Equivalent(native, mod);
+            Assert.InRange(IncrementalRooms.VisitedNodes - visits, capture ? 1 : 0, capture ? 500 : 0);
+        }
+        finally { DiagnosticCounters.Active = previous; }
     }
 }

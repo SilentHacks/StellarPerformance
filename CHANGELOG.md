@@ -6,6 +6,8 @@
 - Remove cable, signal and terrain temporary-collection experiments and their settings.
 - Defer private diagnostic bindings until guarded probe installation and enforce module
   initialization after compatibility checks.
+- Keep profiling off by default and collect feature diagnostic counters only during
+  explicitly started captures.
 - Prune inactive physics spaces and retained object snapshots.
 - Reject conflicting whole-body replacements, argument rewrites and patches on bypassed helpers.
 - Separate scene assignment, cable material presentation, liquid visuals and diagnostic hooks.

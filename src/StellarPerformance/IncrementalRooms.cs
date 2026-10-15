@@ -157,7 +157,7 @@ internal static class IncrementalRooms
         if (completed != null)
         {
             foreach (var node in completed.Prepared) node.TmpGasContent = default;
-            VisitedNodes += completed.Visits;
+            if (DiagnosticCounters.Active) VisitedNodes += completed.Visits;
         }
         _current = __state;
         return __exception;
@@ -186,7 +186,7 @@ internal static class IncrementalRooms
     {
         var edit = _current;
         if (edit == null || !ReferenceEquals(edit.Updater, updater)) { NativeClear(updater); return; }
-        Edits++;
+        if (DiagnosticCounters.Active) Edits++;
         if (TryLocalRoom(edit)) return;
         ClearClosedRegions(edit, false);
     }
@@ -230,7 +230,7 @@ internal static class IncrementalRooms
         {
             var node = pending.Pop();
             if (node.WallCount != 0 || node.RoomId == 0 || !seen.Add(node)) continue;
-            edit.Visits++;
+            if (DiagnosticCounters.Active) edit.Visits++;
             edit.Gas(node);
             Previous(edit.Updater).Add(node.RoomId);
             nodes.Add(node);
@@ -337,12 +337,12 @@ internal static class IncrementalRooms
         if (edit == null || !ReferenceEquals(edit.Updater, updater)) { NativeCreate(updater); return; }
         if (edit.LocalRoom != 0)
         {
-            if (!edit.InvalidLocal && ReconnectLocal(edit)) { LocalEdits++; return; }
+            if (!edit.InvalidLocal && ReconnectLocal(edit)) { if (DiagnosticCounters.Active) LocalEdits++; return; }
             // Walls were already changed. Rebuild affected regions without replaying mutations.
             ClearClosedRegions(edit, true);
             edit.LocalRoom = 0;
         }
-        GeneralEdits++;
+        if (DiagnosticCounters.Active) GeneralEdits++;
         Rebuild(edit);
     }
 
@@ -403,7 +403,7 @@ internal static class IncrementalRooms
                 // Bounded turns keep a small newly separated room from forcing a full large-room scan.
                 for (int step = 0; step < 8 && components[root].Pending.Count != 0 && roots > 1; step++)
                 {
-                    var node = components[root].Pending.Pop(); edit.Visits++;
+                    var node = components[root].Pending.Pop(); if (DiagnosticCounters.Active) edit.Visits++;
                     if (++localVisits > LocalVisitLimit) return false;
                     foreach (var neighbors in Neighbors(node)) foreach (var neighbor in neighbors)
                         {
@@ -489,7 +489,8 @@ internal static class IncrementalRooms
                 if (node.WallCount != 0 || node.RoomId != 0) continue;
                 if (outside.Contains(node)) { exterior = true; break; }
                 if (!seen.Add(node)) continue;
-                edit.Visits++; region.Add(node);
+                if (DiagnosticCounters.Active) edit.Visits++;
+                region.Add(node);
                 if (Boundary(node, low, high)) { exterior = true; break; }
                 float v = (float)Volume(node); voxels += v; gas += edit.Gas(node).GasDensity * v;
                 // Same order as native closed-room traversal and weighted float accumulation.
@@ -502,7 +503,7 @@ internal static class IncrementalRooms
             }
             if (exterior)
             {
-                OutsideExits++;
+                if (DiagnosticCounters.Active) OutsideExits++;
                 foreach (var node in region) outside.Add(node);
             }
             else if (region.Count != 0)

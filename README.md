@@ -72,6 +72,14 @@ Review `IncrementalRooms`, `ShipPartBatching`, `SignalEvaluationReads` and
 `CableScratchCollections`, `SignalScratchCollections` and `TerrainScratchCollections`
 were removed in 0.7.0. Old saved keys are ignored; they no longer install patches.
 
+Profiling support remains available for troubleshooting, but `Diagnostics = false`
+installs no profiling hooks and performs no captures. Feature diagnostic counters are
+collected only during an explicit capture, including when diagnostics are enabled.
+`DiagnosticMode` and `CaptureSeconds` are dormant while diagnostics are disabled.
+Existing saved `Diagnostics = true` is preserved on upgrade; set it to `false` and
+restart to disable diagnostics on an existing installation. Normal startup and
+compatibility warning messages remain available.
+
 Batching supports readable single-submesh opaque meshes, matching materials and vertex
 layouts, and uniform positive transforms. It supports stock URP shaders and the inspected
 `Custom/PlanetObject` asset fingerprint. Screens, unknown custom shaders, animated

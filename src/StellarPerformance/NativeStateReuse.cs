@@ -86,44 +86,44 @@ internal static class NativeStateReuse
     {
         if (__instance.GetType() != typeof(FluidTankState)) return true;
         if (amount <= 0f) fluidItemId = 0;
-        if (__instance.FluidItemId != fluidItemId || !Same(__instance.FluidQuantity, amount) || !Same(__instance.FluidFlow, flow)) { Created++; return true; }
-        Reused++; __result = __instance; return false;
+        if (__instance.FluidItemId != fluidItemId || !Same(__instance.FluidQuantity, amount) || !Same(__instance.FluidFlow, flow)) { if (DiagnosticCounters.Active) Created++; return true; }
+        if (DiagnosticCounters.Active) Reused++; __result = __instance; return false;
     }
 
     internal static ThrusterState Thruster(ThrusterState previous, float strength)
     {
-        if (previous.GetType() == typeof(ThrusterState) && Same(previous.ThrusterStrength, strength)) { Reused++; return previous; }
-        Created++; return previous with { ThrusterStrength = strength };
+        if (previous.GetType() == typeof(ThrusterState) && Same(previous.ThrusterStrength, strength)) { if (DiagnosticCounters.Active) Reused++; return previous; }
+        if (DiagnosticCounters.Active) Created++; return previous with { ThrusterStrength = strength };
     }
 
     internal static FluidValveState Valve(FluidValveState previous, float transfer, float opened)
     {
-        if (previous.GetType() == typeof(FluidValveState) && Same(previous.CurrentTransferRate, transfer) && Same(previous.ValveOpenedRate, opened)) { Reused++; return previous; }
-        Created++; return previous with { CurrentTransferRate = transfer, ValveOpenedRate = opened };
+        if (previous.GetType() == typeof(FluidValveState) && Same(previous.CurrentTransferRate, transfer) && Same(previous.ValveOpenedRate, opened)) { if (DiagnosticCounters.Active) Reused++; return previous; }
+        if (DiagnosticCounters.Active) Created++; return previous with { CurrentTransferRate = transfer, ValveOpenedRate = opened };
     }
 
     internal static MathGateState MathGate(MathGateState previous, double output)
     {
-        if (previous.GetType() == typeof(MathGateState) && Same(previous.Output, output)) { Reused++; return previous; }
-        Created++; return previous with { Output = output };
+        if (previous.GetType() == typeof(MathGateState) && Same(previous.Output, output)) { if (DiagnosticCounters.Active) Reused++; return previous; }
+        if (DiagnosticCounters.Active) Created++; return previous with { Output = output };
     }
 
     internal static DeltaState Delta(DeltaState previous, double input, double delta)
     {
-        if (previous.GetType() == typeof(DeltaState) && Same(previous.PreviousValue, input) && Same(previous.DeltaValue, delta)) { Reused++; return previous; }
-        Created++; return previous with { PreviousValue = input, DeltaValue = delta };
+        if (previous.GetType() == typeof(DeltaState) && Same(previous.PreviousValue, input) && Same(previous.DeltaValue, delta)) { if (DiagnosticCounters.Active) Reused++; return previous; }
+        if (DiagnosticCounters.Active) Created++; return previous with { PreviousValue = input, DeltaValue = delta };
     }
 
     internal static SignalTransmitterState Transmitter(SignalTransmitterState previous, double signal)
     {
-        if (previous.GetType() == typeof(SignalTransmitterState) && Same(previous.SignalValue, signal)) { Reused++; return previous; }
-        Created++; return previous with { SignalValue = signal };
+        if (previous.GetType() == typeof(SignalTransmitterState) && Same(previous.SignalValue, signal)) { if (DiagnosticCounters.Active) Reused++; return previous; }
+        if (DiagnosticCounters.Active) Created++; return previous with { SignalValue = signal };
     }
 
     internal static SignalProcessorState Processor(SignalProcessorState previous, double input, double output)
     {
-        if (previous.GetType() == typeof(SignalProcessorState) && Same(previous.PreviousValue, input) && Same(previous.Output, output)) { Reused++; return previous; }
-        Created++; return previous with { PreviousValue = input, Output = output };
+        if (previous.GetType() == typeof(SignalProcessorState) && Same(previous.PreviousValue, input) && Same(previous.Output, output)) { if (DiagnosticCounters.Active) Reused++; return previous; }
+        if (DiagnosticCounters.Active) Created++; return previous with { PreviousValue = input, Output = output };
     }
 
     internal static IEnumerable<CodeInstruction> Transpile(IEnumerable<CodeInstruction> instructions, MethodBase __originalMethod)

@@ -47,6 +47,12 @@ namespace StellarPerformance;
 
 internal enum DiagnosticMode { Frame, Lean, Full }
 
+// Ordinary feature paths can check this without initializing the diagnostic hooks.
+internal static class DiagnosticCounters
+{
+    internal static bool Active;
+}
+
 internal static partial class Diagnostics
 {
     internal static DiagnosticMode Mode { get; private set; } = DiagnosticMode.Lean;
@@ -142,6 +148,7 @@ internal static partial class Diagnostics
         _roomEditsStart = IncrementalRooms.Edits; _roomLocalStart = IncrementalRooms.LocalEdits;
         _roomGeneralStart = IncrementalRooms.GeneralEdits; _roomVisitsStart = IncrementalRooms.VisitedNodes; _roomOutsideStart = IncrementalRooms.OutsideExits;
         _capture = capture;
+        DiagnosticCounters.Active = true;
     }
 
     internal static string? Update()
@@ -166,6 +173,7 @@ internal static partial class Diagnostics
         var capture = _capture;
         if (capture == null) return null;
         _capture = null;
+        DiagnosticCounters.Active = false;
         Application.logMessageReceived -= OnLog;
         var allocationEnd = ReadAllocationCounter();
         var allocation = allocationEnd.HasValue && allocationEnd.Value >= _allocationStart ? "Main-thread allocated bytes=" + (allocationEnd.Value - _allocationStart) + " (validated with 4096-byte positive control)" : "Main-thread allocation counter unavailable; no allocation estimate reported.";

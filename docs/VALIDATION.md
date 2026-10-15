@@ -8,13 +8,19 @@ detours on .NET 9. Dedicated checks cover inactive-space retention, private-bind
 initialization, replacement-hook policy, manifest/assembly/loader version agreement,
 optional dependency absence in the shipping assembly, and embedded MIT/credit notices.
 
-The full optional-mod suite currently contains 249 passing cases. The default core run
+The full optional-mod suite currently contains 251 passing cases. The default core run
 explicitly skips four adapter cases. Removed experimental collection tests are no longer
 counted; the earlier 258-case count describes 0.6.0, not this candidate.
 
-The exact candidate DLL SHA-256 is
+The current candidate DLL SHA-256 is
+`5B6B4AA334B1A4C8235F1D6A38E7B6DB0BD7E277383E39D02EFCB21EC01FC686`.
+It also disables feature diagnostic counters outside explicit captures. The Release build
+and offline suite cover this follow-up, including native record reuse and room reconstruction
+with counters both enabled and disabled. This follow-up DLL has not been rerun in Unity/Mono.
+
+The preceding candidate DLL SHA-256 was
 `B5330DB60DC6E713622BF0A72877E8CA8EBC5633FC6A0C585EAB6FFC408C47D5`.
-Native Unity/Mono validation on an isolated world copy established:
+Native Unity/Mono validation of that preceding DLL on an isolated world copy established:
 
 - Default feature settings, with Frame diagnostics enabled solely for the driver, installed
   all expected modules without Workshop. SDModKit and the world's other content dependencies

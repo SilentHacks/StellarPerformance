@@ -14,6 +14,7 @@ using Xunit;
 
 namespace StellarPerformance.Tests;
 
+[Collection("Diagnostic counters")]
 public sealed class NativeStateReuseTests
 {
     private static ThrusterState NativeThruster(ThrusterState previous, float strength) => previous with { ThrusterStrength = strength };
@@ -38,28 +39,40 @@ public sealed class NativeStateReuseTests
         }
     }
 
-    [Fact]
-    public void EmittedNativeWithExpressionsPreserveValuesAndReuseUnchangedRecords()
+    [Theory]
+    [InlineData(false)]
+    [InlineData(true)]
+    public void EmittedNativeWithExpressionsPreserveValuesAndReuseUnchangedRecords(bool capture)
     {
-        var thruster = Rewrite<Func<ThrusterState, float, ThrusterState>>(nameof(NativeThruster), NativeStateReuse.Recipes(NativeStateReuse.Thrusters));
-        var valve = Rewrite<Func<FluidValveState, float, float, FluidValveState>>(nameof(NativeValve), new[] { new NativeStateReuse.Recipe(typeof(FluidValveState), 1, nameof(NativeStateReuse.Valve), "CurrentTransferRate", "ValveOpenedRate") });
-        var processor = Rewrite<Func<SignalProcessorState, double, double, SignalProcessorState>>(nameof(NativeProcessor), new[] { new NativeStateReuse.Recipe(typeof(SignalProcessorState), 1, nameof(NativeStateReuse.Processor), "PreviousValue", "Output") });
-        var a = new ThrusterState { ThrusterStrength = 0.5f };
-        Assert.Same(a, thruster(a, 0.5f));
-        Assert.Equal(NativeThruster(a, 0.75f), thruster(a, 0.75f));
-        Assert.Equal(0.5f, a.ThrusterStrength);
-        var b = new FluidValveState { CurrentTransferRate = 0.2f, ValveOpenedRate = 0.4f, IsHeldByPlayer = true, HoldingPlayerId = 123 };
-        Assert.Same(b, valve(b, 0.2f, 0.4f));
-        Assert.Equal(NativeValve(b, 0.3f, 0.5f), valve(b, 0.3f, 0.5f));
-        var c = new SignalProcessorState { PreviousValue = 1, Output = 2, Operation = SignalProcessorOperation.Delta };
-        Assert.Same(c, processor(c, 1, 2));
-        Assert.Equal(NativeProcessor(c, 2, 3), processor(c, 2, 3));
-        Assert.Equal(1, c.PreviousValue);
+        var previous = DiagnosticCounters.Active;
+        DiagnosticCounters.Active = capture;
+        var reused = NativeStateReuse.Reused;
+        var created = NativeStateReuse.Created;
+        try
+        {
+            var thruster = Rewrite<Func<ThrusterState, float, ThrusterState>>(nameof(NativeThruster), NativeStateReuse.Recipes(NativeStateReuse.Thrusters));
+            var valve = Rewrite<Func<FluidValveState, float, float, FluidValveState>>(nameof(NativeValve), new[] { new NativeStateReuse.Recipe(typeof(FluidValveState), 1, nameof(NativeStateReuse.Valve), "CurrentTransferRate", "ValveOpenedRate") });
+            var processor = Rewrite<Func<SignalProcessorState, double, double, SignalProcessorState>>(nameof(NativeProcessor), new[] { new NativeStateReuse.Recipe(typeof(SignalProcessorState), 1, nameof(NativeStateReuse.Processor), "PreviousValue", "Output") });
+            var a = new ThrusterState { ThrusterStrength = 0.5f };
+            Assert.Same(a, thruster(a, 0.5f));
+            Assert.Equal(NativeThruster(a, 0.75f), thruster(a, 0.75f));
+            Assert.Equal(0.5f, a.ThrusterStrength);
+            var b = new FluidValveState { CurrentTransferRate = 0.2f, ValveOpenedRate = 0.4f, IsHeldByPlayer = true, HoldingPlayerId = 123 };
+            Assert.Same(b, valve(b, 0.2f, 0.4f));
+            Assert.Equal(NativeValve(b, 0.3f, 0.5f), valve(b, 0.3f, 0.5f));
+            var c = new SignalProcessorState { PreviousValue = 1, Output = 2, Operation = SignalProcessorOperation.Delta };
+            Assert.Same(c, processor(c, 1, 2));
+            Assert.Equal(NativeProcessor(c, 2, 3), processor(c, 2, 3));
+            Assert.Equal(1, c.PreviousValue);
 
-        // Identity proves that no replacement record was created. A process-wide JIT
-        // transition can allocate on this thread, so a zero-byte microbenchmark here
-        // would measure the .NET test host as well as the factory, rather than Mono.
-        for (var i = 0; i < 100; i++) Assert.Same(a, thruster(a, 0.5f));
+            // Identity proves that no replacement record was created. A process-wide JIT
+            // transition can allocate on this thread, so a zero-byte microbenchmark here
+            // would measure the .NET test host as well as the factory, rather than Mono.
+            for (var i = 0; i < 100; i++) Assert.Same(a, thruster(a, 0.5f));
+            Assert.Equal(capture ? 103L : 0L, NativeStateReuse.Reused - reused);
+            Assert.Equal(capture ? 3L : 0L, NativeStateReuse.Created - created);
+        }
+        finally { DiagnosticCounters.Active = previous; }
     }
 
     [Fact]
