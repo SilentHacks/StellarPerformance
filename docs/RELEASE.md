@@ -1,30 +1,31 @@
 # Releases and packaging
 
-## Prepared 0.9.0
+## Published 0.9.0
 
-0.9.0 includes the unpublished 0.8.0 work and is prepared for a direct upgrade from
-0.7.0. [Release notes](RELEASE_NOTES.md) are ready for the GitHub release body; they
-describe the new defaults, factory-cadence approximation, reversible settings and
-validation limits. Preparation does not publish a tag, push source or change the
-installed game. The last published release recorded here remains 0.7.0.
+[Release v0.9.0](https://github.com/SilentHacks/StellarPerformance/releases/tag/v0.9.0)
+was published on 2026-10-15 as the latest release, with the installable asset
+[StellarPerformance.zip](https://github.com/SilentHacks/StellarPerformance/releases/download/v0.9.0/StellarPerformance.zip).
+It includes the unpublished 0.8.0 work and upgrades directly from 0.7.0.
+The [release notes](RELEASE_NOTES.md) use a concise format for mod-manager readers.
 
-From a clean, reviewed source commit, run:
+The annotated `v0.9.0` tag identifies source commit
+`97f382411978074d50c93f6e550e09fc5ee5fa3c`. Publication documentation on `main`
+can follow the tag without changing the released source or asset.
 
-```powershell
-.\scripts\Package.ps1 -RepositoryName StellarPerformance -IncludeOptionalModTests
+The asset was downloaded anonymously after publication. Its SHA-256 matched the
+prepared ZIP; the shipping DLL hash, manifest version and two allowlisted entries
+were also verified:
+
+```text
+79BC949B9D328F95B4D7A9C8480F6310CBB54E6381E2625ABA38BAC90B4C8217  StellarPerformance.zip
 ```
 
-Omit `-IncludeOptionalModTests` when the inspected optional dependencies are unavailable.
-The output is `artifacts/0.9.0/StellarPerformance.zip`, its `.sha256` sidecar and
-`verification.json`. The receipt identifies the source commit and intended `v0.9.0`
-tag. Use that exact commit when creating the annotated tag; attach the verified ZIP.
-The ZIP must contain only `Mods/StellarPerformance.dll` and `mod.json`.
+The ZIP contains only `Mods/StellarPerformance.dll` and `mod.json`. MIT and attribution
+notices are embedded in the DLL. GitHub's automatic source archives are not the installable
+asset. See [configuration](CONFIGURATION.md) and [validation](VALIDATION.md) for the
+factory-cadence tradeoff, upgrade settings and outstanding gameplay coverage.
 
-Before publication, review [validation](VALIDATION.md), especially factory scheduling
-and incomplete remote-player coverage. After publication, download the attached ZIP
-anonymously, compare its SHA-256 with the receipt, and verify its two entries and
-manifest version. Record the published tag, commit and asset hash here. Mod-listing
-submission remains a separate step.
+Publication did not deploy to the local game. Mod-listing submission has not been performed.
 
 ## Published 0.7.0
 

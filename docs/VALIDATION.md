@@ -1,6 +1,6 @@
 # Validation and limits
 
-## 0.9.0 release preparation
+## 0.9.0 release
 
 The Release net472 build passes with warnings treated as errors. The offline suite
 passes 280 cases with the inspected optional mods enabled; the core run passes 276
