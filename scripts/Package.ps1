@@ -25,7 +25,7 @@ $commit = & git -C $root rev-parse HEAD
 if ($LASTEXITCODE -ne 0) { throw 'A local source commit is required.' }
 $properties = @('-p:IncludeOptionalModTests=' + $IncludeOptionalModTests.ToString().ToLowerInvariant())
 if ($GameDirectory) { $properties += '-p:GameDirectory=' + $GameDirectory }
-& dotnet build (Join-Path $root 'StellarPerformance.sln') -c Release @properties --verbosity minimal
+& dotnet build (Join-Path $root 'StellarPerformance.sln') -c Release @properties --no-incremental --verbosity minimal
 if ($LASTEXITCODE -ne 0) { throw 'Release build failed.' }
 & dotnet test (Join-Path $root 'tests\StellarPerformance.Tests\StellarPerformance.Tests.csproj') -c Release @properties --no-build --no-restore --verbosity minimal
 if ($LASTEXITCODE -ne 0) { throw 'Release tests failed.' }

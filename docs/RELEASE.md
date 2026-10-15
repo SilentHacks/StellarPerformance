@@ -60,7 +60,7 @@ has not been performed. For that separate step, the submission values are userna
    versions together, update the changelog, and commit the reviewed source.
 2. Run `scripts/Package.ps1 -RepositoryName StellarPerformance`, adding
    `-IncludeOptionalModTests` when the inspected optional dependencies are available.
-   The script builds, tests, verifies versions and ZIP entries, and writes the ZIP,
+   The script rebuilds, tests, verifies versions and ZIP entries, and writes the ZIP,
    checksum and receipt beneath the ignored `artifacts/<version>/` directory.
    It does not deploy, launch the game or publish anything.
 3. When separately authorized to publish, push the reviewed source on `main` and

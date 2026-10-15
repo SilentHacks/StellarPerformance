@@ -12,11 +12,12 @@ and credit notices, and absence of optional-mod assembly dependencies.
 The shipping DLL SHA-256 is:
 
 ```text
-5B16860068EFB79AEFA4AC3FE98F483185FBC6B1E8CE3F2B7602EE39FA1546A9
+4303607E772BBA28A0D6A50C895B16E7C98EE422A4F4625DD6DA32FE6895C279
 ```
 
-Release cleanup normalizes source line endings to the repository's LF convention,
-which changes compiler/debug identities. Compared with the latest isolated Unity/Mono
+Release cleanup normalizes source line endings to the repository's LF convention and
+disables implicit source-link metadata in the shipping project so source archives without
+`.git` reproduce the DLL. These changes alter compiler/debug identities. Compared with the latest isolated Unity/Mono
 candidate (`B01F3FC9D639AB8F38F9ACC711AA35158E3BD6EF21499C98ECDFC0B141A01627`),
 all 885 method bodies, embedded resources and runtime metadata except the module identity
 are byte-identical. This rebuild has not been separately launched in Unity/Mono.

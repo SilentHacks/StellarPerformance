@@ -44,6 +44,8 @@ Includes the unpublished 0.8.0 work; upgrades directly from 0.7.0.
 - Coalesce numeric signal/gas readouts at 10 Hz and default part UI distance to 100 m;
   focused input, control changes and re-entry refresh immediately.
 - Preserve existing saved configuration choices; document native-detail overrides.
+- Make the shipping DLL reproducible from source archives without Git metadata; force
+  a fresh Release build before packaging and retain source identity in the receipt.
 
 ## 0.7.0 — 2026-10-15
 

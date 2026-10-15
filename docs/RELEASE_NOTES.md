@@ -41,7 +41,8 @@ save/network formats remain native. Local room gas rounding can differ. Distant 
 can pop, and picking can delay hover/interaction feedback by a few frames.
 
 Release build: zero warnings/errors. Offline checks: 280 passing with optional adapters;
-276 passing and four explicit skips without them. After source line-ending normalization,
+276 passing and four explicit skips without them. After source line-ending normalization
+and disabling implicit source-link metadata for reproducible archive builds,
 the shipping DLL's method bodies, embedded resources and runtime metadata except its
 module identity match the latest isolated Unity/Mono validation artifact. The rebuild
 has not been separately launched in Unity/Mono. In that scene, single-player room reuse removed

@@ -22,4 +22,9 @@ tests install Harmony detours on CoreCLR: they execute emitted method copies and
 A separate test inspects the actual net472 DLL, its loader metadata and embedded notices.
 Building and testing never deploy, launch, stop or attach to the game.
 
+The shipping project disables implicit source-link/Git queries and maps source paths so
+the same SDK and local references reproduce the DLL from a Git checkout or a source ZIP.
+PDBs remain local build output; the minimal mod ZIP omits them. Packaging always rebuilds
+before testing and archiving, and records the source commit separately in its receipt.
+
 For packaging commands, archive contents and publication checks, see [releases and packaging](RELEASE.md).

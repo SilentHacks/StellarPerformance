@@ -5,6 +5,9 @@
     <AssemblyName>StellarPerformance</AssemblyName>
     <Authors>SilentHacks</Authors>
     <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+    <!-- The minimal release omits PDBs; reproduce its DLL from source archives without .git. -->
+    <EnableSourceLink>false</EnableSourceLink>
+    <EnableSourceControlManagerQueries>false</EnableSourceControlManagerQueries>
     <PathMap>$(MSBuildProjectDirectory)=/_/src/StellarPerformance</PathMap>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
