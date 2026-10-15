@@ -1,7 +1,7 @@
 # Stellar Performance
 
 Performance improvements for **StellarDrive Demo 0.8.2**, maintained by **SilentHacks**.
-Version **0.7.0** is a locally prepared release candidate. It reduces repeated ship
+Version **0.7.0** is [available on GitHub](https://github.com/SilentHacks/StellarPerformance/releases/tag/v0.7.0). It reduces repeated ship
 queries, cable graph construction, native record allocations and redundant visual work.
 It does not lower physics, simulation or network update rates or change the save schema.
 

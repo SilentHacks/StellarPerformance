@@ -1,31 +1,50 @@
-# Release preparation
+# Releases and packaging
 
-Prepared identity: **SilentHacks / StellarPerformance**, version **0.7.0**,
-intended tag **v0.7.0** and asset **StellarPerformance.zip**. The root `mod.json`
-is the canonical package manifest; the submission's manifest-folder field will be empty.
+## Published 0.7.0
 
-The local preparation includes source on `main`, a reviewed commit, matching version
-metadata, documentation, credits, MIT licence, test results and a verified package receipt.
-Artifacts are ignored by Git. No GitHub repository, remote, public release or submission
-is created by the preparation or packaging commands.
+The public repository is [SilentHacks/StellarPerformance](https://github.com/SilentHacks/StellarPerformance),
+with `main` as the default branch and `mod.json` at the repository root.
+[Release v0.7.0](https://github.com/SilentHacks/StellarPerformance/releases/tag/v0.7.0)
+was published on 2026-10-15 with the installable asset
+[StellarPerformance.zip](https://github.com/SilentHacks/StellarPerformance/releases/download/v0.7.0/StellarPerformance.zip).
 
-Before publication, review `VALIDATION.md` and decide whether the documented experimental
-support level is appropriate. The candidate has no newly established FPS improvement claim.
-Existing preferences can enable experiments despite the new-install defaults.
+The annotated `v0.7.0` tag identifies source commit
+`5daef04109495036fb08be442db23731b880e916`. Publication documentation on `main`
+can follow that tag without changing the released source or asset.
 
-When separately authorized to publish:
+The attached asset was downloaded anonymously after publication. Its SHA-256 matched
+the prepared archive, and its two allowlisted entries and manifest fields were verified.
 
-1. Create the public `SilentHacks/StellarPerformance` repository and upload the reviewed
-   `main` commit. Do not include the sibling private directory or generated game references.
-2. Confirm `mod.json` is present on `main` and all four required fields are populated.
-3. Create the GitHub release from the prepared `v0.7.0` source tag. Use the matching
-   changelog and describe the validation limits and experimental defaults.
-4. Attach `artifacts/0.7.0/StellarPerformance.zip`. Its name must match the actual repository;
-   if the repository name changes, rerun `scripts/Package.ps1 -RepositoryName <actual-name>`.
-   GitHub's automatic source ZIP is not the installable mod asset.
-5. Download the attached asset, compare its SHA-256 with the local receipt, inspect the two
-   allowlisted entries, and verify installation before submitting.
-6. Submit the username, repository and empty manifest-folder field through the
-   [official mod submission form](https://voxar.dev/submit/).
+```text
+123E88605791EF1B7C26E422946F7C79AE025BE319CB26D141ACF7A938A88D50  StellarPerformance.zip
+```
 
-These external steps have not been performed. Do not push or submit as part of local cleanup.
+The archive contains only `Mods/StellarPerformance.dll` and `mod.json`. MIT and
+attribution notices are embedded in the DLL. GitHub's automatic source ZIP is not
+the installable mod asset. See [validation and limits](VALIDATION.md) before using
+experimental settings. Existing preferences are retained on upgrade.
+
+Publication did not deploy the mod to the local game. Submission to the mod listing
+has not been performed. For that separate step, the submission values are username
+`SilentHacks`, repository `StellarPerformance`, and an empty manifest-folder field.
+
+## Preparing another release
+
+1. Review the source and validation limits. Update the manifest, project and Melon
+   versions together, update the changelog, and commit the reviewed source.
+2. Run `scripts/Package.ps1 -RepositoryName StellarPerformance`, adding
+   `-IncludeOptionalModTests` when the inspected optional dependencies are available.
+   The script builds, tests, verifies versions and ZIP entries, and writes the ZIP,
+   checksum and receipt beneath the ignored `artifacts/<version>/` directory.
+   It does not deploy, launch the game or publish anything.
+3. When separately authorized to publish, push the reviewed source on `main` and
+   the matching annotated `v<version>` tag. Publish a release from that existing tag
+   and attach the matching `StellarPerformance.zip`, with release notes describing
+   defaults and validation limits.
+4. Download the attached asset, compare its SHA-256 with the local receipt, and
+   verify its entries and installation before submitting it to the mod listing.
+
+Keep private evidence, game references, backups and generated build output outside
+the published source and release archive. The root `mod.json` remains the canonical
+package manifest; changing the repository name requires packaging with the matching
+`-RepositoryName` so that the attached ZIP has the required name.

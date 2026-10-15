@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.7.0 — prepared locally, unpublished
+## 0.7.0 — 2026-10-15
 
 - Separate Performance source, tests and packaging from portable-manager and Workshop files.
 - Remove cable, signal and terrain temporary-collection experiments and their settings.

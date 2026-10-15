@@ -1,6 +1,6 @@
 # Validation and limits
 
-## 0.7.0 candidate
+## 0.7.0 release
 
 The Release net472 DLL builds with warnings treated as errors. The offline suite executes
 the retained native IL transformations and managed semantics without installing runtime
@@ -12,7 +12,7 @@ The full optional-mod suite currently contains 251 passing cases. The default co
 explicitly skips four adapter cases. Removed experimental collection tests are no longer
 counted; the earlier 258-case count describes 0.6.0, not this candidate.
 
-The current candidate DLL SHA-256 is
+The released DLL SHA-256 is
 `5B6B4AA334B1A4C8235F1D6A38E7B6DB0BD7E277383E39D02EFCB21EC01FC686`.
 It also disables feature diagnostic counters outside explicit captures. The Release build
 and offline suite cover this follow-up, including native record reuse and room reconstruction
