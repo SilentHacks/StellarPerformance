@@ -7,21 +7,27 @@ using Ships.Interface.Model.Parts;
 using Ships.Interface.Model.Parts.Common;
 using Ships.Interface.Model.Parts.State;
 using Ships.Parts.Common;
+using Ships.Parts.Constant;
+using Ships.Parts.Electrolyzer;
+using Ships.Parts.EthanolDistiller;
 using Ships.Parts.FluidValve;
 using Ships.Parts.FuelTank;
+using Ships.Parts.GasExhaust;
+using Ships.Parts.GasMeter;
 using Ships.Parts.MathGate;
 using Ships.Parts.SignalDisplay;
 using Ships.Parts.SignalSplitter;
 using Ships.Parts.SignalTransmitter;
 using Ships.Parts.Thruster;
 using Ships.Parts.UnaryMathGate;
+using Ships.Parts.WoodThruster;
 using Ships.Visuals;
 using UnityEngine;
 using UnityEngine.Rendering;
 
 namespace StellarPerformance;
 
-// An opt-in prototype. Only fixed opaque geometry using known object-space-independent
+// Only fixed opaque geometry using known object-space-independent
 // stock URP shaders is combined. Gameplay objects, ID rendering and effects stay native.
 internal static class ShipPartBatching
 {
@@ -78,8 +84,8 @@ internal static class ShipPartBatching
         internal void Restore()
         {
             // Disable the replacement immediately; Destroy is deferred by Unity.
-            if (Object != null) { Object.SetActive(false); UnityEngine.Object.Destroy(Object); }
-            for (var i = 0; i < Sources.Count; i++) if (Sources[i].Renderer != null) Sources[i].Renderer.enabled = true;
+            if (Object != null) { RendererDetail.Release(Object.GetComponent<MeshRenderer>()); Object.SetActive(false); UnityEngine.Object.Destroy(Object); }
+            for (var i = 0; i < Sources.Count; i++) if (Sources[i].Renderer != null) { Sources[i].Renderer.enabled = true; RendererDetail.Register(Sources[i].Renderer); }
             if (Mesh != null) UnityEngine.Object.Destroy(Mesh);
         }
     }
@@ -121,6 +127,7 @@ internal static class ShipPartBatching
     internal static Action<string>? Log;
     internal const string InspectedAssetHash = "86A3108EFBC4C48DE335949E38B0CA59069376975C58085E7F261A558908289F";
     private static bool _customShader;
+    internal static readonly Type[] FixedTypes = { typeof(DefaultShipPartVisuals), typeof(ThrusterVisual), typeof(FluidTankVisuals), typeof(SignalTransmitterVisuals), typeof(SignalProcessorVisuals), typeof(MathGateVisuals), typeof(SignalSplitterVisuals), typeof(SignalDisplayVisuals), typeof(FluidValveVisual), typeof(EthanolDistillerVisuals), typeof(ElectrolyzerVisuals), typeof(ConstantVisuals), typeof(GasMeterVisuals), typeof(GasExhaustVisuals), typeof(WoodThrusterVisuals) };
     internal static bool SupportedShader(string name, bool inspectedGameAsset = false) => name == "Universal Render Pipeline/Lit" || name == "Universal Render Pipeline/Simple Lit" || name == "Universal Render Pipeline/Unlit" || (inspectedGameAsset && name == "Custom/PlanetObject");
     internal static bool MatchesShaderAsset(string path)
     {
@@ -150,8 +157,8 @@ internal static class ShipPartBatching
         if (!ContinuousValidation)
         {
             var allowed = new[] { "stellarperformance.part-visual-updates", "stellarperformance.world-ui-visibility" };
-            foreach (var type in new[] { typeof(ThrusterVisual), typeof(FluidTankVisuals), typeof(SignalTransmitterVisuals), typeof(SignalProcessorVisuals), typeof(MathGateVisuals), typeof(SignalSplitterVisuals), typeof(SignalDisplayVisuals), typeof(FluidValveVisual) })
-                foreach (var name in new[] { "SetNetworkState", "ReactToNetworkStateChange" })
+            foreach (var type in FixedTypes)
+                foreach (var name in new[] { "SetNetworkState", "ReactToNetworkStateChange", "Update", "LateUpdate" })
                 {
                     var method = AccessTools.Method(type, name);
                     if (method != null && !PatchSafety.HasOnlyOwners(method, allowed))
@@ -234,10 +241,15 @@ internal static class ShipPartBatching
         foreach (var pair in Ships) foreach (var batch in pair.Value.Batches) { SourceRenderers += batch.Sources.Count; ReplacementRenderers++; }
     }
 
-    private static bool FixedBody(DefaultShipPartVisuals part)
+    internal static bool FixedBody(DefaultShipPartVisuals part)
     {
         var type = part.GetType();
-        if (!(type == typeof(ThrusterVisual) || type == typeof(FluidTankVisuals) || type == typeof(SignalTransmitterVisuals) || type == typeof(SignalProcessorVisuals) || type == typeof(MathGateVisuals) || type == typeof(SignalSplitterVisuals) || type == typeof(SignalDisplayVisuals) || type == typeof(FluidValveVisual))) return false;
+        if (Array.IndexOf(FixedTypes, type) < 0) return false;
+        // Generic visual parts have no native behavior of their own. Require every
+        // attached script to be a known interaction/identity component before batching.
+        if (type == typeof(DefaultShipPartVisuals))
+            foreach (var component in part.GetComponentsInChildren<MonoBehaviour>(true))
+                if (component == null || !StaticGenericComponent(component.GetType())) return false;
         // Native fixed bodies can be event-driven. Unknown prefab scripts require
         // continuous verification and otherwise retain their native renderers.
         if (!ContinuousValidation)
@@ -250,7 +262,13 @@ internal static class ShipPartBatching
         return true;
     }
 
-    private static bool FixedHierarchy(Transform transform, Transform part)
+    internal static bool StaticGenericComponent(Type type) => type == typeof(DefaultShipPartVisuals) ||
+        type == typeof(DefaultShipPartInteractions) || type == typeof(Ships.Parts.Common.Model.PartSocketsTracker) ||
+        type == typeof(Ships.Parts.Common.Model.ShipPartIdentifier) || type == typeof(Ships.Parts.Common.Utils.PartTipInteraction) ||
+        type == typeof(Ships.Cables.VisualObjects.SocketInteractionObject) ||
+        (typeof(PartInteraction).IsAssignableFrom(type) && type.Assembly == typeof(PartInteraction).Assembly);
+
+    internal static bool FixedHierarchy(Transform transform, Transform part)
     {
         for (var depth = 0; depth < 8 && transform != null; depth++, transform = transform.parent)
         {
@@ -270,6 +288,7 @@ internal static class ShipPartBatching
             if (!FixedBody(part)) continue;
             foreach (var renderer in part.GetComponentsInChildren<MeshRenderer>())
             {
+                RendererDetail.Restore(renderer);
                 inspected++;
                 var filter = renderer.GetComponent<MeshFilter>();
                 var material = renderer.sharedMaterial;
@@ -310,8 +329,9 @@ internal static class ShipPartBatching
                     output.sharedMaterial = pair.Key.Material; output.shadowCastingMode = pair.Key.Shadows;
                     output.receiveShadows = pair.Key.ReceiveShadows; output.renderingLayerMask = pair.Key.RenderingLayers;
                     output.lightProbeUsage = LightProbeUsage.Off; output.reflectionProbeUsage = ReflectionProbeUsage.Off;
+                    RendererDetail.Register(output);
                     ship.Batches.Add(new Batch(sources, mesh, obj));
-                    foreach (var source in sources) source.Renderer.enabled = false;
+                    foreach (var source in sources) { RendererDetail.Release(source.Renderer); source.Renderer.enabled = false; }
                     batches++; combined += sources.Count;
                 }
                 catch { if (obj != null) { obj.SetActive(false); UnityEngine.Object.Destroy(obj); } UnityEngine.Object.Destroy(mesh); throw; }

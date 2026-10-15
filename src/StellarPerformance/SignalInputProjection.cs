@@ -189,6 +189,7 @@ internal static class SignalConnectionReads
     [ThreadStatic] private static long _bytes;
     [ThreadStatic] private static uint _ticks;
     internal const long MaximumBytes = 4 * 1024 * 1024;
+    internal const int MaximumEntries = 1024;
     internal static long RetainedBytes => _bytes;
     internal static void Validate()
     {
@@ -230,7 +231,7 @@ internal static class SignalConnectionReads
         if (present && entry!.Current(group)) return entry.Connections;
         var connections = native == null ? group.AllConnections : native(group);
         var bytes = (long)group.Sockets.Count * 64 + (long)connections.Count * 64;
-        if (group.Sockets.Count > 1024 || connections.Count > 2048 || _bytes - (entry?.Bytes ?? 0) + bytes > MaximumBytes || (!present && _retained!.Count >= 128)) return connections;
+        if (group.Sockets.Count > 1024 || connections.Count > 2048 || _bytes - (entry?.Bytes ?? 0) + bytes > MaximumBytes || (!present && _retained!.Count >= MaximumEntries)) return connections;
         if (!present) { entry = new Entry(); _cache.Add(group, entry); _retained!.Add(new WeakReference(entry)); }
         _bytes -= entry!.Bytes;
         entry.Sources = group.Sockets.Select(pair => new Source(pair.Key, pair.Value)).ToArray();

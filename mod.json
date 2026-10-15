@@ -1,9 +1,9 @@
 {
   "id": "stellarperformance",
   "name": "Stellar Performance",
-  "version": "0.7.0",
+  "version": "0.9.0",
   "author": "SilentHacks",
-  "description": "Reduces repeated work in ship systems, cables and visual updates, cutting unnecessary CPU work and memory allocations.\n\nKeeps simulation rates and save formats unchanged. Profiling is off by default; experimental room reconstruction and mesh batching are opt-in.\n\nRequires StellarDrive Demo 0.8.2 and MelonLoader. SDModKit is optional.",
+  "description": "Reduces repeated work in ship systems, cables and visual updates, cutting unnecessary CPU work and memory allocations.\n\nOpinionated defaults skip stable signal work, enable local room reconstruction and mesh batching, and reduce distant visual detail. Numeric part readouts refresh at 10 Hz, cosmetic cable values at 20 Hz, and object picking every third frame. Factory systems advance every second network tick with a doubled step, which can change discrete production, fluid and circuit behavior. Unchanged signal callbacks are coalesced; local room gas rounding can differ. Global physics/network rates and save formats stay native. Settings are reversible and profiling defaults off.\n\nRequires StellarDrive Demo 0.8.2 and MelonLoader 0.7.3. SDModKit is optional.",
   "thumbnail": "assets/thumbnail.png",
   "images": [
     "assets/thumbnail.png"

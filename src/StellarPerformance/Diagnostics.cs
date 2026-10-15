@@ -114,6 +114,7 @@ internal static partial class Diagnostics
     private static volatile CaptureData? _capture;
     private static long _started, _lastFrame, _allocationStart, _lastPopulation, _lastHeap;
     private static long _reusedStart, _createdStart, _uiDeferredStart, _uiUnchangedStart;
+    private static long _signalSkippedStart, _signalEvaluatedStart;
     private static long _roomEditsStart, _roomLocalStart, _roomGeneralStart, _roomVisitsStart, _roomOutsideStart;
     private static string _rendererInventory = string.Empty;
     private static int _lastGc0;
@@ -144,6 +145,7 @@ internal static partial class Diagnostics
         _lastHeap = GC.GetTotalMemory(false);
         _allocationStart = ReadAllocationCounter() ?? 0;
         _reusedStart = NativeStateReuse.Reused; _createdStart = NativeStateReuse.Created;
+        _signalSkippedStart = StableSignals.Skipped; _signalEvaluatedStart = StableSignals.Evaluated;
         _uiDeferredStart = WorldUiVisibility.Deferred; _uiUnchangedStart = WorldUiVisibility.Unchanged;
         _roomEditsStart = IncrementalRooms.Edits; _roomLocalStart = IncrementalRooms.LocalEdits;
         _roomGeneralStart = IncrementalRooms.GeneralEdits; _roomVisitsStart = IncrementalRooms.VisitedNodes; _roomOutsideStart = IncrementalRooms.OutsideExits;
@@ -187,6 +189,7 @@ internal static partial class Diagnostics
             "; part UI: deferred=" + (WorldUiVisibility.Deferred - _uiDeferredStart) + ", unchanged=" + (WorldUiVisibility.Unchanged - _uiUnchangedStart) +
             ", visible/hidden canvases at stop=" + WorldUiVisibility.VisibleCanvases + "/" + WorldUiVisibility.HiddenCanvases +
             "; ship batches: source/replacement renderers=" + ShipPartBatching.SourceRenderers + "/" + ShipPartBatching.ReplacementRenderers +
+            "\nStable signals: operations skipped/evaluated=" + (StableSignals.Skipped - _signalSkippedStart) + "/" + (StableSignals.Evaluated - _signalEvaluatedStart) +
             "\nRoom edits: total=" + (IncrementalRooms.Edits - _roomEditsStart) + ", local=" + (IncrementalRooms.LocalEdits - _roomLocalStart) +
             ", general=" + (IncrementalRooms.GeneralEdits - _roomGeneralStart) + ", visited nodes=" + (IncrementalRooms.VisitedNodes - _roomVisitsStart) +
             ", exterior exits=" + (IncrementalRooms.OutsideExits - _roomOutsideStart) + "\n" + _rendererInventory;

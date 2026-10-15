@@ -1,5 +1,31 @@
 # Releases and packaging
 
+## Prepared 0.9.0
+
+0.9.0 includes the unpublished 0.8.0 work and is prepared for a direct upgrade from
+0.7.0. [Release notes](RELEASE_NOTES.md) are ready for the GitHub release body; they
+describe the new defaults, factory-cadence approximation, reversible settings and
+validation limits. Preparation does not publish a tag, push source or change the
+installed game. The last published release recorded here remains 0.7.0.
+
+From a clean, reviewed source commit, run:
+
+```powershell
+.\scripts\Package.ps1 -RepositoryName StellarPerformance -IncludeOptionalModTests
+```
+
+Omit `-IncludeOptionalModTests` when the inspected optional dependencies are unavailable.
+The output is `artifacts/0.9.0/StellarPerformance.zip`, its `.sha256` sidecar and
+`verification.json`. The receipt identifies the source commit and intended `v0.9.0`
+tag. Use that exact commit when creating the annotated tag; attach the verified ZIP.
+The ZIP must contain only `Mods/StellarPerformance.dll` and `mod.json`.
+
+Before publication, review [validation](VALIDATION.md), especially factory scheduling
+and incomplete remote-player coverage. After publication, download the attached ZIP
+anonymously, compare its SHA-256 with the receipt, and verify its two entries and
+manifest version. Record the published tag, commit and asset hash here. Mod-listing
+submission remains a separate step.
+
 ## Published 0.7.0
 
 The public repository is [SilentHacks/StellarPerformance](https://github.com/SilentHacks/StellarPerformance),

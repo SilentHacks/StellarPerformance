@@ -23,14 +23,16 @@ namespace StellarPerformance.Tests;
 public sealed class NativeContractTests
 {
     [Fact]
-    public void ExperimentalFluidSocketReadsAreDisabledByDefault()
+    public void MeasuredOptimizationsDefaultOnWhileFallbackExperimentsAndDiagnosticsStayOff()
     {
         var codes = ManagedMethod.Instructions(AccessTools.Method(typeof(PerformancePlugin), nameof(PerformancePlugin.OnLateInitializeMelon)));
-        foreach (var setting in new[] { "FluidGraphSocketReads", "SignalEvaluationReads", "IncrementalRooms", "ShipPartBatching" })
+        Assert.DoesNotContain(codes, code => code.opcode == OpCodes.Ldstr && (Equals(code.operand, "SleepingMachinery") || Equals(code.operand, "IdleMachineProbeSeconds")));
+        foreach (var setting in new[] { "FluidGraphSocketReads", "Diagnostics", "BatchingContinuousValidation", "SignalEvaluationReads", "IncrementalRooms", "ShipPartBatching", "RendererDetail", "StableSignals" })
         {
             var index = codes.FindIndex(code => code.opcode == OpCodes.Ldstr && Equals(code.operand, setting));
             Assert.True(index >= 0);
-            Assert.Equal(OpCodes.Ldc_I4_0, codes[index + 1].opcode);
+            var enabled = setting == "SignalEvaluationReads" || setting == "IncrementalRooms" || setting == "ShipPartBatching" || setting == "RendererDetail" || setting == "StableSignals";
+            Assert.Equal(enabled ? OpCodes.Ldc_I4_1 : OpCodes.Ldc_I4_0, codes[index + 1].opcode);
         }
     }
 

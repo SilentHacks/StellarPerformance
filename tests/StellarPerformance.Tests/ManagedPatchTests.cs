@@ -14,6 +14,7 @@ using Xunit;
 
 namespace StellarPerformance.Tests;
 
+[Collection("Diagnostic counters")]
 public sealed class ManagedPatchTests
 {
     [Fact]

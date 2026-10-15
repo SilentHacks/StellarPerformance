@@ -13,13 +13,14 @@ internal static class PatchSafety
         prefix.ReturnType != typeof(void) || prefix.GetParameters().Any(parameter =>
             parameter.ParameterType.IsByRef && parameter.Name != "__state");
 
-    internal static void RequireOriginalBody(MethodBase method, string owner)
+    internal static void RequireOriginalBody(MethodBase method, string owner, params string[] allowed)
     {
         if (method == null) throw new MissingMethodException("A required replacement target is missing.");
         var patches = HarmonyLib.Harmony.GetPatchInfo(method);
         if (patches == null) return;
-        if (patches.Transpilers.Any(patch => patch.owner != owner) ||
-            patches.Prefixes.Any(patch => patch.owner != owner && RewritesArgumentsOrSkips(patch.PatchMethod)))
+        bool Foreign(string patchOwner) => patchOwner != owner && !allowed.Contains(patchOwner);
+        if (patches.Transpilers.Any(patch => Foreign(patch.owner)) ||
+            patches.Prefixes.Any(patch => Foreign(patch.owner) && RewritesArgumentsOrSkips(patch.PatchMethod)))
             throw new InvalidOperationException(method.DeclaringType?.Name + "." + method.Name + " has a conflicting body or argument owner.");
     }
 

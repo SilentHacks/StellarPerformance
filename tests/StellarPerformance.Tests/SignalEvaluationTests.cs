@@ -249,4 +249,21 @@ public sealed class SignalEvaluationTests
         }
         GC.KeepAlive(groups);
     }
+
+    [Fact]
+    public void ManySmallNetworksReuseTheirNativeUnionsWithinTheExistingByteBudget()
+    {
+        SignalConnectionReads.Reset();
+        var groups = new List<ConnectionGroup>(); var reads = 0;
+        IReadOnlyCollection<SocketConnection> Native(ConnectionGroup group) { reads++; return group.AllConnections; }
+        for (uint i = 0; i < 256; i++)
+        {
+            var group = new ConnectionGroup(i); groups.Add(group);
+            group.AddConnection(new SocketConnection(new EntityPartSocket(i, 1, 0), null, SocketConnectionType.Cable));
+            SignalConnectionReads.Read(group, Native);
+        }
+        foreach (var group in groups) SignalConnectionReads.Read(group, Native);
+        Assert.Equal(groups.Count, reads);
+        Assert.InRange(SignalConnectionReads.RetainedBytes, 1, SignalConnectionReads.MaximumBytes);
+    }
 }

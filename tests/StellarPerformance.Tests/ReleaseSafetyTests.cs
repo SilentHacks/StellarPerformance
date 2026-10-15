@@ -37,6 +37,15 @@ public sealed class ReleaseSafetyTests
     }
 
     [Fact]
+    public void SharedCadenceStateDoesNotBindPrivateGameFieldsBeforeInstall()
+    {
+        Assert.True(SimulationCadence.Divisor >= 1);
+        Assert.True(CableVisualCadence.Interval >= 0);
+        Assert.Null(AccessTools.Field(typeof(SimulationCadence), "_playersOf").GetValue(null));
+        Assert.Null(AccessTools.Field(typeof(CableVisualCadence), "_signalCablesOf").GetValue(null));
+    }
+
+    [Fact]
     public void MissingAssemblyDisablesCompatibilityWithoutThrowing()
     {
         Assert.False(Compatibility.Validate(new[] { "StellarPerformance.Absent.TestModule" }, out var reason));
@@ -47,7 +56,8 @@ public sealed class ReleaseSafetyTests
     public void VersionSpecificBindingsCannotRunBeforeTheirFirstExplicitModuleCall()
     {
         foreach (var type in new[] { typeof(FluidCableTopology), typeof(CableVisualUpdates), typeof(PhysicsSceneCache),
-            typeof(PhysicsSceneTransforms), typeof(PartVisualUpdates), typeof(LiquidVisualUpdates), typeof(WorldUiVisibility) })
+            typeof(PhysicsSceneTransforms), typeof(PartVisualUpdates), typeof(LiquidVisualUpdates), typeof(WorldUiVisibility), typeof(RendererDetail), typeof(StableSignals), typeof(SinglePlayerRooms),
+            typeof(PlanetTraversalCadence), typeof(CableVisualCadence), typeof(PickingCameraCadence), typeof(SimulationCadence), typeof(LoaderOverhead) })
             Assert.False((type.Attributes & TypeAttributes.BeforeFieldInit) != 0, type.Name);
     }
 

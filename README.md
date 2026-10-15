@@ -2,18 +2,33 @@
 
 # Stellar Performance
 
-Performance improvements for StellarDrive Demo. Reduces repeated work in ship systems,
-cables and visuals without changing simulation rates or save formats.
+Opinionated performance improvements for StellarDrive Demo. Reduces repeated work in
+ship systems, cables and visuals, with modest visual cuts and small room gas rounding
+differences accepted in exchange for less repeated work. Global physics/network rates and
+save formats stay native; factory simulation uses larger, less frequent steps by default.
 
 ## What it does
 
 - Reuses ship queries, cable topology and unchanged part states.
 - Avoids unnecessary allocations and repeated transform, material and UI updates.
 - Defers hidden part displays and refreshes them when they become visible.
+- Rebuilds edited rooms locally and batches supported fixed part meshes by default.
+- Reuses authoritative room queries in single-player, avoiding a duplicate client room tree.
+- Refreshes numeric part readouts at 10 Hz, limits part UI to 100 m, and reduces distant
+  part shadows and tiny opaque meshes. Focused controls remain responsive.
+- Skips unchanged signal operations. Changing signals process in native order on each
+  factory step.
+- Reuses terrain LOD selections, updates cosmetic cable values at 20 Hz, and renders the
+  object-picking camera every third frame.
+- Advances factory systems every second network tick with a doubled step. Piloting,
+  lever use and ship repositioning restore every-tick simulation while active.
 
-Experimental room reconstruction and mesh batching are available as opt-in features.
-They are disabled by default, along with profiling and the experimental signal/fluid
-options. Existing saved settings are preserved on upgrade.
+Room reconstruction, mesh batching, signal query reuse and stable-signal skipping are
+enabled by default. Stable-signal skipping coalesces identical callbacks. Factory cadence
+can change discrete production, fluid and circuit behavior; picking can delay hover feedback.
+Profiling and the experimental fluid socket fallback remain off. Every tradeoff can be
+disabled in settings. Existing saved settings are preserved on upgrade; see the settings
+guide to apply the new defaults to an older installation.
 
 ## Install
 
@@ -24,6 +39,9 @@ options. Existing saved settings are preserved on upgrade.
    `Mods/StellarPerformance.dll`.
 
 SDModKit is optional. To uninstall, close the game and remove the DLL.
+
+For 0.9.0, see the [release notes](docs/RELEASE_NOTES.md), including upgrade settings
+and gameplay coverage limits. The download link above follows the latest published release.
 
 ## Settings and help
 

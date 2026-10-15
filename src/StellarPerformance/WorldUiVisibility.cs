@@ -26,13 +26,19 @@ internal static class WorldUiVisibility
     {
         internal IStatefulPartState? Displayed, Latest;
         internal bool Pending;
-        internal bool Observe(IStatefulPartState next, bool visible)
+        internal bool WasHidden;
+        internal float NextRefresh;
+        internal bool Observe(IStatefulPartState next, bool visible) => Observe(next, visible, 0, 0, false);
+        internal bool Observe(IStatefulPartState next, bool visible, float now, float interval, bool focused)
         {
             Latest = next;
             if (Displayed != null && SamePresentation(Displayed, next)) { Pending = false; return false; }
-            Pending = !visible;
-            if (visible) Displayed = next;
-            return visible;
+            if (!visible) WasHidden = true;
+            var numeric = next is SignalDisplayState || next is GasMeterState;
+            var run = visible && (focused || !numeric || WasHidden || now >= NextRefresh);
+            Pending = !run;
+            if (run) { Displayed = next; WasHidden = false; NextRefresh = now + interval; }
+            return run;
         }
     }
 
@@ -49,13 +55,37 @@ internal static class WorldUiVisibility
         internal readonly Canvas Canvas;
         internal readonly RectTransform[] Rects;
         internal readonly TMP_InputField[] Inputs;
+        internal readonly RectMask2D[] Masks;
+        internal readonly bool[] MaskWasEnabled;
         internal bool Suppressed, Visible = true;
         internal bool BoundsReady;
         internal Bounds LocalBounds;
-        internal Group(Canvas canvas, RectTransform[] rects, TMP_InputField[] inputs) { Canvas = canvas; Rects = rects; Inputs = inputs; }
+        internal Group(Canvas canvas, RectTransform[] rects, TMP_InputField[] inputs, RectMask2D[] masks)
+        {
+            Canvas = canvas; Rects = rects; Inputs = inputs; Masks = masks; MaskWasEnabled = new bool[masks.Length];
+        }
+        // Hidden canvases still pay RectMask2D clipping every frame through ClipperRegistry.
+        internal void Suppress()
+        {
+            Suppressed = true;
+            Canvas.enabled = false;
+            if (!SuppressClipping) return;
+            for (var i = 0; i < Masks.Length; i++)
+            {
+                var mask = Masks[i];
+                MaskWasEnabled[i] = mask != null && mask.enabled;
+                if (MaskWasEnabled[i]) mask!.enabled = false;
+            }
+        }
         internal void Restore()
         {
-            if (Suppressed && Canvas != null) Canvas.enabled = true;
+            if (Suppressed)
+            {
+                for (var i = 0; i < Masks.Length; i++)
+                    if (MaskWasEnabled[i] && Masks[i] != null) Masks[i].enabled = true;
+                Array.Clear(MaskWasEnabled, 0, MaskWasEnabled.Length);
+                if (Canvas != null) Canvas.enabled = true;
+            }
             Suppressed = false;
         }
     }
@@ -75,7 +105,9 @@ internal static class WorldUiVisibility
     private static bool _updating;
     internal static Action<string>? Log = null;
     internal static bool CullCanvases = true;
+    internal static bool SuppressClipping = true;
     internal static float MaximumDistance = 0f; // Zero preserves the game's drawing distance.
+    internal static float RefreshInterval = 0.1f;
     internal static long Deferred, Unchanged;
     internal static int VisibleCanvases, HiddenCanvases;
 
@@ -133,7 +165,7 @@ internal static class WorldUiVisibility
             if (graphics.Length == 0 || graphics.Length > 128) continue;
             var rects = new RectTransform[graphics.Length];
             for (var i = 0; i < graphics.Length; i++) rects[i] = graphics[i].rectTransform;
-            var group = new Group(canvas, rects, canvas.GetComponentsInChildren<TMP_InputField>(true));
+            var group = new Group(canvas, rects, canvas.GetComponentsInChildren<TMP_InputField>(true), canvas.GetComponentsInChildren<RectMask2D>(true));
             foreach (var rect in rects) RectGroups[rect] = group;
             display.Groups.Add(group); Groups.Add(group);
         }
@@ -149,6 +181,7 @@ internal static class WorldUiVisibility
         if (type != typeof(SignalProcessorVisuals) && type != typeof(MathGateVisuals) && type != typeof(SignalDisplayVisuals) && type != typeof(GasMeterVisuals)) return;
         var display = Register(__instance);
         display.State.Displayed = state; display.State.Latest = state; display.State.Pending = false;
+        display.State.WasHidden = false; display.State.NextRefresh = Time.unscaledTime + RefreshInterval;
         for (var i = 0; i < display.Groups.Count; i++) display.Groups[i].BoundsReady = false;
     }
 
@@ -161,7 +194,8 @@ internal static class WorldUiVisibility
         if (!Displays.TryGetValue(__instance, out var display)) return true;
         var visible = display.Groups.Count == 0;
         for (var i = 0; i < display.Groups.Count; i++) visible |= display.Groups[i].Visible;
-        var run = display.State.Observe(change.NewState, visible);
+        var focused = HasFocus(display);
+        var run = display.State.Observe(change.NewState, visible, Time.unscaledTime, RefreshInterval, focused);
         if (run) for (var i = 0; i < display.Groups.Count; i++) display.Groups[i].BoundsReady = false;
         if (!run && DiagnosticCounters.Active) { if (display.State.Pending) Deferred++; else Unchanged++; }
         return run;
@@ -171,6 +205,13 @@ internal static class WorldUiVisibility
     {
         var canvas = __instance.GetComponent<Canvas>();
         for (var i = 0; i < Groups.Count; i++) if (Groups[i].Canvas == canvas) Groups[i].Restore();
+    }
+
+    private static bool HasFocus(Display display)
+    {
+        foreach (var group in display.Groups)
+            foreach (var input in group.Inputs) if (input != null && input.isFocused) return true;
+        return false;
     }
 
     // Called before Unity builds UI geometry. A display entering any relevant camera is
@@ -228,7 +269,7 @@ internal static class WorldUiVisibility
             else
             {
                 if (DiagnosticCounters.Active) HiddenCanvases++;
-                if (CullCanvases && group.Canvas.enabled) { group.Suppressed = true; group.Canvas.enabled = false; }
+                if (CullCanvases && group.Canvas.enabled) group.Suppress();
             }
         }
         for (var i = Tracked.Count - 1; i >= 0; i--)
@@ -238,7 +279,8 @@ internal static class WorldUiVisibility
             if (!display.State.Pending || display.State.Latest == null) continue;
             var visible = false;
             for (var j = 0; j < display.Groups.Count; j++) visible |= display.Groups[j].Visible;
-            if (visible) display.Visual.SetNetworkState(display.State.Latest);
+            if (!visible) display.State.WasHidden = true;
+            if (visible && (display.State.WasHidden || HasFocus(display) || Time.unscaledTime >= display.State.NextRefresh)) display.Visual.SetNetworkState(display.State.Latest);
         }
         Array.Clear(Cameras, usable, Cameras.Length - usable);
     }

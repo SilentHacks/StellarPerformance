@@ -93,6 +93,7 @@ internal static class FluidCableTopology
         internal readonly Queue<SocketConnection> ToTraverse = new Queue<SocketConnection>();
         internal readonly HashSet<SocketConnection> Traversed = new HashSet<SocketConnection>();
         internal readonly HashSet<uint> VisitedCableIds = new HashSet<uint>();
+        internal readonly CableVisualCadence.Box NextValues = new CableVisualCadence.Box();
     }
 
     private static volatile int _topologyVersion = 1;
@@ -145,11 +146,20 @@ internal static class FluidCableTopology
         var ships = ShipsOf(__instance);
         var connections = ConnectionsOf(__instance);
         var version = _topologyVersion;
-        if (!IsTopologyCurrent(cache, loadedCables, cablesTracker, version))
+        var current = IsTopologyCurrent(cache, loadedCables, cablesTracker, version);
+        if (!current)
             RebuildTopology(cache, loadedCables, cablesTracker, connections, version);
 
         var nodes = cache.Nodes;
         var cables = cache.Cables;
+        if (current && !CableVisualCadence.Due(cache.NextValues, Time.unscaledTime))
+        {
+            if (DiagnosticCounters.Active) CableVisualCadence.Reused++;
+            for (var i = 0; i < cables.Length; i++)
+                cables[i].Visual.UpdateFlow(cables[i].Flow);
+            return false;
+        }
+        if (DiagnosticCounters.Active) CableVisualCadence.Computed++;
         for (var i = 0; i < nodes.Length; i++)
         {
             nodes[i].FluidFlow = 0f;
@@ -205,10 +215,17 @@ internal static class FluidCableTopology
             var slot = visuals[i];
             if (!loadedCables.TryGetValue(slot.Id, out var currentVisual) || !ReferenceEquals(currentVisual, slot.Visual)) return false;
             var hasState = cablesTracker.TryGetCableState(slot.Id, out var state);
-            if (hasState != slot.HasState || (hasState && !state.Equals(slot.State))) return false;
+            if (hasState != slot.HasState || (hasState && !SameState(state, slot.State))) return false;
         }
         return true;
     }
+
+    // Field-wise comparison: ValueType.Equals boxes every nested struct field on Mono.
+    internal static bool SameState(in CableState a, in CableState b) =>
+        a.Type == b.Type && SamePlug(a.PlugA, b.PlugA) && SamePlug(a.PlugB, b.PlugB);
+
+    private static bool SamePlug(in CablePlugSocket a, in CablePlugSocket b) =>
+        a.IsHeldByPlayer == b.IsHeldByPlayer && a.EntityPartSocket.Equals(b.EntityPartSocket);
 
     internal static void RebuildTopology(UpdaterCache cache, IReadOnlyDictionary<uint, CableVisual> loadedCables, CablesClientTracker cablesTracker, ConnectionsClientTracker connections, int version)
     {

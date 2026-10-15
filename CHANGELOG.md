@@ -1,5 +1,50 @@
 # Changelog
 
+## 0.9.0
+
+Includes the unpublished 0.8.0 work; upgrades directly from 0.7.0.
+
+- Keep stable-signal wiring across periodic value refreshes; invalidate it on native
+  cable/part/ship topology changes and stagger initial verification deadlines.
+- Avoid duplicate client room geometry in single-player hosts. Forward position
+  queries without exposing the authoritative mutable tree; restore native mirrors
+  when leaving single-player or enabling a room debug visualizer.
+- Allow more small signal networks within the existing 4 MiB connection-cache budget,
+  avoiding repeated native unions when the former 128-entry limit was reached.
+- Skip unchanged native signal processors and cable groups in native operation order.
+  Input/configuration changes wake processing in the same factory step; derivatives run
+  on each factory step and stable observations refresh every 250 ms by default.
+- Bound stable-signal caches, invalidate on topology changes and exceptions, and preserve
+  native execution for unsupported states. Coalesce unchanged callbacks on sleeping
+  signal steps; keep global physics/network rates and save/network formats native.
+- Add reversible settings, capture-only skip counters, emitted native signal-loop tests
+  and private Unity/Mono simulation validation.
+- Reuse terrain LOD traversals for small observer movements and skip completed empty
+  mesh-delta checks between traversals; refresh at least every 15 frames.
+- Recompute cosmetic cable values at 20 Hz while retaining per-frame animation, and
+  render the object-picking camera every third frame. Hover feedback can arrive later.
+- Advance host factory systems every second network tick with a doubled step. Piloting,
+  lever use and ship repositioning retain every-tick processing. Larger steps can change
+  discrete production, fluid and circuit behavior; global physics/network ticks stay native.
+- Cache MelonLoader's inspected sibling-order reflection path and suppress clipping on
+  hidden registered world-space part UI. Restore suppressed presentation when needed.
+- Compare cable topology fields without nested value-type boxing.
+- Remove the idle-machinery sleeping candidate (`SleepingMachinery`,
+  `IdleMachineProbeSeconds`). Sampled profiles showed native machine updates cost about
+  0.04 ms per frame in the measured world and sleeping raised that to about 0.11 ms.
+  Old saved keys are ignored.
+- Enable measured incremental room reconstruction, fixed part mesh batching and signal
+  query reuse by default; accept the documented room gas rounding differences.
+- Expand opaque body batching to distillers, electrolyzers, numeric constants, gas
+  meters/exhausts, wood thrusters and strictly screened generic parts; keep moving
+  machinery, liquids, screens and effects native.
+- Add bounded distance detail for supported opaque fixed part meshes and batch replacements:
+  retain full geometry within 20 m, omit meshes below 3 projected pixels at distance and
+  stop part shadow casting beyond 40 m, with hysteresis and native restoration.
+- Coalesce numeric signal/gas readouts at 10 Hz and default part UI distance to 100 m;
+  focused input, control changes and re-entry refresh immediately.
+- Preserve existing saved configuration choices; document native-detail overrides.
+
 ## 0.7.0 — 2026-10-15
 
 - Separate Performance source, tests and packaging from portable-manager and Workshop files.
