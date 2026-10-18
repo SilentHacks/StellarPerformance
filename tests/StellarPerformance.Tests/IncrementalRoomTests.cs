@@ -13,12 +13,44 @@ using Ships.Rooms.Model;
 using UnityEngine;
 using WorldProvision.Interface.Services;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace StellarPerformance.Tests;
 
 [Collection("Diagnostic counters")]
 public sealed class IncrementalRoomTests
 {
+    private readonly ITestOutputHelper _output;
+    public IncrementalRoomTests(ITestOutputHelper output) => _output = output;
+
+    [Theory]
+    [InlineData(8, 256)]
+    [InlineData(40, 256)]
+    public void RepeatedLocalEditsMeasureGasDriftAgainstNativeAndWeightedRule(int size, int cycles)
+    {
+        var (native, mod) = Pair(size);
+        var edit = new[] { new Vector3Int(size / 2, size / 2, size / 2) };
+        double voxels = (size - 1) * (size - 1) * (size - 1);
+        double maxDifference = 0, maxRuleError = 0;
+        for (var cycle = 1; cycle <= cycles; cycle++)
+        {
+            native.Edit(edit); mod.Edit(edit);
+            Equivalent(native, mod, float.MaxValue); // Geometry, volume and saved seeds remain exact.
+            native.Edit(remove: edit); mod.Edit(remove: edit);
+            Equivalent(native, mod, float.MaxValue);
+            double a = native.Gases.RoomGases.Single().GasState.GasDensity;
+            double b = mod.Gases.RoomGases.Single().GasState.GasDensity;
+            // A filled voxel displaces gas; reopening it introduces native vacuum.
+            double expected = .37f * Math.Pow((voxels - 1) / voxels, cycle);
+            maxDifference = Math.Max(maxDifference, Math.Abs(a - b));
+            maxRuleError = Math.Max(maxRuleError, Math.Abs(b - expected));
+            Assert.InRange(Math.Abs(b - expected), 0, .00002); // Computational check, not gameplay tolerance.
+            if (cycle == 1 || cycle == 24 || cycle == 96 || cycle == cycles)
+                _output.WriteLine($"size={size}; cycle={cycle}; nativeDensity={a:R}; modDensity={b:R}; weightedRuleDensity={expected:R}; absoluteDifference={Math.Abs(a - b):R}");
+        }
+        _output.WriteLine($"size={size}; cycles={cycles}; maxNativeDifference={maxDifference:R}; maxWeightedRuleError={maxRuleError:R}; exact geometry/volume/seed checks after every edit; no universal gameplay bound asserted.");
+    }
+
     public class Provider : DispatchProxy
     {
         public float Atmosphere;
@@ -146,6 +178,7 @@ public sealed class IncrementalRoomTests
             Assert.True(native.Gases.TryGetRoomGasState(id.Key, out var a));
             Assert.True(mod.Gases.TryGetRoomGasState(id.Value, out var b));
             Assert.Equal(a.RoomVolume, b.RoomVolume);
+            Assert.Equal(a.GasState.GasItemId, b.GasState.GasItemId);
             Assert.InRange(Math.Abs(a.GasState.GasDensity - b.GasState.GasDensity), 0, densityTolerance);
             var seed = mod.Tree.GetLeaf(b.RoomScanSeedCoord);
             Assert.Equal((byte)0, seed.WallCount); Assert.Equal(id.Value, seed.RoomId);

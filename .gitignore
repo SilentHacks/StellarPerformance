@@ -17,3 +17,4 @@ WorldSaves/
 *.pdb
 *.zip
 *.dmp
+**/__pycache__/

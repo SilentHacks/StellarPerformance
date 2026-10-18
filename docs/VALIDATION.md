@@ -1,4 +1,21 @@
+# Current 1.0.0
+
+The mod now contains only five features. Current tests, native evidence, performance
+measurements and remaining limits are recorded in [BENCHMARKS.md](BENCHMARKS.md).
+The earlier counts, approximations and capture hotkeys below describe historical builds;
+removed features cannot be enabled in the new DLL.
+
+---
+
 # Validation and limits
+
+The [pre-1.0.0 claims audit](CLAIMS_AUDIT.md) adds outcome comparisons and known
+counterexamples for the unchanged 0.9.0 runtime code. Its release judgment and
+[per-feature requirements](CLAIMS_REGISTER.md) take precedence over interpreting
+test counts or subsystem savings as proof of general gameplay equivalence or FPS gains.
+The [feature audit](FEATURE_AUDIT.md) extends that assessment with 68 individual-switch
+and control captures, native factory/physics checks and real loopback peer transitions.
+It includes explicit keep/rework/discard recommendations and untested limits.
 
 ## 0.9.0 release
 

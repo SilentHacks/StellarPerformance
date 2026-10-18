@@ -84,8 +84,8 @@ internal static class ShipPartBatching
         internal void Restore()
         {
             // Disable the replacement immediately; Destroy is deferred by Unity.
-            if (Object != null) { RendererDetail.Release(Object.GetComponent<MeshRenderer>()); Object.SetActive(false); UnityEngine.Object.Destroy(Object); }
-            for (var i = 0; i < Sources.Count; i++) if (Sources[i].Renderer != null) { Sources[i].Renderer.enabled = true; RendererDetail.Register(Sources[i].Renderer); }
+            if (Object != null) { Object.SetActive(false); UnityEngine.Object.Destroy(Object); }
+            for (var i = 0; i < Sources.Count; i++) if (Sources[i].Renderer != null) { Sources[i].Renderer.enabled = true; }
             if (Mesh != null) UnityEngine.Object.Destroy(Mesh);
         }
     }
@@ -156,7 +156,7 @@ internal static class ShipPartBatching
     {
         if (!ContinuousValidation)
         {
-            var allowed = new[] { "stellarperformance.part-visual-updates", "stellarperformance.world-ui-visibility" };
+            var allowed = Array.Empty<string>();
             foreach (var type in FixedTypes)
                 foreach (var name in new[] { "SetNetworkState", "ReactToNetworkStateChange", "Update", "LateUpdate" })
                 {
@@ -216,7 +216,7 @@ internal static class ShipPartBatching
     }
 
     internal static bool NeedsPoseInvalidation(StatefulPartStateChangeEvent change) =>
-        change.NewState is FluidValveState next && (!(change.PreviousState is FluidValveState previous) || !NativeStateReuse.Same(previous.ValveOpenedRate, next.ValveOpenedRate));
+        change.NewState is FluidValveState next && (!(change.PreviousState is FluidValveState previous) || !CoreBits.Same(previous.ValveOpenedRate, next.ValveOpenedRate));
 
     internal static void Update()
     {
@@ -288,7 +288,6 @@ internal static class ShipPartBatching
             if (!FixedBody(part)) continue;
             foreach (var renderer in part.GetComponentsInChildren<MeshRenderer>())
             {
-                RendererDetail.Restore(renderer);
                 inspected++;
                 var filter = renderer.GetComponent<MeshFilter>();
                 var material = renderer.sharedMaterial;
@@ -329,9 +328,8 @@ internal static class ShipPartBatching
                     output.sharedMaterial = pair.Key.Material; output.shadowCastingMode = pair.Key.Shadows;
                     output.receiveShadows = pair.Key.ReceiveShadows; output.renderingLayerMask = pair.Key.RenderingLayers;
                     output.lightProbeUsage = LightProbeUsage.Off; output.reflectionProbeUsage = ReflectionProbeUsage.Off;
-                    RendererDetail.Register(output);
                     ship.Batches.Add(new Batch(sources, mesh, obj));
-                    foreach (var source in sources) { RendererDetail.Release(source.Renderer); source.Renderer.enabled = false; }
+                    foreach (var source in sources) { source.Renderer.enabled = false; }
                     batches++; combined += sources.Count;
                 }
                 catch { if (obj != null) { obj.SetActive(false); UnityEngine.Object.Destroy(obj); } UnityEngine.Object.Destroy(mesh); throw; }

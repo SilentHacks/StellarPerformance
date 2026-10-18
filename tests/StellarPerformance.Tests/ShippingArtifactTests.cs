@@ -28,6 +28,9 @@ public sealed class ShippingArtifactTests
         var metadata = pe.GetMetadataReader();
         Assert.Equal(new Version(version + ".0"), metadata.GetAssemblyDefinition().Version);
         var references = metadata.AssemblyReferences.Select(handle => metadata.GetString(metadata.GetAssemblyReference(handle).Name)).ToArray();
+        var runtimeTypes = metadata.TypeDefinitions.Select(handle => metadata.GetString(metadata.GetTypeDefinition(handle).Name)).ToArray();
+        foreach (var removed in new[] { "FrameCadence", "StableSignals", "PhysicsSceneTransforms", "PhysicsSceneCache", "RendererDetail", "WorldUiVisibility", "CableVisualUpdates", "PartVisualUpdates", "NativeStateReuse", "SignalInputProjection" })
+            Assert.DoesNotContain(removed, runtimeTypes);
         Assert.Contains("mscorlib", references);
         Assert.DoesNotContain("System.Private.CoreLib", references);
         Assert.DoesNotContain("SDModKit", references);

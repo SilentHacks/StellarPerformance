@@ -41,7 +41,7 @@ using Xunit;
 
 namespace StellarPerformance.Tests;
 
-public sealed class QueryCacheTests
+public sealed class GridBoundsTests
 {
     [Fact]
     public void ShipGridBoundsMatchesNativeComputationAndInvalidatesOnMutation()
@@ -85,57 +85,4 @@ public sealed class QueryCacheTests
         Assert.Equal(new Vector3Int(2, 3, 4), afterRemove.LowerCoord);
     }
 
-    [Fact]
-    public void AllTwentyFiveStatefulPartQueryTargetsTranspileCleanly()
-    {
-        Assert.Equal(25, StatefulPartQueries.Targets.Length);
-        foreach (var target in StatefulPartQueries.Targets)
-        {
-            Assert.NotNull(target);
-            var original = ManagedMethod.Instructions(target);
-            var nativeCalls = original.Count(code => code.operand is MethodInfo method && StatefulPartQueries.IsGetAllStatefulParts(method));
-            Assert.True(nativeCalls >= 1, $"Expected GetAllStatefulParts call in {target.DeclaringType?.Name}.{target.Name}");
-            var transformed = StatefulPartQueries.Transpile(original).ToArray();
-            Assert.Equal(original.Count, transformed.Length);
-            Assert.DoesNotContain(transformed, code => code.operand is MethodInfo method && StatefulPartQueries.IsGetAllStatefulParts(method));
-            Assert.Equal(nativeCalls, transformed.Count(code => code.operand is MethodInfo method && method.DeclaringType == typeof(StatefulPartQueries) && method.Name == nameof(StatefulPartQueries.GetParts)));
-        }
-    }
-
-    [Fact]
-    public void StatefulPartQueriesReusesResolvedCollectionAndInvalidatesOnAddOrRemove()
-    {
-        var shipState = new ShipState(1u, 2u, null!);
-        var cache = new ShipStatefulPartsCache(shipState);
-        var tracked = (TrackedShipServer)RuntimeHelpers.GetUninitializedObject(typeof(TrackedShipServer));
-        AccessTools.Field(typeof(TrackedShip), "<State>k__BackingField").SetValue(tracked, shipState);
-        AccessTools.Field(typeof(TrackedShip), "<StatefulPartsCache>k__BackingField").SetValue(tracked, cache);
-
-        Assert.Same(StatefulPartQueries.Empty, StatefulPartQueries.GetParts<ThrusterState>(tracked));
-
-        var settings = (PartSettings)RuntimeHelpers.GetUninitializedObject(typeof(PartSettings));
-        var part1 = (StatefulPart)RuntimeHelpers.GetUninitializedObject(typeof(StatefulPart));
-        part1.Id = 10;
-        part1.State = new ThrusterState { ThrusterStrength = 0.75f };
-        AccessTools.Field(typeof(StatefulPart), "<Settings>k__BackingField").SetValue(part1, settings);
-
-        var partsDict = (Dictionary<ushort, StatefulPart>)AccessTools.Field(typeof(ShipState), "_statefulParts").GetValue(shipState)!;
-        partsDict[part1.Id] = part1;
-        cache.AddStatefulPart(part1);
-        StatefulPartQueries.Invalidate(cache);
-
-        var firstRead = StatefulPartQueries.GetParts<ThrusterState>(tracked);
-        var secondRead = StatefulPartQueries.GetParts<ThrusterState>(tracked);
-        Assert.Same(firstRead, secondRead);
-        Assert.Single(firstRead);
-        Assert.Same(part1, firstRead.Single());
-
-        part1.State = new ThrusterState { ThrusterStrength = 1.0f };
-        Assert.Equal(1.0f, ((ThrusterState)StatefulPartQueries.GetParts<ThrusterState>(tracked).Single().State).ThrusterStrength);
-
-        cache.RemoveStatefulPart(part1);
-        partsDict.Remove(part1.Id);
-        StatefulPartQueries.OnMutationEnd(null, cache);
-        Assert.Same(StatefulPartQueries.Empty, StatefulPartQueries.GetParts<ThrusterState>(tracked));
-    }
 }

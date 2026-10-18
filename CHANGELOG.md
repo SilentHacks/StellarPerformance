@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.0.0
+
+- Reduce the mod to grid bounds, fluid visual topology, incremental rooms, single-player room forwarding and guarded fixed-part mesh batching.
+- Remove factory cadence, signal sleeping, picking throttling, UI/distance/terrain approximations and the other secondary caches. Old configuration keys cannot reactivate removed code.
+- Restore native per-frame fluid presentation while retaining topology caching.
+- Retain native simulation rates, module/patch guards, batching interaction restoration and the small documented room gas rounding tradeoff.
+- Replace broad performance claims with measurements of the exact reduced build; see [benchmarks](docs/BENCHMARKS.md).
+
+
 ## 0.9.0
 
 Includes the unpublished 0.8.0 work; upgrades directly from 0.7.0.
@@ -47,7 +56,7 @@ Includes the unpublished 0.8.0 work; upgrades directly from 0.7.0.
 - Make the shipping DLL reproducible from source archives without Git metadata; force
   a fresh Release build before packaging and retain source identity in the receipt.
 
-## 0.7.0 — 2026-10-15
+## 0.7.0 â€” 2026-10-15
 
 - Separate Performance source, tests and packaging from portable-manager and Workshop files.
 - Remove cable, signal and terrain temporary-collection experiments and their settings.
@@ -66,7 +75,7 @@ Includes the unpublished 0.8.0 work; upgrades directly from 0.7.0.
 - Add complete settings/build/validation documentation, MIT licensing under SilentHacks,
   and credit to tidic84's ShipPerformanceFix for inspiration for the independent room work.
 
-## 0.6.0 — private local build
+## 0.6.0 â€” private local build
 
 Added independent incremental room reconstruction, synthetic native room validation,
 bounded searches and saved-coordinate repairs. Retained native gas interpolation with

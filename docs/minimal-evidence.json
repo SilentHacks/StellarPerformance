@@ -1,0 +1,1890 @@
+{
+  "validation": {
+    "offlinePassed": 40,
+    "analysisPassed": 15,
+    "gas": [
+      {
+        "size": 8,
+        "cycles": 256,
+        "maxNativeDifference": 1.5676021575927734e-05,
+        "maxWeightedRuleError": 1.7019023762498975e-07
+      },
+      {
+        "size": 40,
+        "cycles": 256,
+        "maxNativeDifference": 0.0007196366786956787,
+        "maxWeightedRuleError": 6.866037558506122e-07
+      }
+    ]
+  },
+  "schema": "minimal-core-1.0.0",
+  "candidateSha256": "9739430D903E8803C6847CBF6809A12B16B2D4B3EAB1D1311E53F21A589E60C1",
+  "version": "1.0.0",
+  "runtimeSourceFiles": 10,
+  "runtimeSourceLines": 1753,
+  "frameComparison": {
+    "runs": [
+      {
+        "Id": "N1",
+        "Profile": "N",
+        "Block": 1,
+        "World": "PerfTest_Minimal_20261018_021004",
+        "WorldSHA256": "6BC3E3C031DCFF08CC05133CAB347963861FF87743EFB243D6E3AD2A2B823288",
+        "ConfigSHA256": "4254E7C6E73DBCF101D067FF72A852D8492824CC4D45568B1251FD545255B8BC",
+        "ModSHA256": "absent",
+        "StartedUtc": "2026-10-18T01:10:04.3238071Z",
+        "frames": 1638,
+        "seconds": 45.02635979999998,
+        "meanMs": 27.488620146520148,
+        "averageFps": 36.37869033330117,
+        "p95Ms": 37.22722499999997,
+        "p99Ms": 44.26094599999993,
+        "onePercentLowFps": 19.565349995338842,
+        "maxMs": 87.2234,
+        "over25MsPerMinute": 1632.3771303404374,
+        "over50MsPerMinute": 9.32786931623107,
+        "over100MsPerMinute": 0.0,
+        "focusedFrames": 1638,
+        "gc0": 12
+      },
+      {
+        "Id": "M1",
+        "Profile": "M",
+        "Block": 1,
+        "World": "PerfTest_Minimal_20261018_021200",
+        "WorldSHA256": "6BC3E3C031DCFF08CC05133CAB347963861FF87743EFB243D6E3AD2A2B823288",
+        "ConfigSHA256": "4254E7C6E73DBCF101D067FF72A852D8492824CC4D45568B1251FD545255B8BC",
+        "ModSHA256": "9739430D903E8803C6847CBF6809A12B16B2D4B3EAB1D1311E53F21A589E60C1",
+        "StartedUtc": "2026-10-18T01:12:00.9849263Z",
+        "frames": 3209,
+        "seconds": 45.00365059999992,
+        "meanMs": 14.024197756310377,
+        "averageFps": 71.3053265061125,
+        "p95Ms": 18.73184,
+        "p99Ms": 21.661524,
+        "onePercentLowFps": 37.42105857597677,
+        "maxMs": 37.2092,
+        "over25MsPerMinute": 23.998053171268776,
+        "over50MsPerMinute": 0.0,
+        "over100MsPerMinute": 0.0,
+        "focusedFrames": 3209,
+        "gc0": 9
+      },
+      {
+        "Id": "M2",
+        "Profile": "M",
+        "Block": 2,
+        "World": "PerfTest_Minimal_20261018_021357",
+        "WorldSHA256": "6BC3E3C031DCFF08CC05133CAB347963861FF87743EFB243D6E3AD2A2B823288",
+        "ConfigSHA256": "4254E7C6E73DBCF101D067FF72A852D8492824CC4D45568B1251FD545255B8BC",
+        "ModSHA256": "9739430D903E8803C6847CBF6809A12B16B2D4B3EAB1D1311E53F21A589E60C1",
+        "StartedUtc": "2026-10-18T01:13:57.4031553Z",
+        "frames": 3189,
+        "seconds": 45.001867000000004,
+        "meanMs": 14.111592035120728,
+        "averageFps": 70.86372660938711,
+        "p95Ms": 18.66694,
+        "p99Ms": 21.778307999999992,
+        "onePercentLowFps": 37.85179696674625,
+        "maxMs": 33.2473,
+        "over25MsPerMinute": 21.332448273757173,
+        "over50MsPerMinute": 0.0,
+        "over100MsPerMinute": 0.0,
+        "focusedFrames": 3189,
+        "gc0": 8
+      },
+      {
+        "Id": "N2",
+        "Profile": "N",
+        "Block": 2,
+        "World": "PerfTest_Minimal_20261018_021553",
+        "WorldSHA256": "6BC3E3C031DCFF08CC05133CAB347963861FF87743EFB243D6E3AD2A2B823288",
+        "ConfigSHA256": "4254E7C6E73DBCF101D067FF72A852D8492824CC4D45568B1251FD545255B8BC",
+        "ModSHA256": "absent",
+        "StartedUtc": "2026-10-18T01:15:54.0015315Z",
+        "frames": 1660,
+        "seconds": 45.00767389999999,
+        "meanMs": 27.11305656626506,
+        "averageFps": 36.88259925825672,
+        "p95Ms": 34.91757499999999,
+        "p99Ms": 43.370636000000005,
+        "onePercentLowFps": 20.496203440010444,
+        "maxMs": 58.306,
+        "over25MsPerMinute": 1582.396818778942,
+        "over50MsPerMinute": 6.665529986431937,
+        "over100MsPerMinute": 0.0,
+        "focusedFrames": 1660,
+        "gc0": 12
+      },
+      {
+        "Id": "N3",
+        "Profile": "N",
+        "Block": 3,
+        "World": "PerfTest_Minimal_20261018_021750",
+        "WorldSHA256": "6BC3E3C031DCFF08CC05133CAB347963861FF87743EFB243D6E3AD2A2B823288",
+        "ConfigSHA256": "4254E7C6E73DBCF101D067FF72A852D8492824CC4D45568B1251FD545255B8BC",
+        "ModSHA256": "absent",
+        "StartedUtc": "2026-10-18T01:17:50.3614800Z",
+        "frames": 1655,
+        "seconds": 45.009227299999985,
+        "meanMs": 27.195907734138974,
+        "averageFps": 36.77023799962015,
+        "p95Ms": 34.02608,
+        "p99Ms": 43.47049600000004,
+        "onePercentLowFps": 20.20140563757062,
+        "maxMs": 55.2203,
+        "over25MsPerMinute": 1628.9993052158002,
+        "over50MsPerMinute": 13.330599879016368,
+        "over100MsPerMinute": 0.0,
+        "focusedFrames": 1655,
+        "gc0": 12
+      },
+      {
+        "Id": "M3",
+        "Profile": "M",
+        "Block": 3,
+        "World": "PerfTest_Minimal_20261018_021946",
+        "WorldSHA256": "6BC3E3C031DCFF08CC05133CAB347963861FF87743EFB243D6E3AD2A2B823288",
+        "ConfigSHA256": "4254E7C6E73DBCF101D067FF72A852D8492824CC4D45568B1251FD545255B8BC",
+        "ModSHA256": "9739430D903E8803C6847CBF6809A12B16B2D4B3EAB1D1311E53F21A589E60C1",
+        "StartedUtc": "2026-10-18T01:19:46.6681429Z",
+        "frames": 3131,
+        "seconds": 45.00292919999997,
+        "meanMs": 14.37334053018205,
+        "averageFps": 69.57324902308808,
+        "p95Ms": 19.1015,
+        "p99Ms": 23.64777999999997,
+        "onePercentLowFps": 31.600000869000024,
+        "maxMs": 67.1075,
+        "over25MsPerMinute": 39.997396436141344,
+        "over50MsPerMinute": 2.6664930957427564,
+        "over100MsPerMinute": 0.0,
+        "focusedFrames": 3131,
+        "gc0": 8
+      },
+      {
+        "Id": "M4",
+        "Profile": "M",
+        "Block": 4,
+        "World": "PerfTest_Minimal_20261018_022143",
+        "WorldSHA256": "6BC3E3C031DCFF08CC05133CAB347963861FF87743EFB243D6E3AD2A2B823288",
+        "ConfigSHA256": "4254E7C6E73DBCF101D067FF72A852D8492824CC4D45568B1251FD545255B8BC",
+        "ModSHA256": "9739430D903E8803C6847CBF6809A12B16B2D4B3EAB1D1311E53F21A589E60C1",
+        "StartedUtc": "2026-10-18T01:21:43.2924677Z",
+        "frames": 3194,
+        "seconds": 45.00033559999983,
+        "meanMs": 14.089021790857858,
+        "averageFps": 70.97724844523187,
+        "p95Ms": 18.52096,
+        "p99Ms": 21.682358999999998,
+        "onePercentLowFps": 38.8997261094597,
+        "maxMs": 33.9871,
+        "over25MsPerMinute": 18.66652745585309,
+        "over50MsPerMinute": 0.0,
+        "over100MsPerMinute": 0.0,
+        "focusedFrames": 3194,
+        "gc0": 9
+      },
+      {
+        "Id": "N4",
+        "Profile": "N",
+        "Block": 4,
+        "World": "PerfTest_Minimal_20261018_022339",
+        "WorldSHA256": "6BC3E3C031DCFF08CC05133CAB347963861FF87743EFB243D6E3AD2A2B823288",
+        "ConfigSHA256": "4254E7C6E73DBCF101D067FF72A852D8492824CC4D45568B1251FD545255B8BC",
+        "ModSHA256": "absent",
+        "StartedUtc": "2026-10-18T01:23:39.3747650Z",
+        "frames": 1663,
+        "seconds": 45.00481579999997,
+        "meanMs": 27.062426819001804,
+        "averageFps": 36.951601077322955,
+        "p95Ms": 35.54618999999997,
+        "p99Ms": 42.98747999999999,
+        "onePercentLowFps": 21.226936933022273,
+        "maxMs": 57.6615,
+        "over25MsPerMinute": 1593.1628365869249,
+        "over50MsPerMinute": 2.6663813164634727,
+        "over100MsPerMinute": 0.0,
+        "focusedFrames": 1663,
+        "gc0": 12
+      },
+      {
+        "Id": "N5",
+        "Profile": "N",
+        "Block": 5,
+        "World": "PerfTest_Minimal_20261018_022534",
+        "WorldSHA256": "6BC3E3C031DCFF08CC05133CAB347963861FF87743EFB243D6E3AD2A2B823288",
+        "ConfigSHA256": "4254E7C6E73DBCF101D067FF72A852D8492824CC4D45568B1251FD545255B8BC",
+        "ModSHA256": "absent",
+        "StartedUtc": "2026-10-18T01:25:34.8721711Z",
+        "frames": 1656,
+        "seconds": 45.00805979999996,
+        "meanMs": 27.17878007246377,
+        "averageFps": 36.79341005496979,
+        "p95Ms": 34.422875000000005,
+        "p99Ms": 42.13745500000002,
+        "onePercentLowFps": 20.836877645364186,
+        "maxMs": 51.3158,
+        "over25MsPerMinute": 1609.0451426213237,
+        "over50MsPerMinute": 7.9985674032543015,
+        "over100MsPerMinute": 0.0,
+        "focusedFrames": 1656,
+        "gc0": 11
+      },
+      {
+        "Id": "M5",
+        "Profile": "M",
+        "Block": 5,
+        "World": "PerfTest_Minimal_20261018_022731",
+        "WorldSHA256": "6BC3E3C031DCFF08CC05133CAB347963861FF87743EFB243D6E3AD2A2B823288",
+        "ConfigSHA256": "4254E7C6E73DBCF101D067FF72A852D8492824CC4D45568B1251FD545255B8BC",
+        "ModSHA256": "9739430D903E8803C6847CBF6809A12B16B2D4B3EAB1D1311E53F21A589E60C1",
+        "StartedUtc": "2026-10-18T01:27:31.1830820Z",
+        "frames": 3146,
+        "seconds": 45.001298600000126,
+        "meanMs": 14.304290718372537,
+        "averageFps": 69.90909369002057,
+        "p95Ms": 19.070075,
+        "p99Ms": 22.737270000000006,
+        "onePercentLowFps": 36.213092775793534,
+        "maxMs": 34.6897,
+        "over25MsPerMinute": 27.99919200553907,
+        "over50MsPerMinute": 0.0,
+        "over100MsPerMinute": 0.0,
+        "focusedFrames": 3146,
+        "gc0": 9
+      },
+      {
+        "Id": "M6",
+        "Profile": "M",
+        "Block": 6,
+        "World": "PerfTest_Minimal_20261018_022927",
+        "WorldSHA256": "6BC3E3C031DCFF08CC05133CAB347963861FF87743EFB243D6E3AD2A2B823288",
+        "ConfigSHA256": "4254E7C6E73DBCF101D067FF72A852D8492824CC4D45568B1251FD545255B8BC",
+        "ModSHA256": "9739430D903E8803C6847CBF6809A12B16B2D4B3EAB1D1311E53F21A589E60C1",
+        "StartedUtc": "2026-10-18T01:29:27.3688239Z",
+        "frames": 3162,
+        "seconds": 45.00833929999987,
+        "meanMs": 14.234136401012018,
+        "averageFps": 70.2536474168468,
+        "p95Ms": 18.83443,
+        "p99Ms": 21.840739999999993,
+        "onePercentLowFps": 38.403738988027875,
+        "maxMs": 33.6299,
+        "over25MsPerMinute": 19.996294331170816,
+        "over50MsPerMinute": 0.0,
+        "over100MsPerMinute": 0.0,
+        "focusedFrames": 3162,
+        "gc0": 8
+      },
+      {
+        "Id": "N6",
+        "Profile": "N",
+        "Block": 6,
+        "World": "PerfTest_Minimal_20261018_023124",
+        "WorldSHA256": "6BC3E3C031DCFF08CC05133CAB347963861FF87743EFB243D6E3AD2A2B823288",
+        "ConfigSHA256": "4254E7C6E73DBCF101D067FF72A852D8492824CC4D45568B1251FD545255B8BC",
+        "ModSHA256": "absent",
+        "StartedUtc": "2026-10-18T01:31:24.2677771Z",
+        "frames": 1630,
+        "seconds": 45.01418989999996,
+        "meanMs": 27.616067423312884,
+        "averageFps": 36.21080382921656,
+        "p95Ms": 37.33389,
+        "p99Ms": 48.09105200000006,
+        "onePercentLowFps": 18.101480520091737,
+        "maxMs": 106.9617,
+        "over25MsPerMinute": 1624.820976729386,
+        "over50MsPerMinute": 15.994956292660076,
+        "over100MsPerMinute": 1.3329130243883396,
+        "focusedFrames": 1630,
+        "gc0": 11
+      }
+    ],
+    "effects": {
+      "N/M/meanMs": {
+        "matchedRuns": 6,
+        "geometricMeanChangePercent": -47.97851375658821,
+        "perRunChangePercent": [
+          -48.98180526502078,
+          -47.95278060726348,
+          -47.148884785561975,
+          -47.938808721451046,
+          -47.369636605342144,
+          -48.457047910464375
+        ],
+        "exploratoryBootstrap95Percent": [
+          -48.46559065382108,
+          -47.48918238424184
+        ],
+        "intervalNote": "Percentile bootstrap of matched log ratios, 10000 draws, seed 1000; assumes independent representative runs."
+      },
+      "N/M/p95Ms": {
+        "matchedRuns": 6,
+        "geometricMeanChangePercent": -47.06963523735032,
+        "perRunChangePercent": [
+          -49.68241656475868,
+          -46.53998738457638,
+          -43.86217865825272,
+          -47.896075500637295,
+          -44.60057447264356,
+          -49.551386153438585
+        ],
+        "exploratoryBootstrap95Percent": [
+          -48.808895860046746,
+          -45.24071386109847
+        ],
+        "intervalNote": "Percentile bootstrap of matched log ratios, 10000 draws, seed 1000; assumes independent representative runs."
+      },
+      "N/M/p99Ms": {
+        "matchedRuns": 6,
+        "geometricMeanChangePercent": -49.531351013933666,
+        "perRunChangePercent": [
+          -51.05950966344002,
+          -49.78559226108653,
+          -45.600390664969765,
+          -49.56122340737349,
+          -46.040239022503854,
+          -54.58460754819844
+        ],
+        "exploratoryBootstrap95Percent": [
+          -52.016682489324936,
+          -47.16896079948255
+        ],
+        "intervalNote": "Percentile bootstrap of matched log ratios, 10000 draws, seed 1000; assumes independent representative runs."
+      },
+      "N/M/averageFps": {
+        "matchedRuns": 6,
+        "geometricMeanChangePercent": 92.22826416779748,
+        "perRunChangePercent": [
+          96.00850347501202,
+          92.13322280566551,
+          89.21076611961772,
+          92.08165918631957,
+          90.00438824663317,
+          94.01294637972907
+        ],
+        "exploratoryBootstrap95Percent": [
+          90.43695097596537,
+          94.04510747034442
+        ],
+        "intervalNote": "Percentile bootstrap of matched log ratios, 10000 draws, seed 1000; assumes independent representative runs."
+      },
+      "N/M/onePercentLowFps": {
+        "matchedRuns": 6,
+        "geometricMeanChangePercent": 82.816941465522,
+        "perRunChangePercent": [
+          91.26189199217897,
+          84.6771138739583,
+          56.424762889916295,
+          83.25642664413,
+          73.79327839864848,
+          112.1579997028511
+        ],
+        "exploratoryBootstrap95Percent": [
+          69.52743181957698,
+          96.84141526845713
+        ],
+        "intervalNote": "Percentile bootstrap of matched log ratios, 10000 draws, seed 1000; assumes independent representative runs."
+      }
+    },
+    "flags": [],
+    "eligibleForPilotComparison": true,
+    "notes": [
+      "Negative meanMs/p99Ms changes favour the candidate; positive onePercentLowFps changes favour it.",
+      "No traces or frames are silently excluded. Flags must be resolved before interpreting effects.",
+      "N retains the other installed mods. Differences measure this mod's incremental effect on that stack.",
+      "Matching starting hashes do not prove equivalent simulation activity, view, settings or hardware; inspect receipts and screenshots.",
+      "Save-file timestamps detect writes; they do not detect aborted saves or CPU work before a write. Review native save logs too.",
+      "Stationary pilot runs establish no travel, construction, multiplayer or gameplay-equivalence claim."
+    ]
+  },
+  "native": {
+    "minimal-on": {
+      "Host": {
+        "passed": true,
+        "observations": [
+          {
+            "stage": "single-player",
+            "connections": 1,
+            "clientLeaves": 1,
+            "serverLeaves": 208279
+          },
+          {
+            "stage": "after-real-peer-join",
+            "connections": 2,
+            "clientLeaves": 208279,
+            "serverLeaves": 208279
+          },
+          {
+            "stage": "after-real-peer-disconnect",
+            "connections": 1,
+            "clientLeaves": 208279,
+            "serverLeaves": 208279
+          }
+        ],
+        "scope": "Actual second game process over loopback IP; join/disconnect, room-mirror restoration, real hull removal/restoration and local/remote geometry queries; not WAN/Steam transport coverage"
+      },
+      "Client-before": {
+        "passed": true,
+        "phase": "before",
+        "samples": 1027,
+        "mismatches": 0,
+        "clientLeaves": 208279,
+        "hullCount": 5264
+      },
+      "Client-removed": {
+        "passed": true,
+        "phase": "removed",
+        "samples": 1026,
+        "mismatches": 0,
+        "clientLeaves": 208272,
+        "hullCount": 5263
+      },
+      "Client-restored": {
+        "passed": true,
+        "phase": "restored",
+        "samples": 1027,
+        "mismatches": 0,
+        "clientLeaves": 208279,
+        "hullCount": 5264
+      },
+      "factory": {
+        "passed": true,
+        "rows": [
+          {
+            "scenario": 0,
+            "ice": 200,
+            "capacity": 1000.0,
+            "oneTickPowerInterruptions": false,
+            "comparedSteps": 3000,
+            "nativeProduced": 60.0011826,
+            "configuredProduced": 60.0011826,
+            "doubledProduced": 60.00099,
+            "nativeIce": 139.987183,
+            "configuredIce": 139.987183,
+            "doubledIce": 140.010071,
+            "maxDoubledDifference": 0.020191192626953125,
+            "nativeEvents": 3000,
+            "configuredEvents": 3000
+          },
+          {
+            "scenario": 1,
+            "ice": 1,
+            "capacity": 1000.0,
+            "oneTickPowerInterruptions": false,
+            "comparedSteps": 3000,
+            "nativeProduced": 1.0,
+            "configuredProduced": 1.0,
+            "doubledProduced": 1.0,
+            "nativeIce": 0.0,
+            "configuredIce": 0.0,
+            "doubledIce": 0.0,
+            "maxDoubledDifference": 0.02000012993812561,
+            "nativeEvents": 3000,
+            "configuredEvents": 3000
+          },
+          {
+            "scenario": 2,
+            "ice": 200,
+            "capacity": 0.03,
+            "oneTickPowerInterruptions": false,
+            "comparedSteps": 3000,
+            "nativeProduced": 0.03,
+            "configuredProduced": 0.03,
+            "doubledProduced": 0.03,
+            "nativeIce": 199.97,
+            "configuredIce": 199.97,
+            "doubledIce": 199.97,
+            "maxDoubledDifference": 0.019999999552965164,
+            "nativeEvents": 3000,
+            "configuredEvents": 3000
+          },
+          {
+            "scenario": 3,
+            "ice": 200,
+            "capacity": 1000.0,
+            "oneTickPowerInterruptions": true,
+            "comparedSteps": 3000,
+            "nativeProduced": 59.40117,
+            "configuredProduced": 59.40117,
+            "doubledProduced": 60.00099,
+            "nativeIce": 140.587311,
+            "configuredIce": 140.587311,
+            "doubledIce": 140.010071,
+            "maxDoubledDifference": 0.599822998046875,
+            "nativeEvents": 3000,
+            "configuredEvents": 3000
+          }
+        ],
+        "scope": "Actual native Mono machine methods: emitted untouched WritePowerRequest/Update oracle vs installed methods; native-rate intermediate state, output, power request and event-count equality. Doubled-step results are counterexample measurements, not equality passes; isolated machine, not full production chain."
+      },
+      "grid": {
+        "edits": 1000,
+        "mismatches": 0,
+        "untouchedNative": {
+          "iterationsPerBatch": 5000,
+          "batches": 7,
+          "medianMicrosecondsPerCall": 196.50726,
+          "samplesMicrosecondsPerCall": [
+            197.14408,
+            217.08924,
+            193.99913999999998,
+            202.4803,
+            191.28574,
+            196.50726,
+            191.58568
+          ]
+        },
+        "configured": {
+          "iterationsPerBatch": 5000,
+          "batches": 7,
+          "medianMicrosecondsPerCall": 0.0831,
+          "samplesMicrosecondsPerCall": [
+            0.08122,
+            0.08114,
+            0.0831,
+            0.08596000000000001,
+            0.08862,
+            0.08546000000000001,
+            0.08092
+          ]
+        },
+        "scope": "Synthetic grid mutation invokes installed native invalidation hooks; original emitted bounds oracle"
+      },
+      "fluids": {
+        "passed": true,
+        "steps": 128,
+        "comparisons": 25472,
+        "forcedTopologyRebuilds": 16,
+        "changedPartRates": 552,
+        "maxFlowError": 0.0,
+        "nativeTiming": {
+          "iterationsPerBatch": 200,
+          "batches": 7,
+          "medianMicrosecondsPerCall": 4064.8045,
+          "samplesMicrosecondsPerCall": [
+            3981.603,
+            4064.8045,
+            4121.029,
+            4096.1425,
+            4107.6134999999995,
+            3928.3140000000003,
+            4062.112
+          ]
+        },
+        "cachedTiming": {
+          "iterationsPerBatch": 200,
+          "batches": 7,
+          "medianMicrosecondsPerCall": 100.0465,
+          "samplesMicrosecondsPerCall": [
+            99.669,
+            100.0825,
+            100.791,
+            100.0465,
+            99.869,
+            100.0485,
+            99.696
+          ]
+        },
+        "scope": "Actual live native updater and loaded cable visuals: emitted untouched updater oracle vs installed topology cache. Identical content/material/colour/density/call counts; flow tolerance 1e-6; varying positive/zero/negative pump/electrolyzer/thruster/exhaust rates; repeated cache rebuilds. Presentation calls intercepted during comparison and CPU timing; timings exclude native material/animation work and are not full-frame savings. Not arbitrary cable editing coverage."
+      },
+      "batch-highlight": {
+        "passed": true,
+        "available": true,
+        "batchMode": false,
+        "graphicsApi": "Direct3D11",
+        "shipId": 14,
+        "partId": 2,
+        "restoredRenderers": 5,
+        "retainedColliders": 0,
+        "scope": "Actual installed batching restoration via native HighlightFloatingPart and RemoveFloatingPartHighlight calls; part object/state/attached collider identity retained. Component integration, not highlight pixel/hover-click acceptance."
+      },
+      "patches": {
+        "passed": true,
+        "owners": [
+          "stellarperformance.fluid-cable-topology",
+          "stellarperformance.incremental-rooms",
+          "stellarperformance.ship-grid-bounds",
+          "stellarperformance.ship-part-batching",
+          "stellarperformance.single-player-rooms"
+        ],
+        "rows": [
+          {
+            "method": "Ships.Cables.CablesVisuals.OnCableCreate",
+            "owners": [
+              "stellarperformance.fluid-cable-topology"
+            ]
+          },
+          {
+            "method": "Ships.Cables.CablesVisuals.OnCableDelete",
+            "owners": [
+              "stellarperformance.fluid-cable-topology"
+            ]
+          },
+          {
+            "method": "Ships.Cables.CablesVisuals.OnCableUpdate",
+            "owners": [
+              "stellarperformance.fluid-cable-topology"
+            ]
+          },
+          {
+            "method": "Ships.Cables.ConnectionsTracker.CreateConnection",
+            "owners": [
+              "stellarperformance.fluid-cable-topology"
+            ]
+          },
+          {
+            "method": "Ships.Cables.ConnectionsTracker.DeleteConnection",
+            "owners": [
+              "stellarperformance.fluid-cable-topology"
+            ]
+          },
+          {
+            "method": "Ships.Cables.ConnectionsTracker.OnShipStatefulPartAdded",
+            "owners": [
+              "stellarperformance.fluid-cable-topology"
+            ]
+          },
+          {
+            "method": "Ships.Cables.ConnectionsTracker.OnShipStatefulPartRemoved",
+            "owners": [
+              "stellarperformance.fluid-cable-topology"
+            ]
+          },
+          {
+            "method": "Ships.Cables.ConnectionsTracker.UpdateConnection",
+            "owners": [
+              "stellarperformance.fluid-cable-topology"
+            ]
+          },
+          {
+            "method": "Ships.Cables.Fluids.FluidCablesVisualUpdater.UpdateFluidCables",
+            "owners": [
+              "stellarperformance.fluid-cable-topology"
+            ]
+          },
+          {
+            "method": "Ships.Grid.ShipGrid.GetCoordBounds",
+            "owners": [
+              "stellarperformance.ship-grid-bounds"
+            ]
+          },
+          {
+            "method": "Ships.Grid.ShipGrid.RemoveHullPart",
+            "owners": [
+              "stellarperformance.ship-grid-bounds"
+            ]
+          },
+          {
+            "method": "Ships.Grid.ShipGrid.RemoveStatefulPart",
+            "owners": [
+              "stellarperformance.ship-grid-bounds"
+            ]
+          },
+          {
+            "method": "Ships.Grid.ShipGrid.SetPart",
+            "owners": [
+              "stellarperformance.ship-grid-bounds"
+            ]
+          },
+          {
+            "method": "Ships.Interface.Model.ShipState.AddStatefulPart",
+            "owners": [
+              "stellarperformance.fluid-cable-topology"
+            ]
+          },
+          {
+            "method": "Ships.Interface.Model.ShipState.AddStatefulPartWithoutInit",
+            "owners": [
+              "stellarperformance.fluid-cable-topology"
+            ]
+          },
+          {
+            "method": "Ships.Interface.Model.ShipState.RemoveStatefulPart",
+            "owners": [
+              "stellarperformance.fluid-cable-topology"
+            ]
+          },
+          {
+            "method": "Ships.Parts.Common.Services.ShipInteractionHoverToggler.HoverEnter",
+            "owners": [
+              "stellarperformance.ship-part-batching"
+            ]
+          },
+          {
+            "method": "Ships.Parts.Common.Services.ShipInteractionHoverToggler.HoverLeave",
+            "owners": [
+              "stellarperformance.ship-part-batching"
+            ]
+          },
+          {
+            "method": "Ships.Rooms.Model.ShipRoomsVoxelsTreeNode.AddWall",
+            "owners": [
+              "stellarperformance.incremental-rooms"
+            ]
+          },
+          {
+            "method": "Ships.Rooms.Model.ShipRoomsVoxelsTreeNode.RemoveWall",
+            "owners": [
+              "stellarperformance.incremental-rooms"
+            ]
+          },
+          {
+            "method": "Ships.Rooms.ShipRooms..ctor",
+            "owners": [
+              "stellarperformance.single-player-rooms"
+            ]
+          },
+          {
+            "method": "Ships.Rooms.ShipRooms.AddHullPart",
+            "owners": [
+              "stellarperformance.single-player-rooms"
+            ]
+          },
+          {
+            "method": "Ships.Rooms.ShipRooms.AddRelativeHullPart",
+            "owners": [
+              "stellarperformance.single-player-rooms"
+            ]
+          },
+          {
+            "method": "Ships.Rooms.ShipRooms.RemoveHullPart",
+            "owners": [
+              "stellarperformance.single-player-rooms"
+            ]
+          },
+          {
+            "method": "Ships.Rooms.ShipRooms.RemoveRelativeHullPart",
+            "owners": [
+              "stellarperformance.single-player-rooms"
+            ]
+          },
+          {
+            "method": "Ships.Rooms.ShipRooms.SampleRoomAtPosition",
+            "owners": [
+              "stellarperformance.single-player-rooms"
+            ]
+          },
+          {
+            "method": "Ships.Rooms.ShipRooms.UpdateRooms",
+            "owners": [
+              "stellarperformance.single-player-rooms"
+            ]
+          },
+          {
+            "method": "Ships.Rooms.ShipRoomsVoxelsTree.AddWall",
+            "owners": [
+              "stellarperformance.incremental-rooms"
+            ]
+          },
+          {
+            "method": "Ships.Rooms.ShipRoomsVoxelUpdater.UpdateRooms",
+            "owners": [
+              "stellarperformance.incremental-rooms"
+            ]
+          },
+          {
+            "method": "Ships.Rooms.Tests.ShipRoomGridVisualizer.Setup",
+            "owners": [
+              "stellarperformance.single-player-rooms"
+            ]
+          },
+          {
+            "method": "Ships.Rooms.Tests.ShipRoomGridVisualizer.Update",
+            "owners": [
+              "stellarperformance.single-player-rooms"
+            ]
+          },
+          {
+            "method": "Ships.Visuals.ShipPartVisuals.AddStatefulPart",
+            "owners": [
+              "stellarperformance.ship-part-batching"
+            ]
+          },
+          {
+            "method": "Ships.Visuals.ShipPartVisuals.HighlightFloatingPart",
+            "owners": [
+              "stellarperformance.ship-part-batching"
+            ]
+          },
+          {
+            "method": "Ships.Visuals.ShipPartVisuals.OnStatefulPartStateChange",
+            "owners": [
+              "stellarperformance.ship-part-batching"
+            ]
+          },
+          {
+            "method": "Ships.Visuals.ShipPartVisuals.RemoveFloatingPartHighlight",
+            "owners": [
+              "stellarperformance.ship-part-batching"
+            ]
+          },
+          {
+            "method": "Ships.Visuals.ShipPartVisuals.RemoveStatefulPart",
+            "owners": [
+              "stellarperformance.ship-part-batching"
+            ]
+          }
+        ],
+        "scope": "All live Harmony methods owned by this mod; removed patch families cannot be activated by saved keys"
+      },
+      "receipt": {
+        "OriginalFilesVerified": 171,
+        "SinglePlayerRooms": true,
+        "GraphicsHost": true,
+        "World": "PerfTest_MinimalPeer_20261018_023325",
+        "WorldSHA256": "6BC3E3C031DCFF08CC05133CAB347963861FF87743EFB243D6E3AD2A2B823288",
+        "PrivateLoaderRoot": "private/minimal-1.0.0/peer/instances/minimal-on",
+        "ShippingSha256": "9739430D903E8803C6847CBF6809A12B16B2D4B3EAB1D1311E53F21A589E60C1",
+        "RestoredInstallationSha256": "B01F3FC9D639AB8F38F9ACC711AA35158E3BD6EF21499C98ECDFC0B141A01627",
+        "DriverSha256": "3182760FE0B3776E6D6EAFB8FCB2C77CFCCC08389719DE123A92A1BBAFBA272F"
+      }
+    },
+    "minimal-off": {
+      "Host": {
+        "passed": true,
+        "observations": [
+          {
+            "stage": "single-player",
+            "connections": 1,
+            "clientLeaves": 208279,
+            "serverLeaves": 208279
+          },
+          {
+            "stage": "after-real-peer-join",
+            "connections": 2,
+            "clientLeaves": 208279,
+            "serverLeaves": 208279
+          },
+          {
+            "stage": "after-real-peer-disconnect",
+            "connections": 1,
+            "clientLeaves": 208279,
+            "serverLeaves": 208279
+          }
+        ],
+        "scope": "Actual second game process over loopback IP; join/disconnect, room-mirror restoration, real hull removal/restoration and local/remote geometry queries; not WAN/Steam transport coverage"
+      },
+      "Client-before": {
+        "passed": true,
+        "phase": "before",
+        "samples": 1027,
+        "mismatches": 0,
+        "clientLeaves": 208279,
+        "hullCount": 5264
+      },
+      "Client-removed": {
+        "passed": true,
+        "phase": "removed",
+        "samples": 1026,
+        "mismatches": 0,
+        "clientLeaves": 208272,
+        "hullCount": 5263
+      },
+      "Client-restored": {
+        "passed": true,
+        "phase": "restored",
+        "samples": 1027,
+        "mismatches": 0,
+        "clientLeaves": 208279,
+        "hullCount": 5264
+      },
+      "factory": {
+        "passed": true,
+        "rows": [
+          {
+            "scenario": 0,
+            "ice": 200,
+            "capacity": 1000.0,
+            "oneTickPowerInterruptions": false,
+            "comparedSteps": 3000,
+            "nativeProduced": 60.0011826,
+            "configuredProduced": 60.0011826,
+            "doubledProduced": 60.00099,
+            "nativeIce": 139.987183,
+            "configuredIce": 139.987183,
+            "doubledIce": 140.010071,
+            "maxDoubledDifference": 0.020191192626953125,
+            "nativeEvents": 3000,
+            "configuredEvents": 3000
+          },
+          {
+            "scenario": 1,
+            "ice": 1,
+            "capacity": 1000.0,
+            "oneTickPowerInterruptions": false,
+            "comparedSteps": 3000,
+            "nativeProduced": 1.0,
+            "configuredProduced": 1.0,
+            "doubledProduced": 1.0,
+            "nativeIce": 0.0,
+            "configuredIce": 0.0,
+            "doubledIce": 0.0,
+            "maxDoubledDifference": 0.02000012993812561,
+            "nativeEvents": 3000,
+            "configuredEvents": 3000
+          },
+          {
+            "scenario": 2,
+            "ice": 200,
+            "capacity": 0.03,
+            "oneTickPowerInterruptions": false,
+            "comparedSteps": 3000,
+            "nativeProduced": 0.03,
+            "configuredProduced": 0.03,
+            "doubledProduced": 0.03,
+            "nativeIce": 199.97,
+            "configuredIce": 199.97,
+            "doubledIce": 199.97,
+            "maxDoubledDifference": 0.019999999552965164,
+            "nativeEvents": 3000,
+            "configuredEvents": 3000
+          },
+          {
+            "scenario": 3,
+            "ice": 200,
+            "capacity": 1000.0,
+            "oneTickPowerInterruptions": true,
+            "comparedSteps": 3000,
+            "nativeProduced": 59.40117,
+            "configuredProduced": 59.40117,
+            "doubledProduced": 60.00099,
+            "nativeIce": 140.587311,
+            "configuredIce": 140.587311,
+            "doubledIce": 140.010071,
+            "maxDoubledDifference": 0.599822998046875,
+            "nativeEvents": 3000,
+            "configuredEvents": 3000
+          }
+        ],
+        "scope": "Actual native Mono machine methods: emitted untouched WritePowerRequest/Update oracle vs installed methods; native-rate intermediate state, output, power request and event-count equality. Doubled-step results are counterexample measurements, not equality passes; isolated machine, not full production chain."
+      },
+      "grid": {
+        "edits": 1000,
+        "mismatches": 0,
+        "untouchedNative": {
+          "iterationsPerBatch": 5000,
+          "batches": 7,
+          "medianMicrosecondsPerCall": 194.41176000000002,
+          "samplesMicrosecondsPerCall": [
+            198.87598,
+            194.4591,
+            194.0904,
+            193.37828000000002,
+            194.41176000000002,
+            199.3078,
+            193.15402
+          ]
+        },
+        "configured": {
+          "iterationsPerBatch": 5000,
+          "batches": 7,
+          "medianMicrosecondsPerCall": 0.08382,
+          "samplesMicrosecondsPerCall": [
+            0.08374,
+            0.08488,
+            0.08324,
+            0.08382,
+            0.0852,
+            0.08374,
+            0.08436
+          ]
+        },
+        "scope": "Synthetic grid mutation invokes installed native invalidation hooks; original emitted bounds oracle"
+      },
+      "fluids": {
+        "passed": true,
+        "steps": 128,
+        "comparisons": 25472,
+        "forcedTopologyRebuilds": 16,
+        "changedPartRates": 552,
+        "maxFlowError": 0.0,
+        "nativeTiming": {
+          "iterationsPerBatch": 200,
+          "batches": 7,
+          "medianMicrosecondsPerCall": 4097.5865,
+          "samplesMicrosecondsPerCall": [
+            4090.9495,
+            3935.2234999999996,
+            4097.5865,
+            4128.138,
+            4605.3695,
+            4025.3465,
+            4143.2245
+          ]
+        },
+        "cachedTiming": {
+          "iterationsPerBatch": 200,
+          "batches": 7,
+          "medianMicrosecondsPerCall": 101.44149999999999,
+          "samplesMicrosecondsPerCall": [
+            100.90549999999999,
+            101.21799999999999,
+            101.48899999999999,
+            101.2965,
+            101.44149999999999,
+            101.625,
+            101.704
+          ]
+        },
+        "scope": "Actual live native updater and loaded cable visuals: emitted untouched updater oracle vs installed topology cache. Identical content/material/colour/density/call counts; flow tolerance 1e-6; varying positive/zero/negative pump/electrolyzer/thruster/exhaust rates; repeated cache rebuilds. Presentation calls intercepted during comparison and CPU timing; timings exclude native material/animation work and are not full-frame savings. Not arbitrary cable editing coverage."
+      },
+      "batch-highlight": {
+        "passed": true,
+        "available": true,
+        "batchMode": false,
+        "graphicsApi": "Direct3D11",
+        "shipId": 14,
+        "partId": 2,
+        "restoredRenderers": 5,
+        "retainedColliders": 0,
+        "scope": "Actual installed batching restoration via native HighlightFloatingPart and RemoveFloatingPartHighlight calls; part object/state/attached collider identity retained. Component integration, not highlight pixel/hover-click acceptance."
+      },
+      "patches": {
+        "passed": true,
+        "owners": [
+          "stellarperformance.fluid-cable-topology",
+          "stellarperformance.incremental-rooms",
+          "stellarperformance.ship-grid-bounds",
+          "stellarperformance.ship-part-batching"
+        ],
+        "rows": [
+          {
+            "method": "Ships.Cables.CablesVisuals.OnCableCreate",
+            "owners": [
+              "stellarperformance.fluid-cable-topology"
+            ]
+          },
+          {
+            "method": "Ships.Cables.CablesVisuals.OnCableDelete",
+            "owners": [
+              "stellarperformance.fluid-cable-topology"
+            ]
+          },
+          {
+            "method": "Ships.Cables.CablesVisuals.OnCableUpdate",
+            "owners": [
+              "stellarperformance.fluid-cable-topology"
+            ]
+          },
+          {
+            "method": "Ships.Cables.ConnectionsTracker.CreateConnection",
+            "owners": [
+              "stellarperformance.fluid-cable-topology"
+            ]
+          },
+          {
+            "method": "Ships.Cables.ConnectionsTracker.DeleteConnection",
+            "owners": [
+              "stellarperformance.fluid-cable-topology"
+            ]
+          },
+          {
+            "method": "Ships.Cables.ConnectionsTracker.OnShipStatefulPartAdded",
+            "owners": [
+              "stellarperformance.fluid-cable-topology"
+            ]
+          },
+          {
+            "method": "Ships.Cables.ConnectionsTracker.OnShipStatefulPartRemoved",
+            "owners": [
+              "stellarperformance.fluid-cable-topology"
+            ]
+          },
+          {
+            "method": "Ships.Cables.ConnectionsTracker.UpdateConnection",
+            "owners": [
+              "stellarperformance.fluid-cable-topology"
+            ]
+          },
+          {
+            "method": "Ships.Cables.Fluids.FluidCablesVisualUpdater.UpdateFluidCables",
+            "owners": [
+              "stellarperformance.fluid-cable-topology"
+            ]
+          },
+          {
+            "method": "Ships.Grid.ShipGrid.GetCoordBounds",
+            "owners": [
+              "stellarperformance.ship-grid-bounds"
+            ]
+          },
+          {
+            "method": "Ships.Grid.ShipGrid.RemoveHullPart",
+            "owners": [
+              "stellarperformance.ship-grid-bounds"
+            ]
+          },
+          {
+            "method": "Ships.Grid.ShipGrid.RemoveStatefulPart",
+            "owners": [
+              "stellarperformance.ship-grid-bounds"
+            ]
+          },
+          {
+            "method": "Ships.Grid.ShipGrid.SetPart",
+            "owners": [
+              "stellarperformance.ship-grid-bounds"
+            ]
+          },
+          {
+            "method": "Ships.Interface.Model.ShipState.AddStatefulPart",
+            "owners": [
+              "stellarperformance.fluid-cable-topology"
+            ]
+          },
+          {
+            "method": "Ships.Interface.Model.ShipState.AddStatefulPartWithoutInit",
+            "owners": [
+              "stellarperformance.fluid-cable-topology"
+            ]
+          },
+          {
+            "method": "Ships.Interface.Model.ShipState.RemoveStatefulPart",
+            "owners": [
+              "stellarperformance.fluid-cable-topology"
+            ]
+          },
+          {
+            "method": "Ships.Parts.Common.Services.ShipInteractionHoverToggler.HoverEnter",
+            "owners": [
+              "stellarperformance.ship-part-batching"
+            ]
+          },
+          {
+            "method": "Ships.Parts.Common.Services.ShipInteractionHoverToggler.HoverLeave",
+            "owners": [
+              "stellarperformance.ship-part-batching"
+            ]
+          },
+          {
+            "method": "Ships.Rooms.Model.ShipRoomsVoxelsTreeNode.AddWall",
+            "owners": [
+              "stellarperformance.incremental-rooms"
+            ]
+          },
+          {
+            "method": "Ships.Rooms.Model.ShipRoomsVoxelsTreeNode.RemoveWall",
+            "owners": [
+              "stellarperformance.incremental-rooms"
+            ]
+          },
+          {
+            "method": "Ships.Rooms.ShipRoomsVoxelsTree.AddWall",
+            "owners": [
+              "stellarperformance.incremental-rooms"
+            ]
+          },
+          {
+            "method": "Ships.Rooms.ShipRoomsVoxelUpdater.UpdateRooms",
+            "owners": [
+              "stellarperformance.incremental-rooms"
+            ]
+          },
+          {
+            "method": "Ships.Visuals.ShipPartVisuals.AddStatefulPart",
+            "owners": [
+              "stellarperformance.ship-part-batching"
+            ]
+          },
+          {
+            "method": "Ships.Visuals.ShipPartVisuals.HighlightFloatingPart",
+            "owners": [
+              "stellarperformance.ship-part-batching"
+            ]
+          },
+          {
+            "method": "Ships.Visuals.ShipPartVisuals.OnStatefulPartStateChange",
+            "owners": [
+              "stellarperformance.ship-part-batching"
+            ]
+          },
+          {
+            "method": "Ships.Visuals.ShipPartVisuals.RemoveFloatingPartHighlight",
+            "owners": [
+              "stellarperformance.ship-part-batching"
+            ]
+          },
+          {
+            "method": "Ships.Visuals.ShipPartVisuals.RemoveStatefulPart",
+            "owners": [
+              "stellarperformance.ship-part-batching"
+            ]
+          }
+        ],
+        "scope": "All live Harmony methods owned by this mod; removed patch families cannot be activated by saved keys"
+      },
+      "receipt": {
+        "OriginalFilesVerified": 174,
+        "SinglePlayerRooms": false,
+        "GraphicsHost": true,
+        "World": "PerfTest_MinimalPeer_20261018_023436",
+        "WorldSHA256": "6BC3E3C031DCFF08CC05133CAB347963861FF87743EFB243D6E3AD2A2B823288",
+        "PrivateLoaderRoot": "private/minimal-1.0.0/peer/instances/minimal-off",
+        "ShippingSha256": "9739430D903E8803C6847CBF6809A12B16B2D4B3EAB1D1311E53F21A589E60C1",
+        "RestoredInstallationSha256": "B01F3FC9D639AB8F38F9ACC711AA35158E3BD6EF21499C98ECDFC0B141A01627",
+        "DriverSha256": "3182760FE0B3776E6D6EAFB8FCB2C77CFCCC08389719DE123A92A1BBAFBA272F"
+      }
+    },
+    "fluid-positive-control": {
+      "Host": {
+        "passed": true,
+        "observations": [
+          {
+            "stage": "single-player",
+            "connections": 1,
+            "clientLeaves": 1,
+            "serverLeaves": 208279
+          },
+          {
+            "stage": "after-real-peer-join",
+            "connections": 2,
+            "clientLeaves": 208279,
+            "serverLeaves": 208279
+          },
+          {
+            "stage": "after-real-peer-disconnect",
+            "connections": 1,
+            "clientLeaves": 208279,
+            "serverLeaves": 208279
+          }
+        ],
+        "scope": "Actual second game process over loopback IP; join/disconnect, room-mirror restoration, real hull removal/restoration and local/remote geometry queries; not WAN/Steam transport coverage"
+      },
+      "Client-before": {
+        "passed": true,
+        "phase": "before",
+        "samples": 1027,
+        "mismatches": 0,
+        "clientLeaves": 208279,
+        "hullCount": 5264
+      },
+      "Client-removed": {
+        "passed": true,
+        "phase": "removed",
+        "samples": 1026,
+        "mismatches": 0,
+        "clientLeaves": 208272,
+        "hullCount": 5263
+      },
+      "Client-restored": {
+        "passed": true,
+        "phase": "restored",
+        "samples": 1027,
+        "mismatches": 0,
+        "clientLeaves": 208279,
+        "hullCount": 5264
+      },
+      "factory": {
+        "passed": true,
+        "rows": [
+          {
+            "scenario": 0,
+            "ice": 200,
+            "capacity": 1000.0,
+            "oneTickPowerInterruptions": false,
+            "comparedSteps": 3000,
+            "nativeProduced": 60.0011826,
+            "configuredProduced": 60.0011826,
+            "doubledProduced": 60.00099,
+            "nativeIce": 139.987183,
+            "configuredIce": 139.987183,
+            "doubledIce": 140.010071,
+            "maxDoubledDifference": 0.020191192626953125,
+            "nativeEvents": 3000,
+            "configuredEvents": 3000
+          },
+          {
+            "scenario": 1,
+            "ice": 1,
+            "capacity": 1000.0,
+            "oneTickPowerInterruptions": false,
+            "comparedSteps": 3000,
+            "nativeProduced": 1.0,
+            "configuredProduced": 1.0,
+            "doubledProduced": 1.0,
+            "nativeIce": 0.0,
+            "configuredIce": 0.0,
+            "doubledIce": 0.0,
+            "maxDoubledDifference": 0.02000012993812561,
+            "nativeEvents": 3000,
+            "configuredEvents": 3000
+          },
+          {
+            "scenario": 2,
+            "ice": 200,
+            "capacity": 0.03,
+            "oneTickPowerInterruptions": false,
+            "comparedSteps": 3000,
+            "nativeProduced": 0.03,
+            "configuredProduced": 0.03,
+            "doubledProduced": 0.03,
+            "nativeIce": 199.97,
+            "configuredIce": 199.97,
+            "doubledIce": 199.97,
+            "maxDoubledDifference": 0.019999999552965164,
+            "nativeEvents": 3000,
+            "configuredEvents": 3000
+          },
+          {
+            "scenario": 3,
+            "ice": 200,
+            "capacity": 1000.0,
+            "oneTickPowerInterruptions": true,
+            "comparedSteps": 3000,
+            "nativeProduced": 59.40117,
+            "configuredProduced": 59.40117,
+            "doubledProduced": 60.00099,
+            "nativeIce": 140.587311,
+            "configuredIce": 140.587311,
+            "doubledIce": 140.010071,
+            "maxDoubledDifference": 0.599822998046875,
+            "nativeEvents": 3000,
+            "configuredEvents": 3000
+          }
+        ],
+        "scope": "Actual native Mono machine methods: emitted untouched WritePowerRequest/Update oracle vs installed methods; native-rate intermediate state, output, power request and event-count equality. Doubled-step results are counterexample measurements, not equality passes; isolated machine, not full production chain."
+      },
+      "grid": {
+        "edits": 1000,
+        "mismatches": 0,
+        "untouchedNative": {
+          "iterationsPerBatch": 5000,
+          "batches": 7,
+          "medianMicrosecondsPerCall": 196.67108000000002,
+          "samplesMicrosecondsPerCall": [
+            206.23932,
+            198.7018,
+            201.3918,
+            195.69552,
+            195.7788,
+            196.14306000000002,
+            196.67108000000002
+          ]
+        },
+        "configured": {
+          "iterationsPerBatch": 5000,
+          "batches": 7,
+          "medianMicrosecondsPerCall": 0.09632,
+          "samplesMicrosecondsPerCall": [
+            0.09016,
+            0.08907999999999999,
+            0.1066,
+            0.09898,
+            0.09812,
+            0.09014,
+            0.09632
+          ]
+        },
+        "scope": "Synthetic grid mutation invokes installed native invalidation hooks; original emitted bounds oracle"
+      },
+      "fluids": {
+        "passed": true,
+        "steps": 128,
+        "comparisons": 25472,
+        "nonzeroNativeFlows": 1792,
+        "distinctNativeFlowValues": 6,
+        "forcedTopologyRebuilds": 16,
+        "changedPartRates": 552,
+        "maxFlowError": 0.0,
+        "nativeTiming": {
+          "iterationsPerBatch": 200,
+          "batches": 7,
+          "medianMicrosecondsPerCall": 4100.8535,
+          "samplesMicrosecondsPerCall": [
+            4100.8535,
+            4088.3385,
+            3935.7554999999998,
+            4112.313,
+            4113.04,
+            4133.487,
+            4016.4604999999997
+          ]
+        },
+        "cachedTiming": {
+          "iterationsPerBatch": 200,
+          "batches": 7,
+          "medianMicrosecondsPerCall": 102.24549999999999,
+          "samplesMicrosecondsPerCall": [
+            102.53649999999999,
+            102.1085,
+            102.2535,
+            102.189,
+            102.24549999999999,
+            103.4225,
+            102.12799999999999
+          ]
+        },
+        "scope": "Actual live native updater and loaded cable visuals: emitted untouched updater oracle vs installed topology cache. Identical content/material/colour/density/call counts; flow tolerance 1e-6; varying positive/zero/negative pump/electrolyzer/thruster/exhaust rates; repeated cache rebuilds. Presentation calls intercepted during comparison and CPU timing; timings exclude native material/animation work and are not full-frame savings. Not arbitrary cable editing coverage."
+      },
+      "batch-highlight": {
+        "passed": true,
+        "available": true,
+        "batchMode": false,
+        "graphicsApi": "Direct3D11",
+        "shipId": 14,
+        "partId": 2,
+        "restoredRenderers": 5,
+        "retainedColliders": 0,
+        "scope": "Actual installed batching restoration via native HighlightFloatingPart and RemoveFloatingPartHighlight calls; part object/state/attached collider identity retained. Component integration, not highlight pixel/hover-click acceptance."
+      },
+      "patches": {
+        "passed": true,
+        "owners": [
+          "stellarperformance.fluid-cable-topology",
+          "stellarperformance.incremental-rooms",
+          "stellarperformance.ship-grid-bounds",
+          "stellarperformance.ship-part-batching",
+          "stellarperformance.single-player-rooms"
+        ],
+        "rows": [
+          {
+            "method": "Ships.Cables.CablesVisuals.OnCableCreate",
+            "owners": [
+              "stellarperformance.fluid-cable-topology"
+            ]
+          },
+          {
+            "method": "Ships.Cables.CablesVisuals.OnCableDelete",
+            "owners": [
+              "stellarperformance.fluid-cable-topology"
+            ]
+          },
+          {
+            "method": "Ships.Cables.CablesVisuals.OnCableUpdate",
+            "owners": [
+              "stellarperformance.fluid-cable-topology"
+            ]
+          },
+          {
+            "method": "Ships.Cables.ConnectionsTracker.CreateConnection",
+            "owners": [
+              "stellarperformance.fluid-cable-topology"
+            ]
+          },
+          {
+            "method": "Ships.Cables.ConnectionsTracker.DeleteConnection",
+            "owners": [
+              "stellarperformance.fluid-cable-topology"
+            ]
+          },
+          {
+            "method": "Ships.Cables.ConnectionsTracker.OnShipStatefulPartAdded",
+            "owners": [
+              "stellarperformance.fluid-cable-topology"
+            ]
+          },
+          {
+            "method": "Ships.Cables.ConnectionsTracker.OnShipStatefulPartRemoved",
+            "owners": [
+              "stellarperformance.fluid-cable-topology"
+            ]
+          },
+          {
+            "method": "Ships.Cables.ConnectionsTracker.UpdateConnection",
+            "owners": [
+              "stellarperformance.fluid-cable-topology"
+            ]
+          },
+          {
+            "method": "Ships.Cables.Fluids.FluidCablesVisualUpdater.UpdateFluidCables",
+            "owners": [
+              "stellarperformance.fluid-cable-topology"
+            ]
+          },
+          {
+            "method": "Ships.Grid.ShipGrid.GetCoordBounds",
+            "owners": [
+              "stellarperformance.ship-grid-bounds"
+            ]
+          },
+          {
+            "method": "Ships.Grid.ShipGrid.RemoveHullPart",
+            "owners": [
+              "stellarperformance.ship-grid-bounds"
+            ]
+          },
+          {
+            "method": "Ships.Grid.ShipGrid.RemoveStatefulPart",
+            "owners": [
+              "stellarperformance.ship-grid-bounds"
+            ]
+          },
+          {
+            "method": "Ships.Grid.ShipGrid.SetPart",
+            "owners": [
+              "stellarperformance.ship-grid-bounds"
+            ]
+          },
+          {
+            "method": "Ships.Interface.Model.ShipState.AddStatefulPart",
+            "owners": [
+              "stellarperformance.fluid-cable-topology"
+            ]
+          },
+          {
+            "method": "Ships.Interface.Model.ShipState.AddStatefulPartWithoutInit",
+            "owners": [
+              "stellarperformance.fluid-cable-topology"
+            ]
+          },
+          {
+            "method": "Ships.Interface.Model.ShipState.RemoveStatefulPart",
+            "owners": [
+              "stellarperformance.fluid-cable-topology"
+            ]
+          },
+          {
+            "method": "Ships.Parts.Common.Services.ShipInteractionHoverToggler.HoverEnter",
+            "owners": [
+              "stellarperformance.ship-part-batching"
+            ]
+          },
+          {
+            "method": "Ships.Parts.Common.Services.ShipInteractionHoverToggler.HoverLeave",
+            "owners": [
+              "stellarperformance.ship-part-batching"
+            ]
+          },
+          {
+            "method": "Ships.Rooms.Model.ShipRoomsVoxelsTreeNode.AddWall",
+            "owners": [
+              "stellarperformance.incremental-rooms"
+            ]
+          },
+          {
+            "method": "Ships.Rooms.Model.ShipRoomsVoxelsTreeNode.RemoveWall",
+            "owners": [
+              "stellarperformance.incremental-rooms"
+            ]
+          },
+          {
+            "method": "Ships.Rooms.ShipRooms..ctor",
+            "owners": [
+              "stellarperformance.single-player-rooms"
+            ]
+          },
+          {
+            "method": "Ships.Rooms.ShipRooms.AddHullPart",
+            "owners": [
+              "stellarperformance.single-player-rooms"
+            ]
+          },
+          {
+            "method": "Ships.Rooms.ShipRooms.AddRelativeHullPart",
+            "owners": [
+              "stellarperformance.single-player-rooms"
+            ]
+          },
+          {
+            "method": "Ships.Rooms.ShipRooms.RemoveHullPart",
+            "owners": [
+              "stellarperformance.single-player-rooms"
+            ]
+          },
+          {
+            "method": "Ships.Rooms.ShipRooms.RemoveRelativeHullPart",
+            "owners": [
+              "stellarperformance.single-player-rooms"
+            ]
+          },
+          {
+            "method": "Ships.Rooms.ShipRooms.SampleRoomAtPosition",
+            "owners": [
+              "stellarperformance.single-player-rooms"
+            ]
+          },
+          {
+            "method": "Ships.Rooms.ShipRooms.UpdateRooms",
+            "owners": [
+              "stellarperformance.single-player-rooms"
+            ]
+          },
+          {
+            "method": "Ships.Rooms.ShipRoomsVoxelsTree.AddWall",
+            "owners": [
+              "stellarperformance.incremental-rooms"
+            ]
+          },
+          {
+            "method": "Ships.Rooms.ShipRoomsVoxelUpdater.UpdateRooms",
+            "owners": [
+              "stellarperformance.incremental-rooms"
+            ]
+          },
+          {
+            "method": "Ships.Rooms.Tests.ShipRoomGridVisualizer.Setup",
+            "owners": [
+              "stellarperformance.single-player-rooms"
+            ]
+          },
+          {
+            "method": "Ships.Rooms.Tests.ShipRoomGridVisualizer.Update",
+            "owners": [
+              "stellarperformance.single-player-rooms"
+            ]
+          },
+          {
+            "method": "Ships.Visuals.ShipPartVisuals.AddStatefulPart",
+            "owners": [
+              "stellarperformance.ship-part-batching"
+            ]
+          },
+          {
+            "method": "Ships.Visuals.ShipPartVisuals.HighlightFloatingPart",
+            "owners": [
+              "stellarperformance.ship-part-batching"
+            ]
+          },
+          {
+            "method": "Ships.Visuals.ShipPartVisuals.OnStatefulPartStateChange",
+            "owners": [
+              "stellarperformance.ship-part-batching"
+            ]
+          },
+          {
+            "method": "Ships.Visuals.ShipPartVisuals.RemoveFloatingPartHighlight",
+            "owners": [
+              "stellarperformance.ship-part-batching"
+            ]
+          },
+          {
+            "method": "Ships.Visuals.ShipPartVisuals.RemoveStatefulPart",
+            "owners": [
+              "stellarperformance.ship-part-batching"
+            ]
+          }
+        ],
+        "scope": "All live Harmony methods owned by this mod; removed patch families cannot be activated by saved keys"
+      },
+      "receipt": {
+        "OriginalFilesVerified": 177,
+        "SinglePlayerRooms": true,
+        "GraphicsHost": true,
+        "World": "PerfTest_MinimalPeer_20261018_023558",
+        "WorldSHA256": "6BC3E3C031DCFF08CC05133CAB347963861FF87743EFB243D6E3AD2A2B823288",
+        "PrivateLoaderRoot": "private/minimal-1.0.0/peer/instances/fluid-positive-control",
+        "ShippingSha256": "9739430D903E8803C6847CBF6809A12B16B2D4B3EAB1D1311E53F21A589E60C1",
+        "RestoredInstallationSha256": "B01F3FC9D639AB8F38F9ACC711AA35158E3BD6EF21499C98ECDFC0B141A01627",
+        "DriverSha256": "A744C780C2A98BB84A9DF426012D8A853BAC0207F5E5AE5562F5EBA76935A9A7"
+      }
+    }
+  },
+  "installationRestoration": {
+    "Restored": true,
+    "OriginalFilesVerified": 157,
+    "OriginalWorldFilesVerified": 135,
+    "CompletedTraces": 12
+  },
+  "rawFileSha256": {
+    "runtime/evidence/M1-frames.csv": "58BCA2DF144CC3381BAC729D6953EB0AFB80A6E2A677A00676DD7B404E6B6CC6",
+    "runtime/evidence/M1-MelonLoader.log": "F3E198F6DCA092A533E50758856F70429A28ADD2828F40F7E579986378B8422F",
+    "runtime/evidence/M1-Player.log": "86B18E16732B6FED0EEBAC24A6927A1EBEF8ADB5370948A39B3CCD8C9CCB9F41",
+    "runtime/evidence/M1-preferences.cfg": "4254E7C6E73DBCF101D067FF72A852D8492824CC4D45568B1251FD545255B8BC",
+    "runtime/evidence/M1-view.png": "28F7CE5163D28B38BF05088C846B5C7557EACD40A638043CE68E7C0F92EB931F",
+    "runtime/evidence/M2-frames.csv": "FDA071EA1F73190C8E375C80C63D9F492F1F1B1AD9FE1E80AAF2EE6DD670A035",
+    "runtime/evidence/M2-MelonLoader.log": "6E71E99AE13A6751FDCDDE432FCD2EC7BC835D5606C58202F00099A7481F4722",
+    "runtime/evidence/M2-Player.log": "0BBAF91C04DA2A2CA94A9361285425F40846A459C0E6C1DE12D0D7FBB5C09DC9",
+    "runtime/evidence/M2-preferences.cfg": "4254E7C6E73DBCF101D067FF72A852D8492824CC4D45568B1251FD545255B8BC",
+    "runtime/evidence/M2-view.png": "532BA1CD649744BB3A5762781786E5C345FBE61493B373F9A585CA2C62BECC45",
+    "runtime/evidence/M3-frames.csv": "B2A63D4E03A75FFD1935D8F76D1053045CBC08C20734EC9871F8F473FF989978",
+    "runtime/evidence/M3-MelonLoader.log": "6E6BCB6622BAD70916BF8A68A1C5B8E710E47D2A145DCEE42BFED8B285B5A1E7",
+    "runtime/evidence/M3-Player.log": "7E2B9CA74852407DC04DEAF15A6EA0C3289B0EA3A0F45E7485C4038FE5F73574",
+    "runtime/evidence/M3-preferences.cfg": "4254E7C6E73DBCF101D067FF72A852D8492824CC4D45568B1251FD545255B8BC",
+    "runtime/evidence/M3-view.png": "2147B0D40912513A089943402C4CF343E940E3F0B4B9FD014422046AC3B5C59E",
+    "runtime/evidence/M4-frames.csv": "ED2CF3BCDE13A4C76AF9E7AC8FC1A5BBA052C3F5E4EE53DB661C02AE42BAF2E2",
+    "runtime/evidence/M4-MelonLoader.log": "1844D5F296DF292B775DDED18BDD7540EBA73EA39FC1E90680F41EEB87D91BC3",
+    "runtime/evidence/M4-Player.log": "8F3D5CDC9FF8697451B8E69CF8B39C47429FB52DA7FD7479A0C60EB88AF391F0",
+    "runtime/evidence/M4-preferences.cfg": "4254E7C6E73DBCF101D067FF72A852D8492824CC4D45568B1251FD545255B8BC",
+    "runtime/evidence/M4-view.png": "F18BA10C58B5C56D6A7DFCC2AC476E4A64BEF706CCC7696A637D2A03509714B6",
+    "runtime/evidence/M5-frames.csv": "E103F4BA9A295FB1225886E9D8CA0833A319D24BBEC7416B2F5F39DB68DFF674",
+    "runtime/evidence/M5-MelonLoader.log": "1CCB75517D1E285DDDA87D5DD6A0381CD411EA5899546D1E4F4E161B873C0FF4",
+    "runtime/evidence/M5-Player.log": "5CF1A3F4CD1F09C40EFD6EDC378B38AA26DA21F17D32D755F3CE32ACE79ED4E1",
+    "runtime/evidence/M5-preferences.cfg": "4254E7C6E73DBCF101D067FF72A852D8492824CC4D45568B1251FD545255B8BC",
+    "runtime/evidence/M5-view.png": "DAE8EF363E896490C0A2DB8A06FEE0DC6594E32538AA1BA378500EF35787708A",
+    "runtime/evidence/M6-frames.csv": "64B10D313C97509EAC948AEEC198C69360731308597969538FF7986E79009C24",
+    "runtime/evidence/M6-MelonLoader.log": "55D9004A970065B6D51DE7203EC679E46B44AFAE56BFAD16F5EE428813D4604F",
+    "runtime/evidence/M6-Player.log": "15A3087E4094720EF58A37C9EC02998ACFDE1E78B3DEF77F1220A71F2A9AD264",
+    "runtime/evidence/M6-preferences.cfg": "4254E7C6E73DBCF101D067FF72A852D8492824CC4D45568B1251FD545255B8BC",
+    "runtime/evidence/M6-view.png": "05D8BE6BF33561B9C0E426D3093A84B75F42B2B46AC57DC305885B62A5FBFCAB",
+    "runtime/evidence/N1-frames.csv": "2F07BEE92D4F1736FC818F95ACE3D48CDD1085E5B59C6C7E7D6B039D467547A9",
+    "runtime/evidence/N1-MelonLoader.log": "25F07792F243355A03277D8B8D524E91BCEA089C2D2913AD5D5F89E72A926964",
+    "runtime/evidence/N1-Player.log": "EAB57044FFE3B738ED5BE44E36F76AEB8E09E5AED878369AA7F91334C598AB81",
+    "runtime/evidence/N1-preferences.cfg": "4254E7C6E73DBCF101D067FF72A852D8492824CC4D45568B1251FD545255B8BC",
+    "runtime/evidence/N1-view.png": "0B85CC55500EA9ED6353ED074347487BA6370AD83F5ECF89BB2E72B665C73CD8",
+    "runtime/evidence/N2-frames.csv": "B6DAA7924053949727BC1A87C801AE4A5C220C4EA76A50D3D63452FC7F7AC442",
+    "runtime/evidence/N2-MelonLoader.log": "F00919D188DAC0B2566A94F422ACC6A058B5A1A4552FFFE14350253E481F030D",
+    "runtime/evidence/N2-Player.log": "E51FA0F24B616F15CD80810F076936383BD845F77BBCA55B478F2B6CD6519E04",
+    "runtime/evidence/N2-preferences.cfg": "4254E7C6E73DBCF101D067FF72A852D8492824CC4D45568B1251FD545255B8BC",
+    "runtime/evidence/N2-view.png": "5A399FFA0E34C1584783C1FB11B625333332A608BB1137B762CAEC8B59D8D884",
+    "runtime/evidence/N3-frames.csv": "030596B4D3D7AF44DD8CA65E518343EC2F9D1FD0CA0E3E7A24883B3796EDC6F9",
+    "runtime/evidence/N3-MelonLoader.log": "E7715327B419C08938FE4ABB21653F58CE497F0466BB9CC5EC637526B5F1F777",
+    "runtime/evidence/N3-Player.log": "E33EE6735782205F0E16F1221FF82E7789B4BF05EA0E8C0DA249F8C87F387420",
+    "runtime/evidence/N3-preferences.cfg": "4254E7C6E73DBCF101D067FF72A852D8492824CC4D45568B1251FD545255B8BC",
+    "runtime/evidence/N3-view.png": "1583A520AE7457D4FC4D8C12A2884DCE0E35EEDF2B93CA90B953FFD4CE211D89",
+    "runtime/evidence/N4-frames.csv": "745251D9846763D150499C9218E241A0DC4D925D1862F7A1829404F4B6844CD5",
+    "runtime/evidence/N4-MelonLoader.log": "52945F3D46F2739159C4751CDDACD78E799E0DA92BD4379DE2743EF9ED7EE953",
+    "runtime/evidence/N4-Player.log": "3C53A37E80D24403A44767F469A974C77BF22086D5E41C11DC949EC35C0BDAB1",
+    "runtime/evidence/N4-preferences.cfg": "4254E7C6E73DBCF101D067FF72A852D8492824CC4D45568B1251FD545255B8BC",
+    "runtime/evidence/N4-view.png": "D5682E0E5F46CA7A3C872EFFD298E0FAFBA4258EF37BA05EE1FB5862C44A24AE",
+    "runtime/evidence/N5-frames.csv": "681FD857CAE719C37F8DC77081AC75E23F36A9A233E80623528667CC00803F6E",
+    "runtime/evidence/N5-MelonLoader.log": "9031E86DB782B2FE15696F016C1CC3989CABE8615034279971E44D69DB1D32FC",
+    "runtime/evidence/N5-Player.log": "0AC719A50759415F6B47380DB8EF6C553D14639B4498420A33298D6D7C49B004",
+    "runtime/evidence/N5-preferences.cfg": "4254E7C6E73DBCF101D067FF72A852D8492824CC4D45568B1251FD545255B8BC",
+    "runtime/evidence/N5-view.png": "2161B88A83B28EC533F67CC6305A87AEBAF5E856B21B3F2D739DCC68C3471A11",
+    "runtime/evidence/N6-frames.csv": "4D6FEB71DFD52FC0C626A55B2C607E8EC9334C62399F96ADE43792F06F16B8DD",
+    "runtime/evidence/N6-MelonLoader.log": "F3224F787CA596E42F3FB4332CDE54DFBA125D633009C302338BAB016F3604F0",
+    "runtime/evidence/N6-Player.log": "CFFC1D98F46E4697D76E821ABD33C83E5E5C2F7B8836D3BF9EAF65809A48823A",
+    "runtime/evidence/N6-preferences.cfg": "4254E7C6E73DBCF101D067FF72A852D8492824CC4D45568B1251FD545255B8BC",
+    "runtime/evidence/N6-view.png": "7B6094E7313DBEE5D9D1BD4B4FE36762583DCB390F2234109E6C5EF93F59036F",
+    "runtime/evidence/runs.json": "E7FC43409B6E34C6131D0DE10FFF02874C2F1426274AB948ADDEAB836BEBA002",
+    "peer/evidence/fluid-positive-control-batch-highlight.json": "65F87192314DE7D892C7EBD0366F45A47E6650D928CFCE9B341B47DC4B91C1BB",
+    "peer/evidence/fluid-positive-control-Client-before.json": "9C6F2028CA1A88F2B80ADAF34673A29EEC43F706EB0D302A9D37BB44769926FA",
+    "peer/evidence/fluid-positive-control-Client-removed.json": "8000C7D3A1BED9285357335EB9990EF93CDA958CC2E644E951DB8D490FEF954E",
+    "peer/evidence/fluid-positive-control-Client-restored.json": "2C8971970136D496C56FDD9BA1501562AA320E5550635A64107BBB988FA09733",
+    "peer/evidence/fluid-positive-control-factory.json": "E1E7CBA5B27DE69A46642E97BFD2A4CE6913C2A01CB231D8A8B35D17374AC69C",
+    "peer/evidence/fluid-positive-control-fluids.json": "E4B3DB254E0FF004820CDFA8D2E140D846E176C2C8870AAC70EC0905FAD9C8F2",
+    "peer/evidence/fluid-positive-control-grid.json": "9722339195006D42D30F43AB936A8E33B962B2C3F9128128CE0B35E9A61EABFA",
+    "peer/evidence/fluid-positive-control-Host-ready.json": "6E02DC9353793DAC2E498C450EDE363CEF9FB1BE046B9727BADBACC68225A91A",
+    "peer/evidence/fluid-positive-control-Host.json": "476A2B034DAE52480DD6A85C7D51245638B3E63898633F5AB869D8C93C816497",
+    "peer/evidence/fluid-positive-control-patches.json": "234401B115E3F614994652E4C1DC9A85195AB2C7B36581295AEE95202641666B",
+    "peer/evidence/fluid-positive-control-phase-before.json": "C2C721F38A173E0B3E2ACE260C4C2609A364134B7D8B03221E4AC11F9CEF5545",
+    "peer/evidence/fluid-positive-control-phase-removed.json": "200762FBFD32C2B59958E53EB7C9741C865BB25724DFD4973E6305868C2D2AC6",
+    "peer/evidence/fluid-positive-control-phase-restored.json": "C2C721F38A173E0B3E2ACE260C4C2609A364134B7D8B03221E4AC11F9CEF5545",
+    "peer/evidence/fluid-positive-control-receipt.json": "B60A42D6EEDAB3C75F3434CA85D4CC0EFB52383E5B2795A7E56E66FDCDF25D8B",
+    "peer/evidence/minimal-off-batch-highlight.json": "65F87192314DE7D892C7EBD0366F45A47E6650D928CFCE9B341B47DC4B91C1BB",
+    "peer/evidence/minimal-off-Client-before.json": "9C6F2028CA1A88F2B80ADAF34673A29EEC43F706EB0D302A9D37BB44769926FA",
+    "peer/evidence/minimal-off-Client-removed.json": "8000C7D3A1BED9285357335EB9990EF93CDA958CC2E644E951DB8D490FEF954E",
+    "peer/evidence/minimal-off-Client-restored.json": "2C8971970136D496C56FDD9BA1501562AA320E5550635A64107BBB988FA09733",
+    "peer/evidence/minimal-off-factory.json": "E1E7CBA5B27DE69A46642E97BFD2A4CE6913C2A01CB231D8A8B35D17374AC69C",
+    "peer/evidence/minimal-off-fluids.json": "2A3C77537DA089AC1C52E83A80C10357BB41A0F73DB4FD1AEEFEA52E62251BE7",
+    "peer/evidence/minimal-off-grid.json": "9C771D4B5671295FA7B95EF1D0BB6A4455A7FC0ADF67BD54DAE979A35789CCDD",
+    "peer/evidence/minimal-off-Host-ready.json": "6E02DC9353793DAC2E498C450EDE363CEF9FB1BE046B9727BADBACC68225A91A",
+    "peer/evidence/minimal-off-Host.json": "2B05F19FB608B0AED4B535BE806AF773CBE0B00715E7D9C5081EA8BA54368FA0",
+    "peer/evidence/minimal-off-patches.json": "DDA3FF4374A1742DEDE2870556A661E5C1683A8C51DD36E79AA02E227A165985",
+    "peer/evidence/minimal-off-phase-before.json": "C2C721F38A173E0B3E2ACE260C4C2609A364134B7D8B03221E4AC11F9CEF5545",
+    "peer/evidence/minimal-off-phase-removed.json": "200762FBFD32C2B59958E53EB7C9741C865BB25724DFD4973E6305868C2D2AC6",
+    "peer/evidence/minimal-off-phase-restored.json": "C2C721F38A173E0B3E2ACE260C4C2609A364134B7D8B03221E4AC11F9CEF5545",
+    "peer/evidence/minimal-off-receipt.json": "7F7DCED1371F26C87A42E4E6061F8C09C3EEE7897D138F9902C5B0860D8CE990",
+    "peer/evidence/minimal-on-batch-highlight.json": "65F87192314DE7D892C7EBD0366F45A47E6650D928CFCE9B341B47DC4B91C1BB",
+    "peer/evidence/minimal-on-Client-before.json": "9C6F2028CA1A88F2B80ADAF34673A29EEC43F706EB0D302A9D37BB44769926FA",
+    "peer/evidence/minimal-on-Client-removed.json": "8000C7D3A1BED9285357335EB9990EF93CDA958CC2E644E951DB8D490FEF954E",
+    "peer/evidence/minimal-on-Client-restored.json": "2C8971970136D496C56FDD9BA1501562AA320E5550635A64107BBB988FA09733",
+    "peer/evidence/minimal-on-factory.json": "E1E7CBA5B27DE69A46642E97BFD2A4CE6913C2A01CB231D8A8B35D17374AC69C",
+    "peer/evidence/minimal-on-fluids.json": "B93CDA8D84C06E193AAD8F38AABA422C41BC97A624D528B5CB6D76E76AC16610",
+    "peer/evidence/minimal-on-grid.json": "19B648AC36B2AAF3D8EB98F40161A9CAF10D1C42A35C15628E7AB014171E3971",
+    "peer/evidence/minimal-on-Host-ready.json": "6E02DC9353793DAC2E498C450EDE363CEF9FB1BE046B9727BADBACC68225A91A",
+    "peer/evidence/minimal-on-Host.json": "476A2B034DAE52480DD6A85C7D51245638B3E63898633F5AB869D8C93C816497",
+    "peer/evidence/minimal-on-patches.json": "234401B115E3F614994652E4C1DC9A85195AB2C7B36581295AEE95202641666B",
+    "peer/evidence/minimal-on-phase-before.json": "C2C721F38A173E0B3E2ACE260C4C2609A364134B7D8B03221E4AC11F9CEF5545",
+    "peer/evidence/minimal-on-phase-removed.json": "200762FBFD32C2B59958E53EB7C9741C865BB25724DFD4973E6305868C2D2AC6",
+    "peer/evidence/minimal-on-phase-restored.json": "C2C721F38A173E0B3E2ACE260C4C2609A364134B7D8B03221E4AC11F9CEF5545",
+    "peer/evidence/minimal-on-receipt.json": "1E6117DA380133E4EBDF9274731F4EB5EB759B81DB5A62C2CE112DD1D6C0BCFD",
+    "dotnet-tests.txt": "DD9894736E33B6B0DF37B9B72A75A6E1D2CCB9279658CA19A987CE4C61F0ECFE",
+    "python-tests.txt": "F5F3CB95A6C5B1836D9ACD85D62A9B83B17C13167028D5703D4902A579F49E68",
+    "test-results/minimal.trx": "FF9BFBFA41E528139DC3A8C95EEFF78A26653A7F0CFB4FBEB106EE181E28DD97",
+    "runtime/ValidationPlugin.cs": "170B6E109A67511B928956EAEFCBD9364D52E660B5C9827F5BF93967BECD2E6F",
+    "peer/PeerDriver.cs": "67B63317B74C48D7D2F11D97F0AE8291C19E93FA6BE8789774CA9B17EE7A939A",
+    "peer/NativeExtras.cs": "0DAF71D92AA3BD7CE345BA2896DE58FE0AC62055AFD5A18003FDDDD7F7272461",
+    "world-retirement.json": "9E86F9536E8C22AA8C48728365FC338A9FED707E5AF3E9C4785A49F68C579BBB"
+  },
+  "rawEvidenceLocation": "Sibling private/minimal-1.0.0; drivers, original frame traces, logs, screenshots, configurations and receipts are preserved outside the repository.",
+  "worldRetirement": {
+    "Archived": 15,
+    "PreservedPreExisting": [],
+    "OriginalFilesVerified": 157,
+    "Moves": [
+      {
+        "World": "PerfTest_Minimal_20261018_021004",
+        "Source": "WorldSaves/PerfTest_Minimal_20261018_021004",
+        "Destination": "private/minimal-1.0.0/retired-worlds/PerfTest_Minimal_20261018_021004",
+        "WorldSHA256": "6BC3E3C031DCFF08CC05133CAB347963861FF87743EFB243D6E3AD2A2B823288"
+      },
+      {
+        "World": "PerfTest_Minimal_20261018_021200",
+        "Source": "WorldSaves/PerfTest_Minimal_20261018_021200",
+        "Destination": "private/minimal-1.0.0/retired-worlds/PerfTest_Minimal_20261018_021200",
+        "WorldSHA256": "6BC3E3C031DCFF08CC05133CAB347963861FF87743EFB243D6E3AD2A2B823288"
+      },
+      {
+        "World": "PerfTest_Minimal_20261018_021357",
+        "Source": "WorldSaves/PerfTest_Minimal_20261018_021357",
+        "Destination": "private/minimal-1.0.0/retired-worlds/PerfTest_Minimal_20261018_021357",
+        "WorldSHA256": "6BC3E3C031DCFF08CC05133CAB347963861FF87743EFB243D6E3AD2A2B823288"
+      },
+      {
+        "World": "PerfTest_Minimal_20261018_021553",
+        "Source": "WorldSaves/PerfTest_Minimal_20261018_021553",
+        "Destination": "private/minimal-1.0.0/retired-worlds/PerfTest_Minimal_20261018_021553",
+        "WorldSHA256": "6BC3E3C031DCFF08CC05133CAB347963861FF87743EFB243D6E3AD2A2B823288"
+      },
+      {
+        "World": "PerfTest_Minimal_20261018_021750",
+        "Source": "WorldSaves/PerfTest_Minimal_20261018_021750",
+        "Destination": "private/minimal-1.0.0/retired-worlds/PerfTest_Minimal_20261018_021750",
+        "WorldSHA256": "6BC3E3C031DCFF08CC05133CAB347963861FF87743EFB243D6E3AD2A2B823288"
+      },
+      {
+        "World": "PerfTest_Minimal_20261018_021946",
+        "Source": "WorldSaves/PerfTest_Minimal_20261018_021946",
+        "Destination": "private/minimal-1.0.0/retired-worlds/PerfTest_Minimal_20261018_021946",
+        "WorldSHA256": "6BC3E3C031DCFF08CC05133CAB347963861FF87743EFB243D6E3AD2A2B823288"
+      },
+      {
+        "World": "PerfTest_Minimal_20261018_022143",
+        "Source": "WorldSaves/PerfTest_Minimal_20261018_022143",
+        "Destination": "private/minimal-1.0.0/retired-worlds/PerfTest_Minimal_20261018_022143",
+        "WorldSHA256": "6BC3E3C031DCFF08CC05133CAB347963861FF87743EFB243D6E3AD2A2B823288"
+      },
+      {
+        "World": "PerfTest_Minimal_20261018_022339",
+        "Source": "WorldSaves/PerfTest_Minimal_20261018_022339",
+        "Destination": "private/minimal-1.0.0/retired-worlds/PerfTest_Minimal_20261018_022339",
+        "WorldSHA256": "6BC3E3C031DCFF08CC05133CAB347963861FF87743EFB243D6E3AD2A2B823288"
+      },
+      {
+        "World": "PerfTest_Minimal_20261018_022534",
+        "Source": "WorldSaves/PerfTest_Minimal_20261018_022534",
+        "Destination": "private/minimal-1.0.0/retired-worlds/PerfTest_Minimal_20261018_022534",
+        "WorldSHA256": "6BC3E3C031DCFF08CC05133CAB347963861FF87743EFB243D6E3AD2A2B823288"
+      },
+      {
+        "World": "PerfTest_Minimal_20261018_022731",
+        "Source": "WorldSaves/PerfTest_Minimal_20261018_022731",
+        "Destination": "private/minimal-1.0.0/retired-worlds/PerfTest_Minimal_20261018_022731",
+        "WorldSHA256": "6BC3E3C031DCFF08CC05133CAB347963861FF87743EFB243D6E3AD2A2B823288"
+      },
+      {
+        "World": "PerfTest_Minimal_20261018_022927",
+        "Source": "WorldSaves/PerfTest_Minimal_20261018_022927",
+        "Destination": "private/minimal-1.0.0/retired-worlds/PerfTest_Minimal_20261018_022927",
+        "WorldSHA256": "6BC3E3C031DCFF08CC05133CAB347963861FF87743EFB243D6E3AD2A2B823288"
+      },
+      {
+        "World": "PerfTest_Minimal_20261018_023124",
+        "Source": "WorldSaves/PerfTest_Minimal_20261018_023124",
+        "Destination": "private/minimal-1.0.0/retired-worlds/PerfTest_Minimal_20261018_023124",
+        "WorldSHA256": "6BC3E3C031DCFF08CC05133CAB347963861FF87743EFB243D6E3AD2A2B823288"
+      },
+      {
+        "World": "PerfTest_MinimalPeer_20261018_023325",
+        "Source": "WorldSaves/PerfTest_MinimalPeer_20261018_023325",
+        "Destination": "private/minimal-1.0.0/retired-worlds/PerfTest_MinimalPeer_20261018_023325",
+        "WorldSHA256": "6BC3E3C031DCFF08CC05133CAB347963861FF87743EFB243D6E3AD2A2B823288"
+      },
+      {
+        "World": "PerfTest_MinimalPeer_20261018_023436",
+        "Source": "WorldSaves/PerfTest_MinimalPeer_20261018_023436",
+        "Destination": "private/minimal-1.0.0/retired-worlds/PerfTest_MinimalPeer_20261018_023436",
+        "WorldSHA256": "6BC3E3C031DCFF08CC05133CAB347963861FF87743EFB243D6E3AD2A2B823288"
+      },
+      {
+        "World": "PerfTest_MinimalPeer_20261018_023558",
+        "Source": "WorldSaves/PerfTest_MinimalPeer_20261018_023558",
+        "Destination": "private/minimal-1.0.0/retired-worlds/PerfTest_MinimalPeer_20261018_023558",
+        "WorldSHA256": "6BC3E3C031DCFF08CC05133CAB347963861FF87743EFB243D6E3AD2A2B823288"
+      }
+    ]
+  }
+}

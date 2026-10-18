@@ -1,3 +1,22 @@
+# Stellar Performance 1.0.0
+
+Five features remain: exact grid bounds caching, fluid visual topology caching,
+incremental rooms, authoritative single-player room forwarding and guarded fixed-part
+mesh batching. Factory, circuit, picking, physics, UI and presentation rates are native.
+Fluid visuals read live state and update every frame. Room gas rounding can differ slightly.
+
+All other optimisation implementations and their settings were removed. Existing saved
+keys for removed features are ignored. Retained settings remain reversible; see
+[configuration](CONFIGURATION.md). See [benchmarks](BENCHMARKS.md) for the measured build,
+workload, results and behaviour limits. The release retains the measured build and its documented limits.
+
+Requires Windows, StellarDrive Demo 0.8.2 and MelonLoader 0.7.3. Close the game before
+installing the built DLL. SDModKit is optional.
+
+---
+
+## Historical release notes
+
 # Stellar Performance 0.9.0
 
 - Skips unchanged signal work and reuses cable connections to reduce repeated processing

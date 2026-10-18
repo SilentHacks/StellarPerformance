@@ -14,13 +14,26 @@ with `-p:GameDirectory="D:\Games\StellarDrive Demo"`, or set `STELLARDRIVE_GAME_
 An ignored `Directory.Build.local.props` can also set `GameDirectory` for this checkout.
 Shipping output is `src/StellarPerformance/bin/Release/net472/`.
 
-The offline suite has 280 cases: core tests pass 276 and explicitly skip four optional
-adapter cases. Core tests need only the inspected game and loader.
-To run the optional cases, install the inspected SDModKit 1.3.3 and
-Item Lines 0.1.2, then add `-p:IncludeOptionalModTests=true` to the test command. No runtime
-tests install Harmony detours on CoreCLR: they execute emitted method copies and stubs.
-A separate test inspects the actual net472 DLL, its loader metadata and embedded notices.
-Building and testing never deploy, launch, stop or attach to the game.
+The reduced 1.0.0 has 40 offline cases covering retained room, bounds,
+fluid topology, batching and shipping metadata contracts. Retired source and its old
+counterexamples are preserved in the private audit snapshot. The optional-mod test
+property remains available for local references; removed adapter tests are no longer
+part of the current suite. Tests execute emitted native method copies and stubs;
+they never install Harmony detours on CoreCLR. Building and testing never deploy,
+launch, stop or attach to the game.
+
+The standard-library raw-frame analysis tests run separately:
+
+```powershell
+python -m unittest discover -s tests -p 'test_*traces.py'
+```
+
+`CompareFrameTraces.py <manifest> --minimal` validates the five-feature N/M protocol.
+The historical N/S/D and feature-ablation analyzers remain for older audit data.
+Raw runtime drivers, logs, screenshots, saves and restoration receipts belong in
+sibling `private/`. [BENCHMARKS.md](BENCHMARKS.md) records the exact current DLL hash,
+run protocol and evidence scope. Passing offline tests does not establish unrestricted
+gameplay equivalence or a performance gain.
 
 The shipping project disables implicit source-link/Git queries and maps source paths so
 the same SDK and local references reproduce the DLL from a Git checkout or a source ZIP.

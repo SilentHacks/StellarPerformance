@@ -1,0 +1,347 @@
+{
+  "schemaVersion": 1,
+  "assessmentDate": "2026-10-17",
+  "candidateVersion": "0.9.0",
+  "sourceBaseRevision": "558444e",
+  "shippingCodeChanged": false,
+  "shippingDllSHA256": "4303607E772BBA28A0D6A50C895B16E7C98EE422A4F4625DD6DA32FE6895C279",
+  "releaseClaimsGate": "blocked-by-default-factory-cadence",
+  "claimA": {
+    "status": "supported-for-tested-stationary-scene",
+    "scope": "20-ship saved scene, existing optional-mod stack, one machine, three 45-second traces per profile; exploratory pilot",
+    "profiles": {
+      "N": {
+        "runs": 3,
+        "averageFpsRange": [
+          35.466074146787875,
+          36.55231637050613
+        ],
+        "medianRunAverageFps": 35.4791690157453,
+        "medianRunOnePercentLowFps": 20.119325202862527,
+        "medianRunP99Ms": 45.72466499999992
+      },
+      "S": {
+        "runs": 3,
+        "averageFpsRange": [
+          64.19650713937614,
+          64.48827295422862
+        ],
+        "medianRunAverageFps": 64.28139367838608,
+        "medianRunOnePercentLowFps": 38.443917482915,
+        "medianRunP99Ms": 21.062335999999995
+      },
+      "D": {
+        "runs": 3,
+        "averageFpsRange": [
+          82.1898838864472,
+          83.80697922260345
+        ],
+        "medianRunAverageFps": 83.15457691857915,
+        "medianRunOnePercentLowFps": 46.72564368994176,
+        "medianRunP99Ms": 18.219141999999998
+      }
+    },
+    "matchedEffects": {
+      "N/S/meanMs": {
+        "matchedRuns": 3,
+        "geometricMeanChangePercent": -44.29750130655066,
+        "perRunChangePercent": [
+          -43.319436703709385,
+          -44.82684316984084,
+          -44.733490034407815
+        ],
+        "exploratoryBootstrap95Percent": null,
+        "intervalNote": "Not estimated: fewer than six matched runs; report the observed differences as a pilot."
+      },
+      "N/S/p99Ms": {
+        "matchedRuns": 3,
+        "geometricMeanChangePercent": -53.37505149181128,
+        "perRunChangePercent": [
+          -55.12478874614584,
+          -51.34674032056872,
+          -53.57663180759773
+        ],
+        "exploratoryBootstrap95Percent": null,
+        "intervalNote": "Not estimated: fewer than six matched runs; report the observed differences as a pilot."
+      },
+      "N/S/onePercentLowFps": {
+        "matchedRuns": 3,
+        "geometricMeanChangePercent": 89.77080916120555,
+        "perRunChangePercent": [
+          99.68941663672537,
+          79.10963711653167,
+          91.07955706906759
+        ],
+        "exploratoryBootstrap95Percent": null,
+        "intervalNote": "Not estimated: fewer than six matched runs; report the observed differences as a pilot."
+      },
+      "N/D/meanMs": {
+        "matchedRuns": 3,
+        "geometricMeanChangePercent": -56.85747266428458,
+        "perRunChangePercent": [
+          -56.38511647888188,
+          -56.848613880769584,
+          -57.333474198919006
+        ],
+        "exploratoryBootstrap95Percent": null,
+        "intervalNote": "Not estimated: fewer than six matched runs; report the observed differences as a pilot."
+      },
+      "N/D/p99Ms": {
+        "matchedRuns": 3,
+        "geometricMeanChangePercent": -60.23878387056221,
+        "perRunChangePercent": [
+          -61.0536060129518,
+          -60.15467363183519,
+          -59.49260301648772
+        ],
+        "exploratoryBootstrap95Percent": null,
+        "intervalNote": "Not estimated: fewer than six matched runs; report the observed differences as a pilot."
+      },
+      "N/D/onePercentLowFps": {
+        "matchedRuns": 3,
+        "geometricMeanChangePercent": 139.26793426529272,
+        "perRunChangePercent": [
+          154.16407702910763,
+          133.17337351191455,
+          131.13215891133873
+        ],
+        "exploratoryBootstrap95Percent": null,
+        "intervalNote": "Not estimated: fewer than six matched runs; report the observed differences as a pilot."
+      },
+      "S/D/meanMs": {
+        "matchedRuns": 3,
+        "geometricMeanChangePercent": -22.548308697704776,
+        "perRunChangePercent": [
+          -23.051428947297648,
+          -21.789165966949565,
+          -22.79858846226347
+        ],
+        "exploratoryBootstrap95Percent": null,
+        "intervalNote": "Not estimated: fewer than six matched runs; report the observed differences as a pilot."
+      },
+      "S/D/p99Ms": {
+        "matchedRuns": 3,
+        "geometricMeanChangePercent": -14.721158088883385,
+        "perRunChangePercent": [
+          -13.211786866622866,
+          -18.10348036144046,
+          -12.743519997022135
+        ],
+        "exploratoryBootstrap95Percent": null,
+        "intervalNote": "Not estimated: fewer than six matched runs; report the observed differences as a pilot."
+      },
+      "S/D/onePercentLowFps": {
+        "matchedRuns": 3,
+        "geometricMeanChangePercent": 26.082581047562805,
+        "perRunChangePercent": [
+          27.2796932906477,
+          30.184716615894946,
+          20.96121765019254
+        ],
+        "exploratoryBootstrap95Percent": null,
+        "intervalNote": "Not estimated: fewer than six matched runs; report the observed differences as a pilot."
+      }
+    }
+  },
+  "claimB": {
+    "status": "counterexamples-with-current-defaults",
+    "knownDivergences": [
+      "missed one-tick pulse",
+      "half the per-evaluation feedback accumulation",
+      "pending factory time discarded on control transitions",
+      "different production under brief power outages"
+    ],
+    "stableSignalStateComparisons": 90000,
+    "stableSignalMismatches": 0,
+    "roomEditCheckpointsPerFixture": 512,
+    "roomMaximumNativeDensityDifferenceAtmospheres": 0.0007196366786956787,
+    "roomMaximumWeightedRuleErrorAtmospheres": 6.866037558506122e-07,
+    "approvedUniversalGameplayTolerance": null
+  },
+  "offlineOptional": {
+    "total": 298,
+    "passed": 298,
+    "failed": 0,
+    "notExecuted": 0
+  },
+  "offlineCore": {
+    "total": 298,
+    "passed": 294,
+    "failed": 0,
+    "notExecuted": 4
+  },
+  "rawFrameAnalysisTestsPassed": 7,
+  "restoration": {
+    "Restored": true,
+    "OriginalFilesVerified": 121,
+    "OriginalWorldFilesVerified": 99,
+    "CompletedTraces": 9
+  },
+  "runtimeFlags": [],
+  "exclusions": [
+    {
+      "reason": "driver startup overload-selection error",
+      "usablePerformanceEvidence": false
+    },
+    {
+      "reason": "save-observer compatibility conflict and hidden/unfocused rendering",
+      "usablePerformanceEvidence": false
+    },
+    {
+      "reason": "direct executable startup without Steam app context; loading screen",
+      "usablePerformanceEvidence": false
+    },
+    {
+      "id": "S2 original attempt",
+      "reason": "lost focus",
+      "frames": 2690,
+      "focusedFrames": 2588,
+      "wholeTraceRejected": true,
+      "rawEvidencePreserved": true
+    }
+  ],
+  "traceReceipts": [
+    {
+      "id": "N1",
+      "profile": "N",
+      "block": 1,
+      "startingWorldSHA256": "6BC3E3C031DCFF08CC05133CAB347963861FF87743EFB243D6E3AD2A2B823288",
+      "configurationSHA256": "4254E7C6E73DBCF101D067FF72A852D8492824CC4D45568B1251FD545255B8BC",
+      "framesSHA256": "58063756436BDDEEA6B2058028ECF3AC3BBAE37BEEAC2743831347AEEECA623C",
+      "loaderLogSHA256": "3915250448BC63E4C1F156C65F1C41622F9DA551B9661244F2E1D1C0E66F52AC",
+      "playerLogSHA256": "93375CB0140F22EEA25B4FA99966F8BED06E44A1EB5CCC03A23C1F389833A14B",
+      "frames": 1645,
+      "seconds": 45.003987800000054,
+      "averageFps": 36.55231637050613,
+      "onePercentLowFps": 20.12123636712261,
+      "p99Ms": 46.048863999999995
+    },
+    {
+      "id": "S1",
+      "profile": "S",
+      "block": 1,
+      "startingWorldSHA256": "6BC3E3C031DCFF08CC05133CAB347963861FF87743EFB243D6E3AD2A2B823288",
+      "configurationSHA256": "5765186A7E9859DB1033C84DEF2F599EC3017D43DF1971D0806A526E5C6D9EEE",
+      "framesSHA256": "39AD957DAEF3DD42D8031EC6FD69E509B78C384A7DADE0529388D0CBC00665A8",
+      "loaderLogSHA256": "AF18356D7D02C15F4638C9D54DE5CF230F3EF28520542C05C19BFEF84B58B37B",
+      "playerLogSHA256": "7B5BEE9899001EEC10C9186CD18CFEFEEC19FBF5E9E16BD442DB26EDF857211E",
+      "frames": 2902,
+      "seconds": 45.00042979999995,
+      "averageFps": 64.48827295422862,
+      "onePercentLowFps": 40.17997952160377,
+      "p99Ms": 20.664524999999998
+    },
+    {
+      "id": "D1",
+      "profile": "D",
+      "block": 1,
+      "startingWorldSHA256": "6BC3E3C031DCFF08CC05133CAB347963861FF87743EFB243D6E3AD2A2B823288",
+      "configurationSHA256": "4254E7C6E73DBCF101D067FF72A852D8492824CC4D45568B1251FD545255B8BC",
+      "framesSHA256": "65731FDA38C3C844F0C69EEC2ED86E25D64A4EA119E56D9DCA63EFE2F93CC6A5",
+      "loaderLogSHA256": "053A0A8737B8D4C0B753398F4A728B83AB830B645FAB30C6981921045E22BDEA",
+      "playerLogSHA256": "8262705D7B7199681AD4C3FAB61791C77361E64E9807C37468F063458A6694CE",
+      "frames": 3772,
+      "seconds": 45.00818470000002,
+      "averageFps": 83.80697922260345,
+      "onePercentLowFps": 51.14095469934233,
+      "p99Ms": 17.934372
+    },
+    {
+      "id": "D2",
+      "profile": "D",
+      "block": 2,
+      "startingWorldSHA256": "6BC3E3C031DCFF08CC05133CAB347963861FF87743EFB243D6E3AD2A2B823288",
+      "configurationSHA256": "4254E7C6E73DBCF101D067FF72A852D8492824CC4D45568B1251FD545255B8BC",
+      "framesSHA256": "A32AD33A7716CBD901D4885698388A2598E76556E4B63570AD4091FF923C15D3",
+      "loaderLogSHA256": "EE9AD4DE290303115C4A164B89ACD2112794040D06EC8BD9A7BCC6D3D4026AC8",
+      "playerLogSHA256": "7ACC3510E9FCA6066B9EE5F6EA0952F63499F512D07047FECC3BA85B25C755EC",
+      "frames": 3699,
+      "seconds": 45.005538699999924,
+      "averageFps": 82.1898838864472,
+      "onePercentLowFps": 46.72564368994176,
+      "p99Ms": 18.219141999999998
+    },
+    {
+      "id": "N2",
+      "profile": "N",
+      "block": 2,
+      "startingWorldSHA256": "6BC3E3C031DCFF08CC05133CAB347963861FF87743EFB243D6E3AD2A2B823288",
+      "configurationSHA256": "4254E7C6E73DBCF101D067FF72A852D8492824CC4D45568B1251FD545255B8BC",
+      "framesSHA256": "D582B858047CA58B43DEF3ADC97C237C6670E8A5CC75BBB6CE55AEAA83F48802",
+      "loaderLogSHA256": "2D82C73A1A1EE4C84BB4B52DE9987566073BA8E2EF121D5F22BCF777CA124B53",
+      "playerLogSHA256": "31B526860570856B67A4828D33ECAC6FC291372C6F04CE6D2DA38D7D754162FC",
+      "frames": 1596,
+      "seconds": 45.00075180000005,
+      "averageFps": 35.466074146787875,
+      "onePercentLowFps": 20.039013454318876,
+      "p99Ms": 45.72466499999992
+    },
+    {
+      "id": "S2",
+      "profile": "S",
+      "block": 2,
+      "startingWorldSHA256": "6BC3E3C031DCFF08CC05133CAB347963861FF87743EFB243D6E3AD2A2B823288",
+      "configurationSHA256": "5765186A7E9859DB1033C84DEF2F599EC3017D43DF1971D0806A526E5C6D9EEE",
+      "framesSHA256": "2B42AB53C73E33C52E7DBEC8474376B494822AA40D2BFD14A371337FB743AAE6",
+      "loaderLogSHA256": "96C56073FFB6E8B489663E3D91E88E70B390FDFDE6179EDB084CDF12CE6F2593",
+      "playerLogSHA256": "941762FC5D4B1E699617188E4D51B7F4A3DF61786318D280FD8A27A18CEE1689",
+      "frames": 2893,
+      "seconds": 45.00524699999994,
+      "averageFps": 64.28139367838608,
+      "onePercentLowFps": 35.8918042797635,
+      "p99Ms": 22.246539999999992
+    },
+    {
+      "id": "S3",
+      "profile": "S",
+      "block": 3,
+      "startingWorldSHA256": "6BC3E3C031DCFF08CC05133CAB347963861FF87743EFB243D6E3AD2A2B823288",
+      "configurationSHA256": "5765186A7E9859DB1033C84DEF2F599EC3017D43DF1971D0806A526E5C6D9EEE",
+      "framesSHA256": "6BFCDA54F951AC3633074DC71F42D00D62993199A26024DC6B22818728277BDA",
+      "loaderLogSHA256": "97C17DC8B2091211C300B57B2E0E5756E37388CFE4BBE01CCBDA914362FC2C1F",
+      "playerLogSHA256": "A3D0CEE979D08D2CA1649B4088A4A789C21E20A8B141CBBA57F0EA06522DD7AE",
+      "frames": 2889,
+      "seconds": 45.002448399999906,
+      "averageFps": 64.19650713937614,
+      "onePercentLowFps": 38.443917482915,
+      "p99Ms": 21.062335999999995
+    },
+    {
+      "id": "D3",
+      "profile": "D",
+      "block": 3,
+      "startingWorldSHA256": "6BC3E3C031DCFF08CC05133CAB347963861FF87743EFB243D6E3AD2A2B823288",
+      "configurationSHA256": "4254E7C6E73DBCF101D067FF72A852D8492824CC4D45568B1251FD545255B8BC",
+      "framesSHA256": "F31B73CCC60BE8FB39533D5BF0444713299739ECD9543EC6C178DFE2C368EC15",
+      "loaderLogSHA256": "8488B51F2AAACEAE291889339CC23EB3ED545BCDE4288DD3CFD56ED3A345AB6E",
+      "playerLogSHA256": "B92BDBF7BF7E14EC7921F0A43B583CC3EBF130DDC7878AA28F6EF9D574FF7930",
+      "frames": 3742,
+      "seconds": 45.00052960000002,
+      "averageFps": 83.15457691857915,
+      "onePercentLowFps": 46.502230699769235,
+      "p99Ms": 18.378253000000004
+    },
+    {
+      "id": "N3",
+      "profile": "N",
+      "block": 3,
+      "startingWorldSHA256": "6BC3E3C031DCFF08CC05133CAB347963861FF87743EFB243D6E3AD2A2B823288",
+      "configurationSHA256": "4254E7C6E73DBCF101D067FF72A852D8492824CC4D45568B1251FD545255B8BC",
+      "framesSHA256": "274EB219CA12A1B24D476BECB3C642822CD9BE1B50FCE0487E0DEA0B708CCEFD",
+      "loaderLogSHA256": "EB08F6382BA4027D5B876EED60A13C002740310E07C40DD1CB10061963FF68DB",
+      "playerLogSHA256": "A000C8CC5FEB6C94A91AAF11DEEB606E146C1186F4226833B0AC813DC2169DAF",
+      "frames": 1597,
+      "seconds": 45.01232820000005,
+      "averageFps": 35.4791690157453,
+      "onePercentLowFps": 20.119325202862527,
+      "p99Ms": 45.37011599999996
+    }
+  ],
+  "openCoverage": [
+    "real construction/doors and post-edit save/reload",
+    "long connected factory/fluid/feedback workloads",
+    "travel/docking/selection latency and broad graphics",
+    "real remote multiplayer peer",
+    "broader dependency and hardware combinations"
+  ]
+}

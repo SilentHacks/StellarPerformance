@@ -1,5 +1,14 @@
 # Releases and packaging
 
+## 1.0.0
+
+The reduced five-feature release uses the exact DLL measured in [current benchmarks](BENCHMARKS.md).
+See [settings](CONFIGURATION.md) and [release notes](RELEASE_NOTES.md). Historical publication
+receipts below refer to older tagged versions and their settings. The current package contains
+only `Mods/StellarPerformance.dll` and `mod.json`; notices are embedded in the DLL.
+The source commit, archive hash and installation/publication verification are recorded
+when the release is published.
+
 ## Published 0.9.0
 
 [Release v0.9.0](https://github.com/SilentHacks/StellarPerformance/releases/tag/v0.9.0)
@@ -22,7 +31,7 @@ were also verified:
 
 The ZIP contains only `Mods/StellarPerformance.dll` and `mod.json`. MIT and attribution
 notices are embedded in the DLL. GitHub's automatic source archives are not the installable
-asset. See [configuration](CONFIGURATION.md) and [validation](VALIDATION.md) for the
+asset. See the configuration and validation documents in the v0.9.0 tag for the
 factory-cadence tradeoff, upgrade settings and outstanding gameplay coverage.
 
 Publication did not deploy to the local game. Mod-listing submission has not been performed.

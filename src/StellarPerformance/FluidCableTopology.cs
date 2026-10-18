@@ -93,7 +93,6 @@ internal static class FluidCableTopology
         internal readonly Queue<SocketConnection> ToTraverse = new Queue<SocketConnection>();
         internal readonly HashSet<SocketConnection> Traversed = new HashSet<SocketConnection>();
         internal readonly HashSet<uint> VisitedCableIds = new HashSet<uint>();
-        internal readonly CableVisualCadence.Box NextValues = new CableVisualCadence.Box();
     }
 
     private static volatile int _topologyVersion = 1;
@@ -113,7 +112,7 @@ internal static class FluidCableTopology
         foreach (var name in new[] { "RecurseBuildNode", "RecurseBalanceIncomingFlow" })
             PatchSafety.RequireNoForeignOwners(AccessTools.Method(typeof(FluidCablesVisualUpdater), name), harmony.Id);
         PatchSafety.RequireNoForeignOwners(AccessTools.Method(typeof(ConnectionsTracker), nameof(ConnectionsTracker.GetRelayedSocketConnections)),
-            harmony.Id, "sdmodkit.itemcables", "stellarperformance.fluid-sockets");
+            harmony.Id, "sdmodkit.itemcables");
         if (AppDomain.CurrentDomain.GetAssemblies().Any(assembly => assembly.GetName().Name == "SDModKit") &&
             !Compatibility.Validate(new[] { "SDModKit" }, out var reason))
             throw new InvalidOperationException(reason);
@@ -134,7 +133,6 @@ internal static class FluidCableTopology
         }
         harmony.Patch(AccessTools.Method(typeof(FluidCablesVisualUpdater), nameof(FluidCablesVisualUpdater.UpdateFluidCables)) ?? throw new MissingMethodException("UpdateFluidCables"),
             prefix: new HarmonyMethod(typeof(FluidCableTopology), nameof(BeforeUpdateFluidCables)));
-        CableVisualUpdates.Install(harmony);
     }
 
     internal static void BumpTopologyVersion() => Interlocked.Increment(ref _topologyVersion);
@@ -152,14 +150,6 @@ internal static class FluidCableTopology
 
         var nodes = cache.Nodes;
         var cables = cache.Cables;
-        if (current && !CableVisualCadence.Due(cache.NextValues, Time.unscaledTime))
-        {
-            if (DiagnosticCounters.Active) CableVisualCadence.Reused++;
-            for (var i = 0; i < cables.Length; i++)
-                cables[i].Visual.UpdateFlow(cables[i].Flow);
-            return false;
-        }
-        if (DiagnosticCounters.Active) CableVisualCadence.Computed++;
         for (var i = 0; i < nodes.Length; i++)
         {
             nodes[i].FluidFlow = 0f;
@@ -189,16 +179,7 @@ internal static class FluidCableTopology
                 color = itemSettings.fluidColor;
                 if (itemSettings.isGas) mat = gasMat;
             }
-            var previousDefer = CableVisualUpdates.DeferDensityToFlow;
-            CableVisualUpdates.DeferDensityToFlow = slot.HasState;
-            try
-            {
-                slot.Visual.UpdateContent(mat, density, color);
-            }
-            finally
-            {
-                CableVisualUpdates.DeferDensityToFlow = previousDefer;
-            }
+            slot.Visual.UpdateContent(mat, density, color);
         }
         for (var i = 0; i < cables.Length; i++)
             cables[i].Visual.UpdateFlow(cables[i].Flow);
