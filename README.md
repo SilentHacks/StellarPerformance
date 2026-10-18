@@ -22,7 +22,7 @@ Six paired runs in the recorded 20-ship world measured **47.98% lower mean frame
 with median per-run FPS rising from **36.78 to 70.56** on the tested PC and mod stack.
 Scope, raw-evidence provenance and limits are in the [1.0.0 benchmark report](docs/BENCHMARKS.md).
 The [0.9.0 feature audit](docs/FEATURE_AUDIT.md) explains why the other features were removed;
-its old timings are historical and are not measurements of this candidate.
+its old timings are historical and are not measurements of this release.
 
 ## Install
 

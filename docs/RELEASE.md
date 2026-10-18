@@ -1,13 +1,35 @@
 # Releases and packaging
 
-## 1.0.0
+## Published 1.0.0
 
-The reduced five-feature release uses the exact DLL measured in [current benchmarks](BENCHMARKS.md).
-See [settings](CONFIGURATION.md) and [release notes](RELEASE_NOTES.md). Historical publication
-receipts below refer to older tagged versions and their settings. The current package contains
-only `Mods/StellarPerformance.dll` and `mod.json`; notices are embedded in the DLL.
-The source commit, archive hash and installation/publication verification are recorded
-when the release is published.
+[Release v1.0.0](https://github.com/SilentHacks/StellarPerformance/releases/tag/v1.0.0)
+was published on 2026-10-18 as the latest stable release, with
+[StellarPerformance.zip](https://github.com/SilentHacks/StellarPerformance/releases/download/v1.0.0/StellarPerformance.zip).
+The annotated tag identifies source commit `18d73828b588a32bc97272ac5320690d27854e25`.
+Later publication receipts on `main` do not change that release source or asset.
+
+The package rebuilt with zero warnings/errors and passed all 40 offline cases.
+The 15 frame-analysis tests also passed. Its DLL SHA-256 matches the exact build used
+for the twelve frame captures and three native sessions in [the benchmark report](BENCHMARKS.md).
+See [settings](CONFIGURATION.md) and [release notes](RELEASE_NOTES.md) for the five-feature
+profile and the documented atmosphere rounding allowance.
+
+The public asset was downloaded anonymously after publication. The complete ZIP,
+embedded DLL, manifest bytes/version and two allowlisted entries were verified:
+
+```text
+551E7DB173B3CAB3183F18B07CCDD8B2EB668613761D1CE52ABD4216F1A445A6  StellarPerformance.zip
+9739430D903E8803C6847CBF6809A12B16B2D4B3EAB1D1311E53F21A589E60C1  Mods/StellarPerformance.dll
+```
+
+The ZIP contains only `Mods/StellarPerformance.dll` and `mod.json`. Notices are embedded
+in the DLL; GitHub's automatic source archives are not the installable asset.
+
+The same DLL was installed locally with the game closed and its hash verified. The
+five features are enabled and continuous batching validation is off. Obsolete settings
+were removed from this mod's preference section; other categories were preserved.
+The previous DLL and preferences were backed up privately. Mod-listing submission is
+separate and was not performed.
 
 ## Published 0.9.0
 
