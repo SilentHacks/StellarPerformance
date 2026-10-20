@@ -32,7 +32,7 @@ See [settings and compatibility](docs/CONFIGURATION.md) for the five feature swi
 
 The 1.0.0 build measured 47.98% lower mean frame time across six paired runs in the recorded 20-ship world. Median per-run FPS rose from 36.78 to 70.56 on the tested PC and mod stack.
 
-These results describe that workload. Version 1.0.1 has no new performance measurements. Extended moving-scene, construction, docking and WAN/Steam multiplayer coverage remains incomplete.
+These results describe that workload. Version 1.0.1 has no new performance measurements.
 
 See the [benchmark evidence](docs/BENCHMARKS.md) and [validation limits](docs/VALIDATION.md).
 

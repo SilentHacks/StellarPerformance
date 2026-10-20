@@ -11,6 +11,6 @@ Install
 Close the game. Use Stellar Mod Manager, or extract StellarPerformance.zip into the game folder after installing the requirements.
 
 Compatibility
-Native simulation and visual refresh rates are retained. Room gas rounding can differ slightly. No new performance measurements; existing validation limits still apply.
+Native simulation and visual refresh rates are retained. Room gas rounding can differ slightly. No new performance measurements.
 
 Settings, benchmarks and validation details are in the repository README.

@@ -50,6 +50,5 @@ optional. Existing settings are preserved on upgrade; diagnostics default off.
 For manual installation, close the game and extract **StellarPerformance.zip** into
 the game directory.
 
-Performance varies by world. Extended building, travel and multiplayer coverage remains
-incomplete. See [settings and native-detail options](https://github.com/SilentHacks/StellarPerformance/blob/v0.9.0/docs/CONFIGURATION.md)
+Performance varies by world. See [settings and native-detail options](https://github.com/SilentHacks/StellarPerformance/blob/v0.9.0/docs/CONFIGURATION.md)
 and [validation details](https://github.com/SilentHacks/StellarPerformance/blob/v0.9.0/docs/VALIDATION.md).
