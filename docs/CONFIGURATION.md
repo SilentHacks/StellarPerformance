@@ -1,8 +1,7 @@
 # Configuration and compatibility
 
 Version 1.0.1 targets the inspected Windows StellarDrive Demo 0.8.2 / Unity
-6000.3.24f1 assemblies and MelonLoader 0.7.3. The mod-manager manifest requires
-SDModKit and Sandbox Menu. The shipping DLL retains its independent loading path;
+6000.3.24f1 assemblies and MelonLoader 0.7.3. There are no required mod dependencies. SDModKit support is optional and Sandbox Menu is not required;
 fluid topology checks SDModKit's inspected assembly identity when present and permits its known connection hook.
 
 Settings are in `[StellarPerformance]` in `UserData/MelonPreferences.cfg`. Close the

@@ -2,7 +2,7 @@
 
 ## 1.0.1
 
-- Declare SDModKit and Sandbox Menu dependencies for Stellar Mod Manager.
+- Correct the mod-manager manifest: no required mod dependencies; SDModKit support is optional.
 - Rewrite the manager description and release notes with short paragraphs and plain-text bullets.
 - Simplify the README and update installation requirements. Optimisation behaviour is unchanged.
 

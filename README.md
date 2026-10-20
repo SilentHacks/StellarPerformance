@@ -14,9 +14,9 @@ Simulation, physics, networking, picking and visual refresh rates stay native. R
 
 ## Install
 
-Requires Windows, StellarDrive Demo 0.8.2, MelonLoader 0.7.3, SDModKit and Sandbox Menu.
+Requires Windows, StellarDrive Demo 0.8.2, MelonLoader 0.7.3. SDModKit is optional; Sandbox Menu is not required.
 
-Install through Stellar Mod Manager. The manifest declares SDModKit and Sandbox Menu as dependencies.
+Install through Stellar Mod Manager. The mod has no required mod dependencies.
 
 For manual installation, close the game and install the requirements separately. Download StellarPerformance.zip from the [1.0.1 release](https://github.com/SilentHacks/StellarPerformance/releases/tag/v1.0.1) and extract it into the game folder. The DLL belongs at Mods/StellarPerformance.dll.
 
