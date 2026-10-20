@@ -2,7 +2,7 @@
 
 ## 1.0.1
 
-- Correct the mod-manager manifest: no required mod dependencies; SDModKit support is optional.
+- Fix unnecessary dependency prompts in Stellar Mod Manager.
 - Rewrite the manager description and release notes with short paragraphs and plain-text bullets.
 - Simplify the README and update installation requirements. Optimisation behaviour is unchanged.
 

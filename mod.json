@@ -3,7 +3,7 @@
   "name": "Stellar Performance",
   "version": "1.0.1",
   "author": "SilentHacks",
-  "description": "Five focused optimisations for smoother ship-heavy worlds.\n\n• Ship-grid bounds caching\n• Fluid cable topology caching\n• Local room rebuilding\n• Single-player room query reuse\n• Fixed-part mesh batching\n\nNative simulation and visual refresh rates. Reversible settings. Room gas rounding can differ slightly.\n\nRequires Demo 0.8.2, MelonLoader 0.7.3. SDModKit is optional.",
+  "description": "Five focused optimisations for smoother ship-heavy worlds.\n\n• Ship-grid bounds caching\n• Fluid cable topology caching\n• Local room rebuilding\n• Single-player room query reuse\n• Fixed-part mesh batching\n\nEach optimisation can be turned off in settings. Room gas rounding can differ slightly.\n\nRequires Demo 0.8.2 and MelonLoader 0.7.3.",
   "needs": [],
   "thumbnail": "assets/thumbnail.png",
   "images": [

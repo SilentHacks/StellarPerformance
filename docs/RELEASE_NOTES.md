@@ -2,11 +2,9 @@
 
 ## 1.0.1
 
-Removes required SDModKit and Sandbox Menu dependencies and improves the mod-manager description, release notes and README. Optimisation behaviour and settings are unchanged from 1.0.0. No new performance measurements were taken.
+Fixed unnecessary dependency prompts in Stellar Mod Manager.
 
-The root RELEASE_NOTES.md is the plain-text body used for GitHub releases and the mod manager. It uses short paragraphs and bullet characters because the manager displays release bodies without Markdown rendering.
-
-Requires Windows, StellarDrive Demo 0.8.2, MelonLoader 0.7.3. SDModKit is optional; Sandbox Menu is not required.
+Requires Windows, StellarDrive Demo 0.8.2 and MelonLoader 0.7.3.
 
 ## 1.0.0
 
