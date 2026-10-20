@@ -21,6 +21,8 @@ public sealed class ShippingArtifactTests
         var path = Path.Combine(root, "src", "StellarPerformance", "bin", configuration, "net472", "StellarPerformance.dll");
         using var manifest = JsonDocument.Parse(File.ReadAllText(Path.Combine(root, "mod.json")));
         var version = manifest.RootElement.GetProperty("version").GetString()!;
+        Assert.Equal(new[] { "sdmodkit", "sandbox_menu" },
+            manifest.RootElement.GetProperty("needs").EnumerateArray().Select(value => value.GetString()).ToArray());
         Assert.Equal(PerformancePlugin.Version, version);
         Assert.Equal(version + ".0", FileVersionInfo.GetVersionInfo(path).FileVersion);
         using var input = File.OpenRead(path);

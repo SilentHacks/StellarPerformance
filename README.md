@@ -1,49 +1,44 @@
-<img src="assets/thumbnail.png" alt="Stellar Performance" width="128" align="right">
-
 # Stellar Performance
 
-Performance improvements for StellarDrive Demo, reduced to a five-feature core for the
-1.0.0. Simulation, physics, network, picking, UI and visual refresh rates stay
-native. Room gas rounding can differ slightly.
+Five focused optimisations for StellarDrive Demo. Version 1.0.1 updates mod-manager dependencies and presentation; optimisation behaviour is unchanged from 1.0.0.
 
-## What it does
+## Features
 
-- Caches ship grid bounds and invalidates them on native grid mutations.
-- Caches fluid cable visual topology, recomputing live flows and native visuals every frame.
-- Rebuilds edited room regions locally, retaining native wall/gas handling.
-- Uses authoritative room queries for single-player hosts, restoring the local mirror for peers and debug views.
-- Batches inspected fixed opaque part meshes, with compatibility guards and native-renderer restoration for interactions.
+- Ship-grid bounds caching.
+- Fluid cable topology caching, with live visual updates every frame.
+- Local room rebuilding after edits.
+- Single-player reuse of authoritative room queries.
+- Fixed-part mesh batching with compatibility guards.
 
-The earlier factory cadence, stable-signal skipping, picking throttle, visual caps,
-UI throttling and other secondary caches have been removed. Old saved keys cannot
-reactivate them. Five feature switches and one batching compatibility option remain.
-
-Six paired runs in the recorded 20-ship world measured **47.98% lower mean frame time**,
-with median per-run FPS rising from **36.78 to 70.56** on the tested PC and mod stack.
-Scope, raw-evidence provenance and limits are in the [1.0.0 benchmark report](docs/BENCHMARKS.md).
-The [0.9.0 feature audit](docs/FEATURE_AUDIT.md) explains why the other features were removed;
-its old timings are historical and are not measurements of this release.
+Simulation, physics, networking, picking and visual refresh rates stay native. Room gas rounding can differ slightly. Settings are reversible, and unsupported modules retain native paths.
 
 ## Install
 
-**Windows | StellarDrive Demo 0.8.2 | MelonLoader 0.7.3**
+Requires Windows, StellarDrive Demo 0.8.2, MelonLoader 0.7.3, SDModKit and Sandbox Menu.
 
-Download [StellarPerformance.zip](https://github.com/SilentHacks/StellarPerformance/releases/download/v1.0.0/StellarPerformance.zip), close the game, and extract it into the game directory.
-The DLL should be at `Mods/StellarPerformance.dll`. SDModKit is optional.
-To uninstall, close the game and remove the DLL.
+Install through Stellar Mod Manager. The manifest declares SDModKit and Sandbox Menu as dependencies.
 
-See the [development guide](docs/DEVELOPMENT.md) to build from source and
-[release notes](docs/RELEASE_NOTES.md) for upgrade details.
+For manual installation, close the game and install the requirements separately. Download StellarPerformance.zip from the [1.0.1 release](https://github.com/SilentHacks/StellarPerformance/releases/tag/v1.0.1) and extract it into the game folder. The DLL belongs at Mods/StellarPerformance.dll.
 
-## Settings and help
+To uninstall, close the game and remove that DLL.
 
-Settings are under `[StellarPerformance]` in `UserData/MelonPreferences.cfg`.
-Changes require a restart.
+## Settings
 
-- [Settings and compatibility](docs/CONFIGURATION.md)
-- [Validation and known limits](docs/VALIDATION.md)
-- [Current benchmark evidence](docs/BENCHMARKS.md)
-- [Historical pre-1.0.0 claims audit](docs/CLAIMS_AUDIT.md)
+Edit the StellarPerformance section in UserData/MelonPreferences.cfg, then restart the game. Diagnostics default off.
+
+See [settings and compatibility](docs/CONFIGURATION.md) for the five feature switches and the batching compatibility option. Removed pre-1.0 settings are ignored.
+
+## Performance and limits
+
+The 1.0.0 build measured 47.98% lower mean frame time across six paired runs in the recorded 20-ship world. Median per-run FPS rose from 36.78 to 70.56 on the tested PC and mod stack.
+
+These results describe that workload. Version 1.0.1 has no new performance measurements. Extended moving-scene, construction, docking and WAN/Steam multiplayer coverage remains incomplete.
+
+See the [benchmark evidence](docs/BENCHMARKS.md) and [validation limits](docs/VALIDATION.md).
+
+## More information
+
+- [Release notes](docs/RELEASE_NOTES.md)
 - [Changelog](CHANGELOG.md)
-
-Licensed under [MIT](LICENSE). See [credits](CREDITS.md).
+- [Build from source](docs/DEVELOPMENT.md)
+- [Credits](CREDITS.md) and [MIT license](LICENSE)

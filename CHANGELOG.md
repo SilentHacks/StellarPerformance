@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.1
+
+- Declare SDModKit and Sandbox Menu dependencies for Stellar Mod Manager.
+- Rewrite the manager description and release notes with short paragraphs and plain-text bullets.
+- Simplify the README and update installation requirements. Optimisation behaviour is unchanged.
+
 ## 1.0.0
 
 - Reduce the mod to grid bounds, fluid visual topology, incremental rooms, single-player room forwarding and guarded fixed-part mesh batching.

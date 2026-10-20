@@ -11,7 +11,7 @@ namespace StellarPerformance;
 
 public sealed class PerformancePlugin : MelonMod
 {
-    internal const string Version = "1.0.0";
+    internal const string Version = "1.0.1";
     private readonly List<string> _installed = new List<string>();
 
     public override void OnLateInitializeMelon()
