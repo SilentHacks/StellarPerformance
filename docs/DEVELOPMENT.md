@@ -14,13 +14,25 @@ with `-p:GameDirectory="D:\Games\StellarDrive Demo"`, or set `STELLARDRIVE_GAME_
 An ignored `Directory.Build.local.props` can also set `GameDirectory` for this checkout.
 Shipping output is `src/StellarPerformance/bin/Release/net472/`.
 
-The reduced 1.0.0 has 40 offline cases covering retained room, bounds,
-fluid topology, batching and shipping metadata contracts. Retired source and its old
+The 2.0.0 build has 83 offline cases covering retained room, bounds,
+fluid topology, batching recovery, native replication serialization, reliable queue
+ownership/order/capacity, signal union mutation/order, conservative canvas envelopes,
+infinite-far camera projections, preset policies, visual cadence, atmosphere/cloud
+depth scheduling and shipping metadata contracts. The depth regression executes
+copies of the inspected URP input-summary and depth-copy scheduler for all four
+affected passes: reduced contours must copy depth after opaques, before the sky
+effects, without requesting normals or a geometry prepass. Repeated transitions
+back to native must remove the added dependency. Retired source and its old
 counterexamples are preserved in the private audit snapshot. The optional-mod test
 property remains available for local references; removed adapter tests are no longer
 part of the current suite. Tests execute emitted native method copies and stubs;
 they never install Harmony detours on CoreCLR. Building and testing never deploy,
 launch, stop or attach to the game.
+Replication tests use the native generated inventory-slot writer and compare
+complete native payloads, including float bits, existing wire precision, every
+slot/vector field, unknown/malformed types and interaction/pickup exceptions.
+Native integration and frame evidence are separate from these offline passes;
+see [replication validation](REPLICATION_DEDUPLICATION.md).
 
 The standard-library raw-frame analysis tests run separately:
 

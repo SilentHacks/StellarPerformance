@@ -12,15 +12,16 @@ public sealed class DiagnosticCounterCollection { }
 public sealed class CoreContractTests
 {
     [Fact]
-    public void EntryPointExposesOnlyFiveFeaturesAndTheBatchingGuard()
+    public void EntryPointExposesReviewedFeaturesAndExplicitDiagnostics()
     {
         var body = ManagedMethod.Instructions(AccessTools.Method(typeof(PerformancePlugin), nameof(PerformancePlugin.OnLateInitializeMelon)));
         var keys = body.Where(i => i.operand is MethodInfo m && m.Name == "CreateEntry").ToArray();
-        Assert.Equal(6, keys.Length);
+        Assert.Equal(12, keys.Length);
         var literals = body.Select(i => i.operand).OfType<string>().ToArray();
-        foreach (var name in new[] { "ShipGridBounds", "FluidCableTopology", "IncrementalRooms", "SinglePlayerRooms", "ShipPartBatching", "BatchingContinuousValidation" })
+        foreach (var name in new[] { "ShipGridBounds", "FluidCableTopology", "IncrementalRooms", "SinglePlayerRooms", "ShipPartBatching", "BatchingContinuousValidation", "DistillerReplication", "PartReplicationDeduplication", "ReliableTransport", "NetworkCaptureSeconds", "SignalConnectionScan", "CanvasCulling" })
             Assert.Contains(name, literals);
-        Assert.Null(typeof(PerformancePlugin).GetMethod("OnUpdate", BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly));
+        var update = ManagedMethod.Instructions(AccessTools.Method(typeof(PerformancePlugin), nameof(PerformancePlugin.OnUpdate)));
+        Assert.Contains(update, i => i.operand is MethodInfo m && m.DeclaringType == typeof(PresetSelector) && m.Name == "Update");
     }
 
     [Fact]
@@ -44,7 +45,7 @@ public sealed class CoreContractTests
     [Fact]
     public void RetainedPrivateBindingsHaveGuardedInitialization()
     {
-        foreach (var type in new[] { typeof(ShipGridBounds), typeof(FluidCableTopology), typeof(IncrementalRooms), typeof(SinglePlayerRooms), typeof(ShipPartBatching) })
+        foreach (var type in new[] { typeof(ShipGridBounds), typeof(FluidCableTopology), typeof(IncrementalRooms), typeof(SinglePlayerRooms), typeof(ShipPartBatching), typeof(ReplicationDeduplication), typeof(ReliableTransport), typeof(CanvasCulling), typeof(SceneOutlines), typeof(VisualCadence) })
             Assert.False((type.Attributes & TypeAttributes.BeforeFieldInit) != 0, type.Name);
     }
 }

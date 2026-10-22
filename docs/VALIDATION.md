@@ -1,6 +1,32 @@
-# Current 1.0.0
+# Current 2.0.0 release candidate
 
-The mod now contains only five features. Current tests, native evidence, performance
+The release candidate retains the corrected single-player preset implementation
+and adds offline scheduling regressions for every affected atmosphere/cloud pass.
+The suite has 83 cases. Release preparation checks the manifest, shipping version
+and minimal archive separately; it does not run the game or establish new gameplay
+or FPS claims. The native preset evidence and reference-PC measurements remain in
+[live presets](PRESETS.md).
+
+The [live presets and selector](PRESETS.md) retain the development
+defaults as Balanced and require no restart/reload/reconnect for preset changes.
+Their native switching, text/exhaust, room, mixed-preset and one-sided peer checks
+are documented separately from historical released-build claims. Those peer checks
+predate the 22 October redesign of Performance/Aggressive, which was validated in
+single-player sessions only.
+
+The replication expansion has separate
+[correctness, native peer and performance evidence](REPLICATION_DEDUPLICATION.md).
+It adds 11 inspected types to the existing distiller filter, retaining native
+calculations, server callbacks and genuine native updates. Targeted machine update
+bytes fall substantially; the three paired frame runs establish no dependable new
+FPS or frame-tail improvement in the stationary saved world.
+
+The batching recovery implementation has separate
+[native checks and measurements](BATCH_RECOVERY.md).
+Networking and signal changes have separate
+[native evidence and acceptance limits](SCALE_OPTIMISATION.md).
+
+The released 1.0.0 mod contains five features. Its tests, native evidence, performance
 measurements and remaining limits are recorded in [BENCHMARKS.md](BENCHMARKS.md).
 The earlier counts, approximations and capture hotkeys below describe historical builds;
 removed features cannot be enabled in the new DLL.
@@ -143,3 +169,23 @@ an explicitly started capture. Do not infer FPS gains from skip counts or offlin
 It flags incomplete reports, mismatched modes/workloads/durations, save activity and
 unavailable counters. Its summary averages per-capture summaries; percentiles and 1% lows
 are not pooled. Keep raw evidence private and report only the result supported by it.
+
+## Unreleased canvas culling, 2026-10-21
+
+The final canvas slice passed 59 offline cases and a native acceptance pass covering
+camera/FOV/viewport movement, a second rendering camera, moving visual ships,
+focused/dragged text controls and current glyphs, construction/removal/destruction,
+root resizing, cleanup/re-discovery, tracking limits and exception fallback. Native
+single-player host RPCs exercised real placement, writing with an exact authoritative
+constant value, pickup/replacement, removal and piloting. An independent render-time
+oracle checked 302,592 hidden-graphic samples; 109 immediate canvas operations preserved
+raw authoritative state. These are scripted native callbacks, not a manual input or
+remote-client acceptance claim.
+
+Two fresh stationary triplets measured +27.01% FPS above the same current DLL with
+culling inactive. A separate timed movement triplet measured +26.30%. Diagnostics
+were absent from those traces; all retained focus and recorded no saves at native
+50 Hz ticks. See [canvas culling](CANVAS_CULLING.md) for exact hashes, protocol,
+hardware, ownership limits and the compact evidence. Original installation files
+and existing worlds were restored and verified. These gains are not additive with
+the older batching, networking or full-mod comparisons.

@@ -23,6 +23,20 @@ public sealed class IncrementalRoomTests
     private readonly ITestOutputHelper _output;
     public IncrementalRoomTests(ITestOutputHelper output) => _output = output;
 
+    [Fact]
+    public void AlternatingNativeAndOptimizedEditsReuseRoomStateWithoutGeometryLoss()
+    {
+        var (native, mixed) = Pair(8);
+        var edit = new[] { new Vector3Int(4, 4, 4) };
+        for (var i = 0; i < 256; i++)
+        {
+            mixed.Optimized = i % 4 < 2;
+            native.Edit(edit); mixed.Edit(edit); Equivalent(native, mixed, .002f);
+            mixed.Optimized = !mixed.Optimized;
+            native.Edit(remove: edit); mixed.Edit(remove: edit); Equivalent(native, mixed, .002f);
+        }
+    }
+
     [Theory]
     [InlineData(8, 256)]
     [InlineData(40, 256)]
@@ -66,7 +80,7 @@ public sealed class IncrementalRoomTests
         internal readonly ShipRoomsVoxelsTree Tree = new();
         internal readonly ShipRoomsGases Gases = new();
         internal readonly ShipRoomsVoxelUpdater Updater;
-        internal readonly bool Optimized;
+        internal bool Optimized;
         internal readonly float Atmosphere;
         internal World(bool optimized, float atmosphere = 1)
         {

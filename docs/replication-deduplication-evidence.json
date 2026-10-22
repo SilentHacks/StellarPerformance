@@ -1,0 +1,400 @@
+{
+  "scope": "Incremental replication expansion against the previous canvas-culling build on the same 37-ship stationary saved view and installed mod stack. Three fresh-process pairs, order B/C, C/B, B/C; all retained focused frames, no save writes, diagnostics absent, native 50 Hz. One machine/workload; no general confidence interval or broad FPS claim.",
+  "protocol": {
+    "pairs": 3,
+    "warmupSeconds": 35,
+    "captureSeconds": 30
+  },
+  "summaryMedians": {
+    "baseline": {
+      "fps": 64.83201400184839,
+      "meanMs": 15.424478406169667,
+      "p95Ms": 18.6762,
+      "p99Ms": 24.5696,
+      "low1Fps": 36.20938093583717
+    },
+    "candidate": {
+      "fps": 64.9321188862697,
+      "meanMs": 15.400698716632457,
+      "p95Ms": 18.8821,
+      "p99Ms": 24.6273,
+      "low1Fps": 35.191128575789094
+    }
+  },
+  "pairedFpsChangePercent": 0.10741224270949257,
+  "pairedMeanFrameTimeChangePercent": -0.10729699260337844,
+  "pairs": [
+    {
+      "pair": 1,
+      "baseline": {
+        "label": "Bench-1-B",
+        "frames": 1966,
+        "meanMs": 15.260320244150599,
+        "fps": 65.52942428474317,
+        "p95Ms": 18.2828,
+        "p99Ms": 24.5696,
+        "low1Fps": 35.343563620832754,
+        "unfocused": 0,
+        "saveWriteDuringTrace": false,
+        "nativeTickRate": 50,
+        "modSHA256": "F7F5D8C9F23569814C410C8231FA905D4D385C7ABCAE67E8A21D37F92F7A9024",
+        "driverSHA256": "165F06209B1FAFF8B9C2C590B94BEBA895C823ACFB89B1BCCE2B3EA861CD7502",
+        "worldSHA256": "D97D4D83AB0E3E90693ED66D57A00FE5158BB2ED5881FCD829ACB5DF9EC9D47C",
+        "traceSHA256": "C08BA5B3612CA357E75E83F8545D1282FC7181861981E7AFFCF5928519F74694"
+      },
+      "candidate": {
+        "label": "Bench-1-C",
+        "frames": 1948,
+        "meanMs": 15.401025616016433,
+        "fps": 64.9307406488592,
+        "p95Ms": 18.9118,
+        "p99Ms": 24.6273,
+        "low1Fps": 35.191128575789094,
+        "unfocused": 0,
+        "saveWriteDuringTrace": false,
+        "nativeTickRate": 50,
+        "modSHA256": "B4F9A5598733815684476A6F7340E41B63102364CD0D7546AB920F8135ED25FF",
+        "driverSHA256": "165F06209B1FAFF8B9C2C590B94BEBA895C823ACFB89B1BCCE2B3EA861CD7502",
+        "worldSHA256": "D97D4D83AB0E3E90693ED66D57A00FE5158BB2ED5881FCD829ACB5DF9EC9D47C",
+        "traceSHA256": "7BBE75AFB850F5F5DF3A7C2576DFFC3714E21E9BC6401F20D36DE50F8E09CCEC"
+      },
+      "fpsChangePercent": -0.9136104008521828
+    },
+    {
+      "pair": 2,
+      "baseline": {
+        "label": "Bench-2-B",
+        "frames": 1929,
+        "meanMs": 15.560423691031641,
+        "fps": 64.26560226482502,
+        "p95Ms": 18.7884,
+        "p99Ms": 24.8762,
+        "low1Fps": 36.20938093583717,
+        "unfocused": 0,
+        "saveWriteDuringTrace": false,
+        "nativeTickRate": 50,
+        "modSHA256": "F7F5D8C9F23569814C410C8231FA905D4D385C7ABCAE67E8A21D37F92F7A9024",
+        "driverSHA256": "165F06209B1FAFF8B9C2C590B94BEBA895C823ACFB89B1BCCE2B3EA861CD7502",
+        "worldSHA256": "D97D4D83AB0E3E90693ED66D57A00FE5158BB2ED5881FCD829ACB5DF9EC9D47C",
+        "traceSHA256": "ED67D72EACFE5E6E7734C2F2F6FBE25475DF6147220518DCE9AD5538879235DE"
+      },
+      "candidate": {
+        "label": "Bench-2-C",
+        "frames": 1950,
+        "meanMs": 15.392415538461552,
+        "fps": 64.96706105037678,
+        "p95Ms": 18.5089,
+        "p99Ms": 24.203,
+        "low1Fps": 35.93106077568731,
+        "unfocused": 0,
+        "saveWriteDuringTrace": false,
+        "nativeTickRate": 50,
+        "modSHA256": "B4F9A5598733815684476A6F7340E41B63102364CD0D7546AB920F8135ED25FF",
+        "driverSHA256": "165F06209B1FAFF8B9C2C590B94BEBA895C823ACFB89B1BCCE2B3EA861CD7502",
+        "worldSHA256": "D97D4D83AB0E3E90693ED66D57A00FE5158BB2ED5881FCD829ACB5DF9EC9D47C",
+        "traceSHA256": "421DA1EE7DC0FBD6B55CE0B1B96C8336C94B62C2613CF75018DEB8147A43BC00"
+      },
+      "fpsChangePercent": 1.0914995904981906
+    },
+    {
+      "pair": 3,
+      "baseline": {
+        "label": "Bench-3-B",
+        "frames": 1945,
+        "meanMs": 15.424478406169667,
+        "fps": 64.83201400184839,
+        "p95Ms": 18.6762,
+        "p99Ms": 24.1963,
+        "low1Fps": 36.30262017027075,
+        "unfocused": 0,
+        "saveWriteDuringTrace": false,
+        "nativeTickRate": 50,
+        "modSHA256": "F7F5D8C9F23569814C410C8231FA905D4D385C7ABCAE67E8A21D37F92F7A9024",
+        "driverSHA256": "165F06209B1FAFF8B9C2C590B94BEBA895C823ACFB89B1BCCE2B3EA861CD7502",
+        "worldSHA256": "D97D4D83AB0E3E90693ED66D57A00FE5158BB2ED5881FCD829ACB5DF9EC9D47C",
+        "traceSHA256": "3FC877629BA44B03BB9874023E385D833251FE7D172487BD26E1DC95C3074B62"
+      },
+      "candidate": {
+        "label": "Bench-3-C",
+        "frames": 1948,
+        "meanMs": 15.400698716632457,
+        "fps": 64.9321188862697,
+        "p95Ms": 18.8821,
+        "p99Ms": 25.0566,
+        "low1Fps": 33.15395878334743,
+        "unfocused": 0,
+        "saveWriteDuringTrace": false,
+        "nativeTickRate": 50,
+        "modSHA256": "B4F9A5598733815684476A6F7340E41B63102364CD0D7546AB920F8135ED25FF",
+        "driverSHA256": "165F06209B1FAFF8B9C2C590B94BEBA895C823ACFB89B1BCCE2B3EA861CD7502",
+        "worldSHA256": "D97D4D83AB0E3E90693ED66D57A00FE5158BB2ED5881FCD829ACB5DF9EC9D47C",
+        "traceSHA256": "CAB203863C15B9B480A376915B53CBD56A0DA46FC56E78F465CB305347E5C74B"
+      },
+      "fpsChangePercent": 0.1544065628108715
+    }
+  ],
+  "candidateSHA256": "B4F9A5598733815684476A6F7340E41B63102364CD0D7546AB920F8135ED25FF",
+  "baselineSHA256": "F7F5D8C9F23569814C410C8231FA905D4D385C7ABCAE67E8A21D37F92F7A9024",
+  "preservation": {
+    "filesVerifiedPerRun": 157,
+    "worldFilesVerifiedPerRun": 135
+  },
+  "nativeValidation": {
+    "constructedTransitions": 24000,
+    "pairedMachineSteps": 80000,
+    "authoritativeMismatches": 0,
+    "receiverPayloadMismatches": 0,
+    "factoryCases": [
+      {
+        "kind": "EthanolDistillerState",
+        "scenario": 0,
+        "steps": 5000,
+        "events": 5000,
+        "nativeChanges": 5000,
+        "filteredChanges": 20,
+        "nativeBytes": 80000,
+        "filteredBytes": 320,
+        "output": 15.99906,
+        "authorityEqual": true,
+        "receiverEqual": true
+      },
+      {
+        "kind": "EthanolDistillerState",
+        "scenario": 1,
+        "steps": 5000,
+        "events": 5000,
+        "nativeChanges": 5000,
+        "filteredChanges": 117,
+        "nativeBytes": 80000,
+        "filteredBytes": 1872,
+        "output": 15.8390808,
+        "authorityEqual": true,
+        "receiverEqual": true
+      },
+      {
+        "kind": "EthanolDistillerState",
+        "scenario": 2,
+        "steps": 5000,
+        "events": 5000,
+        "nativeChanges": 5000,
+        "filteredChanges": 5,
+        "nativeBytes": 70000,
+        "filteredBytes": 70,
+        "output": 0.7999978,
+        "authorityEqual": true,
+        "receiverEqual": true
+      },
+      {
+        "kind": "EthanolDistillerState",
+        "scenario": 3,
+        "steps": 5000,
+        "events": 5000,
+        "nativeChanges": 5000,
+        "filteredChanges": 3,
+        "nativeBytes": 80000,
+        "filteredBytes": 48,
+        "output": 0.03,
+        "authorityEqual": true,
+        "receiverEqual": true
+      },
+      {
+        "kind": "ElectrolyzerState",
+        "scenario": 0,
+        "steps": 5000,
+        "events": 5000,
+        "nativeChanges": 5000,
+        "filteredChanges": 101,
+        "nativeBytes": 75000,
+        "filteredBytes": 1515,
+        "output": 99.99523,
+        "authorityEqual": true,
+        "receiverEqual": true
+      },
+      {
+        "kind": "ElectrolyzerState",
+        "scenario": 1,
+        "steps": 5000,
+        "events": 5000,
+        "nativeChanges": 4999,
+        "filteredChanges": 197,
+        "nativeBytes": 74985,
+        "filteredBytes": 2955,
+        "output": 98.9954,
+        "authorityEqual": true,
+        "receiverEqual": true
+      },
+      {
+        "kind": "ElectrolyzerState",
+        "scenario": 2,
+        "steps": 5000,
+        "events": 5000,
+        "nativeChanges": 52,
+        "filteredChanges": 3,
+        "nativeBytes": 780,
+        "filteredBytes": 45,
+        "output": 1.0,
+        "authorityEqual": true,
+        "receiverEqual": true
+      },
+      {
+        "kind": "ElectrolyzerState",
+        "scenario": 3,
+        "steps": 5000,
+        "events": 5000,
+        "nativeChanges": 3,
+        "filteredChanges": 3,
+        "nativeBytes": 45,
+        "filteredBytes": 45,
+        "output": 0.03,
+        "authorityEqual": true,
+        "receiverEqual": true
+      },
+      {
+        "kind": "WoodPowerGeneratorState",
+        "scenario": 0,
+        "steps": 5000,
+        "events": 5000,
+        "nativeChanges": 5000,
+        "filteredChanges": 10,
+        "nativeBytes": 75000,
+        "filteredBytes": 150,
+        "output": 0.0,
+        "authorityEqual": true,
+        "receiverEqual": true
+      },
+      {
+        "kind": "WoodPowerGeneratorState",
+        "scenario": 1,
+        "steps": 5000,
+        "events": 5000,
+        "nativeChanges": 4999,
+        "filteredChanges": 108,
+        "nativeBytes": 74985,
+        "filteredBytes": 1620,
+        "output": 0.0,
+        "authorityEqual": true,
+        "receiverEqual": true
+      },
+      {
+        "kind": "WoodPowerGeneratorState",
+        "scenario": 2,
+        "steps": 5000,
+        "events": 5000,
+        "nativeChanges": 507,
+        "filteredChanges": 8,
+        "nativeBytes": 7605,
+        "filteredBytes": 120,
+        "output": 0.0,
+        "authorityEqual": true,
+        "receiverEqual": true
+      },
+      {
+        "kind": "WoodPowerGeneratorState",
+        "scenario": 3,
+        "steps": 5000,
+        "events": 5000,
+        "nativeChanges": 5000,
+        "filteredChanges": 10,
+        "nativeBytes": 75000,
+        "filteredBytes": 150,
+        "output": 0.0,
+        "authorityEqual": true,
+        "receiverEqual": true
+      },
+      {
+        "kind": "WoodThrusterState",
+        "scenario": 0,
+        "steps": 5000,
+        "events": 5000,
+        "nativeChanges": 5000,
+        "filteredChanges": 6,
+        "nativeBytes": 80000,
+        "filteredBytes": 96,
+        "output": 0.0,
+        "authorityEqual": true,
+        "receiverEqual": true
+      },
+      {
+        "kind": "WoodThrusterState",
+        "scenario": 1,
+        "steps": 5000,
+        "events": 5000,
+        "nativeChanges": 4999,
+        "filteredChanges": 103,
+        "nativeBytes": 79984,
+        "filteredBytes": 1648,
+        "output": 0.0,
+        "authorityEqual": true,
+        "receiverEqual": true
+      },
+      {
+        "kind": "WoodThrusterState",
+        "scenario": 2,
+        "steps": 5000,
+        "events": 5000,
+        "nativeChanges": 1002,
+        "filteredChanges": 3,
+        "nativeBytes": 16032,
+        "filteredBytes": 48,
+        "output": 0.0,
+        "authorityEqual": true,
+        "receiverEqual": true
+      },
+      {
+        "kind": "WoodThrusterState",
+        "scenario": 3,
+        "steps": 5000,
+        "events": 5000,
+        "nativeChanges": 5000,
+        "filteredChanges": 6,
+        "nativeBytes": 80000,
+        "filteredBytes": 96,
+        "output": 0.0,
+        "authorityEqual": true,
+        "receiverEqual": true
+      }
+    ],
+    "receiptHashes": {
+      "evidence\\Validation02\\completion.json": "7C302675E2DDF5B9D1146C708608C711F758A60D2F58A55DBE3DE9AA3D59CC11",
+      "evidence\\Validation02\\frames.json": "15302E0D75E148312C472D6BC78115292BC5579677CA2BB918982A5E44BBF224",
+      "evidence\\Validation02\\live-replication.json": "D819671039A15B409DA0C791245BDEBE07E4A18AD99AE6BFE8B3EFB38CB0061D",
+      "evidence\\Validation02\\loaded.json": "F9EB6A90DB33613CEA6206542F62F0472A91816CAC542B0480B2F102C2851569",
+      "evidence\\Validation02\\native-factories.json": "90CC5DF073A5D29C0258A34D999A2DBF93CDAF1905BBFE57E76170BB388B52DC",
+      "evidence\\Validation02\\native-fixtures.json": "3F56A6B93AF086714D099F21B4C55912682FA8AE4B847FD0C8B34BE24A32D352",
+      "evidence\\Validation02\\request.json": "107FB85DC8E822A5FD2C0A70917ACF007AF7AAFE7AB190BE7D587C27713B7EDC",
+      "evidence\\Validation02\\system.json": "6D1032CEFE72263C21A6EDD25E5FB1AE29DF1B1666437B4034BC8ADBD1A42BA8"
+    },
+    "liveObservation": {
+      "seconds": 15,
+      "lostOrChangedPayloads": 0,
+      "additionalSuppressionFromNewTypes": 0,
+      "scope": "Instrumented saved-world observation after FPS capture. Existing distiller suppression remains; no additional new-type bandwidth benefit established in this interval."
+    },
+    "loopbackPeer": {
+      "graphicsEnabled": true,
+      "passed": true,
+      "selectedParts": 11,
+      "phases": 7,
+      "joinDisconnectRejoin": true,
+      "scope": "Actual native host and two successive separate client processes over loopback IP; controlled saved-world part states, duplicate bursts, changed/return values, same-frame pulses, remove/re-add and initial/rejoin snapshots. Not WAN, Steam or manual input acceptance.",
+      "receiptHashes": {
+        "Client-phase-0.json": "17268F6C967D253D3A25BB941A6599BDD7B9240906E71FC6A928CE12EBAD2D99",
+        "Client-phase-1.json": "17268F6C967D253D3A25BB941A6599BDD7B9240906E71FC6A928CE12EBAD2D99",
+        "Client-phase-2.json": "C59D04EEF7F54A7114A62032402A1B475FCC9C3F4D7534369B6442A27FF82017",
+        "Client-phase-3.json": "0BC0B96754D8D913E3AF06D8D45EAD518BD8DAD0B55846395167D0117DE579D2",
+        "Client-phase-4.json": "BFA99E890332ECCF72790797EDB3AB3B2F572F2AA9B676EDA898E260A323A462",
+        "Client-phase-5.json": "17268F6C967D253D3A25BB941A6599BDD7B9240906E71FC6A928CE12EBAD2D99",
+        "Client-phase-6.json": "17268F6C967D253D3A25BB941A6599BDD7B9240906E71FC6A928CE12EBAD2D99",
+        "Client2-phase-6.json": "17268F6C967D253D3A25BB941A6599BDD7B9240906E71FC6A928CE12EBAD2D99",
+        "phase.json": "E9E150046A586CD75670F62BE0978A6EE8AF67FD6399F15F1DC4FC601AA52F51"
+      }
+    }
+  },
+  "limits": [
+    "One machine and one stationary saved view; no reliable new FPS or frame-tail gain.",
+    "Targeted machine byte reductions are not total network traffic or packet reductions.",
+    "Peer test uses controlled states on saved-world parts; no WAN/Steam or manual input coverage.",
+    "Initial headless peer run passed state checks but emitted graphics initialization errors; graphics follow-up is recorded separately.",
+    "Existing room gas-rounding tradeoff is unchanged."
+  ]
+}

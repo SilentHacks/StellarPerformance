@@ -1,6 +1,6 @@
 <Project>
   <ItemGroup>
-    <_GameAssembly Include="Assembly-CSharp;CablesMesh;Core;FishNet.Runtime;Items.Model;Planets;Players;Players.Interface;Saving;Ships;Ships.Interface;Tools;Tools.Interface;UI;Unity.InputSystem;Unity.TextMeshPro;UnityEngine.AnimationModule;UnityEngine.CoreModule;UnityEngine.PhysicsModule;UnityEngine.UI;UnityEngine.UIModule;WorldObjects;WorldObjects.Interface;WorldProvision.Interface;WorldTracking;WorldTracking.Interface;com.rlabrecque.steamworks.net" />
+    <_GameAssembly Include="Assembly-CSharp;CablesMesh;Core;FishNet.Runtime;Items.Model;MKEdgeDetection;MKEdgeDetectionUniversalRendererFeature;Planets;Players;Rendering;Players.Interface;Saving;Ships;Ships.Interface;Tools;Tools.Interface;UI;UI.Interface;Unity.InputSystem;Unity.TextMeshPro;Unity.RenderPipelines.Core.Runtime;Unity.RenderPipelines.Universal.Runtime;UnityEngine.TextRenderingModule;UnityEngine.IMGUIModule;UnityEngine.ParticleSystemModule;UnityEngine.AnimationModule;UnityEngine.CoreModule;UnityEngine.PhysicsModule;UnityEngine.UI;UnityEngine.UIModule;WorldObjects;WorldObjects.Interface;WorldProvision.Interface;WorldTracking;WorldTracking.Interface;com.rlabrecque.steamworks.net" />
     <Reference Include="@(_GameAssembly)">
       <HintPath>$(GameManagedDirectory)/%(Identity).dll</HintPath>
       <Private>false</Private>

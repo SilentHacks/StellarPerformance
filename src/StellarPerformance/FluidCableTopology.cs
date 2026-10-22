@@ -93,6 +93,7 @@ internal static class FluidCableTopology
         internal readonly Queue<SocketConnection> ToTraverse = new Queue<SocketConnection>();
         internal readonly HashSet<SocketConnection> Traversed = new HashSet<SocketConnection>();
         internal readonly HashSet<uint> VisitedCableIds = new HashSet<uint>();
+        internal readonly VisualCadence.Box Refresh = new VisualCadence.Box();
     }
 
     private static volatile int _topologyVersion = 1;
@@ -150,6 +151,14 @@ internal static class FluidCableTopology
 
         var nodes = cache.Nodes;
         var cables = cache.Cables;
+        // Optional cosmetic cap: between refreshes the scroll animation keeps advancing
+        // toward the last computed flow. A topology change always refreshes.
+        if (current && !VisualCadence.FluidDue(cache.Refresh))
+        {
+            for (var i = 0; i < cables.Length; i++)
+                cables[i].Visual.UpdateFlow(cables[i].Flow);
+            return false;
+        }
         for (var i = 0; i < nodes.Length; i++)
         {
             nodes[i].FluidFlow = 0f;

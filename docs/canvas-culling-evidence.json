@@ -1,0 +1,358 @@
+{
+  "date": "2026-10-21",
+  "feature": "CanvasCulling",
+  "release": "unreleased",
+  "shippingSHA256": "F7F5D8C9F23569814C410C8231FA905D4D385C7ABCAE67E8A21D37F92F7A9024",
+  "baseline": "Same DLL and existing default modules; only CanvasCulling active/restore flag changes between phases. No diagnostic or correctness observers in FPS traces.",
+  "system": {
+    "cpu": "AMD Ryzen 7 3800X 8-Core Processor ",
+    "gpu": "NVIDIA GeForce RTX 2070 SUPER",
+    "api": "Direct3D11",
+    "width": 2560,
+    "height": 1080,
+    "quality": 0
+  },
+  "worldShips": 37,
+  "systemNotes": "Unity 6000.3.24f1; D3D11; uncapped, vsync off; existing installed mods retained.",
+  "stationary": {
+    "nativeFPS": 50.768556829121465,
+    "culledFPS": 64.47968239812647,
+    "fpsGainPercent": 27.007120992535505,
+    "meanFrameTimeReductionPercent": 21.26425729634701,
+    "scope": "Two fresh processes, reversed triplet orders. Equal weight per process in log space; no per-frame independence or general confidence interval claimed."
+  },
+  "runs": [
+    {
+      "name": "Bench02",
+      "mode": "stationary",
+      "shippingSHA256": "F7F5D8C9F23569814C410C8231FA905D4D385C7ABCAE67E8A21D37F92F7A9024",
+      "driverSHA256": "4AF761347F1477B7FE9B746C41F7DA2495C0E5C96ED1A466DEAB259FE40AA313",
+      "seedSHA256": "D97D4D83AB0E3E90693ED66D57A00FE5158BB2ED5881FCD829ACB5DF9EC9D47C",
+      "warmup": 35.0,
+      "capture": 25.0,
+      "phases": [
+        {
+          "phase": "00-labels-cull",
+          "frames": 1635,
+          "fps": 65.37971894966302,
+          "meanMs": 15.29526305810396,
+          "p99Ms": 23.3983,
+          "low1Fps": 37.59577818208904,
+          "unfocused": 0,
+          "saveWriteDuringTrace": false,
+          "tickRate": 50,
+          "ticks": 1250,
+          "rawSeconds": 25.007755099999972,
+          "traceSHA256": "D747687C13C98CC45ED49836C6A8DCDDC0AC8492C2DE7183A174DF7C6386DE9D",
+          "meanDrawCalls": 2196.0593272171254
+        },
+        {
+          "phase": "01-native",
+          "frames": 1251,
+          "fps": 50.00506626068997,
+          "meanMs": 19.997973701039186,
+          "p99Ms": 32.2798,
+          "low1Fps": 29.07051392308039,
+          "unfocused": 0,
+          "saveWriteDuringTrace": false,
+          "tickRate": 50,
+          "ticks": 1250,
+          "rawSeconds": 25.017465099999974,
+          "traceSHA256": "27092114F046841F9348EC702B6ECEBA4B2E3EA09052186D9816D846DBBA9A0D",
+          "meanDrawCalls": 2189.243804956035
+        },
+        {
+          "phase": "02-labels-cull",
+          "frames": 1620,
+          "fps": 64.76089737016798,
+          "meanMs": 15.441416666666646,
+          "p99Ms": 24.1347,
+          "low1Fps": 35.880062817019976,
+          "unfocused": 0,
+          "saveWriteDuringTrace": false,
+          "tickRate": 50,
+          "ticks": 1251,
+          "rawSeconds": 25.015094999999963,
+          "traceSHA256": "4CA20DD4251050788B66C0A157F53988A7512DF7CD8D62E9037F9506D9C9D59E",
+          "meanDrawCalls": 2183.6814814814816
+        }
+      ],
+      "nativeFPS": 50.005066260689965,
+      "culledFPS": 65.0695725280991,
+      "fpsGainPercent": 30.125960015478803,
+      "meanFrameTimeReductionPercent": 23.151383484045184
+    },
+    {
+      "name": "Bench03",
+      "mode": "stationary",
+      "shippingSHA256": "F7F5D8C9F23569814C410C8231FA905D4D385C7ABCAE67E8A21D37F92F7A9024",
+      "driverSHA256": "4AF761347F1477B7FE9B746C41F7DA2495C0E5C96ED1A466DEAB259FE40AA313",
+      "seedSHA256": "D97D4D83AB0E3E90693ED66D57A00FE5158BB2ED5881FCD829ACB5DF9EC9D47C",
+      "warmup": 35.0,
+      "capture": 25.0,
+      "phases": [
+        {
+          "phase": "00-native",
+          "frames": 1286,
+          "fps": 51.404844637990834,
+          "meanMs": 19.45341936236392,
+          "p99Ms": 27.6038,
+          "low1Fps": 30.398416850450435,
+          "unfocused": 0,
+          "saveWriteDuringTrace": false,
+          "tickRate": 50,
+          "ticks": 1251,
+          "rawSeconds": 25.017097300000014,
+          "traceSHA256": "8F057309ACCAA0664271083BC9D529266ABAF193A3619A7D9499E30A9AEEF14C",
+          "meanDrawCalls": 2195.7954898911353
+        },
+        {
+          "phase": "01-labels-cull",
+          "frames": 1598,
+          "fps": 63.895139934534846,
+          "meanMs": 15.650642615769708,
+          "p99Ms": 25.9919,
+          "low1Fps": 33.59304489598474,
+          "unfocused": 0,
+          "saveWriteDuringTrace": false,
+          "tickRate": 50,
+          "ticks": 1251,
+          "rawSeconds": 25.009726899999997,
+          "traceSHA256": "24441DDEC9993BD8F99E7493E0A8AF08EE9149029BF39F741AB998A30D1C40DB",
+          "meanDrawCalls": 2191.072590738423
+        },
+        {
+          "phase": "02-native",
+          "frames": 1293,
+          "fps": 51.68293961112724,
+          "meanMs": 19.3487446249033,
+          "p99Ms": 27.1233,
+          "low1Fps": 31.36593142309583,
+          "unfocused": 0,
+          "saveWriteDuringTrace": false,
+          "tickRate": 50,
+          "ticks": 1251,
+          "rawSeconds": 25.017926799999984,
+          "traceSHA256": "DBF6A72620AC8E8DEA9922AA1D91B74C42CA81C10E3BDC6CE788676F11570D30",
+          "meanDrawCalls": 2182.0781129157
+        }
+      ],
+      "nativeFPS": 51.543704573348805,
+      "culledFPS": 63.895139934534846,
+      "fpsGainPercent": 23.963033824255774,
+      "meanFrameTimeReductionPercent": 19.330790062970326
+    },
+    {
+      "name": "Motion01",
+      "mode": "moving",
+      "shippingSHA256": "F7F5D8C9F23569814C410C8231FA905D4D385C7ABCAE67E8A21D37F92F7A9024",
+      "driverSHA256": "4AF761347F1477B7FE9B746C41F7DA2495C0E5C96ED1A466DEAB259FE40AA313",
+      "seedSHA256": "D97D4D83AB0E3E90693ED66D57A00FE5158BB2ED5881FCD829ACB5DF9EC9D47C",
+      "warmup": 25.0,
+      "capture": 24.0,
+      "phases": [
+        {
+          "phase": "00-moving-native",
+          "frames": 1190,
+          "fps": 49.55522560936768,
+          "meanMs": 20.179506554621856,
+          "p99Ms": 29.2475,
+          "low1Fps": 20.076700295748047,
+          "unfocused": 0,
+          "saveWriteDuringTrace": false,
+          "tickRate": 50,
+          "ticks": 1191,
+          "rawSeconds": 24.013612800000026,
+          "traceSHA256": "E7FB667E8CBD15FAF8ECE14F9D226E3FF47BFA3024B2268E68510A3C70167EC2",
+          "meanDrawCalls": 2604.021848739496
+        },
+        {
+          "phase": "01-moving-cull",
+          "frames": 1498,
+          "fps": 62.38866533390092,
+          "meanMs": 16.02855253671563,
+          "p99Ms": 27.1403,
+          "low1Fps": 31.373434857768533,
+          "unfocused": 0,
+          "saveWriteDuringTrace": false,
+          "tickRate": 50,
+          "ticks": 1201,
+          "rawSeconds": 24.010771699999932,
+          "traceSHA256": "B7EBA7ACB4EF1D6C799D8AB69BB45D6B396A738C499667F199C4DBE788A3DA62",
+          "meanDrawCalls": 2472.1208277703604
+        },
+        {
+          "phase": "02-moving-native",
+          "frames": 1182,
+          "fps": 49.2425397552271,
+          "meanMs": 20.307644670050756,
+          "p99Ms": 34.4136,
+          "low1Fps": 23.38359317819807,
+          "unfocused": 0,
+          "saveWriteDuringTrace": false,
+          "tickRate": 50,
+          "ticks": 1198,
+          "rawSeconds": 24.003636000000025,
+          "traceSHA256": "1B66A412DD9C2C2DA2B8C58FFA23394E40093652F11C483EBD2CB9DE81A0D57E",
+          "meanDrawCalls": 2581.0862944162436
+        }
+      ],
+      "nativeFPS": 49.398635276174744,
+      "culledFPS": 62.3886653339009,
+      "fpsGainPercent": 26.29633386651742,
+      "meanFrameTimeReductionPercent": 20.821137923377897
+    }
+  ],
+  "nativeAcceptance": {
+    "complete": true,
+    "checks": [
+      {
+        "name": "10000-native-frustum-oracle-comparisons",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "camera-translations-fast-turns-pitch-FOV-and-viewport",
+        "passed": true,
+        "detail": {
+          "poses": 180,
+          "recoveries": 3720,
+          "observations": 186,
+          "hiddenChecks": 76337
+        }
+      },
+      {
+        "name": "native-TMP-selection-focus-edit-submit-and-drag",
+        "passed": true,
+        "detail": {
+          "edits": 2,
+          "submits": 1,
+          "scope": "uGUI control callbacks; not a multiplayer RPC test"
+        }
+      },
+      {
+        "name": "moving-visual-ship-rechecks-current-world-bounds",
+        "passed": true,
+        "detail": {
+          "poses": 36
+        }
+      },
+      {
+        "name": "second-world-UI-camera-union",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "bounded-camera-overflow-fails-open",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "native-disabled-state-and-explicit-clear-preserved",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "native-instancer-construction-removal-and-ship-destruction",
+        "passed": true,
+        "detail": {
+          "added": 48,
+          "removed": 16,
+          "originalCollidersPreserved": true
+        }
+      },
+      {
+        "name": "root-control-resize-invalidates-envelope-and-restores-native",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "canvas-capacity-overflow-and-unknown-script-fail-open",
+        "passed": true,
+        "detail": {
+          "capacity": 4096
+        }
+      },
+      {
+        "name": "native-physics-ray-filter-and-hover",
+        "passed": true,
+        "detail": {
+          "callbacks": 1
+        }
+      },
+      {
+        "name": "single-player-host-native-build-writing-pickup-placement-removal-and-piloting-RPCs",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "unload-clear-restores-owned-canvases-and-drops-references",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "injected-exception-restores-owned-canvases-and-stops-module",
+        "passed": true,
+        "detail": null
+      }
+    ],
+    "authoritativeComparisons": 109,
+    "observations": 719,
+    "hiddenChecks": 302592,
+    "visibleRecoveries": 3801,
+    "scope": "Scripted native camera/render, visual construction, uGUI and physics ray callbacks in an isolated world; no OS input or remote peer coverage.",
+    "renderPassCost": {
+      "count": 2239,
+      "meanMs": 0.5043239839213934,
+      "medianMs": 0.6173,
+      "p95Ms": 0.8427,
+      "scope": "Private timing observer outside FPS runs; includes menu, initial discovery and cleanup. The median describes the populated pass better than the lifecycle mean."
+    }
+  },
+  "singlePlayerHostRPCs": {
+    "complete": true,
+    "checks": [
+      {
+        "test": "native-placement-RPC-and-client-registration",
+        "ship": 15,
+        "part": 467
+      },
+      {
+        "test": "native-writing-start-focus-submit-authority-and-exit",
+        "value": 42.25
+      },
+      {
+        "test": "native-pickup-and-place-held-RPCs",
+        "oldPart": 467,
+        "newPart": 468,
+        "preservedValue": 42.25
+      },
+      {
+        "test": "native-remove-RPC-and-canvas-release"
+      },
+      {
+        "test": "native-pilot-seat-enter-and-exit",
+        "state": "Piloting"
+      }
+    ],
+    "scope": "Real single-player host RPC, client state and visual callbacks with scripted requests; no OS keyboard/mouse or remote peer."
+  },
+  "offlineTests": {
+    "passed": 59,
+    "failed": 0,
+    "framework": "net9.0 same-source tests; no runtime detours on CoreCLR"
+  },
+  "preservation": {
+    "originalFiles": 157,
+    "originalWorldFiles": 135,
+    "verifiedAfterEveryRun": true,
+    "privateDriversRetired": true
+  },
+  "limits": [
+    "One world, one PC and graphics configuration.",
+    "Scripted native API/callback tests, not an OS input playthrough or remote peer test.",
+    "Fixed inspected prefab layouts; runtime third-party changes to layout/layers/fonts/scripts are outside the cache contract.",
+    "No new simulation, physics, circuit or room approximation. Existing room rounding tradeoff remains.",
+    "Earlier development/pilot runs and earlier batching/networking gains are excluded. Gains are not additive."
+  ]
+}

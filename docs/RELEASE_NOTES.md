@@ -1,5 +1,24 @@
 # Release notes
 
+## 2.0.0
+
+- Add an F8/menu preset selector with Faithful, Balanced, Performance, Aggressive and Custom levels. Apply and save changes during play without restarting, reloading or reconnecting. Balanced keeps the current development defaults.
+- Performance and Aggressive keep the whole scene visible. They use silhouette-only or no scene contours, shorter shadows, reduced vegetation range and less frequent cosmetic cable and still-camera terrain-detail updates. Both measured about 11% above Balanced in the stationary reference scene; Aggressive did not add FPS there, and gains on graphics-limited PCs are unmeasured. Simulation stays native.
+- Declare the atmosphere/cloud depth dependency when reducing contours, fixing sky effects drawing over terrain, trees and wall tops.
+- Update the manager description, AI disclosure (`vibecoded`), active development status and tags.
+- Custom also offers readout refresh, small-label and part-label limits, shadow filtering/resolution and exhaust density. Faithful selects native room reconstruction; changing level retains existing gas amounts. Host and clients can select different levels.
+- Hide inspected offscreen ship-part UI canvases, checking visibility before rendering and keeping focused controls and native readout updates active. Unknown UI retains native drawing.
+- Restore mesh batching after hover and highlight interactions, keeping more of the rendering performance benefit as you interact with your build.
+- Reuse existing combined meshes and spread batch construction across frames to reduce rebuild hitches.
+- Reduce repeated signal-network scanning on large circuit builds while keeping native circuit calculations and update timing.
+- Reduce redundant replication for distillers, electrolyzers, wood generators/thrusters and other inspected parts while preserving native calculations, inventory, power, fluid output and genuine encoded changes. Repeated client notifications can occur less often.
+- Add experimental recovery for reliable Steam packets rejected during temporary congestion. Disabled by default; persistent overload can disconnect the affected peer.
+- Add optional network diagnostics for investigating congestion and large multiplayer builds. Disabled by default.
+
+No new simulation approximations. Save and network formats are unchanged. The existing room-gas rounding tradeoff remains.
+
+Requires Windows, StellarDrive Demo 0.8.2 and MelonLoader 0.7.3.
+
 ## 1.0.1
 
 Fixed unnecessary dependency prompts in Stellar Mod Manager.

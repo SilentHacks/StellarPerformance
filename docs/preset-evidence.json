@@ -1,0 +1,917 @@
+{
+  "status": "unreleased",
+  "candidateSHA256": "2667A68D30DB67BC2C74B9460FDA998865B95EC0C494284231D8AF518B0955BF",
+  "controlSHA256": "B4F9A5598733815684476A6F7340E41B63102364CD0D7546AB920F8135ED25FF",
+  "offline": {
+    "sameSourceTestsPassed": 69,
+    "frameAnalysisTestsPassed": 15
+  },
+  "native": {
+    "switchChecks": {
+      "passed": true,
+      "rows": [
+        {
+          "name": "Faithful",
+          "repeat": 0,
+          "authoritativeUnchanged": true,
+          "shadowDistance": 500.0,
+          "cascades": 4
+        },
+        {
+          "name": "Balanced",
+          "repeat": 0,
+          "authoritativeUnchanged": true,
+          "shadowDistance": 500.0,
+          "cascades": 4
+        },
+        {
+          "name": "Performance",
+          "repeat": 0,
+          "authoritativeUnchanged": true,
+          "shadowDistance": 500.0,
+          "cascades": 4
+        },
+        {
+          "name": "Aggressive",
+          "repeat": 0,
+          "authoritativeUnchanged": true,
+          "shadowDistance": 150.0,
+          "cascades": 2
+        },
+        {
+          "name": "Faithful",
+          "repeat": 1,
+          "authoritativeUnchanged": true,
+          "shadowDistance": 500.0,
+          "cascades": 4
+        },
+        {
+          "name": "Balanced",
+          "repeat": 1,
+          "authoritativeUnchanged": true,
+          "shadowDistance": 500.0,
+          "cascades": 4
+        },
+        {
+          "name": "Performance",
+          "repeat": 1,
+          "authoritativeUnchanged": true,
+          "shadowDistance": 500.0,
+          "cascades": 4
+        },
+        {
+          "name": "Aggressive",
+          "repeat": 1,
+          "authoritativeUnchanged": true,
+          "shadowDistance": 150.0,
+          "cascades": 2
+        },
+        {
+          "name": "Faithful",
+          "repeat": 2,
+          "authoritativeUnchanged": true,
+          "shadowDistance": 500.0,
+          "cascades": 4
+        },
+        {
+          "name": "Balanced",
+          "repeat": 2,
+          "authoritativeUnchanged": true,
+          "shadowDistance": 500.0,
+          "cascades": 4
+        },
+        {
+          "name": "Performance",
+          "repeat": 2,
+          "authoritativeUnchanged": true,
+          "shadowDistance": 500.0,
+          "cascades": 4
+        },
+        {
+          "name": "Aggressive",
+          "repeat": 2,
+          "authoritativeUnchanged": true,
+          "shadowDistance": 150.0,
+          "cascades": 2
+        },
+        {
+          "name": "Faithful",
+          "repeat": 3,
+          "authoritativeUnchanged": true,
+          "shadowDistance": 500.0,
+          "cascades": 4
+        },
+        {
+          "name": "Balanced",
+          "repeat": 3,
+          "authoritativeUnchanged": true,
+          "shadowDistance": 500.0,
+          "cascades": 4
+        },
+        {
+          "name": "Performance",
+          "repeat": 3,
+          "authoritativeUnchanged": true,
+          "shadowDistance": 500.0,
+          "cascades": 4
+        },
+        {
+          "name": "Aggressive",
+          "repeat": 3,
+          "authoritativeUnchanged": true,
+          "shadowDistance": 150.0,
+          "cascades": 2
+        },
+        {
+          "name": "Faithful",
+          "repeat": 4,
+          "authoritativeUnchanged": true,
+          "shadowDistance": 500.0,
+          "cascades": 4
+        },
+        {
+          "name": "Balanced",
+          "repeat": 4,
+          "authoritativeUnchanged": true,
+          "shadowDistance": 500.0,
+          "cascades": 4
+        },
+        {
+          "name": "Performance",
+          "repeat": 4,
+          "authoritativeUnchanged": true,
+          "shadowDistance": 500.0,
+          "cascades": 4
+        },
+        {
+          "name": "Aggressive",
+          "repeat": 4,
+          "authoritativeUnchanged": true,
+          "shadowDistance": 150.0,
+          "cascades": 2
+        },
+        {
+          "name": "Faithful",
+          "repeat": 5,
+          "authoritativeUnchanged": true,
+          "shadowDistance": 500.0,
+          "cascades": 4
+        },
+        {
+          "name": "Balanced",
+          "repeat": 5,
+          "authoritativeUnchanged": true,
+          "shadowDistance": 500.0,
+          "cascades": 4
+        },
+        {
+          "name": "Performance",
+          "repeat": 5,
+          "authoritativeUnchanged": true,
+          "shadowDistance": 500.0,
+          "cascades": 4
+        },
+        {
+          "name": "Aggressive",
+          "repeat": 5,
+          "authoritativeUnchanged": true,
+          "shadowDistance": 150.0,
+          "cascades": 2
+        },
+        {
+          "name": "Faithful",
+          "repeat": 6,
+          "authoritativeUnchanged": true,
+          "shadowDistance": 500.0,
+          "cascades": 4
+        },
+        {
+          "name": "Balanced",
+          "repeat": 6,
+          "authoritativeUnchanged": true,
+          "shadowDistance": 500.0,
+          "cascades": 4
+        },
+        {
+          "name": "Performance",
+          "repeat": 6,
+          "authoritativeUnchanged": true,
+          "shadowDistance": 500.0,
+          "cascades": 4
+        },
+        {
+          "name": "Aggressive",
+          "repeat": 6,
+          "authoritativeUnchanged": true,
+          "shadowDistance": 150.0,
+          "cascades": 2
+        },
+        {
+          "name": "Faithful",
+          "repeat": 7,
+          "authoritativeUnchanged": true,
+          "shadowDistance": 500.0,
+          "cascades": 4
+        },
+        {
+          "name": "Balanced",
+          "repeat": 7,
+          "authoritativeUnchanged": true,
+          "shadowDistance": 500.0,
+          "cascades": 4
+        },
+        {
+          "name": "Performance",
+          "repeat": 7,
+          "authoritativeUnchanged": true,
+          "shadowDistance": 500.0,
+          "cascades": 4
+        },
+        {
+          "name": "Aggressive",
+          "repeat": 7,
+          "authoritativeUnchanged": true,
+          "shadowDistance": 150.0,
+          "cascades": 2
+        },
+        {
+          "name": "Faithful",
+          "repeat": 8,
+          "authoritativeUnchanged": true,
+          "shadowDistance": 500.0,
+          "cascades": 4
+        },
+        {
+          "name": "Balanced",
+          "repeat": 8,
+          "authoritativeUnchanged": true,
+          "shadowDistance": 500.0,
+          "cascades": 4
+        },
+        {
+          "name": "Performance",
+          "repeat": 8,
+          "authoritativeUnchanged": true,
+          "shadowDistance": 500.0,
+          "cascades": 4
+        },
+        {
+          "name": "Aggressive",
+          "repeat": 8,
+          "authoritativeUnchanged": true,
+          "shadowDistance": 150.0,
+          "cascades": 2
+        },
+        {
+          "name": "Faithful",
+          "repeat": 9,
+          "authoritativeUnchanged": true,
+          "shadowDistance": 500.0,
+          "cascades": 4
+        },
+        {
+          "name": "Balanced",
+          "repeat": 9,
+          "authoritativeUnchanged": true,
+          "shadowDistance": 500.0,
+          "cascades": 4
+        },
+        {
+          "name": "Performance",
+          "repeat": 9,
+          "authoritativeUnchanged": true,
+          "shadowDistance": 500.0,
+          "cascades": 4
+        },
+        {
+          "name": "Aggressive",
+          "repeat": 9,
+          "authoritativeUnchanged": true,
+          "shadowDistance": 150.0,
+          "cascades": 2
+        },
+        {
+          "name": "Faithful",
+          "repeat": 10,
+          "authoritativeUnchanged": true,
+          "shadowDistance": 500.0,
+          "cascades": 4
+        },
+        {
+          "name": "Balanced",
+          "repeat": 10,
+          "authoritativeUnchanged": true,
+          "shadowDistance": 500.0,
+          "cascades": 4
+        },
+        {
+          "name": "Performance",
+          "repeat": 10,
+          "authoritativeUnchanged": true,
+          "shadowDistance": 500.0,
+          "cascades": 4
+        },
+        {
+          "name": "Aggressive",
+          "repeat": 10,
+          "authoritativeUnchanged": true,
+          "shadowDistance": 150.0,
+          "cascades": 2
+        },
+        {
+          "name": "Faithful",
+          "repeat": 11,
+          "authoritativeUnchanged": true,
+          "shadowDistance": 500.0,
+          "cascades": 4
+        },
+        {
+          "name": "Balanced",
+          "repeat": 11,
+          "authoritativeUnchanged": true,
+          "shadowDistance": 500.0,
+          "cascades": 4
+        },
+        {
+          "name": "Performance",
+          "repeat": 11,
+          "authoritativeUnchanged": true,
+          "shadowDistance": 500.0,
+          "cascades": 4
+        },
+        {
+          "name": "Aggressive",
+          "repeat": 11,
+          "authoritativeUnchanged": true,
+          "shadowDistance": 150.0,
+          "cascades": 2
+        }
+      ],
+      "roomEditTransitions": 108,
+      "scope": "Native live policy changes, immediate authoritative fingerprints, actual URP shadow assets, passive text/exhaust and synthetic native room edit fixtures. No OS input claim from these checks."
+    },
+    "timedReadout": {
+      "passed": true,
+      "performanceFlushAfterSeconds": 0.15,
+      "aggressiveFlushAfterSeconds": 0.25,
+      "focusedImmediate": true
+    },
+    "exhaust": {
+      "passed": true,
+      "nativeRate": 30.0,
+      "aggressiveRate": 15.0,
+      "speedAndSizeUnchanged": true
+    },
+    "transitions": 24000,
+    "factorySteps": 80000,
+    "allAuthoritativeAndReceiverComparisonsPassed": true
+  },
+  "ui": {
+    "finalBuildRun": "UI04",
+    "realKeyboardOpenSelectApplyClose": true,
+    "customInheritsActivePolicy": true,
+    "savedPreferencesChecked": true,
+    "nativeScreenshotsReviewed": true,
+    "windowsCaptureTimedOut": true,
+    "mouseClickCoverage": false
+  },
+  "multiplayer": [
+    {
+      "case": "Matrix02",
+      "passed": true,
+      "selectedParts": 12,
+      "phases": 23,
+      "joinDisconnectRejoin": true,
+      "scope": "Actual native host and two successive separate client processes over loopback IP; controlled saved-world part states, duplicate bursts, changed/return values, same-frame pulses, remove/re-add and initial/rejoin snapshots. Not WAN, Steam or manual input acceptance.",
+      "combinations": [
+        [
+          "Aggressive",
+          "Aggressive"
+        ],
+        [
+          "Aggressive",
+          "Balanced"
+        ],
+        [
+          "Aggressive",
+          "Faithful"
+        ],
+        [
+          "Aggressive",
+          "Performance"
+        ],
+        [
+          "Balanced",
+          "Aggressive"
+        ],
+        [
+          "Balanced",
+          "Balanced"
+        ],
+        [
+          "Balanced",
+          "Faithful"
+        ],
+        [
+          "Balanced",
+          "Performance"
+        ],
+        [
+          "Faithful",
+          "Aggressive"
+        ],
+        [
+          "Faithful",
+          "Balanced"
+        ],
+        [
+          "Faithful",
+          "Faithful"
+        ],
+        [
+          "Faithful",
+          "Performance"
+        ],
+        [
+          "Performance",
+          "Aggressive"
+        ],
+        [
+          "Performance",
+          "Balanced"
+        ],
+        [
+          "Performance",
+          "Faithful"
+        ],
+        [
+          "Performance",
+          "Performance"
+        ]
+      ],
+      "roomSamples": 0,
+      "roomSampleCountAvailable": false,
+      "restoration": {
+        "Verified": true,
+        "Files": 157,
+        "WorldFiles": 135,
+        "ModSHA256": "2667A68D30DB67BC2C74B9460FDA998865B95EC0C494284231D8AF518B0955BF",
+        "DriverSHA256": "13F85CB0E825FE07E64E04E8FD638908E60255B36B0DB314E7530F2BFD773771"
+      }
+    },
+    {
+      "case": "HostOnly4",
+      "passed": true,
+      "selectedParts": 12,
+      "phases": 23,
+      "joinDisconnectRejoin": true,
+      "scope": "Actual native host and two successive separate client processes over loopback IP; controlled saved-world part states, duplicate bursts, changed/return values, same-frame pulses, remove/re-add and initial/rejoin snapshots. Not WAN, Steam or manual input acceptance.",
+      "combinations": [
+        [
+          "Aggressive",
+          "Absent"
+        ],
+        [
+          "Balanced",
+          "Absent"
+        ],
+        [
+          "Faithful",
+          "Absent"
+        ],
+        [
+          "Performance",
+          "Absent"
+        ]
+      ],
+      "roomSamples": 10617,
+      "roomSampleCountAvailable": true,
+      "restoration": {
+        "Verified": true,
+        "Files": 157,
+        "WorldFiles": 135,
+        "ModSHA256": "2667A68D30DB67BC2C74B9460FDA998865B95EC0C494284231D8AF518B0955BF",
+        "DriverSHA256": "65BBB6877111B15F7E3B88F67FECB4443E246F5B1BFC7A44472E82E93F67ADB5"
+      }
+    },
+    {
+      "case": "ClientOnly",
+      "passed": true,
+      "selectedParts": 12,
+      "phases": 23,
+      "joinDisconnectRejoin": true,
+      "scope": "Actual native host and two successive separate client processes over loopback IP; controlled saved-world part states, duplicate bursts, changed/return values, same-frame pulses, remove/re-add and initial/rejoin snapshots. Not WAN, Steam or manual input acceptance.",
+      "combinations": [
+        [
+          "Absent",
+          "Aggressive"
+        ],
+        [
+          "Absent",
+          "Balanced"
+        ],
+        [
+          "Absent",
+          "Faithful"
+        ],
+        [
+          "Absent",
+          "Performance"
+        ]
+      ],
+      "roomSamples": 10617,
+      "roomSampleCountAvailable": true,
+      "restoration": {
+        "Verified": true,
+        "Files": 157,
+        "WorldFiles": 135,
+        "ModSHA256": "2667A68D30DB67BC2C74B9460FDA998865B95EC0C494284231D8AF518B0955BF",
+        "DriverSHA256": "65BBB6877111B15F7E3B88F67FECB4443E246F5B1BFC7A44472E82E93F67ADB5"
+      }
+    }
+  ],
+  "multiplayerSelector": {
+    "case": "UiProbe2",
+    "phases": 9,
+    "roles": {
+      "Host": {
+        "opened": {
+          "passed": true,
+          "visible": true,
+          "timeScale": 1.0,
+          "networkTick": 1368,
+          "initialTick": 1368
+        },
+        "closed": {
+          "passed": true,
+          "visible": false,
+          "timeScale": 1.0,
+          "networkTick": 1405,
+          "initialTick": 1368
+        }
+      },
+      "Client": {
+        "opened": {
+          "passed": true,
+          "visible": true,
+          "timeScale": 1.0,
+          "networkTick": 406,
+          "initialTick": 406
+        },
+        "closed": {
+          "passed": true,
+          "visible": false,
+          "timeScale": 1.0,
+          "networkTick": 444,
+          "initialTick": 406
+        }
+      }
+    },
+    "joinDisconnectRejoin": true,
+    "scope": "The same native selector Open/Close paths were invoked on host and client while connected. Time scale stayed 1 and network ticks and controlled native state/hull updates continued. Real OS keyboard input is covered separately by the single-player UI runs."
+  },
+  "performance": {
+    "hardware": "Ryzen 7 3800X / RTX 2070 SUPER / D3D11 / 2560x1080 / quality 0 / vsync off / uncapped",
+    "worldShips": 37,
+    "worldSHA256": "D97D4D83AB0E3E90693ED66D57A00FE5158BB2ED5881FCD829ACB5DF9EC9D47C",
+    "protocol": "Three fresh matched control/Balanced pairs (C/B, B/C, C/B), 35 s focused warmup, screenshot + 3 s settle, 20 s capture. Two additional fresh processes each compare B/P/A/F/B or B/F/A/P/B: 5 s settling per switch, 20 s capture per phase, linear interpolation in log frame time between Balanced endpoints. All frames retained; no expensive correctness probes or network diagnostics during FPS capture.",
+    "balancedVsPrevious": {
+      "pairedFPSChangePercent": 0.09742592364334612,
+      "pairs": [
+        {
+          "pair": 1,
+          "controlFPS": 62.18741078056167,
+          "balancedFPS": 61.22487912597028,
+          "fpsChangePercent": -1.5477918159156667
+        },
+        {
+          "pair": 2,
+          "controlFPS": 61.7979982204575,
+          "balancedFPS": 62.79171714459151,
+          "fpsChangePercent": 1.6080115096754666
+        },
+        {
+          "pair": 3,
+          "controlFPS": 62.136896881870065,
+          "balancedFPS": 62.29667616084343,
+          "fpsChangePercent": 0.2571407440528084
+        }
+      ]
+    },
+    "profilesRelativeToBalanced": {
+      "Faithful": {
+        "equalProcessFPSChangePercent": -0.46426265143829637,
+        "perProcessFPSChangePercent": [
+          0.5291719808743212,
+          -1.4478801097980054
+        ]
+      },
+      "Performance": {
+        "equalProcessFPSChangePercent": 2.650548292716759,
+        "perProcessFPSChangePercent": [
+          -1.0988634451436607,
+          6.542102870080435
+        ]
+      },
+      "Aggressive": {
+        "equalProcessFPSChangePercent": 4.225327014356384,
+        "perProcessFPSChangePercent": [
+          2.8366081201425697,
+          5.632799348637896
+        ]
+      }
+    },
+    "runs": [
+      {
+        "label": "Control1",
+        "frames": 1244,
+        "meanMs": 16.08042508038583,
+        "fps": 62.18741078056167,
+        "p95Ms": 19.2613,
+        "p99Ms": 25.1788,
+        "low1Fps": 34.823771402835,
+        "unfocused": 0,
+        "saveWriteDuringTrace": false,
+        "nativeTickRate": 50,
+        "traceSHA256": "27811A5EBE337A6CDB2C20CA1CE9E64462C5FE519C0DF2AB6E8C4AC7B221BD89"
+      },
+      {
+        "label": "Balanced1",
+        "frames": 1225,
+        "meanMs": 16.33322946938774,
+        "fps": 61.22487912597028,
+        "p95Ms": 19.8339,
+        "p99Ms": 28.9204,
+        "low1Fps": 28.221827325690228,
+        "unfocused": 0,
+        "saveWriteDuringTrace": false,
+        "nativeTickRate": 50,
+        "traceSHA256": "AB14099EA8F0E846D57CD34F3B72CBDD4E3105A2BE8542DAAF1EA575130DF23F"
+      },
+      {
+        "label": "Control2",
+        "frames": 1237,
+        "meanMs": 16.181753920776057,
+        "fps": 61.7979982204575,
+        "p95Ms": 19.4688,
+        "p99Ms": 25.7465,
+        "low1Fps": 33.86825418463448,
+        "unfocused": 0,
+        "saveWriteDuringTrace": false,
+        "nativeTickRate": 50,
+        "traceSHA256": "D1A0C9F8C1996D0B192CF483B338B4F98A13F67A061915863390217A8FBC8AA2"
+      },
+      {
+        "label": "Balanced2",
+        "frames": 1256,
+        "meanMs": 15.925667356687885,
+        "fps": 62.79171714459151,
+        "p95Ms": 19.1643,
+        "p99Ms": 24.9451,
+        "low1Fps": 34.352013672101435,
+        "unfocused": 0,
+        "saveWriteDuringTrace": false,
+        "nativeTickRate": 50,
+        "traceSHA256": "934B2ED3EFC8BDD702878BF159F3DF96B1CD11242C3319B44E66DC4D61CB2A7B"
+      },
+      {
+        "label": "Control3",
+        "frames": 1243,
+        "meanMs": 16.093497586484304,
+        "fps": 62.136896881870065,
+        "p95Ms": 19.1853,
+        "p99Ms": 25.0321,
+        "low1Fps": 34.87784036412466,
+        "unfocused": 0,
+        "saveWriteDuringTrace": false,
+        "nativeTickRate": 50,
+        "traceSHA256": "9EBDA3A0F89B514937FFCEF4AD61B1E3C7381B6945CBCDB166D0E878F64CBCCA"
+      },
+      {
+        "label": "Balanced3",
+        "frames": 1246,
+        "meanMs": 16.052220786516855,
+        "fps": 62.29667616084343,
+        "p95Ms": 19.2593,
+        "p99Ms": 26.1157,
+        "low1Fps": 34.166453838131304,
+        "unfocused": 0,
+        "saveWriteDuringTrace": false,
+        "nativeTickRate": 50,
+        "traceSHA256": "70893758E14C8BFBAD94339358C52EE24C4EF749D624A48C6A74398CF67CAB82"
+      },
+      {
+        "label": "Profiles1",
+        "frames": 1233,
+        "meanMs": 16.222148580697453,
+        "fps": 61.644115452739,
+        "p95Ms": 19.6636,
+        "p99Ms": 26.9226,
+        "low1Fps": 24.47720764015241,
+        "unfocused": 0,
+        "saveWriteDuringTrace": false,
+        "nativeTickRate": 50,
+        "traceSHA256": "5CDB8C9215BB974395E070BFDC441F306BD7513E9CB8F68EC3FCCD62C1C59D2D"
+      },
+      {
+        "label": "Profiles2",
+        "frames": 1241,
+        "meanMs": 16.128664867042694,
+        "fps": 62.00141228325722,
+        "p95Ms": 19.5488,
+        "p99Ms": 26.2975,
+        "low1Fps": 33.81925973022376,
+        "unfocused": 0,
+        "saveWriteDuringTrace": false,
+        "nativeTickRate": 50,
+        "traceSHA256": "68CFE16EB5783322B79C965B2CD23A54ADB5DADD4ED50C8AFF6080E33A3C26CA"
+      }
+    ],
+    "profilePhases": [
+      {
+        "run": "Profiles1",
+        "phase": 0,
+        "preset": "Balanced",
+        "frames": 1261,
+        "meanMs": 15.866898176050768,
+        "fps": 63.0242905011758,
+        "unfocused": 0,
+        "saveWrite": false,
+        "p95Ms": 18.8806,
+        "p99Ms": 25.0644,
+        "low1Fps": 34.059916502114696,
+        "referenceMeanMs": 15.866898176050766,
+        "fpsChangePercent": -1.1102230246251565e-14,
+        "traceSHA256": "32F6825587F368B5DDFE20971E97736AC49130CEFFF4E5BA43A25924A20F7F96"
+      },
+      {
+        "run": "Profiles1",
+        "phase": 1,
+        "preset": "Performance",
+        "frames": 1246,
+        "meanMs": 16.06514133226324,
+        "fps": 62.2465734547709,
+        "unfocused": 0,
+        "saveWrite": false,
+        "p95Ms": 22.54,
+        "p99Ms": 29.2616,
+        "low1Fps": 30.960838667197816,
+        "referenceMeanMs": 15.888607366752336,
+        "fpsChangePercent": -1.0988634451436607,
+        "traceSHA256": "F1926ED11A1AA5884626AA410CBBECFCB0AC2E0AF860408D1877DCE701180589"
+      },
+      {
+        "run": "Profiles1",
+        "phase": 2,
+        "preset": "Aggressive",
+        "frames": 1293,
+        "meanMs": 15.471480974477933,
+        "fps": 64.63505346706111,
+        "unfocused": 0,
+        "saveWrite": false,
+        "p95Ms": 18.5215,
+        "p99Ms": 24.7168,
+        "low1Fps": 33.800027209021906,
+        "referenceMeanMs": 15.910346260106287,
+        "fpsChangePercent": 2.8366081201425697,
+        "traceSHA256": "F26F44B3C066E0EF8643A717A85A26C118955621AEF1488E7D6D3CC2DA4AF75F"
+      },
+      {
+        "run": "Profiles1",
+        "phase": 3,
+        "preset": "Faithful",
+        "frames": 1262,
+        "meanMs": 15.848250396196503,
+        "fps": 63.0984477781847,
+        "unfocused": 0,
+        "saveWrite": false,
+        "p95Ms": 19.162,
+        "p99Ms": 24.6446,
+        "low1Fps": 35.03535066882485,
+        "referenceMeanMs": 15.93211489675198,
+        "fpsChangePercent": 0.5291719808743212,
+        "traceSHA256": "8A60C66BD2C86515B71D6EA72A41F39B147D5DAAFBD339F43A02B103B523268E"
+      },
+      {
+        "run": "Profiles1",
+        "phase": 4,
+        "preset": "Balanced",
+        "frames": 1254,
+        "meanMs": 15.953913317384375,
+        "fps": 62.680546152293424,
+        "unfocused": 0,
+        "saveWrite": false,
+        "p95Ms": 19.4057,
+        "p99Ms": 25.2807,
+        "low1Fps": 34.54571520857839,
+        "referenceMeanMs": 15.953913317384371,
+        "fpsChangePercent": -2.220446049250313e-14,
+        "traceSHA256": "2809F8FDA26C1D2901206682CC320040BC873E0D95BC7E41829DAE396C088779"
+      },
+      {
+        "run": "Profiles2",
+        "phase": 0,
+        "preset": "Balanced",
+        "frames": 1246,
+        "meanMs": 16.0618959069021,
+        "fps": 62.25915083724836,
+        "unfocused": 0,
+        "saveWrite": false,
+        "p95Ms": 18.9128,
+        "p99Ms": 25.8283,
+        "low1Fps": 31.01393869784877,
+        "referenceMeanMs": 16.0618959069021,
+        "fpsChangePercent": 0.0,
+        "traceSHA256": "39B808676B84C121B3A1D5DB822CAA4EAFFA25474A856EB1DE584CFA7B487610"
+      },
+      {
+        "run": "Profiles2",
+        "phase": 1,
+        "preset": "Faithful",
+        "frames": 1215,
+        "meanMs": 16.463824855967083,
+        "fps": 60.73922729064771,
+        "unfocused": 0,
+        "saveWrite": false,
+        "p95Ms": 22.2292,
+        "p99Ms": 26.8752,
+        "low1Fps": 31.744276573067783,
+        "referenceMeanMs": 16.225448410565555,
+        "fpsChangePercent": -1.4478801097980054,
+        "traceSHA256": "22C8FEA22CA7CC4560515E90D313A8E91644B53A6276F208BAAE07F9CA2DA817"
+      },
+      {
+        "run": "Profiles2",
+        "phase": 2,
+        "preset": "Aggressive",
+        "frames": 1289,
+        "meanMs": 15.516644840961993,
+        "fps": 64.44692201500453,
+        "unfocused": 0,
+        "saveWrite": false,
+        "p95Ms": 18.4103,
+        "p99Ms": 25.0262,
+        "low1Fps": 35.32885422343204,
+        "referenceMeanMs": 16.390666310494154,
+        "fpsChangePercent": 5.632799348637896,
+        "traceSHA256": "4DC49DC3D95C3BA6F1CA59C3A63C1C149936EE4A18B77C707F5B7664F2F5D2F6"
+      },
+      {
+        "run": "Profiles2",
+        "phase": 3,
+        "preset": "Performance",
+        "frames": 1287,
+        "meanMs": 15.540867055167052,
+        "fps": 64.34647413494979,
+        "unfocused": 0,
+        "saveWrite": false,
+        "p95Ms": 18.4729,
+        "p99Ms": 25.1914,
+        "low1Fps": 34.35705917316301,
+        "referenceMeanMs": 16.55756656481852,
+        "fpsChangePercent": 6.542102870080435,
+        "traceSHA256": "3B84123FF3A10BC8668EC6B53D79DBB0451C2594CA2DBABA54105399B836A21B"
+      },
+      {
+        "run": "Profiles2",
+        "phase": 4,
+        "preset": "Balanced",
+        "frames": 1196,
+        "meanMs": 16.726166304347814,
+        "fps": 59.78656326883819,
+        "unfocused": 0,
+        "saveWrite": false,
+        "p95Ms": 20.8852,
+        "p99Ms": 37.4482,
+        "low1Fps": 19.662017076283085,
+        "referenceMeanMs": 16.726166304347817,
+        "fpsChangePercent": 2.220446049250313e-14,
+        "traceSHA256": "02853A4E8C5D1C64AD27A5CC4BAAE0AB3DEB1C48B530DCD61BA534AE72FB8133"
+      }
+    ],
+    "interpretation": {
+      "updated": "2026-10-22",
+      "practicalFPSNoiseBandPercent": 3,
+      "rule": "Treat roughly plus/minus 3% in these ordinary gameplay runs as inconclusive, not demonstrated improvement or regression. This is not a formal significance test; larger single observations need practical confirmation.",
+      "Performance": "No dependable uplift established. The aggregate is inside the practical noise band and the two observations disagree.",
+      "Aggressive": "Tentative lead only: one observation is inside the noise band, the other exceeds it. A dependable tier advantage is not established.",
+      "advertisedExpectedFPSGain": null
+    },
+    "limitations": "One stationary world on one PC. Two process repeats for preset effects; no population confidence interval, moving/active-effects or multiplayer FPS claim. Conditional feature effects are not additive."
+  },
+  "preservation": {
+    "originalFiles": 157,
+    "originalWorldFiles": 135,
+    "verifiedAfterEveryCompletedRun": true,
+    "permanentDeployment": false,
+    "published": false
+  },
+  "failedPilots": {
+    "Matrix01": "Unloaded room fixture selected.",
+    "HostOnly": "Unloaded native client room tree.",
+    "HostOnly2": "Initial wall additions and edit were queued together in unloaded fixture.",
+    "HostOnly3": "Private mutable control-file sharing violation; replaced by immutable phase files with ready markers.",
+    "UI03": "Transient process-exit race in restoration; recovered after verified exit and all originals hash-verified.",
+    "UiProbe": "Reconnect helper incorrectly asserted a close on the fresh client that had never opened the panel; corrected before the final UI peer pass."
+  }
+}

@@ -1,0 +1,4807 @@
+{
+  "schema": 1,
+  "date": "2026-10-22",
+  "shippingSHA256": "001B587DF551403182741E7EE397E905C0C2CAFDB0BA0276DA661AD8D578397F",
+  "baselineSHA256": "6E45EC771F6D2EDDEA5226ABD76EED953C01E3F60F6CAD5C672F497411235602",
+  "interpretation": "Ordinary gameplay variance within about +/-3% FPS is inconclusive. Larger single observations need practical confirmation. No statistical confidence claim; no sum of isolated feature gains.",
+  "settings": {
+    "Balanced": "Previous development defaults, native presentation",
+    "Aggressive": "4 m inspected labels, 5 Hz distant passive text, 10 px passive labels, shadows off, 10% vegetation range with native-or-20m floor, 10% exhaust emission, decorative contours off",
+    "Terrain": "Native in every mode; no terrain control shipped",
+    "Performance": "12 m inspected labels, 10 Hz distant passive text, 6 px passive labels, 100 m / 2 cascades / 1024 hard shadows, 50% vegetation range with native-or-20m floor, 75% exhaust emission, decorative contours off"
+  },
+  "limitations": [
+    "One saved 37-ship world and installed mod stack on Ryzen 7 3800X / RTX 2070 SUPER at 2560x1080 D3D11, native configured 50Hz, vsync off.",
+    "No active particles in the measured world; emission correctness checked separately. No active-exhaust or multiplayer FPS gain is claimed.",
+    "Camera motion is a scripted local camera route, not a manual piloting/building playthrough.",
+    "No new exact CPU preparation optimisation retained: pooling, endpoint plans, hidden text deferral and unchanged chunk preparation had no clear repeatable FPS benefit.",
+    "Render scale rejected because native render attachments mismatch; terrain coarsening rejected after visual review. Neither is a shipping gain."
+  ],
+  "offlineTests": 71,
+  "runs": [
+    {
+      "label": "Baseline01",
+      "metadata": {
+        "Label": "Baseline01",
+        "World": "PerfTest_Replication_20261022_011633_657",
+        "WorldSHA256": "D97D4D83AB0E3E90693ED66D57A00FE5158BB2ED5881FCD829ACB5DF9EC9D47C",
+        "ModSHA256": "6E45EC771F6D2EDDEA5226ABD76EED953C01E3F60F6CAD5C672F497411235602",
+        "DriverSHA256": "7166DBEC942C1BA60A6176E6FF045C19954563FFBCF73FC32FAFE3130A64F668",
+        "StartUtc": "2026-10-22T00:16:34.1704965Z"
+      },
+      "phases": [
+        {
+          "index": 0,
+          "result": {
+            "phase": "Balanced",
+            "frames": 1297,
+            "fps": 64.84671097481932,
+            "meanMs": 15.420982575173488,
+            "p95": 18.0425,
+            "p99": 23.8675,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "A359B752B1E15AA56EDCF7A88C60933E1527AD2ACF9E3AC9D2CD527659736CA8",
+          "application": {
+            "phase": "Balanced",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "additionalMap": 512,
+              "soft": true,
+              "policy": {
+                "Name": "Balanced",
+                "Rooms": true,
+                "Outlines": true,
+                "ReadoutHz": 0,
+                "LabelPixels": 0,
+                "Cascades": 0,
+                "ShadowDistance": 0.0,
+                "ExhaustDensity": 1.0
+              },
+              "productionOnly": true
+            }
+          }
+        },
+        {
+          "index": 1,
+          "result": {
+            "phase": "Balanced",
+            "frames": 1316,
+            "fps": 65.77620019748254,
+            "meanMs": 15.203067325227964,
+            "p95": 18.217,
+            "p99": 23.7562,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "7510FA926E1FC4C789EFE1026E1D9B9ABAD13BD27F4A1AC0048C13B6741A9841",
+          "application": {
+            "phase": "Balanced",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "additionalMap": 512,
+              "soft": true,
+              "policy": {
+                "Name": "Balanced",
+                "Rooms": true,
+                "Outlines": true,
+                "ReadoutHz": 0,
+                "LabelPixels": 0,
+                "Cascades": 0,
+                "ShadowDistance": 0.0,
+                "ExhaustDensity": 1.0
+              },
+              "productionOnly": true
+            }
+          }
+        }
+      ],
+      "completed": true,
+      "interpretation": "See request and shipping DLL identity for scope.",
+      "restoration": {
+        "Restored": true,
+        "FilesVerified": 157,
+        "WorldFilesVerified": 135,
+        "Utc": "2026-10-22T00:18:10.6408808Z"
+      }
+    },
+    {
+      "label": "Final01",
+      "metadata": {
+        "Label": "Final01",
+        "World": "PerfTest_Replication_20261022_004949_157",
+        "WorldSHA256": "D97D4D83AB0E3E90693ED66D57A00FE5158BB2ED5881FCD829ACB5DF9EC9D47C",
+        "ModSHA256": "0E956CAD3205FE22E09884A65D649E6CADE9575C0BBD00B39B60882E378284B1",
+        "DriverSHA256": "CCB5AEE57DFB4193A76C82A4E591C754CBE464230CE60FE4B201AF19F495477F",
+        "StartUtc": "2026-10-21T23:49:49.9804638Z"
+      },
+      "phases": [
+        {
+          "index": 0,
+          "result": {
+            "phase": "Balanced",
+            "frames": 1126,
+            "fps": 56.30146637169173,
+            "meanMs": 17.761526731793936,
+            "p95": 24.0291,
+            "p99": 42.8969,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "A931940C8F5BF08ACE2D612D8893E19CBAF9479651179F8C85F6D9B97E8AC14B",
+          "application": {
+            "phase": "Balanced",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "additionalMap": 512,
+              "soft": true,
+              "policy": {},
+              "productionOnly": true
+            }
+          }
+        },
+        {
+          "index": 1,
+          "result": {
+            "phase": "Performance",
+            "frames": 1314,
+            "fps": 65.66887164146455,
+            "meanMs": 15.227915068493143,
+            "p95": 19.9629,
+            "p99": 25.2286,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "3755F05AA995DE5F7A9837E6E2C85A25E57E6EEF491D421B058545CAD1F20BA9",
+          "application": {
+            "phase": "Performance",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 100.0,
+              "cascades": 2,
+              "map": 1024,
+              "additionalMap": 512,
+              "soft": false,
+              "policy": {},
+              "productionOnly": true
+            }
+          }
+        },
+        {
+          "index": 2,
+          "result": {
+            "phase": "Aggressive",
+            "frames": 1528,
+            "fps": 76.39691356469214,
+            "meanMs": 13.089534031413587,
+            "p95": 16.8262,
+            "p99": 22.7161,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "201CB730AAFABE8452FA7D8375F3675E59D06A0A90A8CBE2BA07C1D27674F609",
+          "application": {
+            "phase": "Aggressive",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 60.0,
+              "cascades": 1,
+              "map": 512,
+              "additionalMap": 512,
+              "soft": false,
+              "policy": {},
+              "productionOnly": true
+            }
+          }
+        },
+        {
+          "index": 3,
+          "result": {
+            "phase": "Limit",
+            "frames": 1601,
+            "fps": 79.99731936527841,
+            "meanMs": 12.50041886321049,
+            "p95": 17.052,
+            "p99": 21.5022,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "BB9EDE15248FC187B6F2BC4BFF6E9F8297EEE650F0EDEC88AC799C94AEF83161",
+          "application": {
+            "phase": "Limit",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 0.0,
+              "cascades": 1,
+              "map": 256,
+              "additionalMap": 256,
+              "soft": true,
+              "policy": {},
+              "productionOnly": true
+            }
+          }
+        },
+        {
+          "index": 4,
+          "result": {
+            "phase": "Balanced",
+            "frames": 1265,
+            "fps": 63.36253693459877,
+            "meanMs": 15.782196363636372,
+            "p95": 19.9922,
+            "p99": 26.7148,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "6FE4706B80BB22AD7196269EF111EFFCBEC20EFFD38E06F1ADCBC60BD61E04C9",
+          "application": {
+            "phase": "Balanced",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "additionalMap": 512,
+              "soft": true,
+              "policy": {},
+              "productionOnly": true
+            }
+          }
+        }
+      ],
+      "completed": true,
+      "acceptance": {
+        "passed": true,
+        "rows": [
+          {
+            "repeat": 0,
+            "name": "Faithful",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 0,
+            "name": "Balanced",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 0,
+            "name": "Performance",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 0,
+            "name": "Aggressive",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 0,
+            "name": "Balanced",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 1,
+            "name": "Faithful",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 1,
+            "name": "Balanced",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 1,
+            "name": "Performance",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 1,
+            "name": "Aggressive",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 1,
+            "name": "Balanced",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 2,
+            "name": "Faithful",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 2,
+            "name": "Balanced",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 2,
+            "name": "Performance",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 2,
+            "name": "Aggressive",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 2,
+            "name": "Balanced",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 3,
+            "name": "Faithful",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 3,
+            "name": "Balanced",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 3,
+            "name": "Performance",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 3,
+            "name": "Aggressive",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 3,
+            "name": "Balanced",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 4,
+            "name": "Faithful",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 4,
+            "name": "Balanced",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 4,
+            "name": "Performance",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 4,
+            "name": "Aggressive",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 4,
+            "name": "Balanced",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 5,
+            "name": "Faithful",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 5,
+            "name": "Balanced",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 5,
+            "name": "Performance",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 5,
+            "name": "Aggressive",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 5,
+            "name": "Balanced",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 6,
+            "name": "Faithful",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 6,
+            "name": "Balanced",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 6,
+            "name": "Performance",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 6,
+            "name": "Aggressive",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 6,
+            "name": "Balanced",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 7,
+            "name": "Faithful",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 7,
+            "name": "Balanced",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 7,
+            "name": "Performance",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 7,
+            "name": "Aggressive",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 7,
+            "name": "Balanced",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          }
+        ],
+        "native": {
+          "distance": 500.0,
+          "cascades": 4,
+          "map": 4096,
+          "add": 512,
+          "soft": true,
+          "scale": 1.0
+        },
+        "colliders": 6981,
+        "visibleLabels": 70,
+        "aggressiveHidden": 56,
+        "focusRestores": true,
+        "balancedRestores": true,
+        "exhaustRestores": true,
+        "scope": "Immediate native switch state, collider identities, actual shadow assets and emission rates. Visual detail is local presentation; no physics cadence changes."
+      },
+      "interpretation": "Rejected terrain prototype. Includes unacceptable missing/coarse surfaces; do not report as delivered preset gains. Final01 also overlapped offline builds/checks; Final03 failed an overstrict particle float equality check.",
+      "restoration": {
+        "Restored": true,
+        "FilesVerified": 157,
+        "WorldFilesVerified": 135,
+        "Utc": "2026-10-21T23:52:45.5360733Z"
+      }
+    },
+    {
+      "label": "Final02",
+      "metadata": {
+        "Label": "Final02",
+        "World": "PerfTest_Replication_20261022_005256_335",
+        "WorldSHA256": "D97D4D83AB0E3E90693ED66D57A00FE5158BB2ED5881FCD829ACB5DF9EC9D47C",
+        "ModSHA256": "0E956CAD3205FE22E09884A65D649E6CADE9575C0BBD00B39B60882E378284B1",
+        "DriverSHA256": "0DDC66ED220ACEC17A86EC2A7129643AE055F952EEE3B838650335287DDD280A",
+        "StartUtc": "2026-10-21T23:52:56.8425751Z"
+      },
+      "phases": [
+        {
+          "index": 0,
+          "result": {
+            "phase": "Balanced",
+            "frames": 1258,
+            "fps": 62.89163289715938,
+            "meanMs": 15.900366295707467,
+            "p95": 19.104,
+            "p99": 25.6423,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "D76EA123C8996695DF2623229C414BD318236D77AABD366C1CB88CAC77A72D0B",
+          "application": {
+            "phase": "Balanced",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "additionalMap": 512,
+              "soft": true,
+              "policy": {
+                "Name": "Balanced",
+                "Rooms": true,
+                "Outlines": true,
+                "ReadoutHz": 0,
+                "LabelPixels": 0,
+                "Cascades": 0,
+                "ShadowDistance": 0.0,
+                "ExhaustDensity": 1.0,
+                "LabelDistance": 0.0,
+                "TerrainDetail": 1.0,
+                "VegetationRange": 1.0,
+                "ShadowResolution": 0,
+                "ShadowQuality": 0
+              },
+              "productionOnly": true
+            }
+          }
+        },
+        {
+          "index": 1,
+          "result": {
+            "phase": "Limit",
+            "frames": 1667,
+            "fps": 83.32892486496775,
+            "meanMs": 12.000634853029398,
+            "p95": 15.7765,
+            "p99": 21.5237,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "4D17342964C066E44FB4C8B1FEB623F1A59561DDEC27E8F661F3178A42307C49",
+          "application": {
+            "phase": "Limit",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 0.0,
+              "cascades": 1,
+              "map": 256,
+              "additionalMap": 256,
+              "soft": true,
+              "policy": {
+                "Name": "Custom",
+                "Rooms": true,
+                "Outlines": false,
+                "ReadoutHz": 5,
+                "LabelPixels": 10,
+                "Cascades": 1,
+                "ShadowDistance": 0.0,
+                "ExhaustDensity": 0.1,
+                "LabelDistance": 4.0,
+                "TerrainDetail": 0.25,
+                "VegetationRange": 0.1,
+                "ShadowResolution": 256,
+                "ShadowQuality": 2
+              },
+              "productionOnly": true
+            }
+          }
+        },
+        {
+          "index": 2,
+          "result": {
+            "phase": "Aggressive",
+            "frames": 1459,
+            "fps": 72.90974944372205,
+            "meanMs": 13.715586840301587,
+            "p95": 20.2834,
+            "p99": 25.5978,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "7EB6548B9B388E4310AEDDBC1EB261DEC2C42CB33D73A30097C36ABD52DD0392",
+          "application": {
+            "phase": "Aggressive",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 60.0,
+              "cascades": 1,
+              "map": 512,
+              "additionalMap": 512,
+              "soft": false,
+              "policy": {
+                "Name": "Aggressive",
+                "Rooms": true,
+                "Outlines": false,
+                "ReadoutHz": 5,
+                "LabelPixels": 10,
+                "Cascades": 1,
+                "ShadowDistance": 60.0,
+                "ExhaustDensity": 0.25,
+                "LabelDistance": 5.0,
+                "TerrainDetail": 0.4,
+                "VegetationRange": 0.25,
+                "ShadowResolution": 512,
+                "ShadowQuality": 1
+              },
+              "productionOnly": true
+            }
+          }
+        },
+        {
+          "index": 3,
+          "result": {
+            "phase": "Performance",
+            "frames": 1363,
+            "fps": 68.14418934497449,
+            "meanMs": 14.674765517241392,
+            "p95": 18.2198,
+            "p99": 24.0906,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "497E52A7F6B315CC63FAC0690B80ACF330B3D37256156489B531FA82146D262E",
+          "application": {
+            "phase": "Performance",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 100.0,
+              "cascades": 2,
+              "map": 1024,
+              "additionalMap": 512,
+              "soft": false,
+              "policy": {
+                "Name": "Performance",
+                "Rooms": true,
+                "Outlines": false,
+                "ReadoutHz": 10,
+                "LabelPixels": 6,
+                "Cascades": 2,
+                "ShadowDistance": 100.0,
+                "ExhaustDensity": 0.75,
+                "LabelDistance": 20.0,
+                "TerrainDetail": 0.75,
+                "VegetationRange": 0.75,
+                "ShadowResolution": 1024,
+                "ShadowQuality": 1
+              },
+              "productionOnly": true
+            }
+          }
+        },
+        {
+          "index": 4,
+          "result": {
+            "phase": "Balanced",
+            "frames": 1270,
+            "fps": 63.486925819931265,
+            "meanMs": 15.751274566929135,
+            "p95": 19.2751,
+            "p99": 25.192,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "447EC9617D895DBA81B22068EC3A5838F994BDA63081D176F0C1C8345BA73B22",
+          "application": {
+            "phase": "Balanced",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "additionalMap": 512,
+              "soft": true,
+              "policy": {
+                "Name": "Balanced",
+                "Rooms": true,
+                "Outlines": true,
+                "ReadoutHz": 0,
+                "LabelPixels": 0,
+                "Cascades": 0,
+                "ShadowDistance": 0.0,
+                "ExhaustDensity": 1.0,
+                "LabelDistance": 0.0,
+                "TerrainDetail": 1.0,
+                "VegetationRange": 1.0,
+                "ShadowResolution": 0,
+                "ShadowQuality": 0
+              },
+              "productionOnly": true
+            }
+          }
+        }
+      ],
+      "completed": true,
+      "interpretation": "Rejected terrain prototype. Includes unacceptable missing/coarse surfaces; do not report as delivered preset gains. Final01 also overlapped offline builds/checks; Final03 failed an overstrict particle float equality check.",
+      "restoration": {
+        "Restored": true,
+        "FilesVerified": 157,
+        "WorldFilesVerified": 135,
+        "Utc": "2026-10-21T23:55:49.0986858Z"
+      }
+    },
+    {
+      "label": "Final03",
+      "metadata": {
+        "Label": "Final03",
+        "World": "PerfTest_Replication_20261022_005636_846",
+        "WorldSHA256": "D97D4D83AB0E3E90693ED66D57A00FE5158BB2ED5881FCD829ACB5DF9EC9D47C",
+        "ModSHA256": "C08CB817A17C7FFF8CE3A7178A4F4C0CC08B8A8896E90D18F684F82707232FF6",
+        "DriverSHA256": "98849964179D482C126210EAD112EF4004A40BB554067B9244F3AB5D91E4E0D6",
+        "StartUtc": "2026-10-21T23:56:37.4179134Z"
+      },
+      "phases": [
+        {
+          "index": 0,
+          "result": {
+            "phase": "Balanced",
+            "frames": 1294,
+            "fps": 64.68734747826997,
+            "meanMs": 15.458973647604333,
+            "p95": 18.4855,
+            "p99": 24.3005,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "138D5475A55FC24344F8B5759D8888384219484642153809B6B38D43286816F3",
+          "application": {
+            "phase": "Balanced",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "additionalMap": 512,
+              "soft": true,
+              "policy": {
+                "Name": "Balanced",
+                "Rooms": true,
+                "Outlines": true,
+                "ReadoutHz": 0,
+                "LabelPixels": 0,
+                "Cascades": 0,
+                "ShadowDistance": 0.0,
+                "ExhaustDensity": 1.0,
+                "LabelDistance": 0.0,
+                "TerrainDetail": 1.0,
+                "VegetationRange": 1.0,
+                "ShadowResolution": 0,
+                "ShadowQuality": 0
+              },
+              "productionOnly": true
+            }
+          }
+        },
+        {
+          "index": 1,
+          "result": {
+            "phase": "Performance",
+            "frames": 1399,
+            "fps": 69.9456021702635,
+            "meanMs": 14.296824517512517,
+            "p95": 17.6153,
+            "p99": 23.5358,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "9B373744BE99A5ECF3334ADA089B0EDD48AD33E79C2A13955E049E386C863E4A",
+          "application": {
+            "phase": "Performance",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 100.0,
+              "cascades": 2,
+              "map": 1024,
+              "additionalMap": 512,
+              "soft": false,
+              "policy": {
+                "Name": "Performance",
+                "Rooms": true,
+                "Outlines": false,
+                "ReadoutHz": 10,
+                "LabelPixels": 6,
+                "Cascades": 2,
+                "ShadowDistance": 100.0,
+                "ExhaustDensity": 0.75,
+                "LabelDistance": 20.0,
+                "TerrainDetail": 0.75,
+                "VegetationRange": 0.75,
+                "ShadowResolution": 1024,
+                "ShadowQuality": 1
+              },
+              "productionOnly": true
+            }
+          }
+        },
+        {
+          "index": 2,
+          "result": {
+            "phase": "Aggressive",
+            "frames": 1610,
+            "fps": 80.45420627033292,
+            "meanMs": 12.429430931677029,
+            "p95": 18.2514,
+            "p99": 22.7684,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "AA8E1AE62A773079EDAD45A0EF3AD41601EBF569460D0ADD357DD562E155E95E",
+          "application": {
+            "phase": "Aggressive",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 0.0,
+              "cascades": 1,
+              "map": 256,
+              "additionalMap": 256,
+              "soft": true,
+              "policy": {
+                "Name": "Aggressive",
+                "Rooms": true,
+                "Outlines": false,
+                "ReadoutHz": 5,
+                "LabelPixels": 10,
+                "Cascades": 1,
+                "ShadowDistance": 0.0,
+                "ExhaustDensity": 0.1,
+                "LabelDistance": 4.0,
+                "TerrainDetail": 0.25,
+                "VegetationRange": 0.1,
+                "ShadowResolution": 256,
+                "ShadowQuality": 2
+              },
+              "productionOnly": true
+            }
+          }
+        },
+        {
+          "index": 3,
+          "result": {
+            "phase": "Balanced",
+            "frames": 1291,
+            "fps": 64.51907536198814,
+            "meanMs": 15.499292176607305,
+            "p95": 19.0852,
+            "p99": 25.3325,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "A381DAE72CC146EBE955E4453878AF438EFDDB2684C0115D23839C4CAA3B932A",
+          "application": {
+            "phase": "Balanced",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "additionalMap": 512,
+              "soft": true,
+              "policy": {
+                "Name": "Balanced",
+                "Rooms": true,
+                "Outlines": true,
+                "ReadoutHz": 0,
+                "LabelPixels": 0,
+                "Cascades": 0,
+                "ShadowDistance": 0.0,
+                "ExhaustDensity": 1.0,
+                "LabelDistance": 0.0,
+                "TerrainDetail": 1.0,
+                "VegetationRange": 1.0,
+                "ShadowResolution": 0,
+                "ShadowQuality": 0
+              },
+              "productionOnly": true
+            }
+          }
+        }
+      ],
+      "completed": false,
+      "interpretation": "Rejected terrain prototype. Includes unacceptable missing/coarse surfaces; do not report as delivered preset gains. Final01 also overlapped offline builds/checks; Final03 failed an overstrict particle float equality check.",
+      "restoration": {
+        "Restored": true,
+        "FilesVerified": 157,
+        "WorldFilesVerified": 135,
+        "Utc": "2026-10-21T23:59:07.5257427Z"
+      }
+    },
+    {
+      "label": "Final04",
+      "metadata": {
+        "Label": "Final04",
+        "World": "PerfTest_Replication_20261022_010258_242",
+        "WorldSHA256": "D97D4D83AB0E3E90693ED66D57A00FE5158BB2ED5881FCD829ACB5DF9EC9D47C",
+        "ModSHA256": "A8ABA17EC85986DE153B2382E417DA729026E195E14E5621707A4DA4EEEAD28F",
+        "DriverSHA256": "54995A914F64E6885CD1DD2210451C2AF555AEC0B562C74D238EA806B39F6119",
+        "StartUtc": "2026-10-22T00:02:58.804898Z"
+      },
+      "phases": [
+        {
+          "index": 0,
+          "result": {
+            "phase": "Balanced",
+            "frames": 1292,
+            "fps": 64.60353284419358,
+            "meanMs": 15.479029643962848,
+            "p95": 18.5039,
+            "p99": 24.2827,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "D954ADD117256ED7F17164410CD87CE790AB070E3DFAF1F724D6C3F153D2FE3C",
+          "application": {
+            "phase": "Balanced",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "additionalMap": 512,
+              "soft": true,
+              "policy": {
+                "Name": "Balanced",
+                "Rooms": true,
+                "Outlines": true,
+                "ReadoutHz": 0,
+                "LabelPixels": 0,
+                "Cascades": 0,
+                "ShadowDistance": 0.0,
+                "ExhaustDensity": 1.0,
+                "LabelDistance": 0.0,
+                "VegetationRange": 1.0,
+                "ShadowResolution": 0,
+                "ShadowQuality": 0
+              },
+              "productionOnly": true
+            }
+          }
+        },
+        {
+          "index": 1,
+          "result": {
+            "phase": "Performance",
+            "frames": 1369,
+            "fps": 68.39949996518075,
+            "meanMs": 14.61998991964937,
+            "p95": 18.0428,
+            "p99": 23.9958,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "A7BB5BAC60AB658740E38E1076F217CBA05EA89C249A396D359B0DF0EEB3780D",
+          "application": {
+            "phase": "Performance",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 100.0,
+              "cascades": 2,
+              "map": 1024,
+              "additionalMap": 512,
+              "soft": false,
+              "policy": {
+                "Name": "Performance",
+                "Rooms": true,
+                "Outlines": false,
+                "ReadoutHz": 10,
+                "LabelPixels": 6,
+                "Cascades": 2,
+                "ShadowDistance": 100.0,
+                "ExhaustDensity": 0.75,
+                "LabelDistance": 20.0,
+                "VegetationRange": 0.75,
+                "ShadowResolution": 1024,
+                "ShadowQuality": 1
+              },
+              "productionOnly": true
+            }
+          }
+        },
+        {
+          "index": 2,
+          "result": {
+            "phase": "Aggressive",
+            "frames": 1566,
+            "fps": 78.27567348619404,
+            "meanMs": 12.77536117496806,
+            "p95": 16.4379,
+            "p99": 22.2103,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "B9E05DD43C00BDC825E70936FBB219E95A1AD997A0C0B5B8FAE1E3DF3082B303",
+          "application": {
+            "phase": "Aggressive",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 0.0,
+              "cascades": 1,
+              "map": 256,
+              "additionalMap": 256,
+              "soft": true,
+              "policy": {
+                "Name": "Aggressive",
+                "Rooms": true,
+                "Outlines": false,
+                "ReadoutHz": 5,
+                "LabelPixels": 10,
+                "Cascades": 1,
+                "ShadowDistance": 0.0,
+                "ExhaustDensity": 0.1,
+                "LabelDistance": 4.0,
+                "VegetationRange": 0.1,
+                "ShadowResolution": 256,
+                "ShadowQuality": 2
+              },
+              "productionOnly": true
+            }
+          }
+        },
+        {
+          "index": 3,
+          "result": {
+            "phase": "Balanced",
+            "frames": 1256,
+            "fps": 62.760816225801726,
+            "meanMs": 15.933508519108264,
+            "p95": 22.068,
+            "p99": 28.4985,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "661B01F5DF14CFACA123763990BD2C4FE0374E3BD5444E295FB9FE0B008726FD",
+          "application": {
+            "phase": "Balanced",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "additionalMap": 512,
+              "soft": true,
+              "policy": {
+                "Name": "Balanced",
+                "Rooms": true,
+                "Outlines": true,
+                "ReadoutHz": 0,
+                "LabelPixels": 0,
+                "Cascades": 0,
+                "ShadowDistance": 0.0,
+                "ExhaustDensity": 1.0,
+                "LabelDistance": 0.0,
+                "VegetationRange": 1.0,
+                "ShadowResolution": 0,
+                "ShadowQuality": 0
+              },
+              "productionOnly": true
+            }
+          }
+        }
+      ],
+      "completed": true,
+      "acceptance": {
+        "passed": true,
+        "rows": [
+          {
+            "repeat": 0,
+            "name": "Faithful",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 0,
+            "name": "Balanced",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 0,
+            "name": "Performance",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 0,
+            "name": "Aggressive",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 0,
+            "name": "Balanced",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 1,
+            "name": "Faithful",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 1,
+            "name": "Balanced",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 1,
+            "name": "Performance",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 1,
+            "name": "Aggressive",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 1,
+            "name": "Balanced",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 2,
+            "name": "Faithful",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 2,
+            "name": "Balanced",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 2,
+            "name": "Performance",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 2,
+            "name": "Aggressive",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 2,
+            "name": "Balanced",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 3,
+            "name": "Faithful",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 3,
+            "name": "Balanced",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 3,
+            "name": "Performance",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 3,
+            "name": "Aggressive",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 3,
+            "name": "Balanced",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 4,
+            "name": "Faithful",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 4,
+            "name": "Balanced",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 4,
+            "name": "Performance",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 4,
+            "name": "Aggressive",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 4,
+            "name": "Balanced",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 5,
+            "name": "Faithful",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 5,
+            "name": "Balanced",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 5,
+            "name": "Performance",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 5,
+            "name": "Aggressive",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 5,
+            "name": "Balanced",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 6,
+            "name": "Faithful",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 6,
+            "name": "Balanced",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 6,
+            "name": "Performance",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 6,
+            "name": "Aggressive",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 6,
+            "name": "Balanced",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 7,
+            "name": "Faithful",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 7,
+            "name": "Balanced",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 7,
+            "name": "Performance",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 7,
+            "name": "Aggressive",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 7,
+            "name": "Balanced",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          }
+        ],
+        "native": {
+          "distance": 500.0,
+          "cascades": 4,
+          "map": 4096,
+          "add": 512,
+          "soft": true,
+          "scale": 1.0
+        },
+        "colliders": 6981,
+        "visibleLabels": 70,
+        "aggressiveHidden": 63,
+        "focusRestores": true,
+        "balancedRestores": true,
+        "exhaustRestores": true,
+        "scope": "Immediate native switch state, collider identities, actual shadow assets and emission rates. Visual detail is local presentation; no physics cadence changes."
+      },
+      "interpretation": "Native terrain retained. Performance uses the earlier 20 m / 75% vegetation mapping; Aggressive matches the final policy.",
+      "restoration": {
+        "Restored": true,
+        "FilesVerified": 157,
+        "WorldFilesVerified": 135,
+        "Utc": "2026-10-22T00:05:28.9605107Z"
+      }
+    },
+    {
+      "label": "Final05",
+      "metadata": {
+        "Label": "Final05",
+        "World": "PerfTest_Replication_20261022_010730_124",
+        "WorldSHA256": "D97D4D83AB0E3E90693ED66D57A00FE5158BB2ED5881FCD829ACB5DF9EC9D47C",
+        "ModSHA256": "001B587DF551403182741E7EE397E905C0C2CAFDB0BA0276DA661AD8D578397F",
+        "DriverSHA256": "7166DBEC942C1BA60A6176E6FF045C19954563FFBCF73FC32FAFE3130A64F668",
+        "StartUtc": "2026-10-22T00:07:30.6394114Z"
+      },
+      "phases": [
+        {
+          "index": 0,
+          "result": {
+            "phase": "Balanced",
+            "frames": 1274,
+            "fps": 63.67183603676575,
+            "meanMs": 15.705531083202539,
+            "p95": 18.8357,
+            "p99": 24.2818,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "8B3ABB70DE28DDEDFF959E77B98D0A5867E17130402EC520F313E4BDC55D31F1",
+          "application": {
+            "phase": "Balanced",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "additionalMap": 512,
+              "soft": true,
+              "policy": {
+                "Name": "Balanced",
+                "Rooms": true,
+                "Outlines": true,
+                "ReadoutHz": 0,
+                "LabelPixels": 0,
+                "Cascades": 0,
+                "ShadowDistance": 0.0,
+                "ExhaustDensity": 1.0,
+                "LabelDistance": 0.0,
+                "VegetationRange": 1.0,
+                "ShadowResolution": 0,
+                "ShadowQuality": 0
+              },
+              "productionOnly": true
+            }
+          }
+        },
+        {
+          "index": 1,
+          "result": {
+            "phase": "Performance",
+            "frames": 1430,
+            "fps": 71.49942550211611,
+            "meanMs": 13.98612636363636,
+            "p95": 17.1911,
+            "p99": 22.8345,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "C6D88D58AA1B064C49F9A495E81917D2776B2C41FB7F5F7990FE6AA78BE2EA6C",
+          "application": {
+            "phase": "Performance",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 100.0,
+              "cascades": 2,
+              "map": 1024,
+              "additionalMap": 512,
+              "soft": false,
+              "policy": {
+                "Name": "Performance",
+                "Rooms": true,
+                "Outlines": false,
+                "ReadoutHz": 10,
+                "LabelPixels": 6,
+                "Cascades": 2,
+                "ShadowDistance": 100.0,
+                "ExhaustDensity": 0.75,
+                "LabelDistance": 12.0,
+                "VegetationRange": 0.5,
+                "ShadowResolution": 1024,
+                "ShadowQuality": 1
+              },
+              "productionOnly": true
+            }
+          }
+        },
+        {
+          "index": 2,
+          "result": {
+            "phase": "Aggressive",
+            "frames": 1482,
+            "fps": 74.05226627941768,
+            "meanMs": 13.50397564102563,
+            "p95": 19.5011,
+            "p99": 27.5301,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "9C7B29A685B4FEF0884C8640AFE4EA9B0EEEB5C31DA21551323BEA061E38EE2B",
+          "application": {
+            "phase": "Aggressive",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 0.0,
+              "cascades": 1,
+              "map": 256,
+              "additionalMap": 256,
+              "soft": true,
+              "policy": {
+                "Name": "Aggressive",
+                "Rooms": true,
+                "Outlines": false,
+                "ReadoutHz": 5,
+                "LabelPixels": 10,
+                "Cascades": 1,
+                "ShadowDistance": 0.0,
+                "ExhaustDensity": 0.1,
+                "LabelDistance": 4.0,
+                "VegetationRange": 0.1,
+                "ShadowResolution": 256,
+                "ShadowQuality": 2
+              },
+              "productionOnly": true
+            }
+          }
+        },
+        {
+          "index": 3,
+          "result": {
+            "phase": "Balanced",
+            "frames": 1288,
+            "fps": 64.351947114051,
+            "meanMs": 15.539545341614906,
+            "p95": 18.7779,
+            "p99": 25.4776,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "6B719757E7BC81CBD5AA2488DEC84929302BE9B5F41175C315CD2101E1DAD3F8",
+          "application": {
+            "phase": "Balanced",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "additionalMap": 512,
+              "soft": true,
+              "policy": {
+                "Name": "Balanced",
+                "Rooms": true,
+                "Outlines": true,
+                "ReadoutHz": 0,
+                "LabelPixels": 0,
+                "Cascades": 0,
+                "ShadowDistance": 0.0,
+                "ExhaustDensity": 1.0,
+                "LabelDistance": 0.0,
+                "VegetationRange": 1.0,
+                "ShadowResolution": 0,
+                "ShadowQuality": 0
+              },
+              "productionOnly": true
+            }
+          }
+        }
+      ],
+      "completed": true,
+      "acceptance": {
+        "passed": true,
+        "rows": [
+          {
+            "repeat": 0,
+            "name": "Faithful",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 0,
+            "name": "Balanced",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 0,
+            "name": "Performance",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 0,
+            "name": "Aggressive",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 0,
+            "name": "Balanced",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 1,
+            "name": "Faithful",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 1,
+            "name": "Balanced",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 1,
+            "name": "Performance",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 1,
+            "name": "Aggressive",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 1,
+            "name": "Balanced",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 2,
+            "name": "Faithful",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 2,
+            "name": "Balanced",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 2,
+            "name": "Performance",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 2,
+            "name": "Aggressive",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 2,
+            "name": "Balanced",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 3,
+            "name": "Faithful",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 3,
+            "name": "Balanced",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 3,
+            "name": "Performance",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 3,
+            "name": "Aggressive",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 3,
+            "name": "Balanced",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 4,
+            "name": "Faithful",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 4,
+            "name": "Balanced",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 4,
+            "name": "Performance",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 4,
+            "name": "Aggressive",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 4,
+            "name": "Balanced",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 5,
+            "name": "Faithful",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 5,
+            "name": "Balanced",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 5,
+            "name": "Performance",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 5,
+            "name": "Aggressive",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 5,
+            "name": "Balanced",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 6,
+            "name": "Faithful",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 6,
+            "name": "Balanced",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 6,
+            "name": "Performance",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 6,
+            "name": "Aggressive",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 6,
+            "name": "Balanced",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 7,
+            "name": "Faithful",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 7,
+            "name": "Balanced",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 7,
+            "name": "Performance",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 7,
+            "name": "Aggressive",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          },
+          {
+            "repeat": 7,
+            "name": "Balanced",
+            "authoritativeUnchanged": true,
+            "collidersUnchanged": true
+          }
+        ],
+        "native": {
+          "distance": 500.0,
+          "cascades": 4,
+          "map": 4096,
+          "add": 512,
+          "soft": true,
+          "scale": 1.0
+        },
+        "colliders": 6981,
+        "visibleLabels": 70,
+        "aggressiveHidden": 63,
+        "focusRestores": true,
+        "balancedRestores": true,
+        "exhaustRestores": true,
+        "scope": "Immediate native switch state, collider identities, actual shadow assets and emission rates. Visual detail is local presentation; no physics cadence changes."
+      },
+      "interpretation": "See request and shipping DLL identity for scope.",
+      "restoration": {
+        "Restored": true,
+        "FilesVerified": 157,
+        "WorldFilesVerified": 135,
+        "Utc": "2026-10-22T00:10:00.8017763Z"
+      }
+    },
+    {
+      "label": "Final06",
+      "metadata": {
+        "Label": "Final06",
+        "World": "PerfTest_Replication_20261022_011026_758",
+        "WorldSHA256": "D97D4D83AB0E3E90693ED66D57A00FE5158BB2ED5881FCD829ACB5DF9EC9D47C",
+        "ModSHA256": "001B587DF551403182741E7EE397E905C0C2CAFDB0BA0276DA661AD8D578397F",
+        "DriverSHA256": "7166DBEC942C1BA60A6176E6FF045C19954563FFBCF73FC32FAFE3130A64F668",
+        "StartUtc": "2026-10-22T00:10:27.1452992Z"
+      },
+      "phases": [
+        {
+          "index": 0,
+          "result": {
+            "phase": "Balanced",
+            "frames": 1265,
+            "fps": 63.24154587014809,
+            "meanMs": 15.812390197628456,
+            "p95": 19.4922,
+            "p99": 30.8412,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "E15B007E18B2A5001E82DECBF24B965A75483398D249BB65CB593BCC8FCE92AD",
+          "application": {
+            "phase": "Balanced",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "additionalMap": 512,
+              "soft": true,
+              "policy": {
+                "Name": "Balanced",
+                "Rooms": true,
+                "Outlines": true,
+                "ReadoutHz": 0,
+                "LabelPixels": 0,
+                "Cascades": 0,
+                "ShadowDistance": 0.0,
+                "ExhaustDensity": 1.0,
+                "LabelDistance": 0.0,
+                "VegetationRange": 1.0,
+                "ShadowResolution": 0,
+                "ShadowQuality": 0
+              },
+              "productionOnly": true
+            }
+          }
+        },
+        {
+          "index": 1,
+          "result": {
+            "phase": "Aggressive",
+            "frames": 1512,
+            "fps": 75.55063181739207,
+            "meanMs": 13.236156679894183,
+            "p95": 17.2011,
+            "p99": 24.5203,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "E350333A97DC83D7B555ACC8908C9D7BBD48E416147CFD14CCB4ED2873548AF5",
+          "application": {
+            "phase": "Aggressive",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 0.0,
+              "cascades": 1,
+              "map": 256,
+              "additionalMap": 256,
+              "soft": true,
+              "policy": {
+                "Name": "Aggressive",
+                "Rooms": true,
+                "Outlines": false,
+                "ReadoutHz": 5,
+                "LabelPixels": 10,
+                "Cascades": 1,
+                "ShadowDistance": 0.0,
+                "ExhaustDensity": 0.1,
+                "LabelDistance": 4.0,
+                "VegetationRange": 0.1,
+                "ShadowResolution": 256,
+                "ShadowQuality": 2
+              },
+              "productionOnly": true
+            }
+          }
+        },
+        {
+          "index": 2,
+          "result": {
+            "phase": "Performance",
+            "frames": 1436,
+            "fps": 71.75416128914364,
+            "meanMs": 13.936473955431758,
+            "p95": 17.2803,
+            "p99": 22.4534,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "0B1C83AF9E7A9C2ED4D884604560F16343EA9DDDD4082A184DCE1045F81CBD00",
+          "application": {
+            "phase": "Performance",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 100.0,
+              "cascades": 2,
+              "map": 1024,
+              "additionalMap": 512,
+              "soft": false,
+              "policy": {
+                "Name": "Performance",
+                "Rooms": true,
+                "Outlines": false,
+                "ReadoutHz": 10,
+                "LabelPixels": 6,
+                "Cascades": 2,
+                "ShadowDistance": 100.0,
+                "ExhaustDensity": 0.75,
+                "LabelDistance": 12.0,
+                "VegetationRange": 0.5,
+                "ShadowResolution": 1024,
+                "ShadowQuality": 1
+              },
+              "productionOnly": true
+            }
+          }
+        },
+        {
+          "index": 3,
+          "result": {
+            "phase": "Balanced",
+            "frames": 1295,
+            "fps": 64.73642024112594,
+            "meanMs": 15.447255135135153,
+            "p95": 18.4736,
+            "p99": 25.3851,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "40D4BC8FA7525EE5B362E194BD7BCAC531E3FAC47A6A5279FC8AF942B93B0A41",
+          "application": {
+            "phase": "Balanced",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "additionalMap": 512,
+              "soft": true,
+              "policy": {
+                "Name": "Balanced",
+                "Rooms": true,
+                "Outlines": true,
+                "ReadoutHz": 0,
+                "LabelPixels": 0,
+                "Cascades": 0,
+                "ShadowDistance": 0.0,
+                "ExhaustDensity": 1.0,
+                "LabelDistance": 0.0,
+                "VegetationRange": 1.0,
+                "ShadowResolution": 0,
+                "ShadowQuality": 0
+              },
+              "productionOnly": true
+            }
+          }
+        }
+      ],
+      "completed": true,
+      "interpretation": "See request and shipping DLL identity for scope.",
+      "restoration": {
+        "Restored": true,
+        "FilesVerified": 157,
+        "WorldFilesVerified": 135,
+        "Utc": "2026-10-22T00:12:55.1899522Z"
+      }
+    },
+    {
+      "label": "Motion01",
+      "metadata": {
+        "Label": "Motion01",
+        "World": "PerfTest_Replication_20261022_011314_618",
+        "WorldSHA256": "D97D4D83AB0E3E90693ED66D57A00FE5158BB2ED5881FCD829ACB5DF9EC9D47C",
+        "ModSHA256": "001B587DF551403182741E7EE397E905C0C2CAFDB0BA0276DA661AD8D578397F",
+        "DriverSHA256": "7166DBEC942C1BA60A6176E6FF045C19954563FFBCF73FC32FAFE3130A64F668",
+        "StartUtc": "2026-10-22T00:13:15.0085836Z"
+      },
+      "phases": [
+        {
+          "index": 0,
+          "result": {
+            "phase": "Balanced",
+            "frames": 1449,
+            "fps": 60.361979920931034,
+            "meanMs": 16.566719668737065,
+            "p95": 22.2369,
+            "p99": 27.1983,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "8E4521A233A787BC5FE4FCAE11270F916AD574BFD596D7E2119741FD7FFA0E76",
+          "application": {
+            "phase": "Balanced",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "additionalMap": 512,
+              "soft": true,
+              "policy": {
+                "Name": "Balanced",
+                "Rooms": true,
+                "Outlines": true,
+                "ReadoutHz": 0,
+                "LabelPixels": 0,
+                "Cascades": 0,
+                "ShadowDistance": 0.0,
+                "ExhaustDensity": 1.0,
+                "LabelDistance": 0.0,
+                "VegetationRange": 1.0,
+                "ShadowResolution": 0,
+                "ShadowQuality": 0
+              },
+              "productionOnly": true
+            }
+          }
+        },
+        {
+          "index": 1,
+          "result": {
+            "phase": "Aggressive",
+            "frames": 1832,
+            "fps": 76.29999150871048,
+            "meanMs": 13.106161353711803,
+            "p95": 16.9677,
+            "p99": 22.1529,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "0E56F4FF207CFA10C420ACED08A95D46356BFCA8F707D9A84B357C2BE9DB6EE9",
+          "application": {
+            "phase": "Aggressive",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 0.0,
+              "cascades": 1,
+              "map": 256,
+              "additionalMap": 256,
+              "soft": true,
+              "policy": {
+                "Name": "Aggressive",
+                "Rooms": true,
+                "Outlines": false,
+                "ReadoutHz": 5,
+                "LabelPixels": 10,
+                "Cascades": 1,
+                "ShadowDistance": 0.0,
+                "ExhaustDensity": 0.1,
+                "LabelDistance": 4.0,
+                "VegetationRange": 0.1,
+                "ShadowResolution": 256,
+                "ShadowQuality": 2
+              },
+              "productionOnly": true
+            }
+          }
+        },
+        {
+          "index": 2,
+          "result": {
+            "phase": "Performance",
+            "frames": 1754,
+            "fps": 73.07621479655963,
+            "meanMs": 13.684343158494839,
+            "p95": 17.3618,
+            "p99": 22.6606,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "1EB509FE84F12EE2F61E1857827A1E9AA1B312A1D12CEE2D00430E5B39F86D1D",
+          "application": {
+            "phase": "Performance",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 100.0,
+              "cascades": 2,
+              "map": 1024,
+              "additionalMap": 512,
+              "soft": false,
+              "policy": {
+                "Name": "Performance",
+                "Rooms": true,
+                "Outlines": false,
+                "ReadoutHz": 10,
+                "LabelPixels": 6,
+                "Cascades": 2,
+                "ShadowDistance": 100.0,
+                "ExhaustDensity": 0.75,
+                "LabelDistance": 12.0,
+                "VegetationRange": 0.5,
+                "ShadowResolution": 1024,
+                "ShadowQuality": 1
+              },
+              "productionOnly": true
+            }
+          }
+        },
+        {
+          "index": 3,
+          "result": {
+            "phase": "Balanced",
+            "frames": 1504,
+            "fps": 62.63078809778167,
+            "meanMs": 15.966588164893604,
+            "p95": 21.5137,
+            "p99": 26.3232,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "611F397A2828B7AA23CBD37E68783B5F0F5FE5A27D72422F48446477231676FD",
+          "application": {
+            "phase": "Balanced",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "additionalMap": 512,
+              "soft": true,
+              "policy": {
+                "Name": "Balanced",
+                "Rooms": true,
+                "Outlines": true,
+                "ReadoutHz": 0,
+                "LabelPixels": 0,
+                "Cascades": 0,
+                "ShadowDistance": 0.0,
+                "ExhaustDensity": 1.0,
+                "LabelDistance": 0.0,
+                "VegetationRange": 1.0,
+                "ShadowResolution": 0,
+                "ShadowQuality": 0
+              },
+              "productionOnly": true
+            }
+          }
+        }
+      ],
+      "completed": true,
+      "interpretation": "See request and shipping DLL identity for scope.",
+      "restoration": {
+        "Restored": true,
+        "FilesVerified": 157,
+        "WorldFilesVerified": 135,
+        "Utc": "2026-10-22T00:15:58.3991014Z"
+      }
+    },
+    {
+      "label": "Screen01",
+      "metadata": {
+        "Label": "Screen01",
+        "World": "PerfTest_Replication_20261022_001746_615",
+        "WorldSHA256": "D97D4D83AB0E3E90693ED66D57A00FE5158BB2ED5881FCD829ACB5DF9EC9D47C",
+        "ModSHA256": "7123FF634BDC34DA2B7DA3C3745C784BBF26423F1354F5110A2069FC6CC178AD",
+        "DriverSHA256": "F337788A593E15E09B097CBA4C905B58465CA7A5DD9D18C25B6E8AF85673D35A",
+        "StartUtc": "2026-10-21T23:17:47.2342581Z"
+      },
+      "phases": [
+        {
+          "index": 0,
+          "result": {
+            "phase": "Balanced",
+            "frames": 959,
+            "fps": 63.894283702905426,
+            "meanMs": 15.650852346193961,
+            "p95": 18.7616,
+            "p99": 25.0599,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "42D679C506FE7BF2826FEE977D2B00B46CA2286B4C0C39097DBA226BA3615297",
+          "application": {
+            "phase": "Balanced",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "soft": true,
+              "ui": 0.0,
+              "cpu": false
+            }
+          }
+        },
+        {
+          "index": 1,
+          "result": {
+            "phase": "Performance",
+            "frames": 998,
+            "fps": 66.4822001003775,
+            "meanMs": 15.041620140280553,
+            "p95": 18.5437,
+            "p99": 28.5192,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "89ADDEC12C58F84A9A20F0090333FD0D50D777A01A9D631F312A672C37432BC1",
+          "application": {
+            "phase": "Performance",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "soft": true,
+              "ui": 0.0,
+              "cpu": false
+            }
+          }
+        },
+        {
+          "index": 2,
+          "result": {
+            "phase": "Aggressive",
+            "frames": 996,
+            "fps": 66.34500353047336,
+            "meanMs": 15.072725100401621,
+            "p95": 18.7071,
+            "p99": 24.7172,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "53E8254B67698EEFE1E880ABBA5E96C9395DCA4E24AA26BE92261B1786AFEF97",
+          "application": {
+            "phase": "Aggressive",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 150.0,
+              "cascades": 2,
+              "map": 4096,
+              "soft": true,
+              "ui": 0.0,
+              "cpu": false
+            }
+          }
+        },
+        {
+          "index": 3,
+          "result": {
+            "phase": "scale90",
+            "frames": 122,
+            "fps": 8.08726761004511,
+            "meanMs": 123.65115737704915,
+            "p95": 134.4722,
+            "p99": 139.8369,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "9F7AFFBD98C45DAB077BEDCC674DABB6CB623BE02EBA5C0A916CB972A98005A2",
+          "application": {
+            "phase": "scale90",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 0.9,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "soft": true,
+              "ui": 0.0,
+              "cpu": false
+            }
+          }
+        },
+        {
+          "index": 4,
+          "result": {
+            "phase": "scale75",
+            "frames": 123,
+            "fps": 8.198973652478182,
+            "meanMs": 121.96648536585367,
+            "p95": 130.409,
+            "p99": 133.6419,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "4420090D6F4DBD9CE8BB1686CE94A494135A9B2BD05E3807BB09B2E279CCCC6A",
+          "application": {
+            "phase": "scale75",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 0.75,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "soft": true,
+              "ui": 0.0,
+              "cpu": false
+            }
+          }
+        },
+        {
+          "index": 5,
+          "result": {
+            "phase": "shadow-low",
+            "frames": 998,
+            "fps": 66.51948042980223,
+            "meanMs": 15.03319018036072,
+            "p95": 18.7916,
+            "p99": 27.0627,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "99BADF8C224D0EC042A1DD01471328A1EBB8219110AB245B44D1F573965D5E94",
+          "application": {
+            "phase": "shadow-low",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 100.0,
+              "cascades": 2,
+              "map": 1024,
+              "soft": false,
+              "ui": 0.0,
+              "cpu": false
+            }
+          }
+        },
+        {
+          "index": 6,
+          "result": {
+            "phase": "shadow-off",
+            "frames": 945,
+            "fps": 62.991941230985226,
+            "meanMs": 15.875046560846549,
+            "p95": 19.2336,
+            "p99": 34.9437,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "43BCB462B6620D0DA6696CCEC23D7966CC79A89233F11D67CFEAC7745A667BFC",
+          "application": {
+            "phase": "shadow-off",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 0.0,
+              "cascades": 4,
+              "map": 4096,
+              "soft": true,
+              "ui": 0.0,
+              "cpu": false
+            }
+          }
+        },
+        {
+          "index": 7,
+          "result": {
+            "phase": "ui80",
+            "frames": 973,
+            "fps": 64.82473586668354,
+            "meanMs": 15.426210174717376,
+            "p95": 18.9243,
+            "p99": 24.4607,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "B7971A3F2EA6FCE9DD49601BB9EC4AA9B4563B27528BEBC3E86C42F8583B74E0",
+          "application": {
+            "phase": "ui80",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "soft": true,
+              "ui": 80.0,
+              "cpu": false
+            }
+          }
+        },
+        {
+          "index": 8,
+          "result": {
+            "phase": "ui40",
+            "frames": 977,
+            "fps": 65.11946115158916,
+            "meanMs": 15.356392425793226,
+            "p95": 18.5816,
+            "p99": 25.4606,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "783AFC3BBDA606441D194F450F5735ECBB305B055CB56EAAC606294E57787AF9",
+          "application": {
+            "phase": "ui40",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "soft": true,
+              "ui": 40.0,
+              "cpu": false
+            }
+          }
+        },
+        {
+          "index": 9,
+          "result": {
+            "phase": "ui20",
+            "frames": 972,
+            "fps": 64.7840851416441,
+            "meanMs": 15.435889814814816,
+            "p95": 18.643,
+            "p99": 24.9081,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "69560F92B9F3CF9442F9CC12323EBF21EC66FC87CF170AD2684FC3C6C345F890",
+          "application": {
+            "phase": "ui20",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "soft": true,
+              "ui": 20.0,
+              "cpu": false
+            }
+          }
+        },
+        {
+          "index": 10,
+          "result": {
+            "phase": "cpu",
+            "frames": 922,
+            "fps": 61.45285288470951,
+            "meanMs": 16.27263752711498,
+            "p95": 21.5184,
+            "p99": 26.7306,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "7D96D1CC6064A22DB4B8A15D2AC0B190FE09CFB5E17E8A7E2D09E87D2033107C",
+          "application": {
+            "phase": "cpu",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "soft": true,
+              "ui": 0.0,
+              "cpu": true
+            }
+          }
+        },
+        {
+          "index": 11,
+          "result": {
+            "phase": "combo-p",
+            "frames": 124,
+            "fps": 8.250793624875259,
+            "meanMs": 121.20046209677419,
+            "p95": 128.4137,
+            "p99": 131.3083,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "BD0A7742C072105BDB44F337613BC861FB8CC8AD3EDE6C2767443B5AAA8527D8",
+          "application": {
+            "phase": "combo-p",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 0.9,
+              "distance": 100.0,
+              "cascades": 2,
+              "map": 1024,
+              "soft": false,
+              "ui": 40.0,
+              "cpu": true
+            }
+          }
+        },
+        {
+          "index": 12,
+          "result": {
+            "phase": "combo-a",
+            "frames": 124,
+            "fps": 8.20182082935873,
+            "meanMs": 121.92414596774194,
+            "p95": 128.9344,
+            "p99": 146.2556,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "45CC2A22724DFDF1489A99D7990BD08E1B3D2DAB28824186F65C368EF96F5B71",
+          "application": {
+            "phase": "combo-a",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 0.75,
+              "distance": 60.0,
+              "cascades": 1,
+              "map": 512,
+              "soft": false,
+              "ui": 20.0,
+              "cpu": true
+            }
+          }
+        },
+        {
+          "index": 13,
+          "result": {
+            "phase": "Balanced",
+            "frames": 986,
+            "fps": 65.69682560734327,
+            "meanMs": 15.221435598377298,
+            "p95": 18.4264,
+            "p99": 24.6362,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "DD765ED18D3888130C0B430A7007B711128452420F15CBC1030184A0F93CDB42",
+          "application": {
+            "phase": "Balanced",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "soft": true,
+              "ui": 0.0,
+              "cpu": false
+            }
+          }
+        }
+      ],
+      "completed": true,
+      "interpretation": "Exploratory prototype only. Render-scale phases are invalid due attachment mismatch errors. Terrain combinations are not delivered presets.",
+      "restoration": {
+        "Restored": true,
+        "FilesVerified": 157,
+        "WorldFilesVerified": 135,
+        "Utc": "2026-10-21T23:23:15.7394806Z"
+      }
+    },
+    {
+      "label": "Screen02",
+      "metadata": {
+        "Label": "Screen02",
+        "World": "PerfTest_Replication_20261022_002337_924",
+        "WorldSHA256": "D97D4D83AB0E3E90693ED66D57A00FE5158BB2ED5881FCD829ACB5DF9EC9D47C",
+        "ModSHA256": "7123FF634BDC34DA2B7DA3C3745C784BBF26423F1354F5110A2069FC6CC178AD",
+        "DriverSHA256": "960F486AF695EF851A499D6465E9C41BDF372859600CA07B262461DD02B932B1",
+        "StartUtc": "2026-10-21T23:23:38.3450031Z"
+      },
+      "phases": [
+        {
+          "index": 0,
+          "result": {
+            "phase": "Balanced",
+            "frames": 943,
+            "fps": 62.8429434555122,
+            "meanMs": 15.912685577942739,
+            "p95": 19.1459,
+            "p99": 25.2825,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "4837F05690D67176B94BC0E2017DF8329E162811D8CBAFCB21550D58D0D08D27",
+          "application": {
+            "phase": "Balanced",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "soft": true,
+              "ui": 0.0,
+              "terrain": 1.0,
+              "vegetation": 1.0,
+              "cpu": false
+            }
+          }
+        },
+        {
+          "index": 1,
+          "result": {
+            "phase": "ui8",
+            "frames": 1018,
+            "fps": 67.86638434250773,
+            "meanMs": 14.734835363457776,
+            "p95": 17.892,
+            "p99": 23.5887,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "6F72AB4288C4E1A29FDA8EE8D90B596694A0CF927F518A4056518683FC9B7D5D",
+          "application": {
+            "phase": "ui8",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "soft": true,
+              "ui": 8.0,
+              "terrain": 1.0,
+              "vegetation": 1.0,
+              "cpu": false
+            }
+          }
+        },
+        {
+          "index": 2,
+          "result": {
+            "phase": "terrain75",
+            "frames": 963,
+            "fps": 64.19805394299142,
+            "meanMs": 15.576796157840096,
+            "p95": 19.3412,
+            "p99": 24.9849,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "F07F3CD8A3E0410AB0761B85F133B04B9196BB1CA7A6799E2DF8E95ECAB7796E",
+          "application": {
+            "phase": "terrain75",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "soft": true,
+              "ui": 0.0,
+              "terrain": 0.75,
+              "vegetation": 1.0,
+              "cpu": false
+            }
+          }
+        },
+        {
+          "index": 3,
+          "result": {
+            "phase": "terrain40",
+            "frames": 935,
+            "fps": 62.30811557740943,
+            "meanMs": 16.049273689839566,
+            "p95": 22.1822,
+            "p99": 28.2516,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "86FE108EC7E296FD85E001777EA679BA79640013468AD142D76226DD42F76121",
+          "application": {
+            "phase": "terrain40",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "soft": true,
+              "ui": 0.0,
+              "terrain": 0.4,
+              "vegetation": 1.0,
+              "cpu": false
+            }
+          }
+        },
+        {
+          "index": 4,
+          "result": {
+            "phase": "vegetation50",
+            "frames": 1014,
+            "fps": 67.55874412691985,
+            "meanMs": 14.801932938856012,
+            "p95": 17.8624,
+            "p99": 22.6546,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "4AFF2D6509ECD81A8B00CFEFC6FA2C19EE6CE50992A1FF1F82FCB981AC6FEF38",
+          "application": {
+            "phase": "vegetation50",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "soft": true,
+              "ui": 0.0,
+              "terrain": 1.0,
+              "vegetation": 0.5,
+              "cpu": false
+            }
+          }
+        },
+        {
+          "index": 5,
+          "result": {
+            "phase": "scale75-nrp",
+            "frames": 123,
+            "fps": 8.176649995119933,
+            "meanMs": 122.29947479674802,
+            "p95": 129.5056,
+            "p99": 142.782,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "B736AC968797C205E0F88D8D9F2EA1D046E6C7C1A9C6F92709AD9B6AA5D55A4A",
+          "application": {
+            "phase": "scale75-nrp",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 0.75,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "soft": true,
+              "ui": 0.0,
+              "terrain": 1.0,
+              "vegetation": 1.0,
+              "cpu": false
+            }
+          }
+        },
+        {
+          "index": 6,
+          "result": {
+            "phase": "combo-p2",
+            "frames": 1053,
+            "fps": 70.19687623900744,
+            "meanMs": 14.245648148148133,
+            "p95": 17.5176,
+            "p99": 22.2989,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "8E4E7C6D0DB2AB63A902DBCE633396308B0A77DE08949BEA972F91C014163160",
+          "application": {
+            "phase": "combo-p2",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 100.0,
+              "cascades": 2,
+              "map": 1024,
+              "soft": false,
+              "ui": 20.0,
+              "terrain": 0.75,
+              "vegetation": 0.75,
+              "cpu": false
+            }
+          }
+        },
+        {
+          "index": 7,
+          "result": {
+            "phase": "combo-a2",
+            "frames": 1127,
+            "fps": 75.11964202737754,
+            "meanMs": 13.312097515527931,
+            "p95": 17.0325,
+            "p99": 21.4838,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "BF03C2D535A6C22318250634518FB84D934DFD31AC20D788DD69E91E56B5E4BF",
+          "application": {
+            "phase": "combo-a2",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 60.0,
+              "cascades": 1,
+              "map": 512,
+              "soft": false,
+              "ui": 8.0,
+              "terrain": 0.4,
+              "vegetation": 0.5,
+              "cpu": false
+            }
+          }
+        },
+        {
+          "index": 8,
+          "result": {
+            "phase": "Balanced",
+            "frames": 940,
+            "fps": 62.635288892343205,
+            "meanMs": 15.965440851063818,
+            "p95": 19.4159,
+            "p99": 35.9786,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "2855BFF45C743DA2FDBDC2DBA8FDA3C3F0776857D41F70C6FE7B63D5014CBB19",
+          "application": {
+            "phase": "Balanced",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "soft": true,
+              "ui": 0.0,
+              "terrain": 1.0,
+              "vegetation": 1.0,
+              "cpu": false
+            }
+          }
+        }
+      ],
+      "completed": true,
+      "interpretation": "Exploratory prototype only. Render-scale phases are invalid due attachment mismatch errors. Terrain combinations are not delivered presets.",
+      "restoration": {
+        "Restored": true,
+        "FilesVerified": 157,
+        "WorldFilesVerified": 135,
+        "Utc": "2026-10-21T23:27:26.0436953Z"
+      }
+    },
+    {
+      "label": "Screen03",
+      "metadata": {
+        "Label": "Screen03",
+        "World": "PerfTest_Replication_20261022_002821_858",
+        "WorldSHA256": "D97D4D83AB0E3E90693ED66D57A00FE5158BB2ED5881FCD829ACB5DF9EC9D47C",
+        "ModSHA256": "7123FF634BDC34DA2B7DA3C3745C784BBF26423F1354F5110A2069FC6CC178AD",
+        "DriverSHA256": "7B784BCCECBE8B6B45AF91D8F3FAC91B55C4467554E5B3CF7734EFBAAF9A9B69",
+        "StartUtc": "2026-10-21T23:28:22.2958147Z"
+      },
+      "phases": [
+        {
+          "index": 0,
+          "result": {
+            "phase": "Balanced",
+            "frames": 933,
+            "fps": 62.13278020197361,
+            "meanMs": 16.094563879957132,
+            "p95": 19.7446,
+            "p99": 26.1841,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "CC967FF7AE6BC6839667FB3D1406EC39EC1BFA2C65B8F79BC62424EEEA752959",
+          "application": {
+            "phase": "Balanced",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "soft": true,
+              "ui": 0.0,
+              "terrain": 1.0,
+              "vegetation": 1.0,
+              "cpu": false
+            }
+          }
+        },
+        {
+          "index": 1,
+          "result": {
+            "phase": "cpu-plan",
+            "frames": 972,
+            "fps": 64.75806785590197,
+            "meanMs": 15.442091358024685,
+            "p95": 18.5004,
+            "p99": 23.9936,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "ABCD4F144B2A4F48B2DB628349C7742EF0E6F1FF20F89BCE1F8B237CF8933D00",
+          "application": {
+            "phase": "cpu-plan",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "soft": true,
+              "ui": 0.0,
+              "terrain": 1.0,
+              "vegetation": 1.0,
+              "cpu": true
+            }
+          }
+        },
+        {
+          "index": 2,
+          "result": {
+            "phase": "vegetation25",
+            "frames": 970,
+            "fps": 64.60489749347389,
+            "meanMs": 15.478702680412361,
+            "p95": 21.581,
+            "p99": 27.245,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "84A63AE1D8AB7F531C17B4E9BBCA7285713A2E946EE70EA9897948E186536040",
+          "application": {
+            "phase": "vegetation25",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "soft": true,
+              "ui": 0.0,
+              "terrain": 1.0,
+              "vegetation": 0.25,
+              "cpu": false
+            }
+          }
+        },
+        {
+          "index": 3,
+          "result": {
+            "phase": "vegetation10",
+            "frames": 1019,
+            "fps": 67.86485949982763,
+            "meanMs": 14.735166437683997,
+            "p95": 18.0505,
+            "p99": 24.403,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "516A79D246ACD1EC39E2CEE444504CDA25F25109D78FF48A8B10C408F3E20FC9",
+          "application": {
+            "phase": "vegetation10",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "soft": true,
+              "ui": 0.0,
+              "terrain": 1.0,
+              "vegetation": 0.1,
+              "cpu": false
+            }
+          }
+        },
+        {
+          "index": 4,
+          "result": {
+            "phase": "scale75-compiler",
+            "frames": 124,
+            "fps": 8.236612421067926,
+            "meanMs": 121.4091362903226,
+            "p95": 128.6685,
+            "p99": 131.5545,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "E948ADD176262F51AAA1F84ACBC96B6247457DC5D1FB8655BC9BB7318C560AF1",
+          "application": {
+            "phase": "scale75-compiler",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 0.75,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "soft": true,
+              "ui": 0.0,
+              "terrain": 1.0,
+              "vegetation": 1.0,
+              "cpu": false
+            }
+          }
+        },
+        {
+          "index": 5,
+          "result": {
+            "phase": "scale50-compiler",
+            "frames": 120,
+            "fps": 7.967595787930489,
+            "meanMs": 125.50837499999996,
+            "p95": 138.1028,
+            "p99": 146.8599,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "2AD9B93F93723098FB17BB1067F7A93CAD83D76FC931C09B83F1D330E36B6404",
+          "application": {
+            "phase": "scale50-compiler",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 0.5,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "soft": true,
+              "ui": 0.0,
+              "terrain": 1.0,
+              "vegetation": 1.0,
+              "cpu": false
+            }
+          }
+        },
+        {
+          "index": 6,
+          "result": {
+            "phase": "ui12",
+            "frames": 986,
+            "fps": 65.7235536685474,
+            "meanMs": 15.21524543610549,
+            "p95": 19.3702,
+            "p99": 31.145,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "D1466DBD21B643538D3DB7C95772179BCBC7E19263095B973FA1D9E6D957BD15",
+          "application": {
+            "phase": "ui12",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "soft": true,
+              "ui": 12.0,
+              "terrain": 1.0,
+              "vegetation": 1.0,
+              "cpu": false
+            }
+          }
+        },
+        {
+          "index": 7,
+          "result": {
+            "phase": "combo-p3",
+            "frames": 1063,
+            "fps": 70.85816652101076,
+            "meanMs": 14.112699341486369,
+            "p95": 17.5382,
+            "p99": 23.8091,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "07327C29AB153157433CC1B430364435F5F5F9115F0DFFE0243C873F8B85345E",
+          "application": {
+            "phase": "combo-p3",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 100.0,
+              "cascades": 2,
+              "map": 1024,
+              "soft": false,
+              "ui": 12.0,
+              "terrain": 1.0,
+              "vegetation": 0.5,
+              "cpu": false
+            }
+          }
+        },
+        {
+          "index": 8,
+          "result": {
+            "phase": "combo-a3",
+            "frames": 1070,
+            "fps": 71.30050943081176,
+            "meanMs": 14.025145233644862,
+            "p95": 19.3699,
+            "p99": 23.4506,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "A29D5EFEC8631E001C0A650D09C972C6BED22FF4852CD6E73A37D451B65DB360",
+          "application": {
+            "phase": "combo-a3",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 60.0,
+              "cascades": 1,
+              "map": 512,
+              "soft": false,
+              "ui": 8.0,
+              "terrain": 1.0,
+              "vegetation": 0.1,
+              "cpu": false
+            }
+          }
+        },
+        {
+          "index": 9,
+          "result": {
+            "phase": "Balanced",
+            "frames": 956,
+            "fps": 63.67398578263801,
+            "meanMs": 15.705000836820082,
+            "p95": 19.5119,
+            "p99": 26.2252,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "213FD96E74EC508478DCEAA8B24071DDC61E2B30766A58B8B68197754A6B1EB3",
+          "application": {
+            "phase": "Balanced",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "soft": true,
+              "ui": 0.0,
+              "terrain": 1.0,
+              "vegetation": 1.0,
+              "cpu": false
+            }
+          }
+        }
+      ],
+      "completed": true,
+      "interpretation": "Exploratory prototype only. Render-scale phases are invalid due attachment mismatch errors. Terrain combinations are not delivered presets.",
+      "restoration": {
+        "Restored": true,
+        "FilesVerified": 157,
+        "WorldFilesVerified": 135,
+        "Utc": "2026-10-21T23:32:30.4777043Z"
+      }
+    },
+    {
+      "label": "Screen04",
+      "metadata": {
+        "Label": "Screen04",
+        "World": "PerfTest_Replication_20261022_003243_652",
+        "WorldSHA256": "D97D4D83AB0E3E90693ED66D57A00FE5158BB2ED5881FCD829ACB5DF9EC9D47C",
+        "ModSHA256": "711F41D3412ECECF2AB817F9F09E40A429F1D0A7B36C4B3B26DA875AB331B526",
+        "DriverSHA256": "3E85F36C8149F26972A32E780394BED70779ABC954F0ED321AA9BF37A8696AA1",
+        "StartUtc": "2026-10-21T23:32:44.3088687Z"
+      },
+      "phases": [
+        {
+          "index": 0,
+          "result": {
+            "phase": "Balanced",
+            "frames": 951,
+            "fps": 63.37362220847372,
+            "meanMs": 15.779435751840133,
+            "p95": 18.5378,
+            "p99": 25.2922,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "7B5FDEB2036CBD02011B2316A38C41EECD9415ADC0C97650FF83A12CE3028B25",
+          "application": {
+            "phase": "Balanced",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "soft": true,
+              "ui": 0.0,
+              "terrain": 1.0,
+              "vegetation": 1.0,
+              "cpu": false
+            }
+          }
+        },
+        {
+          "index": 1,
+          "result": {
+            "phase": "cpu-plan",
+            "frames": 976,
+            "fps": 65.04392210798399,
+            "meanMs": 15.374226639344252,
+            "p95": 18.2675,
+            "p99": 24.0345,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "62C0B3DEBA05251C2F74CE4602A5D6AB56D4041906969EC8639CF20E78A054AD",
+          "application": {
+            "phase": "cpu-plan",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "soft": true,
+              "ui": 0.0,
+              "terrain": 1.0,
+              "vegetation": 1.0,
+              "cpu": true
+            }
+          }
+        },
+        {
+          "index": 2,
+          "result": {
+            "phase": "Balanced",
+            "frames": 968,
+            "fps": 64.49636530666689,
+            "meanMs": 15.504749690082638,
+            "p95": 18.5223,
+            "p99": 24.6054,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "F5D681738309ACF7814662F48CAE325CDDCB8D2C062914DB2CABC745BFD7351C",
+          "application": {
+            "phase": "Balanced",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "soft": true,
+              "ui": 0.0,
+              "terrain": 1.0,
+              "vegetation": 1.0,
+              "cpu": false
+            }
+          }
+        },
+        {
+          "index": 3,
+          "result": {
+            "phase": "defer",
+            "frames": 948,
+            "fps": 63.183343606958374,
+            "meanMs": 15.826956012658218,
+            "p95": 19.7854,
+            "p99": 27.4554,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "7AC3BBA9D284E4D6004A02B29529823208A8C08DE960B937948FDBCA47D4C3CA",
+          "application": {
+            "phase": "defer",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "soft": true,
+              "ui": 0.0,
+              "terrain": 1.0,
+              "vegetation": 1.0,
+              "cpu": false
+            }
+          }
+        },
+        {
+          "index": 4,
+          "result": {
+            "phase": "Balanced",
+            "frames": 960,
+            "fps": 63.98319929152997,
+            "meanMs": 15.629102812500015,
+            "p95": 18.8656,
+            "p99": 24.5318,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "56A16A900E88A56F5597E0BA157F5D722BC29431965391F1A823AAEE85379A53",
+          "application": {
+            "phase": "Balanced",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "soft": true,
+              "ui": 0.0,
+              "terrain": 1.0,
+              "vegetation": 1.0,
+              "cpu": false
+            }
+          }
+        },
+        {
+          "index": 5,
+          "result": {
+            "phase": "combo-p3-defer",
+            "frames": 1062,
+            "fps": 70.78692612665732,
+            "meanMs": 14.126902448210908,
+            "p95": 17.7126,
+            "p99": 24.0315,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "9657F90FBDA6FB09379DDEF2F235E1C0592D9ECD357F7BB3DDA089BA73908E24",
+          "application": {
+            "phase": "combo-p3-defer",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 100.0,
+              "cascades": 2,
+              "map": 1024,
+              "soft": false,
+              "ui": 12.0,
+              "terrain": 1.0,
+              "vegetation": 0.5,
+              "cpu": false
+            }
+          }
+        },
+        {
+          "index": 6,
+          "result": {
+            "phase": "combo-a3-defer",
+            "frames": 1092,
+            "fps": 72.79858479551156,
+            "meanMs": 13.736530769230773,
+            "p95": 17.2047,
+            "p99": 31.4726,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "E55681AC90270931AEE58A3ACBBC88B0AD25D26786AE0DDE84B3A7B149EC7395",
+          "application": {
+            "phase": "combo-a3-defer",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 60.0,
+              "cascades": 1,
+              "map": 512,
+              "soft": false,
+              "ui": 8.0,
+              "terrain": 1.0,
+              "vegetation": 0.1,
+              "cpu": false
+            }
+          }
+        },
+        {
+          "index": 7,
+          "result": {
+            "phase": "Balanced",
+            "frames": 966,
+            "fps": 64.35067906553701,
+            "meanMs": 15.539851552795032,
+            "p95": 18.8938,
+            "p99": 24.0998,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "1AA0C73E3AE7EE02B9327EA162CD082D7862805C594DC8C5DA2924AE54A7B169",
+          "application": {
+            "phase": "Balanced",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "soft": true,
+              "ui": 0.0,
+              "terrain": 1.0,
+              "vegetation": 1.0,
+              "cpu": false
+            }
+          }
+        },
+        {
+          "index": 8,
+          "result": {
+            "phase": "scale75-hud",
+            "frames": 87,
+            "fps": 5.790557954802617,
+            "meanMs": 172.69492988505752,
+            "p95": 180.4411,
+            "p99": 210.5441,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "E700A1246C01CAE829DC34DB64AC74F1CC61275A0FE34FAEE15F2FB5BE2BCE28",
+          "application": {
+            "phase": "scale75-hud",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 0.75,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "soft": true,
+              "ui": 0.0,
+              "terrain": 1.0,
+              "vegetation": 1.0,
+              "cpu": false
+            }
+          }
+        },
+        {
+          "index": 9,
+          "result": {
+            "phase": "scale50-hud",
+            "frames": 87,
+            "fps": 5.7394000093242195,
+            "meanMs": 174.23424022988496,
+            "p95": 187.2401,
+            "p99": 203.6727,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "F488C2367D7D8E6AE5A825FCDEA20D051998F81D880F4904AD1CEA4ABE142445",
+          "application": {
+            "phase": "scale50-hud",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 0.5,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "soft": true,
+              "ui": 0.0,
+              "terrain": 1.0,
+              "vegetation": 1.0,
+              "cpu": false
+            }
+          }
+        },
+        {
+          "index": 10,
+          "result": {
+            "phase": "Balanced",
+            "frames": 979,
+            "fps": 65.26226015886073,
+            "meanMs": 15.322791419816141,
+            "p95": 21.1698,
+            "p99": 26.4017,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "FC61EF337EC1AA5AC8E91B969C4C5F1294AA4046B7193EB600E84CB266F1734B",
+          "application": {
+            "phase": "Balanced",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "soft": true,
+              "ui": 0.0,
+              "terrain": 1.0,
+              "vegetation": 1.0,
+              "cpu": false
+            }
+          }
+        }
+      ],
+      "completed": true,
+      "interpretation": "Exploratory prototype only. Render-scale phases are invalid due attachment mismatch errors. Terrain combinations are not delivered presets.",
+      "restoration": {
+        "Restored": true,
+        "FilesVerified": 157,
+        "WorldFilesVerified": 135,
+        "Utc": "2026-10-21T23:37:13.3615733Z"
+      }
+    },
+    {
+      "label": "Screen05",
+      "metadata": {
+        "Label": "Screen05",
+        "World": "PerfTest_Replication_20261022_003727_940",
+        "WorldSHA256": "D97D4D83AB0E3E90693ED66D57A00FE5158BB2ED5881FCD829ACB5DF9EC9D47C",
+        "ModSHA256": "7123FF634BDC34DA2B7DA3C3745C784BBF26423F1354F5110A2069FC6CC178AD",
+        "DriverSHA256": "9BF922C84BA7F3807EDEAE66C7C76AB03F4602F58F76E3A332BEBF7FC12300E8",
+        "StartUtc": "2026-10-21T23:37:28.605618Z"
+      },
+      "phases": [
+        {
+          "index": 0,
+          "result": {
+            "phase": "Balanced",
+            "frames": 952,
+            "fps": 63.464416218467534,
+            "meanMs": 15.756861239495805,
+            "p95": 18.5067,
+            "p99": 24.0402,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "FCC98351E58C516E4ABC728B72D529A86328504F4AD9E6D29BBE4F53057C450A",
+          "application": {
+            "phase": "Balanced",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "soft": true,
+              "ui": 0.0,
+              "terrain": 1.0,
+              "vegetation": 1.0,
+              "cpu": false
+            }
+          }
+        },
+        {
+          "index": 1,
+          "result": {
+            "phase": "chunk-cpu",
+            "frames": 968,
+            "fps": 64.52261612679472,
+            "meanMs": 15.498441632231394,
+            "p95": 18.6879,
+            "p99": 23.6637,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "7A867D873A998C7C817A253A08D54CA864C152DADFD6247F8BD81D843C19571B",
+          "application": {
+            "phase": "chunk-cpu",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "soft": true,
+              "ui": 0.0,
+              "terrain": 1.0,
+              "vegetation": 1.0,
+              "cpu": false
+            }
+          }
+        },
+        {
+          "index": 2,
+          "result": {
+            "phase": "Balanced",
+            "frames": 967,
+            "fps": 64.45951209055474,
+            "meanMs": 15.513614167528427,
+            "p95": 18.6008,
+            "p99": 24.289,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "F0C1B3257415B492D46C4C50FA8622DAA11DC297B1A5BA218733FA8A630B2B70",
+          "application": {
+            "phase": "Balanced",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "soft": true,
+              "ui": 0.0,
+              "terrain": 1.0,
+              "vegetation": 1.0,
+              "cpu": false
+            }
+          }
+        },
+        {
+          "index": 3,
+          "result": {
+            "phase": "combo-p4",
+            "frames": 1040,
+            "fps": 69.27087594075012,
+            "meanMs": 14.436081346153845,
+            "p95": 18.0905,
+            "p99": 24.9321,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "C935DBDA14B836ABB755BC4537547401CC2EBE31E8A81CAF3393065086E8F5E6",
+          "application": {
+            "phase": "combo-p4",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 100.0,
+              "cascades": 2,
+              "map": 1024,
+              "soft": false,
+              "ui": 16.0,
+              "terrain": 0.75,
+              "vegetation": 0.5,
+              "cpu": false
+            }
+          }
+        },
+        {
+          "index": 4,
+          "result": {
+            "phase": "combo-a2",
+            "frames": 1131,
+            "fps": 75.33594385589787,
+            "meanMs": 13.273876304155609,
+            "p95": 16.736,
+            "p99": 20.0923,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "ED1DA47E843D06D12CB0B39B89785FA45087D376D101ECD64D31655D9A3B2C36",
+          "application": {
+            "phase": "combo-a2",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 60.0,
+              "cascades": 1,
+              "map": 512,
+              "soft": false,
+              "ui": 8.0,
+              "terrain": 0.4,
+              "vegetation": 0.5,
+              "cpu": false
+            }
+          }
+        },
+        {
+          "index": 5,
+          "result": {
+            "phase": "combo-a4",
+            "frames": 1150,
+            "fps": 76.63464564632983,
+            "meanMs": 13.048928347826083,
+            "p95": 16.5369,
+            "p99": 21.2308,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "7B184CD3558D7743A04AC6DC7B4948A0C68C45C272ED0ABF2FC77D6D829845F5",
+          "application": {
+            "phase": "combo-a4",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 60.0,
+              "cascades": 1,
+              "map": 512,
+              "soft": false,
+              "ui": 5.0,
+              "terrain": 0.4,
+              "vegetation": 0.25,
+              "cpu": false
+            }
+          }
+        },
+        {
+          "index": 6,
+          "result": {
+            "phase": "combo-a5",
+            "frames": 1172,
+            "fps": 78.13753765377594,
+            "meanMs": 12.79794616040957,
+            "p95": 17.223,
+            "p99": 21.7933,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "A92738285E5C283507F4B8B2ED1E22F92343271AFAA4282126B5286A1A0BE36A",
+          "application": {
+            "phase": "combo-a5",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 60.0,
+              "cascades": 1,
+              "map": 512,
+              "soft": false,
+              "ui": 5.0,
+              "terrain": 0.25,
+              "vegetation": 0.1,
+              "cpu": false
+            }
+          }
+        },
+        {
+          "index": 7,
+          "result": {
+            "phase": "Balanced",
+            "frames": 961,
+            "fps": 64.3107736426129,
+            "meanMs": 15.549494172736727,
+            "p95": 18.8103,
+            "p99": 25.1021,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "A0DD4C265874D268DC290BE3F2A0B215392A236AA4891C40CB7144FE984AF4B2",
+          "application": {
+            "phase": "Balanced",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "soft": true,
+              "ui": 0.0,
+              "terrain": 1.0,
+              "vegetation": 1.0,
+              "cpu": false
+            }
+          }
+        },
+        {
+          "index": 8,
+          "result": {
+            "phase": "combo-a4-native-terrain",
+            "frames": 1089,
+            "fps": 72.57991084840934,
+            "meanMs": 13.777917171717165,
+            "p95": 17.4685,
+            "p99": 30.0655,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "7AC92F4A609FDB18B749569D015D9F183BBAE450CBB5128AF1C878B25AAC8FAF",
+          "application": {
+            "phase": "combo-a4-native-terrain",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 60.0,
+              "cascades": 1,
+              "map": 512,
+              "soft": false,
+              "ui": 5.0,
+              "terrain": 1.0,
+              "vegetation": 0.25,
+              "cpu": false
+            }
+          }
+        },
+        {
+          "index": 9,
+          "result": {
+            "phase": "chunk-cpu",
+            "frames": 967,
+            "fps": 64.42969175516222,
+            "meanMs": 15.520794415718717,
+            "p95": 18.8084,
+            "p99": 25.5879,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "0F0719AB52CF11C530C2CDF3740415BEB38D0EEE0FEB0727D712AFF7F51F28E7",
+          "application": {
+            "phase": "chunk-cpu",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "soft": true,
+              "ui": 0.0,
+              "terrain": 1.0,
+              "vegetation": 1.0,
+              "cpu": false
+            }
+          }
+        },
+        {
+          "index": 10,
+          "result": {
+            "phase": "Balanced",
+            "frames": 971,
+            "fps": 64.69728745528528,
+            "meanMs": 15.456598558187427,
+            "p95": 18.5952,
+            "p99": 23.8167,
+            "unfocused": 0,
+            "saveWrite": false,
+            "tick": 50
+          },
+          "rawSHA256": "4359D5179FC6A61188FC45E9B685400DBBCB8EB4232F20FF89A05D3CD575A5A3",
+          "application": {
+            "phase": "Balanced",
+            "authoritativeUnchanged": true,
+            "settings": {
+              "scale": 1.0,
+              "distance": 500.0,
+              "cascades": 4,
+              "map": 4096,
+              "soft": true,
+              "ui": 0.0,
+              "terrain": 1.0,
+              "vegetation": 1.0,
+              "cpu": false
+            }
+          }
+        }
+      ],
+      "completed": true,
+      "interpretation": "Exploratory prototype only. Render-scale phases are invalid due attachment mismatch errors. Terrain combinations are not delivered presets.",
+      "restoration": {
+        "Restored": true,
+        "FilesVerified": 157,
+        "WorldFilesVerified": 135,
+        "Utc": "2026-10-21T23:41:55.8770163Z"
+      }
+    },
+    {
+      "label": "UIFinal01",
+      "metadata": {
+        "Label": "UIFinal01",
+        "World": "PerfTest_Replication_20261022_011914_950",
+        "WorldSHA256": "D97D4D83AB0E3E90693ED66D57A00FE5158BB2ED5881FCD829ACB5DF9EC9D47C",
+        "ModSHA256": "001B587DF551403182741E7EE397E905C0C2CAFDB0BA0276DA661AD8D578397F",
+        "DriverSHA256": "8FA3DB0D109A62E6BC04886DA24E68611570A4E604F4A370942DEF855052DC7C",
+        "StartUtc": "2026-10-22T00:19:15.3908963Z"
+      },
+      "phases": [],
+      "completed": false,
+      "interpretation": "Incomplete private recorder pilot: status-file reader/writer sharing race caused helper exit after successful Custom application/close. No shipping code change; recorder fixed and rerun.",
+      "restoration": {
+        "Restored": true,
+        "FilesVerified": 157,
+        "WorldFilesVerified": 135,
+        "Utc": "2026-10-22T00:23:13.2136328Z"
+      }
+    },
+    {
+      "label": "UIFinal02",
+      "metadata": {
+        "Label": "UIFinal02",
+        "World": "PerfTest_Replication_20261022_012420_193",
+        "WorldSHA256": "D97D4D83AB0E3E90693ED66D57A00FE5158BB2ED5881FCD829ACB5DF9EC9D47C",
+        "ModSHA256": "001B587DF551403182741E7EE397E905C0C2CAFDB0BA0276DA661AD8D578397F",
+        "DriverSHA256": "754C9A582B627A149DD9E86C334F5D2B5B5F3AA1DF3B91F58BB24D17E47D428C",
+        "StartUtc": "2026-10-22T00:24:20.6398848Z"
+      },
+      "phases": [],
+      "completed": true,
+      "interpretation": "Final real-keyboard UI check with numeric focus placed by the private driver. Native screenshots used; no OS mouse acceptance claim.",
+      "custom-applied": {
+        "focus": "",
+        "selection": "Custom",
+        "dirty": false,
+        "problem": "",
+        "current": {
+          "Name": "Custom",
+          "Rooms": true,
+          "Outlines": false,
+          "ReadoutHz": 10,
+          "LabelPixels": 6,
+          "Cascades": 2,
+          "ShadowDistance": 100.0,
+          "ExhaustDensity": 0.75,
+          "LabelDistance": 18.0,
+          "VegetationRange": 0.6,
+          "ShadowResolution": 1024,
+          "ShadowQuality": 1
+        },
+        "custom": {
+          "Name": "Custom",
+          "Rooms": true,
+          "Outlines": false,
+          "ReadoutHz": 10,
+          "LabelPixels": 6,
+          "Cascades": 2,
+          "ShadowDistance": 100.0,
+          "ExhaustDensity": 0.75,
+          "LabelDistance": 18.0,
+          "VegetationRange": 0.6,
+          "ShadowResolution": 1024,
+          "ShadowQuality": 1
+        },
+        "status": "Custom active. No restart required."
+      },
+      "custom-reopened": {
+        "focus": "",
+        "selection": "Custom",
+        "dirty": false,
+        "problem": "",
+        "current": {
+          "Name": "Custom",
+          "Rooms": true,
+          "Outlines": false,
+          "ReadoutHz": 10,
+          "LabelPixels": 6,
+          "Cascades": 2,
+          "ShadowDistance": 100.0,
+          "ExhaustDensity": 0.75,
+          "LabelDistance": 18.0,
+          "VegetationRange": 0.6,
+          "ShadowResolution": 1024,
+          "ShadowQuality": 1
+        },
+        "custom": {
+          "Name": "Custom",
+          "Rooms": true,
+          "Outlines": false,
+          "ReadoutHz": 10,
+          "LabelPixels": 6,
+          "Cascades": 2,
+          "ShadowDistance": 100.0,
+          "ExhaustDensity": 0.75,
+          "LabelDistance": 18.0,
+          "VegetationRange": 0.6,
+          "ShadowResolution": 1024,
+          "ShadowQuality": 1
+        },
+        "status": "Custom active. No restart required."
+      },
+      "aggressive-applied": {
+        "focus": "",
+        "selection": "Aggressive",
+        "dirty": false,
+        "problem": "",
+        "current": {
+          "Name": "Aggressive",
+          "Rooms": true,
+          "Outlines": false,
+          "ReadoutHz": 5,
+          "LabelPixels": 10,
+          "Cascades": 1,
+          "ShadowDistance": 0.0,
+          "ExhaustDensity": 0.1,
+          "LabelDistance": 4.0,
+          "VegetationRange": 0.1,
+          "ShadowResolution": 256,
+          "ShadowQuality": 2
+        },
+        "custom": {
+          "Name": "Custom",
+          "Rooms": true,
+          "Outlines": false,
+          "ReadoutHz": 10,
+          "LabelPixels": 6,
+          "Cascades": 2,
+          "ShadowDistance": 100.0,
+          "ExhaustDensity": 0.75,
+          "LabelDistance": 18.0,
+          "VegetationRange": 0.6,
+          "ShadowResolution": 1024,
+          "ShadowQuality": 1
+        },
+        "status": "Aggressive active. No restart required."
+      },
+      "balanced-applied": {
+        "focus": "",
+        "selection": "Balanced",
+        "dirty": false,
+        "problem": "",
+        "current": {
+          "Name": "Balanced",
+          "Rooms": true,
+          "Outlines": true,
+          "ReadoutHz": 0,
+          "LabelPixels": 0,
+          "Cascades": 0,
+          "ShadowDistance": 0.0,
+          "ExhaustDensity": 1.0,
+          "LabelDistance": 0.0,
+          "VegetationRange": 1.0,
+          "ShadowResolution": 0,
+          "ShadowQuality": 0
+        },
+        "custom": {
+          "Name": "Custom",
+          "Rooms": true,
+          "Outlines": false,
+          "ReadoutHz": 10,
+          "LabelPixels": 6,
+          "Cascades": 2,
+          "ShadowDistance": 100.0,
+          "ExhaustDensity": 0.75,
+          "LabelDistance": 18.0,
+          "VegetationRange": 0.6,
+          "ShadowResolution": 1024,
+          "ShadowQuality": 1
+        },
+        "status": "Balanced active. No restart required."
+      },
+      "closed-state": {
+        "enabled": true,
+        "focused": true,
+        "pause": false,
+        "keyboard": true,
+        "visible": false,
+        "policy": "Custom"
+      },
+      "restoration": {
+        "Restored": true,
+        "FilesVerified": 157,
+        "WorldFilesVerified": 135,
+        "Utc": "2026-10-22T00:29:06.3448313Z"
+      }
+    }
+  ],
+  "finalVerification": {
+    "Completed": true,
+    "Candidate": "001B587DF551403182741E7EE397E905C0C2CAFDB0BA0276DA661AD8D578397F",
+    "NativeSwitches": 40,
+    "Colliders": 6981,
+    "OfflineTests": 71,
+    "PeerPhases": 9,
+    "OriginalFiles": 157,
+    "OriginalWorldFiles": 135,
+    "Utc": "2026-10-22T00:31:07.7702252Z"
+  },
+  "peer": {
+    "result": {
+      "passed": true,
+      "selectedParts": 12,
+      "phases": 9,
+      "joinDisconnectRejoin": true,
+      "scope": "Actual native host and two successive separate client processes over loopback IP; controlled saved-world part states, duplicate bursts, changed/return values, same-frame pulses, remove/re-add and initial/rejoin snapshots. Not WAN, Steam or manual input acceptance."
+    },
+    "restoration": {
+      "Verified": true,
+      "Files": 157,
+      "WorldFiles": 135,
+      "ModSHA256": "001B587DF551403182741E7EE397E905C0C2CAFDB0BA0276DA661AD8D578397F",
+      "DriverSHA256": "F0FA2F96526A2A72C756A391B60E6B229D7298368304FABDCDA6E7ACE4E935BB"
+    },
+    "phases": [
+      {
+        "passed": true,
+        "preset": "Balanced",
+        "hostPreset": "Faithful",
+        "roomSamples": 0,
+        "parts": [
+          {
+            "Type": "EthanolDistillerState",
+            "delta": 0,
+            "payload": "01-01-6E-FF-00-00-00-00"
+          },
+          {
+            "Type": "WoodPowerGeneratorState",
+            "delta": 0,
+            "payload": "00-00-00-00-01-6E-FF"
+          },
+          {
+            "Type": "WoodThrusterState",
+            "delta": 0,
+            "payload": "00-00-00-00-01-6E-FF-01"
+          },
+          {
+            "Type": "GyroscopeState",
+            "delta": 0,
+            "payload": "00-00-00-00-00-00-00-00-00-00-00-00"
+          },
+          {
+            "Type": "PilotSeatState",
+            "delta": 0,
+            "payload": "01-00-00-00-00-00-00-00-80-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00"
+          },
+          {
+            "Type": "VelocitySensorState",
+            "delta": 0,
+            "payload": "00-00-00-00-00-00-00-00"
+          },
+          {
+            "Type": "SignalProcessorState",
+            "delta": 0,
+            "payload": "00-00-00-00-00-00-00-00-00"
+          },
+          {
+            "Type": "SignalTransmitterState",
+            "delta": 0,
+            "payload": "10-63-68-61-6E-6E-65-6C-30"
+          },
+          {
+            "Type": "WarpDriveState",
+            "delta": 0,
+            "payload": "00"
+          },
+          {
+            "Type": "StorageState",
+            "delta": 0,
+            "payload": "01-00-00-00-01-6E-FF-00-00-00-00-00-00"
+          },
+          {
+            "Type": "GasSensorState",
+            "delta": 0,
+            "payload": "00-00-00-00"
+          },
+          {
+            "Type": "GasMeterState",
+            "delta": 0,
+            "payload": "64-00-00-00-00"
+          }
+        ]
+      },
+      {
+        "passed": true,
+        "preset": "Performance",
+        "hostPreset": "Balanced",
+        "roomSamples": 0,
+        "parts": [
+          {
+            "Type": "EthanolDistillerState",
+            "delta": 0,
+            "payload": "01-01-6E-FF-00-00-00-00"
+          },
+          {
+            "Type": "WoodPowerGeneratorState",
+            "delta": 0,
+            "payload": "00-00-00-00-01-6E-FF"
+          },
+          {
+            "Type": "WoodThrusterState",
+            "delta": 0,
+            "payload": "00-00-00-00-01-6E-FF-01"
+          },
+          {
+            "Type": "GyroscopeState",
+            "delta": 0,
+            "payload": "00-00-00-00-00-00-00-00-00-00-00-00"
+          },
+          {
+            "Type": "PilotSeatState",
+            "delta": 0,
+            "payload": "01-00-00-00-00-00-00-00-80-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00"
+          },
+          {
+            "Type": "VelocitySensorState",
+            "delta": 0,
+            "payload": "00-00-00-00-00-00-00-00"
+          },
+          {
+            "Type": "SignalProcessorState",
+            "delta": 0,
+            "payload": "00-00-00-00-00-00-00-00-00"
+          },
+          {
+            "Type": "SignalTransmitterState",
+            "delta": 0,
+            "payload": "10-63-68-61-6E-6E-65-6C-30"
+          },
+          {
+            "Type": "WarpDriveState",
+            "delta": 0,
+            "payload": "00"
+          },
+          {
+            "Type": "StorageState",
+            "delta": 0,
+            "payload": "01-00-00-00-01-6E-FF-00-00-00-00-00-00"
+          },
+          {
+            "Type": "GasSensorState",
+            "delta": 0,
+            "payload": "00-00-00-00"
+          },
+          {
+            "Type": "GasMeterState",
+            "delta": 0,
+            "payload": "64-00-00-00-00"
+          }
+        ]
+      },
+      {
+        "passed": true,
+        "preset": "Aggressive",
+        "hostPreset": "Performance",
+        "roomSamples": 0,
+        "parts": [
+          {
+            "Type": "EthanolDistillerState",
+            "delta": 1,
+            "payload": "00-01-6E-FE-00-00-00-3F"
+          },
+          {
+            "Type": "WoodPowerGeneratorState",
+            "delta": 1,
+            "payload": "00-00-00-3F-01-6E-FE"
+          },
+          {
+            "Type": "WoodThrusterState",
+            "delta": 1,
+            "payload": "00-00-00-3F-01-6E-FE-00"
+          },
+          {
+            "Type": "GyroscopeState",
+            "delta": 1,
+            "payload": "00-00-00-3F-00-00-80-3F-00-00-00-00"
+          },
+          {
+            "Type": "PilotSeatState",
+            "delta": 1,
+            "payload": "00-00-00-00-3F-00-00-00-BF-00-00-00-00-00-00-00-3F-00-00-00-00-00-00-00-3F-00-00-00-00-00-00-00-00"
+          },
+          {
+            "Type": "VelocitySensorState",
+            "delta": 1,
+            "payload": "00-00-00-00-00-00-E0-3F"
+          },
+          {
+            "Type": "SignalProcessorState",
+            "delta": 1,
+            "payload": "01-00-00-00-00-00-00-E0-3F"
+          },
+          {
+            "Type": "SignalTransmitterState",
+            "delta": 1,
+            "payload": "10-63-68-61-6E-6E-65-6C-31"
+          },
+          {
+            "Type": "WarpDriveState",
+            "delta": 1,
+            "payload": "01"
+          },
+          {
+            "Type": "StorageState",
+            "delta": 1,
+            "payload": "00-00-00-00-01-6E-FE-00-00-00-00-00-00"
+          },
+          {
+            "Type": "GasSensorState",
+            "delta": 1,
+            "payload": "00-00-00-3F"
+          },
+          {
+            "Type": "GasMeterState",
+            "delta": 1,
+            "payload": "64-CC-CC-4C-3F"
+          }
+        ]
+      },
+      {
+        "passed": true,
+        "preset": "Performance",
+        "hostPreset": "Aggressive",
+        "roomSamples": 0,
+        "parts": [
+          {
+            "Type": "EthanolDistillerState",
+            "delta": 1,
+            "payload": "01-01-6E-FF-00-00-00-00"
+          },
+          {
+            "Type": "WoodPowerGeneratorState",
+            "delta": 1,
+            "payload": "00-00-00-00-01-6E-FF"
+          },
+          {
+            "Type": "WoodThrusterState",
+            "delta": 1,
+            "payload": "00-00-00-00-01-6E-FF-01"
+          },
+          {
+            "Type": "GyroscopeState",
+            "delta": 1,
+            "payload": "00-00-00-00-00-00-00-00-00-00-00-00"
+          },
+          {
+            "Type": "PilotSeatState",
+            "delta": 1,
+            "payload": "01-00-00-00-00-00-00-00-80-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00"
+          },
+          {
+            "Type": "VelocitySensorState",
+            "delta": 1,
+            "payload": "00-00-00-00-00-00-00-00"
+          },
+          {
+            "Type": "SignalProcessorState",
+            "delta": 1,
+            "payload": "00-00-00-00-00-00-00-00-00"
+          },
+          {
+            "Type": "SignalTransmitterState",
+            "delta": 1,
+            "payload": "10-63-68-61-6E-6E-65-6C-30"
+          },
+          {
+            "Type": "WarpDriveState",
+            "delta": 1,
+            "payload": "00"
+          },
+          {
+            "Type": "StorageState",
+            "delta": 1,
+            "payload": "01-00-00-00-01-6E-FF-00-00-00-00-00-00"
+          },
+          {
+            "Type": "GasSensorState",
+            "delta": 1,
+            "payload": "00-00-00-00"
+          },
+          {
+            "Type": "GasMeterState",
+            "delta": 1,
+            "payload": "64-00-00-00-00"
+          }
+        ]
+      },
+      {
+        "passed": true,
+        "preset": "Balanced",
+        "hostPreset": "Faithful",
+        "roomSamples": 0,
+        "parts": [
+          {
+            "Type": "EthanolDistillerState",
+            "delta": 2,
+            "payload": "01-01-6E-FF-00-00-00-00"
+          },
+          {
+            "Type": "WoodPowerGeneratorState",
+            "delta": 2,
+            "payload": "00-00-00-00-01-6E-FF"
+          },
+          {
+            "Type": "WoodThrusterState",
+            "delta": 2,
+            "payload": "00-00-00-00-01-6E-FF-01"
+          },
+          {
+            "Type": "GyroscopeState",
+            "delta": 2,
+            "payload": "00-00-00-00-00-00-00-00-00-00-00-00"
+          },
+          {
+            "Type": "PilotSeatState",
+            "delta": 2,
+            "payload": "01-00-00-00-00-00-00-00-80-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00"
+          },
+          {
+            "Type": "VelocitySensorState",
+            "delta": 2,
+            "payload": "00-00-00-00-00-00-00-00"
+          },
+          {
+            "Type": "SignalProcessorState",
+            "delta": 2,
+            "payload": "00-00-00-00-00-00-00-00-00"
+          },
+          {
+            "Type": "SignalTransmitterState",
+            "delta": 2,
+            "payload": "10-63-68-61-6E-6E-65-6C-30"
+          },
+          {
+            "Type": "WarpDriveState",
+            "delta": 2,
+            "payload": "00"
+          },
+          {
+            "Type": "StorageState",
+            "delta": 2,
+            "payload": "01-00-00-00-01-6E-FF-00-00-00-00-00-00"
+          },
+          {
+            "Type": "GasSensorState",
+            "delta": 2,
+            "payload": "00-00-00-00"
+          },
+          {
+            "Type": "GasMeterState",
+            "delta": 2,
+            "payload": "64-00-00-00-00"
+          }
+        ]
+      },
+      {
+        "passed": true,
+        "preset": "Performance",
+        "hostPreset": "Balanced",
+        "roomSamples": 0,
+        "parts": [
+          {
+            "Type": "EthanolDistillerState",
+            "delta": 0,
+            "payload": "01-01-6E-FF-00-00-00-00"
+          },
+          {
+            "Type": "WoodPowerGeneratorState",
+            "delta": 0,
+            "payload": "00-00-00-00-01-6E-FF"
+          },
+          {
+            "Type": "WoodThrusterState",
+            "delta": 0,
+            "payload": "00-00-00-00-01-6E-FF-01"
+          },
+          {
+            "Type": "GyroscopeState",
+            "delta": 0,
+            "payload": "00-00-00-00-00-00-00-00-00-00-00-00"
+          },
+          {
+            "Type": "PilotSeatState",
+            "delta": 0,
+            "payload": "01-00-00-00-00-00-00-00-80-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00"
+          },
+          {
+            "Type": "VelocitySensorState",
+            "delta": 0,
+            "payload": "00-00-00-00-00-00-00-00"
+          },
+          {
+            "Type": "SignalProcessorState",
+            "delta": 0,
+            "payload": "00-00-00-00-00-00-00-00-00"
+          },
+          {
+            "Type": "SignalTransmitterState",
+            "delta": 0,
+            "payload": "10-63-68-61-6E-6E-65-6C-30"
+          },
+          {
+            "Type": "WarpDriveState",
+            "delta": 0,
+            "payload": "00"
+          },
+          {
+            "Type": "StorageState",
+            "delta": 0,
+            "payload": "01-00-00-00-01-6E-FF-00-00-00-00-00-00"
+          },
+          {
+            "Type": "GasSensorState",
+            "delta": 0,
+            "payload": "00-00-00-00"
+          },
+          {
+            "Type": "GasMeterState",
+            "delta": 0,
+            "payload": "64-00-00-00-00"
+          }
+        ]
+      },
+      {
+        "passed": true,
+        "preset": "Aggressive",
+        "hostPreset": "Performance",
+        "roomSamples": 625,
+        "parts": [
+          {
+            "Type": "EthanolDistillerState",
+            "delta": 0,
+            "payload": "01-01-6E-FF-00-00-00-00"
+          },
+          {
+            "Type": "WoodPowerGeneratorState",
+            "delta": 0,
+            "payload": "00-00-00-00-01-6E-FF"
+          },
+          {
+            "Type": "WoodThrusterState",
+            "delta": 0,
+            "payload": "00-00-00-00-01-6E-FF-01"
+          },
+          {
+            "Type": "GyroscopeState",
+            "delta": 0,
+            "payload": "00-00-00-00-00-00-00-00-00-00-00-00"
+          },
+          {
+            "Type": "PilotSeatState",
+            "delta": 0,
+            "payload": "01-00-00-00-00-00-00-00-80-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00"
+          },
+          {
+            "Type": "VelocitySensorState",
+            "delta": 0,
+            "payload": "00-00-00-00-00-00-00-00"
+          },
+          {
+            "Type": "SignalProcessorState",
+            "delta": 0,
+            "payload": "00-00-00-00-00-00-00-00-00"
+          },
+          {
+            "Type": "SignalTransmitterState",
+            "delta": 0,
+            "payload": "10-63-68-61-6E-6E-65-6C-30"
+          },
+          {
+            "Type": "WarpDriveState",
+            "delta": 0,
+            "payload": "00"
+          },
+          {
+            "Type": "StorageState",
+            "delta": 0,
+            "payload": "01-00-00-00-01-6E-FF-00-00-00-00-00-00"
+          },
+          {
+            "Type": "GasSensorState",
+            "delta": 0,
+            "payload": "00-00-00-00"
+          },
+          {
+            "Type": "GasMeterState",
+            "delta": 0,
+            "payload": "64-00-00-00-00"
+          }
+        ]
+      },
+      {
+        "passed": true,
+        "preset": "Faithful",
+        "hostPreset": "Faithful",
+        "roomSamples": 624,
+        "parts": [
+          {
+            "Type": "EthanolDistillerState",
+            "delta": 1,
+            "payload": "00-01-6E-FE-00-00-00-3F"
+          },
+          {
+            "Type": "WoodPowerGeneratorState",
+            "delta": 1,
+            "payload": "00-00-00-3F-01-6E-FE"
+          },
+          {
+            "Type": "WoodThrusterState",
+            "delta": 1,
+            "payload": "00-00-00-3F-01-6E-FE-00"
+          },
+          {
+            "Type": "GyroscopeState",
+            "delta": 1,
+            "payload": "00-00-00-3F-00-00-80-3F-00-00-00-00"
+          },
+          {
+            "Type": "PilotSeatState",
+            "delta": 1,
+            "payload": "00-00-00-00-3F-00-00-00-BF-00-00-00-00-00-00-00-3F-00-00-00-00-00-00-00-3F-00-00-00-00-00-00-00-00"
+          },
+          {
+            "Type": "VelocitySensorState",
+            "delta": 1,
+            "payload": "00-00-00-00-00-00-E0-3F"
+          },
+          {
+            "Type": "SignalProcessorState",
+            "delta": 1,
+            "payload": "01-00-00-00-00-00-00-E0-3F"
+          },
+          {
+            "Type": "SignalTransmitterState",
+            "delta": 1,
+            "payload": "10-63-68-61-6E-6E-65-6C-31"
+          },
+          {
+            "Type": "WarpDriveState",
+            "delta": 1,
+            "payload": "01"
+          },
+          {
+            "Type": "StorageState",
+            "delta": 1,
+            "payload": "00-00-00-00-01-6E-FE-00-00-00-00-00-00"
+          },
+          {
+            "Type": "GasSensorState",
+            "delta": 1,
+            "payload": "00-00-00-3F"
+          },
+          {
+            "Type": "GasMeterState",
+            "delta": 1,
+            "payload": "64-CC-CC-4C-3F"
+          }
+        ]
+      },
+      {
+        "passed": true,
+        "preset": "Faithful",
+        "hostPreset": "Balanced",
+        "roomSamples": 625,
+        "parts": [
+          {
+            "Type": "EthanolDistillerState",
+            "delta": 1,
+            "payload": "01-01-6E-FF-00-00-00-00"
+          },
+          {
+            "Type": "WoodPowerGeneratorState",
+            "delta": 1,
+            "payload": "00-00-00-00-01-6E-FF"
+          },
+          {
+            "Type": "WoodThrusterState",
+            "delta": 1,
+            "payload": "00-00-00-00-01-6E-FF-01"
+          },
+          {
+            "Type": "GyroscopeState",
+            "delta": 1,
+            "payload": "00-00-00-00-00-00-00-00-00-00-00-00"
+          },
+          {
+            "Type": "PilotSeatState",
+            "delta": 1,
+            "payload": "01-00-00-00-00-00-00-00-80-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00"
+          },
+          {
+            "Type": "VelocitySensorState",
+            "delta": 1,
+            "payload": "00-00-00-00-00-00-00-00"
+          },
+          {
+            "Type": "SignalProcessorState",
+            "delta": 1,
+            "payload": "00-00-00-00-00-00-00-00-00"
+          },
+          {
+            "Type": "SignalTransmitterState",
+            "delta": 1,
+            "payload": "10-63-68-61-6E-6E-65-6C-30"
+          },
+          {
+            "Type": "WarpDriveState",
+            "delta": 1,
+            "payload": "00"
+          },
+          {
+            "Type": "StorageState",
+            "delta": 1,
+            "payload": "01-00-00-00-01-6E-FF-00-00-00-00-00-00"
+          },
+          {
+            "Type": "GasSensorState",
+            "delta": 1,
+            "payload": "00-00-00-00"
+          },
+          {
+            "Type": "GasMeterState",
+            "delta": 1,
+            "payload": "64-00-00-00-00"
+          }
+        ]
+      }
+    ]
+  }
+}

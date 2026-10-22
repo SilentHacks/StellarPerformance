@@ -1,9 +1,16 @@
 {
   "id": "stellarperformance",
   "name": "Stellar Performance",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "author": "SilentHacks",
-  "description": "Five focused optimisations for smoother ship-heavy worlds.\n\n• Ship-grid bounds caching\n• Fluid cable topology caching\n• Local room rebuilding\n• Single-player room query reuse\n• Fixed-part mesh batching\n\nEach optimisation can be turned off in settings. Room gas rounding can differ slightly.\n\nRequires Demo 0.8.2 and MelonLoader 0.7.3.",
+  "description": "Smoother ship-heavy worlds with live performance presets.\n\n• Press F8 for Faithful, Balanced, Performance, Aggressive or Custom\n• Cache ship bounds, cable topology and signal connections\n• Rebuild rooms locally and reuse single-player room queries\n• Batch fixed meshes and cull offscreen part UI\n• Suppress identical supported replication payloads\n\nBalanced keeps native presentation. Higher presets trade cosmetic detail for speed. Room gas rounding can differ slightly.\n\nRequires Demo 0.8.2 and MelonLoader 0.7.3.",
+  "ai": "vibecoded",
+  "development": "active",
+  "tags": [
+    "performance",
+    "optimization",
+    "quality-of-life"
+  ],
   "needs": [],
   "thumbnail": "assets/thumbnail.png",
   "images": [

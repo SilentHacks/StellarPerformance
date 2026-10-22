@@ -1,0 +1,453 @@
+{
+  "scope": "Three fresh-process pairs on the same 37-ship seed; prior batch-recovery control versus combined distiller replication, signal union cache and experimental retry enabled without remote peers. 40s warmup, 30s focused traces, no profiler/network diagnostics or save writes during traces. Not remote multiplayer or moving/building FPS evidence.",
+  "system": {
+    "cpu": "AMD Ryzen 7 3800X 8-Core Processor ",
+    "gpu": "NVIDIA GeForce RTX 2070 SUPER",
+    "api": "Direct3D11",
+    "width": 2560,
+    "height": 1080,
+    "quality": 0,
+    "vsync": 0,
+    "target": -1,
+    "modVersion": "1.0.1.0"
+  },
+  "pairs": [
+    {
+      "control": {
+        "label": "ControlA01",
+        "dllSHA256": "0D187A82753DA7E8176E7C4B9141734B167BC1B1DCD404E25C071E9614704019",
+        "driverSHA256": "01C873EBAED0EBFC2D89F88D262393C5E7BFCD85FE6B49E4A6295D283196BB43",
+        "fps": 43.85300017151655,
+        "meanMs": 22.803456914893616,
+        "low1Fps": 22.90780384294269,
+        "p99Ms": 39.558,
+        "frames": 1316,
+        "ticks": 1501,
+        "traceSHA256": "4B67ADE0AE96172787CC4171AEEC4B173CAC7DD17E510028F4BDFBED9F47E175"
+      },
+      "candidate": {
+        "label": "CandidateB01",
+        "dllSHA256": "D04DA67E5411E40BC4F5469EB659E803C7EBFBF28F114CF3470C3A0BB223830B",
+        "driverSHA256": "01C873EBAED0EBFC2D89F88D262393C5E7BFCD85FE6B49E4A6295D283196BB43",
+        "fps": 47.65480713251431,
+        "meanMs": 20.98424188811189,
+        "low1Fps": 26.000108086163618,
+        "p99Ms": 33.4663,
+        "frames": 1430,
+        "ticks": 1501,
+        "traceSHA256": "2B784F0A2FB4E9DCC9D20893D5FADC4E9FAE14DC494AEAB04854677B73A5F504"
+      },
+      "fpsGainPercent": 8.6694341233855,
+      "frameReductionPercent": 7.977803688148455
+    },
+    {
+      "control": {
+        "label": "ControlA02",
+        "dllSHA256": "0D187A82753DA7E8176E7C4B9141734B167BC1B1DCD404E25C071E9614704019",
+        "driverSHA256": "01C873EBAED0EBFC2D89F88D262393C5E7BFCD85FE6B49E4A6295D283196BB43",
+        "fps": 43.948777756168795,
+        "meanMs": 22.7537613343442,
+        "low1Fps": 22.20590372989149,
+        "p99Ms": 40.8929,
+        "frames": 1319,
+        "ticks": 1499,
+        "traceSHA256": "48B3E74A13467B6C2CBAE56BFB723E74EF419135D39B1CC4EE9F504C3AB14914"
+      },
+      "candidate": {
+        "label": "CandidateB02",
+        "dllSHA256": "D04DA67E5411E40BC4F5469EB659E803C7EBFBF28F114CF3470C3A0BB223830B",
+        "driverSHA256": "01C873EBAED0EBFC2D89F88D262393C5E7BFCD85FE6B49E4A6295D283196BB43",
+        "fps": 47.68621296210839,
+        "meanMs": 20.97042180293501,
+        "low1Fps": 26.434206769875882,
+        "p99Ms": 33.1085,
+        "frames": 1431,
+        "ticks": 1500,
+        "traceSHA256": "324BBB925BA594F24E3DF41491F07853059AC9E922BFF2F532E7457A5F07898F"
+      },
+      "fpsGainPercent": 8.50407086785252,
+      "frameReductionPercent": 7.8375592729692745
+    },
+    {
+      "control": {
+        "label": "ControlA03",
+        "dllSHA256": "0D187A82753DA7E8176E7C4B9141734B167BC1B1DCD404E25C071E9614704019",
+        "driverSHA256": "01C873EBAED0EBFC2D89F88D262393C5E7BFCD85FE6B49E4A6295D283196BB43",
+        "fps": 44.57430217189287,
+        "meanMs": 22.434451046337816,
+        "low1Fps": 22.898914503379793,
+        "p99Ms": 40.4133,
+        "frames": 1338,
+        "ticks": 1501,
+        "traceSHA256": "EDD41C89E3F6EEB685C98A13BBE75A52E8A1325C0DFB5870FA7C51CC56585146"
+      },
+      "candidate": {
+        "label": "CandidateB03",
+        "dllSHA256": "D04DA67E5411E40BC4F5469EB659E803C7EBFBF28F114CF3470C3A0BB223830B",
+        "driverSHA256": "01C873EBAED0EBFC2D89F88D262393C5E7BFCD85FE6B49E4A6295D283196BB43",
+        "fps": 48.5225797592071,
+        "meanMs": 20.60896195054945,
+        "low1Fps": 26.405120179132332,
+        "p99Ms": 30.3112,
+        "frames": 1456,
+        "ticks": 1500,
+        "traceSHA256": "DA04BC6349946C0C824C69FE4F9F88A8CF0D4C41A7AF8B6B713C163A686E5B13"
+      },
+      "fpsGainPercent": 8.857744024995394,
+      "frameReductionPercent": 8.136990256716615
+    }
+  ],
+  "medianPairedFpsGainPercent": 8.6694341233855,
+  "medianPairedFrameReductionPercent": 7.977803688148455,
+  "control": {
+    "fps": 43.948777756168795,
+    "meanMs": 22.7537613343442,
+    "low1Fps": 22.898914503379793,
+    "p99Ms": 40.4133
+  },
+  "candidate": {
+    "fps": 47.68621296210839,
+    "meanMs": 20.97042180293501,
+    "low1Fps": 26.405120179132332,
+    "p99Ms": 33.1085
+  },
+  "nativeDistillers": {
+    "passed": true,
+    "scope": "Actual Mono native guess/update methods and installed MasterSync hook; 12 isolated distillers, four scenarios (steady, interrupted power, exhaustion, constrained output); native callbacks and authoritative values compared every tick; real native update serialization and receiver payload-state equality, not WAN/full-chain testing.",
+    "rows": [
+      {
+        "scenario": 0,
+        "distillers": 12,
+        "ticks": 5000,
+        "stack": 255,
+        "nativeNotifications": 60192,
+        "candidateNotifications": 60192,
+        "nativeChanges": 60192,
+        "candidateChanges": 432,
+        "nativeBytes": 963072,
+        "candidateBytes": 6912,
+        "output": 192.0281,
+        "remaining": 235.010986,
+        "nativeValuesEqual": true,
+        "receiverEncodedValuesEqual": true
+      },
+      {
+        "scenario": 1,
+        "distillers": 12,
+        "ticks": 5000,
+        "stack": 255,
+        "nativeNotifications": 60192,
+        "candidateNotifications": 60192,
+        "nativeChanges": 60192,
+        "candidateChanges": 1608,
+        "nativeBytes": 963072,
+        "candidateBytes": 25728,
+        "output": 188.182892,
+        "remaining": 235.410767,
+        "nativeValuesEqual": true,
+        "receiverEncodedValuesEqual": true
+      },
+      {
+        "scenario": 2,
+        "distillers": 12,
+        "ticks": 5000,
+        "stack": 1,
+        "nativeNotifications": 60192,
+        "candidateNotifications": 60192,
+        "nativeChanges": 60192,
+        "candidateChanges": 252,
+        "nativeBytes": 842712,
+        "candidateBytes": 3552,
+        "output": 9.599894,
+        "remaining": 0.0,
+        "nativeValuesEqual": true,
+        "receiverEncodedValuesEqual": true
+      },
+      {
+        "scenario": 3,
+        "distillers": 12,
+        "ticks": 5000,
+        "stack": 255,
+        "nativeNotifications": 60192,
+        "candidateNotifications": 60192,
+        "nativeChanges": 60192,
+        "candidateChanges": 216,
+        "nativeBytes": 963072,
+        "candidateBytes": 3456,
+        "output": 0.0383999944,
+        "remaining": 254.996,
+        "nativeValuesEqual": true,
+        "receiverEncodedValuesEqual": true
+      }
+    ]
+  },
+  "nativeSignalQueries": {
+    "passed": true,
+    "liveGroups": 792,
+    "endpointComparisons": 476010,
+    "unionOrderComparisons": 476010,
+    "nativeOrderExact": true,
+    "scope": "Actual native Mono server/client graph discovery and untouched method-copy oracle; 200 delete/split/reconnect/merge cycles per isolated copy of live graph; real ship/provider state read on every native query; cache changes no classification, signal value or execution code. Not GUI cable-drag acceptance."
+  },
+  "steamPressure": {
+    "passed": true,
+    "packets": 160,
+    "initialRetainedBytes": 173014,
+    "channelAndOrderExact": true,
+    "noFaultInjection": true,
+    "scope": "Actual Steam loopback network, socket-specific 4096-byte Steam send buffer and 65536-byte/sec rate; installed retention/retry, 160 packets, two reliable channel IDs, source buffers overwritten; not WAN/player replication acceptance."
+  },
+  "offlineTests": 53,
+  "frameAnalysisTests": 15,
+  "finalDllSHA256": "431E6B8948CBC47F10DBCA352A6065503CB82D4BEEBFBA104E84234459BF4BEE",
+  "finalNativeConformance": {
+    "factories": {
+      "passed": true,
+      "evidence": {
+        "passed": true,
+        "rows": [
+          {
+            "scenario": 0,
+            "ice": 200,
+            "capacity": 1000.0,
+            "oneTickPowerInterruptions": false,
+            "comparedSteps": 3000,
+            "nativeProduced": 60.0011826,
+            "configuredProduced": 60.0011826,
+            "doubledProduced": 60.00099,
+            "nativeIce": 139.987183,
+            "configuredIce": 139.987183,
+            "doubledIce": 140.010071,
+            "maxDoubledDifference": 0.020191192626953125,
+            "nativeEvents": 3000,
+            "configuredEvents": 3000
+          },
+          {
+            "scenario": 1,
+            "ice": 1,
+            "capacity": 1000.0,
+            "oneTickPowerInterruptions": false,
+            "comparedSteps": 3000,
+            "nativeProduced": 1.0,
+            "configuredProduced": 1.0,
+            "doubledProduced": 1.0,
+            "nativeIce": 0.0,
+            "configuredIce": 0.0,
+            "doubledIce": 0.0,
+            "maxDoubledDifference": 0.02000012993812561,
+            "nativeEvents": 3000,
+            "configuredEvents": 3000
+          },
+          {
+            "scenario": 2,
+            "ice": 200,
+            "capacity": 0.03,
+            "oneTickPowerInterruptions": false,
+            "comparedSteps": 3000,
+            "nativeProduced": 0.03,
+            "configuredProduced": 0.03,
+            "doubledProduced": 0.03,
+            "nativeIce": 199.97,
+            "configuredIce": 199.97,
+            "doubledIce": 199.97,
+            "maxDoubledDifference": 0.019999999552965164,
+            "nativeEvents": 3000,
+            "configuredEvents": 3000
+          },
+          {
+            "scenario": 3,
+            "ice": 200,
+            "capacity": 1000.0,
+            "oneTickPowerInterruptions": true,
+            "comparedSteps": 3000,
+            "nativeProduced": 59.40117,
+            "configuredProduced": 59.40117,
+            "doubledProduced": 60.00099,
+            "nativeIce": 140.587311,
+            "configuredIce": 140.587311,
+            "doubledIce": 140.010071,
+            "maxDoubledDifference": 0.599822998046875,
+            "nativeEvents": 3000,
+            "configuredEvents": 3000
+          }
+        ],
+        "scope": "Actual native Mono machine methods: emitted untouched WritePowerRequest/Update oracle vs installed methods; native-rate intermediate state, output, power request and event-count equality. Doubled-step results are counterexample measurements, not equality passes; isolated machine, not full production chain."
+      }
+    },
+    "circuits": {
+      "passed": true,
+      "evidence": {
+        "signals": {
+          "passed": true,
+          "evidence": {
+            "comparedStates": 192000,
+            "mismatches": 0,
+            "nativeEvents": 192600,
+            "configuredEvents": 192600,
+            "nativeStable": {
+              "iterationsPerBatch": 1000,
+              "batches": 7,
+              "medianMicrosecondsPerCall": 138.1766,
+              "samplesMicrosecondsPerCall": [
+                259.6268,
+                252.24779999999998,
+                165.6539,
+                111.5733,
+                111.12110000000001,
+                112.02810000000001,
+                138.1766
+              ]
+            },
+            "configuredStable": {
+              "iterationsPerBatch": 1000,
+              "batches": 7,
+              "medianMicrosecondsPerCall": 111.5933,
+              "samplesMicrosecondsPerCall": [
+                112.18839999999999,
+                111.5933,
+                112.5956,
+                138.38389999999998,
+                111.4165,
+                110.7318,
+                110.85810000000001
+              ]
+            },
+            "nativeBusy": {
+              "iterationsPerBatch": 1000,
+              "batches": 7,
+              "medianMicrosecondsPerCall": 112.7881,
+              "samplesMicrosecondsPerCall": [
+                137.671,
+                114.2436,
+                111.37960000000001,
+                111.9549,
+                138.0521,
+                112.7881,
+                111.2526
+              ]
+            },
+            "configuredBusy": {
+              "iterationsPerBatch": 1000,
+              "batches": 7,
+              "medianMicrosecondsPerCall": 112.3895,
+              "samplesMicrosecondsPerCall": [
+                112.3895,
+                139.7265,
+                111.3419,
+                110.45819999999999,
+                110.34519999999999,
+                140.272,
+                116.3177
+              ]
+            },
+            "scope": "64-gate native operation loop, untouched emitted oracle vs actually patched method; no factory cadence applied to this isolated fixture"
+          }
+        }
+      }
+    },
+    "fluids": {
+      "passed": true,
+      "evidence": {
+        "passed": true,
+        "steps": 128,
+        "comparisons": 37504,
+        "nonzeroNativeFlows": 1792,
+        "distinctNativeFlowValues": 6,
+        "forcedTopologyRebuilds": 16,
+        "changedPartRates": 885,
+        "maxFlowError": 0.0,
+        "nativeTiming": {
+          "iterationsPerBatch": 200,
+          "batches": 7,
+          "medianMicrosecondsPerCall": 6944.6145,
+          "samplesMicrosecondsPerCall": [
+            6918.3665,
+            6944.6145,
+            6952.8135,
+            6940.453,
+            6896.6465,
+            7065.3135,
+            9060.8645
+          ]
+        },
+        "cachedTiming": {
+          "iterationsPerBatch": 200,
+          "batches": 7,
+          "medianMicrosecondsPerCall": 159.618,
+          "samplesMicrosecondsPerCall": [
+            159.496,
+            159.64600000000002,
+            159.618,
+            159.5615,
+            159.5,
+            161.0615,
+            159.955
+          ]
+        },
+        "scope": "Actual live native updater and loaded cable visuals: emitted untouched updater oracle vs installed topology cache. Identical content/material/colour/density/call counts; flow tolerance 1e-6; varying positive/zero/negative pump/electrolyzer/thruster/exhaust rates; repeated cache rebuilds. Presentation calls intercepted during comparison and CPU timing; timings exclude native material/animation work and are not full-frame savings. Not arbitrary cable editing coverage."
+      }
+    },
+    "physics": {
+      "passed": true,
+      "evidence": {
+        "passed": true,
+        "steps": 600,
+        "landed": true,
+        "sleepingSteps": 507,
+        "maxPositionError": 0.0,
+        "maxVelocityError": 0.0,
+        "maxRotationError": 0.0,
+        "scope": "Twin native PhysX scenes with gravity, floor contact, sleeping, collider disable/re-enable and impulse; no claim of full ship flight/docking coverage"
+      }
+    }
+  },
+  "nativeInteractionChecks": {
+    "checks": [
+      {
+        "test": "overlapping-native-hover-and-highlight",
+        "passed": true,
+        "unchangedMesh": true
+      },
+      {
+        "test": "nested-native-hover",
+        "passed": true
+      },
+      {
+        "test": "native-physics-ray-filter-tracker-hover-and-leave",
+        "passed": true,
+        "frames": 20
+      },
+      {
+        "test": "native-instancer-add-remove-and-unload",
+        "passed": true,
+        "added": 49,
+        "removed": 12,
+        "originalCollidersPreserved": true
+      }
+    ],
+    "validatedRecoveries": 12,
+    "authoritativeMismatches": 0
+  },
+  "interactionTestDllSHA256": "DE2CDF85E3D402E3C98DB2C78CD186A378BCE595EDF8E20B112C3D5AFF4A3990",
+  "finalNativeTestDllSHA256": "431E6B8948CBC47F10DBCA352A6065503CB82D4BEEBFBA104E84234459BF4BEE",
+  "changesSinceFpsMeasurement": [
+    "SignalConnectionScan defaults on; FPS tests already explicitly enabled it.",
+    "CSV columns clarify that bytes count transport attempts.",
+    "Expired-peer cleanup also checks the cooperative time budget; offline regression covered."
+  ],
+  "changedMethodsSinceFpsMeasurement": [
+    "System.Void StellarPerformance.NetworkCapture::Stop()",
+    "System.Void StellarPerformance.PerformancePlugin::OnLateInitializeMelon()",
+    "System.Void StellarPerformance.ReliableBacklog`1::Drain(System.Double,System.Func`4<TKey,System.ArraySegment`1<System.Byte>,System.Byte,StellarPerformance.RetryResult>,System.Action`2<TKey,System.String>,System.Func`1<System.Double>)"
+  ],
+  "restoration": {
+    "Restored": true,
+    "FilesVerified": 157,
+    "WorldFilesVerified": 135,
+    "Utc": "2026-10-21T17:17:55.9465274Z"
+  },
+  "remainingAcceptance": [
+    "Real remote-player join/disconnect/rejoin and sustained congested production.",
+    "Full mouse-driven pickup, building and cable drag/rewiring; desktop game capture timed out twice."
+  ]
+}

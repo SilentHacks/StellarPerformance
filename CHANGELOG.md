@@ -1,5 +1,23 @@
 # Changelog
 
+## 2.0.0
+
+- Update the mod-manager description and add `ai: vibecoded`, `development: active` and descriptive tags, following the current [manifest guidance](https://jollyname.dev/create/).
+- Add live Faithful, Balanced, Performance, Aggressive and Custom presets with an F8/menu selector, keyboard access and saved preferences. Preserve the current defaults as Balanced; no restart/reload/reconnect is needed for preset changes.
+- Switch native/incremental room reconstruction between complete updates while retaining existing gas state. Add opt-in contour modes, passive signal/oxygen text caps, unreadable-label omission, shadow ceilings, cosmetic exhaust density, inspected part-label distance limits, shadow-map resolution/filtering and visual vegetation range. Keep native simulation, terrain, collisions, resource placement, sound ranges, interaction/picking and genuine replication.
+- Fix sky and clouds drawing over terrain, trees and anything above the horizon when scene contours were reduced. The native atmosphere and cloud passes read the depth texture without declaring it, so they relied on the contour prepass. They now declare depth whenever contours are reduced, and only the main-view contours change; build-tool outlines stay native.
+- Redesign Performance and Aggressive around measured costs instead of hiding scenery. Add silhouette-only contours (no crease pass or depth-normals prepass) and opt-in cosmetic caps for cable glow/flow targets and still-camera terrain/vegetation detail searches. Remove the 4–12 m label cut-offs, 10% vegetation, 10% exhaust and disabled shadows from the named levels.
+- Cull inspected offscreen world-space part canvases before each UI draw, using all rendering cameras and current ship/camera poses. Retain focused controls, native text updates, clipping, billboards, picking and simulation.
+- Bound canvas tracking, restore native canvases on edits/unload/failure, and recover loaded visual identities from the native part map. Leave unknown scripts, dynamic layouts and unsupported UI on their native paths.
+- Suppress consecutive distiller notifications whose native serialized payloads are identical, retaining native production and server callbacks.
+- Extend exact payload deduplication to inspected electrolyzers, wood generators/thrusters, gyro/pilot bookkeeping, velocity/gas sensors, unary processors, signal transmitters, storage and warp timers. Preserve native equality, encoded changes, interaction/pickup transitions and authoritative callbacks; retain independent distiller and other-part switches.
+- Add an independently switchable signal connection union cache with exact mutation/order validation. Keep native socket classification and circuit execution.
+- Add experimental, bounded reliable Steam congestion recovery (default off), with ordered owned packets, fair retries and explicit disconnect on sustained overload.
+- Add explicit startup network captures, default off, reporting replication suppression, Steam congestion, retry/backlog and peer queue statistics.
+- Recover fixed-part batches after native hover/highlight interactions end, retaining native rendering for parts whose material or pose changed.
+- Reuse combined vertex data during recovery instead of rebuilding whole meshes. Spread construction scans and mesh creation across frames, with bounded mesh sizes and a 16 MiB index-cache ceiling.
+- Track overlapping interactions, cancel pending construction work on edits/unload, and fall back to native rendering if recovery cannot safely continue.
+
 ## 1.0.1
 
 - Fix unnecessary dependency prompts in Stellar Mod Manager.

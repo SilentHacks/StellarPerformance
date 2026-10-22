@@ -1,6 +1,6 @@
 # Stellar Performance
 
-Five focused optimisations for StellarDrive Demo.
+Focused optimisations for StellarDrive Demo.
 
 ## Features
 
@@ -8,9 +8,14 @@ Five focused optimisations for StellarDrive Demo.
 - Fluid cable topology caching, with live visual updates every frame.
 - Local room rebuilding after edits.
 - Single-player reuse of authoritative room queries.
-- Fixed-part mesh batching with compatibility guards.
+- Fixed-part mesh batching with compatibility guards and recovery after interaction.
+- Suppression of identical native replication payloads for inspected machines and other supported parts.
+- Exact signal connection scan reuse.
+- Offscreen culling of inspected ship-part canvases, with native readout updates and focused controls.
+- Live Faithful, Balanced, Performance, Aggressive and Custom presets, with an in-game F8 selector.
+- Experimental Steam congestion recovery, disabled by default.
 
-Simulation, physics, networking, picking and visual refresh rates stay native. Room gas rounding can differ slightly. Each optimisation can be turned off in settings.
+Simulation, physics and picking retain native rates. Balanced retains native presentation. Higher presets reduce contours, shadow/vegetation range and cosmetic refresh rates while preserving the landscape and native readouts. Supported part notifications can omit identical payloads; incremental-room gas rounding can differ slightly.
 
 ## Install
 
@@ -18,15 +23,20 @@ Requires Windows, StellarDrive Demo 0.8.2 and MelonLoader 0.7.3.
 
 Install through Stellar Mod Manager.
 
-For manual installation, close the game and install the requirements separately. Download StellarPerformance.zip from the [1.0.1 release](https://github.com/SilentHacks/StellarPerformance/releases/tag/v1.0.1) and extract it into the game folder. The DLL belongs at Mods/StellarPerformance.dll.
+For manual installation, close the game and install the requirements separately. Download StellarPerformance.zip from [GitHub releases](https://github.com/SilentHacks/StellarPerformance/releases) and extract it into the game folder. The DLL belongs at Mods/StellarPerformance.dll.
 
 To uninstall, close the game and remove that DLL.
 
 ## Settings
 
-Edit the StellarPerformance section in UserData/MelonPreferences.cfg, then restart the game.
+In 2.0.0, press F8 or choose Performance in a menu. Preset changes
+apply during play and are saved without restarting or reconnecting. Balanced keeps
+native presentation. See [live presets](docs/PRESETS.md) for trade-offs and multiplayer rules.
 
-See [settings and compatibility](docs/CONFIGURATION.md) for the five feature switches and the batching compatibility option.
+Individual startup feature/compatibility overrides remain in the StellarPerformance
+section of UserData/MelonPreferences.cfg. Close the game before editing that file manually.
+
+See [settings and compatibility](docs/CONFIGURATION.md) for feature switches and diagnostics.
 
 ## Performance and limits
 
@@ -35,6 +45,16 @@ The 1.0.0 build measured 47.98% lower mean frame time across six paired runs in 
 Results vary by world and hardware.
 
 See the [benchmark evidence](docs/BENCHMARKS.md) and [validation limits](docs/VALIDATION.md).
+The 2.0.0 batching changes and their measurements are documented in
+[batch recovery](docs/BATCH_RECOVERY.md).
+Networking and signal work is documented in
+[large-build optimisation](docs/SCALE_OPTIMISATION.md), including validation limits.
+Canvas behavior, camera/build acceptance and incremental FPS measurements are in
+[canvas culling](docs/CANVAS_CULLING.md).
+The higher-preset trade-offs and measured gains are in
+[live presets](docs/PRESETS.md); changes within roughly ±3% FPS are treated as inconclusive.
+Supported replication types, preservation rules and validation are documented in
+[replication deduplication](docs/REPLICATION_DEDUPLICATION.md).
 
 ## More information
 

@@ -1,5 +1,28 @@
 # Releases and packaging
 
+## Preparing 2.0.0
+
+The 2.0.0 release candidate includes the live preset selector, corrected
+atmosphere/cloud depth scheduling, batching recovery, canvas culling, signal scan
+reuse and expanded identical-payload replication suppression. Balanced keeps native
+presentation; higher levels use the graded cosmetic settings in [live presets](PRESETS.md).
+The redesigned presets were checked in single-player; earlier multiplayer checks
+and their limits remain documented separately. No additional graphics-limited or
+multiplayer FPS benefit is claimed.
+
+The root [release notes](../RELEASE_NOTES.md) are the prepared GitHub release body.
+`scripts/Package.ps1` rebuilds the committed source and produces the installable
+`artifacts/2.0.0/StellarPerformance.zip`, checksum and verification receipt. The ZIP
+contains only `Mods/StellarPerformance.dll` and root `mod.json`.
+Preparation does not publish a release or push source/tags.
+
+The manifest follows the [mod-manager guidance](https://jollyname.dev/create/):
+stable mod ID, matching version/tag, description within 600 characters, existing
+repository-relative images, `ai: vibecoded`, `development: active` and up to six
+non-reserved tags. The AI label is the maintainer's choice. Packaging validates the
+new fields as well as version and archive contents. `needs` stays empty because
+this mod has no required companion mod; MelonLoader is a runtime requirement.
+
 ## Published 1.0.0
 
 [Release v1.0.0](https://github.com/SilentHacks/StellarPerformance/releases/tag/v1.0.0)

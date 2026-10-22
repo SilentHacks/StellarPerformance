@@ -10,8 +10,19 @@ Set-StrictMode -Version Latest
 $root = Split-Path -Parent $PSScriptRoot
 $manifestPath = Join-Path $root 'mod.json'
 $manifest = Get-Content -LiteralPath $manifestPath -Raw | ConvertFrom-Json
-foreach ($field in @('id', 'name', 'version', 'description')) {
+foreach ($field in @('id', 'name', 'author', 'version', 'description', 'thumbnail', 'ai', 'development')) {
     if ([string]::IsNullOrWhiteSpace($manifest.$field)) { throw "Missing manifest field: $field" }
+}
+if (@('ai-free', 'ai-assisted', 'vibecoded') -cnotcontains $manifest.ai) { throw 'Invalid AI disclosure.' }
+if (@('active', 'inactive') -cnotcontains $manifest.development) { throw 'Invalid development status.' }
+if ($manifest.description.Length -gt 600) { throw 'Keep the manager description within 600 characters.' }
+$tagsProperty = $manifest.PSObject.Properties['tags']
+if ($null -ne $tagsProperty) {
+    $tags = @($tagsProperty.Value)
+    if ($tags.Count -gt 6) { throw 'Use at most six manager tags.' }
+    foreach ($tag in $tags) {
+        if ([string]::IsNullOrWhiteSpace($tag) -or $tag.Length -gt 24 -or @('ai', 'ai-free', 'ai-assisted', 'vibecoded', 'active', 'inactive') -contains $tag) { throw 'Invalid or reserved manager tag.' }
+    }
 }
 if ($manifest.version -notmatch '^\d+\.\d+\.\d+$') { throw 'Use a three-part release version.' }
 $project = Join-Path $root 'src\StellarPerformance\StellarPerformance.csproj'
@@ -31,6 +42,8 @@ if ($LASTEXITCODE -ne 0) { throw 'Release build failed.' }
 if ($LASTEXITCODE -ne 0) { throw 'Release tests failed.' }
 $dll = Join-Path $root 'src\StellarPerformance\bin\Release\net472\StellarPerformance.dll'
 if ([Reflection.AssemblyName]::GetAssemblyName($dll).Version.ToString() -cne ($manifest.version + '.0')) { throw 'Shipping DLL version differs.' }
+$changes = & git -C $root status --porcelain
+if ($LASTEXITCODE -ne 0 -or $changes) { throw 'Source changed during build.' }
 $output = Join-Path $root ('artifacts\' + $manifest.version)
 $null = New-Item -ItemType Directory -Path $output -Force
 $zipPath = Join-Path $output ($RepositoryName + '.zip')

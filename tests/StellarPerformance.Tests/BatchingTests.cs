@@ -12,6 +12,44 @@ namespace StellarPerformance.Tests;
 
 public sealed class BatchingTests
 {
+    [Fact]
+    public void RecoveryWaitsForEveryNativeHoverAndHighlightToEnd()
+    {
+        var holds = new BatchInteractionHolds();
+        Assert.True(holds.Enter(7, "body"));
+        Assert.True(holds.Enter(7, "socket"));
+        Assert.True(holds.Highlight(7));
+        Assert.True(holds.Highlight(7)); // Native highlight is idempotent.
+        holds.Leave(7, "body"); holds.Unhighlight(7);
+        Assert.True(holds.Held(7));
+        holds.Leave(7, "unrelated"); Assert.True(holds.Held(7));
+        holds.Leave(7, "socket"); Assert.False(holds.Held(7));
+        holds.Leave(7, "socket"); holds.Unhighlight(7);
+        Assert.False(holds.Held(7));
+    }
+
+    [Fact]
+    public void NestedHoverRemovalAndTrackingOverflowFailClosed()
+    {
+        var holds = new BatchInteractionHolds();
+        Assert.True(holds.Enter(1, "same")); Assert.True(holds.Enter(1, "same"));
+        holds.Leave(1, "same"); Assert.True(holds.Held(1));
+        holds.Remove(1); Assert.False(holds.Held(1));
+        for (ushort id = 0; id < BatchInteractionHolds.Limit; id++) Assert.True(holds.Highlight(id));
+        Assert.False(holds.Highlight(500));
+        Assert.True(holds.Highlight(1)); // Existing idempotent state needs no storage.
+        holds.Unhighlight(1); Assert.True(holds.Highlight(500));
+        holds.Clear(); Assert.False(holds.Held(500));
+    }
+
+    [Fact]
+    public void RecoveryDeadlinesHandleFrameCounterWrap()
+    {
+        Assert.False(ShipPartBatching.Ready(int.MaxValue - 1, int.MinValue + 3));
+        Assert.True(ShipPartBatching.Ready(int.MinValue + 3, int.MinValue + 3));
+        Assert.True(ShipPartBatching.Ready(int.MinValue + 4, int.MinValue + 3));
+    }
+
     [Theory]
     [InlineData(0, 0)]
     [InlineData(15.9f, 0)]

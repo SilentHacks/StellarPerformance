@@ -25,6 +25,8 @@ internal static class IncrementalRooms
     static IncrementalRooms() { }
 
     internal const string Owner = "stellarperformance.incremental-rooms";
+    internal static bool Enabled = true;
+    internal static bool Busy => _current != null || _mutation != null;
     private const int LocalSeedLimit = 256;
     private const int LocalVisitLimit = 65536;
     internal static long Edits, LocalEdits, GeneralEdits, VisitedNodes, OutsideExits;
@@ -139,7 +141,7 @@ internal static class IncrementalRooms
     {
         __state = _current;
         _current = null; // Nested/native updates must not borrow an outer ship's edit.
-        if (Added(__instance).Count + Removed(__instance).Count + ClearSeeds(__instance).Count + CreateSeeds(__instance).Count == 0 || !Compatible()) return;
+        if (!Enabled || Added(__instance).Count + Removed(__instance).Count + ClearSeeds(__instance).Count + CreateSeeds(__instance).Count == 0 || !Compatible()) return;
         _current = new Edit(__instance, Environment(__instance).GetAtmosphereDensityAtPosition(Ship(__instance).RelativeSpaceId, Vector3.zero));
     }
 

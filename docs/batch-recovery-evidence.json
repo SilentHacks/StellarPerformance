@@ -1,0 +1,775 @@
+{
+  "date": "2026-10-21",
+  "status": "Unreleased",
+  "head": "1c49ec86776bfc19b936d7e545c8500858a8e152",
+  "candidateDllSha256": "0D187A82753DA7E8176E7C4B9141734B167BC1B1DCD404E25C071E9614704019",
+  "hashes": {
+    "world": [
+      "6BC3E3C031DCFF08CC05133CAB347963861FF87743EFB243D6E3AD2A2B823288"
+    ],
+    "driver": [
+      "6967CB72A40F49E7997E1E363EB6A95008EAAACE08ED7A57F25643906127544C"
+    ],
+    "N": [
+      "4F870464951BD49A51501F6080AEE162D5FCCF180A15F627226B422B2032296C"
+    ],
+    "C": [
+      "0D187A82753DA7E8176E7C4B9141734B167BC1B1DCD404E25C071E9614704019"
+    ]
+  },
+  "protocol": "Current HEAD mod versus batch recovery, identical 117 native highlight/remove calls on the same 20-ship seed. Initial intact batches and settled post-interaction phases reported separately. Three fresh process pairs with N/C, C/N, N/C ordering; equal-weight paired log frame ratios. No general-gameplay or multiplayer FPS claim.",
+  "effects": [
+    {
+      "phase": "00-native",
+      "pairs": 3,
+      "fpsChangePercent": -0.1716677718102244,
+      "frameTimeChangePercent": 0.17196297682087192,
+      "controlMedianPerRunFps": 63.49643951912354,
+      "candidateMedianPerRunFps": 61.757773755771716
+    },
+    {
+      "phase": "01-route-all",
+      "pairs": 3,
+      "fpsChangePercent": 16.134883310949743,
+      "frameTimeChangePercent": -13.893227298251798,
+      "controlMedianPerRunFps": 50.26381103174288,
+      "candidateMedianPerRunFps": 58.31068475148955
+    }
+  ],
+  "pairs": [
+    {
+      "pair": 1,
+      "outcomes": [
+        {
+          "phase": "00-native",
+          "controlFps": 63.49643951912354,
+          "candidateFps": 61.757773755771716,
+          "logFrameRatio": 0.027763975395414052,
+          "frameTimeChangePercent": 2.8152986379132994,
+          "fpsChangePercent": -2.738209853212592
+        },
+        {
+          "phase": "01-route-all",
+          "controlFps": 50.49261260495263,
+          "candidateFps": 58.31068475148955,
+          "logFrameRatio": -0.14395830792922443,
+          "frameTimeChangePercent": -13.407615053495325,
+          "fpsChangePercent": 15.483596001863598
+        }
+      ]
+    },
+    {
+      "pair": 2,
+      "outcomes": [
+        {
+          "phase": "00-native",
+          "controlFps": 63.75947243901452,
+          "candidateFps": 63.55899881865065,
+          "logFrameRatio": 0.00314917048662115,
+          "frameTimeChangePercent": 0.31541343332968097,
+          "fpsChangePercent": -0.31442170503469535
+        },
+        {
+          "phase": "01-route-all",
+          "controlFps": 50.26381103174288,
+          "candidateFps": 58.47138810007508,
+          "logFrameRatio": -0.1512521867080716,
+          "frameTimeChangePercent": -14.036911616130531,
+          "fpsChangePercent": 16.328998736583888
+        }
+      ]
+    },
+    {
+      "pair": 3,
+      "outcomes": [
+        {
+          "phase": "00-native",
+          "controlFps": 59.544216733558926,
+          "candidateFps": 61.09792238794093,
+          "logFrameRatio": -0.025758687188605286,
+          "frameTimeChangePercent": -2.5429762480576046,
+          "fpsChangePercent": 2.6093309134190834
+        },
+        {
+          "phase": "01-route-all",
+          "controlFps": 49.8995371977859,
+          "candidateFps": 58.18034505039227,
+          "logFrameRatio": -0.15353585566742683,
+          "frameTimeChangePercent": -14.232998868318914,
+          "fpsChangePercent": 16.59495922734491
+        }
+      ]
+    }
+  ],
+  "runs": [
+    {
+      "label": "Confirm-1-N",
+      "arm": "N",
+      "pair": 1,
+      "phases": [
+        {
+          "phase": "00-native",
+          "traceStartElapsed": 58.4456177,
+          "traceEndElapsed": 83.4638,
+          "nativeTickRate": 50,
+          "elapsedTicks": 1250,
+          "frames": 1588,
+          "meanMs": 15.748914546599499,
+          "fps": 63.49643951912354,
+          "p95Ms": 19.81,
+          "p99Ms": 25.3194,
+          "low1Fps": 29.855772733081032,
+          "unfocused": 0,
+          "saveWriteDuringTrace": false,
+          "batches": {
+            "sources": 2327,
+            "batches": 117,
+            "rotations": 0,
+            "skippedRotationWrites": 0,
+            "maxHeldQuaternionComponentDifference": 0.0,
+            "recoveryJobs": 0,
+            "pendingRecoveryJobs": 0,
+            "recoveryTotalMs": 0.0,
+            "recoveryMaxJobMs": 0.0,
+            "recoveryStateMismatches": 0
+          },
+          "traceSha256": "77088B5959263C952A06B8AB5F9901DA9255046752B46AB584B83DDCBEAF0CEA",
+          "elapsedSeconds": 25.009276299999975,
+          "ticksPerSecond": 49.98145428142602,
+          "drawCallsMedian": 6703.0,
+          "over33ms": 5,
+          "over50ms": 1
+        },
+        {
+          "phase": "01-route-all",
+          "traceStartElapsed": 92.56879,
+          "traceEndElapsed": 117.5856,
+          "nativeTickRate": 50,
+          "elapsedTicks": 1249,
+          "frames": 1263,
+          "meanMs": 19.804877355502768,
+          "fps": 50.49261260495263,
+          "p95Ms": 27.5119,
+          "p99Ms": 37.5563,
+          "low1Fps": 22.690954307792584,
+          "unfocused": 0,
+          "saveWriteDuringTrace": false,
+          "batches": {
+            "sources": 0,
+            "batches": 0,
+            "rotations": 0,
+            "skippedRotationWrites": 0,
+            "maxHeldQuaternionComponentDifference": 0.0,
+            "recoveryJobs": 0,
+            "pendingRecoveryJobs": 0,
+            "recoveryTotalMs": 0.0,
+            "recoveryMaxJobMs": 0.0,
+            "recoveryStateMismatches": 0
+          },
+          "traceSha256": "66D7CC6FE2ACEAB5DDDF3F5E20F724EF26B0DEDB9A43822DE1CEC95AF801A1E4",
+          "elapsedSeconds": 25.013560099999992,
+          "ticksPerSecond": 49.93291618652878,
+          "drawCallsMedian": 12165.0,
+          "over33ms": 23,
+          "over50ms": 2
+        }
+      ],
+      "system": {
+        "cpu": "AMD Ryzen 7 3800X 8-Core Processor ",
+        "gpu": "NVIDIA GeForce RTX 2070 SUPER",
+        "api": "Direct3D11",
+        "width": 2560,
+        "height": 1080,
+        "quality": 0,
+        "vsync": 0,
+        "target": -1,
+        "modVersion": "1.0.1.0"
+      },
+      "cachedIndexBytes": null,
+      "batchingUpdateCpuMs": null,
+      "recoveryCpuMs": null
+    },
+    {
+      "label": "Confirm-1-C",
+      "arm": "C",
+      "pair": 1,
+      "phases": [
+        {
+          "phase": "00-native",
+          "traceStartElapsed": 59.02277,
+          "traceEndElapsed": 84.03453,
+          "nativeTickRate": 50,
+          "elapsedTicks": 1250,
+          "frames": 1544,
+          "meanMs": 16.192293523316046,
+          "fps": 61.757773755771716,
+          "p95Ms": 20.1664,
+          "p99Ms": 27.2812,
+          "low1Fps": 27.14160371774831,
+          "unfocused": 0,
+          "saveWriteDuringTrace": false,
+          "batches": {
+            "sources": 2320,
+            "batches": 141,
+            "rotations": 0,
+            "skippedRotationWrites": 0,
+            "maxHeldQuaternionComponentDifference": 0.0,
+            "recoveryJobs": 0,
+            "pendingRecoveryJobs": 0,
+            "recoveryTotalMs": 0.0,
+            "recoveryMaxJobMs": 0.0,
+            "recoveryStateMismatches": 0
+          },
+          "traceSha256": "4F5F9411A835F9144AEAA09F99BCF2E6B3213A37BDDC8F51EA15D8E841D03288",
+          "elapsedSeconds": 25.000901199999973,
+          "ticksPerSecond": 49.998197664970625,
+          "drawCallsMedian": 6820.0,
+          "over33ms": 7,
+          "over50ms": 2
+        },
+        {
+          "phase": "01-route-all",
+          "traceStartElapsed": 93.1394348,
+          "traceEndElapsed": 118.14782,
+          "nativeTickRate": 50,
+          "elapsedTicks": 1250,
+          "frames": 1458,
+          "meanMs": 17.14951563786009,
+          "fps": 58.31068475148955,
+          "p95Ms": 23.3965,
+          "p99Ms": 28.7741,
+          "low1Fps": 30.181949728082195,
+          "unfocused": 0,
+          "saveWriteDuringTrace": false,
+          "batches": {
+            "sources": 1990,
+            "batches": 123,
+            "rotations": 0,
+            "skippedRotationWrites": 0,
+            "maxHeldQuaternionComponentDifference": 0.0,
+            "recoveryJobs": 0,
+            "pendingRecoveryJobs": 0,
+            "recoveryTotalMs": 0.0,
+            "recoveryMaxJobMs": 0.0,
+            "recoveryStateMismatches": 0
+          },
+          "traceSha256": "FADFC760B9C0267485DD03601A25A03BE1280F782CE296F4450E91D2F2AFFC92",
+          "elapsedSeconds": 25.003993800000025,
+          "ticksPerSecond": 49.99201367583121,
+          "drawCallsMedian": 7594.0,
+          "over33ms": 6,
+          "over50ms": 0
+        }
+      ],
+      "system": {
+        "cpu": "AMD Ryzen 7 3800X 8-Core Processor ",
+        "gpu": "NVIDIA GeForce RTX 2070 SUPER",
+        "api": "Direct3D11",
+        "width": 2560,
+        "height": 1080,
+        "quality": 0,
+        "vsync": 0,
+        "target": -1,
+        "modVersion": "1.0.1.0"
+      },
+      "cachedIndexBytes": null,
+      "batchingUpdateCpuMs": null,
+      "recoveryCpuMs": null
+    },
+    {
+      "label": "Confirm-2-N",
+      "arm": "N",
+      "pair": 2,
+      "phases": [
+        {
+          "phase": "00-native",
+          "traceStartElapsed": 59.048687,
+          "traceEndElapsed": 84.14671,
+          "nativeTickRate": 50,
+          "elapsedTicks": 1251,
+          "frames": 1595,
+          "meanMs": 15.68394407523514,
+          "fps": 63.75947243901452,
+          "p95Ms": 19.5606,
+          "p99Ms": 24.0512,
+          "low1Fps": 33.56620822685386,
+          "unfocused": 0,
+          "saveWriteDuringTrace": false,
+          "batches": {
+            "sources": 2327,
+            "batches": 117,
+            "rotations": 0,
+            "skippedRotationWrites": 0,
+            "maxHeldQuaternionComponentDifference": 0.0,
+            "recoveryJobs": 0,
+            "pendingRecoveryJobs": 0,
+            "recoveryTotalMs": 0.0,
+            "recoveryMaxJobMs": 0.0,
+            "recoveryStateMismatches": 0
+          },
+          "traceSha256": "1B7CAFA84774D64EEC39F44412F3C95CF845FEA14CBF3F4E79981AC07246B261",
+          "elapsedSeconds": 25.015890800000015,
+          "ticksPerSecond": 50.0082131794403,
+          "drawCallsMedian": 6703.0,
+          "over33ms": 2,
+          "over50ms": 0
+        },
+        {
+          "phase": "01-route-all",
+          "traceStartElapsed": 93.2594,
+          "traceEndElapsed": 118.271049,
+          "nativeTickRate": 50,
+          "elapsedTicks": 1249,
+          "frames": 1257,
+          "meanMs": 19.895029435163092,
+          "fps": 50.26381103174288,
+          "p95Ms": 27.6952,
+          "p99Ms": 36.8705,
+          "low1Fps": 22.495467163366584,
+          "unfocused": 0,
+          "saveWriteDuringTrace": false,
+          "batches": {
+            "sources": 0,
+            "batches": 0,
+            "rotations": 0,
+            "skippedRotationWrites": 0,
+            "maxHeldQuaternionComponentDifference": 0.0,
+            "recoveryJobs": 0,
+            "pendingRecoveryJobs": 0,
+            "recoveryTotalMs": 0.0,
+            "recoveryMaxJobMs": 0.0,
+            "recoveryStateMismatches": 0
+          },
+          "traceSha256": "BE4BECEE558F350CAE25219074756904145B8C54566AE410D782AB80B7EE9208",
+          "elapsedSeconds": 25.008052000000006,
+          "ticksPerSecond": 49.9439140641582,
+          "drawCallsMedian": 12165.0,
+          "over33ms": 22,
+          "over50ms": 2
+        }
+      ],
+      "system": {
+        "cpu": "AMD Ryzen 7 3800X 8-Core Processor ",
+        "gpu": "NVIDIA GeForce RTX 2070 SUPER",
+        "api": "Direct3D11",
+        "width": 2560,
+        "height": 1080,
+        "quality": 0,
+        "vsync": 0,
+        "target": -1,
+        "modVersion": "1.0.1.0"
+      },
+      "cachedIndexBytes": null,
+      "batchingUpdateCpuMs": {
+        "n": 6429,
+        "median": 0.0186,
+        "p95": 0.0273,
+        "p99": 0.0367,
+        "maximum": 76.3635,
+        "total": 183.99840000000023,
+        "over1ms": 1,
+        "over5ms": 1,
+        "over10ms": 1
+      },
+      "recoveryCpuMs": {
+        "n": 0
+      }
+    },
+    {
+      "label": "Confirm-2-C",
+      "arm": "C",
+      "pair": 2,
+      "phases": [
+        {
+          "phase": "00-native",
+          "traceStartElapsed": 58.85121,
+          "traceEndElapsed": 83.861496,
+          "nativeTickRate": 50,
+          "elapsedTicks": 1249,
+          "frames": 1589,
+          "meanMs": 15.733413341724345,
+          "fps": 63.55899881865065,
+          "p95Ms": 19.5716,
+          "p99Ms": 22.8146,
+          "low1Fps": 33.61679764144548,
+          "unfocused": 0,
+          "saveWriteDuringTrace": false,
+          "batches": {
+            "sources": 2320,
+            "batches": 141,
+            "rotations": 0,
+            "skippedRotationWrites": 0,
+            "maxHeldQuaternionComponentDifference": 0.0,
+            "recoveryJobs": 0,
+            "pendingRecoveryJobs": 0,
+            "recoveryTotalMs": 0.0,
+            "recoveryMaxJobMs": 0.0,
+            "recoveryStateMismatches": 0
+          },
+          "traceSha256": "B9D072E0F8B2060951F8A284F867CCC49180D51EB191830B949980A77BFEE1DE",
+          "elapsedSeconds": 25.000393800000026,
+          "ticksPerSecond": 49.9592130424761,
+          "drawCallsMedian": 6820.0,
+          "over33ms": 5,
+          "over50ms": 1
+        },
+        {
+          "phase": "01-route-all",
+          "traceStartElapsed": 92.9567642,
+          "traceEndElapsed": 117.964142,
+          "nativeTickRate": 50,
+          "elapsedTicks": 1249,
+          "frames": 1462,
+          "meanMs": 17.102381737346096,
+          "fps": 58.47138810007508,
+          "p95Ms": 22.9046,
+          "p99Ms": 32.0931,
+          "low1Fps": 26.319717642069133,
+          "unfocused": 0,
+          "saveWriteDuringTrace": false,
+          "batches": {
+            "sources": 1990,
+            "batches": 123,
+            "rotations": 0,
+            "skippedRotationWrites": 0,
+            "maxHeldQuaternionComponentDifference": 0.0,
+            "recoveryJobs": 0,
+            "pendingRecoveryJobs": 0,
+            "recoveryTotalMs": 0.0,
+            "recoveryMaxJobMs": 0.0,
+            "recoveryStateMismatches": 0
+          },
+          "traceSha256": "F857FA73D023D1D0ED4786D1C4043128CAD68FAD14B43F6424349AC46F56D3E7",
+          "elapsedSeconds": 25.003682099999992,
+          "ticksPerSecond": 49.95264277496155,
+          "drawCallsMedian": 7594.0,
+          "over33ms": 12,
+          "over50ms": 1
+        }
+      ],
+      "system": {
+        "cpu": "AMD Ryzen 7 3800X 8-Core Processor ",
+        "gpu": "NVIDIA GeForce RTX 2070 SUPER",
+        "api": "Direct3D11",
+        "width": 2560,
+        "height": 1080,
+        "quality": 0,
+        "vsync": 0,
+        "target": -1,
+        "modVersion": "1.0.1.0"
+      },
+      "cachedIndexBytes": 9541152,
+      "batchingUpdateCpuMs": {
+        "n": 6604,
+        "median": 0.0405,
+        "p95": 0.0815,
+        "p99": 0.6425,
+        "maximum": 6.3597,
+        "total": 385.66949999999986,
+        "over1ms": 31,
+        "over5ms": 1,
+        "over10ms": 0
+      },
+      "recoveryCpuMs": {
+        "n": 120,
+        "median": 0.08265,
+        "p95": 0.1835,
+        "p99": 0.4206,
+        "maximum": 0.6674,
+        "total": 11.352200000000003,
+        "over1ms": 0,
+        "over5ms": 0,
+        "over10ms": 0
+      }
+    },
+    {
+      "label": "Confirm-3-N",
+      "arm": "N",
+      "pair": 3,
+      "phases": [
+        {
+          "phase": "00-native",
+          "traceStartElapsed": 59.13601,
+          "traceEndElapsed": 84.15288,
+          "nativeTickRate": 50,
+          "elapsedTicks": 1247,
+          "frames": 1489,
+          "meanMs": 16.79424224311617,
+          "fps": 59.544216733558926,
+          "p95Ms": 22.5357,
+          "p99Ms": 34.0036,
+          "low1Fps": 22.516042278050925,
+          "unfocused": 0,
+          "saveWriteDuringTrace": false,
+          "batches": {
+            "sources": 2327,
+            "batches": 117,
+            "rotations": 0,
+            "skippedRotationWrites": 0,
+            "maxHeldQuaternionComponentDifference": 0.0,
+            "recoveryJobs": 0,
+            "pendingRecoveryJobs": 0,
+            "recoveryTotalMs": 0.0,
+            "recoveryMaxJobMs": 0.0,
+            "recoveryStateMismatches": 0
+          },
+          "traceSha256": "C1E54AD885D90C18EE9BD3264B787D04F6DB00D5A4B55660C528135EE8CDB47D",
+          "elapsedSeconds": 25.00662670000002,
+          "ticksPerSecond": 49.86678191185215,
+          "drawCallsMedian": 6703.0,
+          "over33ms": 15,
+          "over50ms": 5
+        },
+        {
+          "phase": "01-route-all",
+          "traceStartElapsed": 93.28368,
+          "traceEndElapsed": 118.2973,
+          "nativeTickRate": 50,
+          "elapsedTicks": 1246,
+          "frames": 1248,
+          "meanMs": 20.04026602564104,
+          "fps": 49.8995371977859,
+          "p95Ms": 26.7659,
+          "p99Ms": 37.1134,
+          "low1Fps": 20.934513179235545,
+          "unfocused": 0,
+          "saveWriteDuringTrace": false,
+          "batches": {
+            "sources": 0,
+            "batches": 0,
+            "rotations": 0,
+            "skippedRotationWrites": 0,
+            "maxHeldQuaternionComponentDifference": 0.0,
+            "recoveryJobs": 0,
+            "pendingRecoveryJobs": 0,
+            "recoveryTotalMs": 0.0,
+            "recoveryMaxJobMs": 0.0,
+            "recoveryStateMismatches": 0
+          },
+          "traceSha256": "64926D5B96EB83E5FB44123CF90308021DAF7B257440233453A2D57031E1AC8D",
+          "elapsedSeconds": 25.010251999999973,
+          "ticksPerSecond": 49.81956999073825,
+          "drawCallsMedian": 12165.0,
+          "over33ms": 25,
+          "over50ms": 4
+        }
+      ],
+      "system": {
+        "cpu": "AMD Ryzen 7 3800X 8-Core Processor ",
+        "gpu": "NVIDIA GeForce RTX 2070 SUPER",
+        "api": "Direct3D11",
+        "width": 2560,
+        "height": 1080,
+        "quality": 0,
+        "vsync": 0,
+        "target": -1,
+        "modVersion": "1.0.1.0"
+      },
+      "cachedIndexBytes": null,
+      "batchingUpdateCpuMs": {
+        "n": 6302,
+        "median": 0.0194,
+        "p95": 0.0288,
+        "p99": 0.0402,
+        "maximum": 68.1664,
+        "total": 176.53070000000008,
+        "over1ms": 1,
+        "over5ms": 1,
+        "over10ms": 1
+      },
+      "recoveryCpuMs": {
+        "n": 0
+      }
+    },
+    {
+      "label": "Confirm-3-C",
+      "arm": "C",
+      "pair": 3,
+      "phases": [
+        {
+          "phase": "00-native",
+          "traceStartElapsed": 59.2523422,
+          "traceEndElapsed": 84.2704849,
+          "nativeTickRate": 50,
+          "elapsedTicks": 1249,
+          "frames": 1528,
+          "meanMs": 16.36716865183247,
+          "fps": 61.09792238794093,
+          "p95Ms": 21.3427,
+          "p99Ms": 29.7561,
+          "low1Fps": 27.236265341507362,
+          "unfocused": 0,
+          "saveWriteDuringTrace": false,
+          "batches": {
+            "sources": 2320,
+            "batches": 141,
+            "rotations": 0,
+            "skippedRotationWrites": 0,
+            "maxHeldQuaternionComponentDifference": 0.0,
+            "recoveryJobs": 0,
+            "pendingRecoveryJobs": 0,
+            "recoveryTotalMs": 0.0,
+            "recoveryMaxJobMs": 0.0,
+            "recoveryStateMismatches": 0
+          },
+          "traceSha256": "62C515D422D6DCCDAEEF782B08E383616DC1415993FD819449091546E5BECD01",
+          "elapsedSeconds": 25.0090337,
+          "ticksPerSecond": 49.9419535749596,
+          "drawCallsMedian": 6820.0,
+          "over33ms": 7,
+          "over50ms": 1
+        },
+        {
+          "phase": "01-route-all",
+          "traceStartElapsed": 93.38214,
+          "traceEndElapsed": 118.3953,
+          "nativeTickRate": 50,
+          "elapsedTicks": 1247,
+          "frames": 1455,
+          "meanMs": 17.18793518900345,
+          "fps": 58.18034505039227,
+          "p95Ms": 22.9379,
+          "p99Ms": 32.7523,
+          "low1Fps": 23.401419764137096,
+          "unfocused": 0,
+          "saveWriteDuringTrace": false,
+          "batches": {
+            "sources": 1990,
+            "batches": 123,
+            "rotations": 0,
+            "skippedRotationWrites": 0,
+            "maxHeldQuaternionComponentDifference": 0.0,
+            "recoveryJobs": 0,
+            "pendingRecoveryJobs": 0,
+            "recoveryTotalMs": 0.0,
+            "recoveryMaxJobMs": 0.0,
+            "recoveryStateMismatches": 0
+          },
+          "traceSha256": "52CAC50B6BF0EADEDD32A604D74B0C1A71FEEFD13CC9F64D8F0644CD376CD6BE",
+          "elapsedSeconds": 25.008445700000024,
+          "ticksPerSecond": 49.86315483013,
+          "drawCallsMedian": 7594.0,
+          "over33ms": 14,
+          "over50ms": 2
+        }
+      ],
+      "system": {
+        "cpu": "AMD Ryzen 7 3800X 8-Core Processor ",
+        "gpu": "NVIDIA GeForce RTX 2070 SUPER",
+        "api": "Direct3D11",
+        "width": 2560,
+        "height": 1080,
+        "quality": 0,
+        "vsync": 0,
+        "target": -1,
+        "modVersion": "1.0.1.0"
+      },
+      "cachedIndexBytes": 9541152,
+      "batchingUpdateCpuMs": {
+        "n": 6676,
+        "median": 0.0404,
+        "p95": 0.0758,
+        "p99": 0.5481,
+        "maximum": 6.7429,
+        "total": 373.6879999999998,
+        "over1ms": 15,
+        "over5ms": 1,
+        "over10ms": 0
+      },
+      "recoveryCpuMs": {
+        "n": 120,
+        "median": 0.0806,
+        "p95": 0.1984,
+        "p99": 0.3867,
+        "maximum": 0.6799,
+        "total": 11.291499999999997,
+        "over1ms": 0,
+        "over5ms": 0,
+        "over10ms": 0
+      }
+    }
+  ],
+  "recoveryCpuMs": {
+    "n": 240,
+    "median": 0.08124999999999999,
+    "p95": 0.1967,
+    "p99": 0.4206,
+    "maximum": 0.6799,
+    "total": 22.64370000000001,
+    "over1ms": 0,
+    "over5ms": 0,
+    "over10ms": 0
+  },
+  "batchingUpdateCpuMsByArm": {
+    "N": {
+      "n": 12731,
+      "median": 0.019,
+      "p95": 0.0282,
+      "p99": 0.039,
+      "maximum": 76.3635,
+      "total": 360.5291000000012,
+      "over1ms": 2,
+      "over5ms": 2,
+      "over10ms": 2
+    },
+    "C": {
+      "n": 13280,
+      "median": 0.0405,
+      "p95": 0.0791,
+      "p99": 0.5961,
+      "maximum": 6.7429,
+      "total": 759.3575000000034,
+      "over1ms": 46,
+      "over5ms": 2,
+      "over10ms": 0
+    }
+  },
+  "cpuScope": "Observer exports exist for pairs 2 and 3. Pair 1 has complete frame traces but no observer export. Export was enabled through the frozen driver's post-trace branch; identical driver/DLL hashes and identical capture paths throughout. Update costs include startup, first-use/JIT, warmup and traces, but exclude full correctness probes. Timings include lightweight Harmony observer overhead. Whole-game frame hitches are not the same as batching method time.",
+  "acceptance": {
+    "checks": [
+      {
+        "test": "overlapping-native-hover-and-highlight",
+        "passed": true,
+        "unchangedMesh": true
+      },
+      {
+        "test": "nested-native-hover",
+        "passed": true
+      },
+      {
+        "test": "native-physics-ray-filter-tracker-hover-and-leave",
+        "passed": true,
+        "frames": 20
+      },
+      {
+        "test": "native-instancer-add-remove-and-unload",
+        "passed": true,
+        "added": 49,
+        "removed": 12,
+        "originalCollidersPreserved": true
+      }
+    ],
+    "validatedRecoveries": 12,
+    "authoritativeMismatches": 0
+  },
+  "offlineTests": 43,
+  "traceAnalysisTests": 15,
+  "nativeComparisons": {
+    "factorySteps": 12000,
+    "circuitStates": 192000,
+    "fluidComparisons": 25472,
+    "physicsSteps": 600,
+    "measuredErrors": 0
+  },
+  "manualScope": "One Constant placed through normal game UI with actual mouse input; native physics-ray hover used controlled ray inputs. Manual mouse hover and pickup were not certified. No broad building, flight/docking or multiplayer claim.",
+  "memory": {
+    "initialCachedIndexBytes": 9935808,
+    "globalIndexCeilingBytes": 16777216
+  },
+  "restoration": {
+    "originalFiles": 157,
+    "originalWorldFiles": 135,
+    "temporaryDriverRemoved": true,
+    "ownedWorldsRetired": true
+  }
+}

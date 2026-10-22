@@ -1,0 +1,42 @@
+{
+  "scope": "Selector UI redesign; preset policy and runtime application unchanged",
+  "nativeSession": "UI06",
+  "candidateSHA256": "6E45EC771F6D2EDDEA5226ABD76EED953C01E3F60F6CAD5C672F497411235602",
+  "offlineTestsPassed": 69,
+  "screenshotResolution": [
+    1280,
+    720
+  ],
+  "checks": [
+    "F8 open",
+    "Numeric keys remain text while a value is focused",
+    "Automatic Custom draft without applying",
+    "Invalid frequency rejected without applying",
+    "Enter applies all edited settings live",
+    "MelonPreferences values match applied Custom",
+    "Custom inherits the previewed preset",
+    "Close discards unapplied preview",
+    "Escape restores local pause state",
+    "Reopening restores active settings",
+    "Balanced restores existing defaults",
+    "Apply disabled when unchanged"
+  ],
+  "appliedCustom": {
+    "Name": "Custom",
+    "Rooms": true,
+    "Outlines": true,
+    "ReadoutHz": 12,
+    "LabelPixels": 8,
+    "Cascades": 0,
+    "ShadowDistance": 250.0,
+    "ExhaustDensity": 0.75
+  },
+  "input": "OS keyboard via computer-use; private game-side focus placement for numeric fields",
+  "screenshots": "Native in-game captures; Windows capture timed out",
+  "limitations": [
+    "No OS mouse-click acceptance",
+    "No new frame-time benchmark or multiplayer rerun; earlier core evidence belongs to the prior build"
+  ],
+  "restoredFiles": 157,
+  "restoredWorldFiles": 135
+}
