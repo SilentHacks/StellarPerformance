@@ -1,6 +1,6 @@
-# Current 2.0.0 release candidate
+# Current 2.0.0
 
-The release candidate retains the corrected single-player preset implementation
+The release retains the corrected single-player preset implementation
 and adds offline scheduling regressions for every affected atmosphere/cloud pass.
 The suite has 83 cases. Release preparation checks the manifest, shipping version
 and minimal archive separately; it does not run the game or establish new gameplay

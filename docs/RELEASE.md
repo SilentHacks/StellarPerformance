@@ -1,6 +1,21 @@
 # Releases and packaging
 
-## Preparing 2.0.0
+## Published 2.0.0
+
+[Release v2.0.0](https://github.com/SilentHacks/StellarPerformance/releases/tag/v2.0.0)
+was published on 2026-10-22 as the latest stable release, with
+[StellarPerformance.zip](https://github.com/SilentHacks/StellarPerformance/releases/download/v2.0.0/StellarPerformance.zip)
+and its SHA-256 checksum file. The annotated tag identifies source commit
+`e8ce086c98a1c18bcfcd71936470e1e34047b92b`. Later publication documentation on
+`main` does not change that release source or asset.
+
+Both public assets were downloaded anonymously after publication. Their hashes,
+the embedded DLL, the complete manifest and the two allowlisted ZIP entries matched
+the prepared package. The listing and packaged manifest both declare version
+2.0.0, `ai: vibecoded`, `development: active` and the descriptive tags. Publication
+did not deploy to the local game or modify its settings or worlds.
+
+## 2.0.0 preparation checks
 
 The 2.0.0 release candidate includes the live preset selector, corrected
 atmosphere/cloud depth scheduling, batching recovery, canvas culling, signal scan
