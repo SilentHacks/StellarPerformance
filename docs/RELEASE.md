@@ -16,6 +16,20 @@ The root [release notes](../RELEASE_NOTES.md) are the prepared GitHub release bo
 contains only `Mods/StellarPerformance.dll` and root `mod.json`.
 Preparation does not publish a release or push source/tags.
 
+Preparation checks passed: a warning-free net472 Release build, all 83 offline
+cases, all 15 frame-analysis cases, and an identical DLL rebuilt from a fresh Git
+source archive. The release DLL SHA-256 is
+`7409CC3C84845531963DEAA6E2B69C94329D2513E25E855AF592ACA65FA48830`;
+the ZIP SHA-256 is
+`251A2ADC8F307060A1F0EF106A34634723BCD4AA702E0232FE9690F1FDF4D90C`.
+
+Source line endings were normalised to make the source-archive build reproducible.
+This changed debug/module identity relative to native-tested DLL `6335A967…`,
+which remains the identity recorded in the preset measurements. Metadata inspection
+confirmed identical code for all 469 methods, signatures, fields, assembly
+references and embedded resources. The release rebuild was not separately launched
+in Unity/Mono; no new native or performance result is claimed.
+
 The manifest follows the [mod-manager guidance](https://jollyname.dev/create/):
 stable mod ID, matching version/tag, description within 600 characters, existing
 repository-relative images, `ai: vibecoded`, `development: active` and up to six
