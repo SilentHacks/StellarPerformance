@@ -1,0 +1,765 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-23",
+  "scope": "Initial investigation Unity/Mono method evidence. Its FPS captures are excluded for focus/rendering or instrumentation reasons. Later focused FPS and evolving acceptance are recorded separately in cpu-followup-evidence.json.",
+  "experimentalDefaults": {
+    "SignalReduction": false,
+    "PowerTransferScan": false,
+    "SaveSerialization": false
+  },
+  "shippingDllSha256": "77B47392F9E7647C082AED3F1643A50B86E251D844E8DA60B7128162FC24E0B7",
+  "offlineTests": {
+    "modCasesPassed": 108,
+    "traceAnalysisCasesPassed": 15
+  },
+  "runs": {
+    "Candidate02": {
+      "completion": {
+        "complete": true,
+        "phases": 1,
+        "failures": []
+      },
+      "system": {
+        "cpu": "AMD Ryzen 7 3800X 8-Core Processor ",
+        "gpu": "NVIDIA GeForce RTX 2070 SUPER",
+        "api": "Direct3D11",
+        "quality": 0
+      },
+      "loaded": {
+        "ships": 37,
+        "width": 2560,
+        "height": 1080,
+        "tickRate": 50
+      },
+      "moduleInstallation": {
+        "signal-reduction": "signal-reduction installed.",
+        "power-transfer-scan": "power-transfer-scan installed.",
+        "save-serialization": "save-serialization skipped; native/previous mod behavior retained. InvalidOperationException: SaveFileWriter.WriteGameFile has a conflicting body or argument owner."
+      },
+      "originalFiles": {
+        "OriginalsUntouched": true,
+        "FilesVerified": 157,
+        "WorldFilesVerified": 135,
+        "Utc": "2026-10-23T12:00:28.6428856Z"
+      },
+      "runHashes": {
+        "Label": "Candidate02",
+        "WorldSHA256": "D97D4D83AB0E3E90693ED66D57A00FE5158BB2ED5881FCD829ACB5DF9EC9D47C",
+        "ModSHA256": "D7F4EED34557F1C8EEC5F989EACC0AD062EEA439B3A655547757655CB6E46CBF",
+        "DriverSHA256": "06BD1A4D75E4CF86E1E8597A1EC1ECFDDFEC0CA0F00A6C85EEBC1E9F3A0FC7DE",
+        "StartUtc": "2026-10-23T11:59:04.5874020Z"
+      },
+      "signals": {
+        "passed": true,
+        "shippingHelperCompared": true,
+        "planCacheSupported": true,
+        "synthetic": {
+          "projections": 1300,
+          "groups": 15901,
+          "pointerMutationComparisons": 9,
+          "bitwise": true,
+          "liveEmissionArrayMutation": true,
+          "derivedAndCustomFallback": true
+        },
+        "reports": [
+          {
+            "tracker": "ConnectionsServerTracker",
+            "liveGroups": 396,
+            "comparisons": 142963,
+            "unsupportedGroups": 0,
+            "loops": 75,
+            "planCacheEntriesAfterBenchmark": 396,
+            "controlMedianMs": 45.277100000000004,
+            "fusedMedianMs": 37.4517,
+            "planMedianMs": 18.052300000000002
+          },
+          {
+            "tracker": "ConnectionsClientTracker",
+            "liveGroups": 396,
+            "comparisons": 142963,
+            "unsupportedGroups": 0,
+            "loops": 75,
+            "planCacheEntriesAfterBenchmark": 396,
+            "controlMedianMs": 100.05300000000001,
+            "fusedMedianMs": 91.10130000000001,
+            "planMedianMs": 117.6038
+          }
+        ]
+      },
+      "power": {
+        "passed": true,
+        "comparedSteps": 2000,
+        "scalarComparisons": 12000,
+        "fallbackEventsCompared": 5093,
+        "duplicateIds": 103012,
+        "uniqueIds": 513,
+        "timings": {
+          "original": {
+            "medianMicroseconds": 2043.67,
+            "samplesMicroseconds": [
+              2043.7549999999999,
+              2042.905,
+              2043.825,
+              2043.095,
+              2043.67,
+              2047.015,
+              2042.725
+            ]
+          },
+          "shippingProjection": {
+            "medianMicroseconds": 10.25,
+            "samplesMicroseconds": [
+              10.540000000000001,
+              10.245000000000001,
+              10.25,
+              10.245000000000001,
+              10.24,
+              10.615,
+              10.555
+            ]
+          }
+        },
+        "liveObserversSupported": true,
+        "freshWorldGroups": 17,
+        "freshWorldNativeVisits": 65,
+        "freshWorldUniqueVisits": 65
+      },
+      "save": {
+        "bytes": 2932547,
+        "getStateMs": 0.8976000000000001,
+        "conversionMs": 25.845200000000002,
+        "nativeFixtureTimings": {
+          "cached-hull-segments": {
+            "warmedMedianMs": 35.9467,
+            "allBytesEqual": true
+          },
+          "cached-hull-writer": {
+            "warmedMedianMs": 59.8414,
+            "allBytesEqual": true
+          },
+          "cached-native": {
+            "warmedMedianMs": 181.3582,
+            "allBytesEqual": true
+          },
+          "fresh-hull-writer": {
+            "warmedMedianMs": 93.62570000000001,
+            "allBytesEqual": true
+          },
+          "fresh-native": {
+            "warmedMedianMs": 215.7988,
+            "allBytesEqual": true
+          }
+        },
+        "shippingHelper": {
+          "available": true,
+          "observations": [
+            {
+              "run": 0,
+              "elapsedMs": 98.9625,
+              "exactBytes": true,
+              "settingsRestored": true
+            },
+            {
+              "run": 1,
+              "elapsedMs": 37.4286,
+              "exactBytes": true,
+              "settingsRestored": true
+            },
+            {
+              "run": 2,
+              "elapsedMs": 35.8537,
+              "exactBytes": true,
+              "settingsRestored": true
+            },
+            {
+              "run": 3,
+              "elapsedMs": 35.8964,
+              "exactBytes": true,
+              "settingsRestored": true
+            },
+            {
+              "run": 4,
+              "elapsedMs": 35.6786,
+              "exactBytes": true,
+              "settingsRestored": true
+            },
+            {
+              "run": 5,
+              "elapsedMs": 37.1027,
+              "exactBytes": true,
+              "settingsRestored": true
+            }
+          ],
+          "mutationExact": true,
+          "returnExact": true,
+          "policies": [
+            {
+              "policy": "types",
+              "exactBytes": true
+            },
+            {
+              "policy": "references",
+              "exactBytes": true
+            },
+            {
+              "policy": "ignore-defaults",
+              "exactBytes": true
+            }
+          ],
+          "errorCheck": {
+            "nativeReturnedNull": true,
+            "candidateReturnedNull": true,
+            "originalErrorType": "System.IO.DirectoryNotFoundException",
+            "candidateErrorType": "System.IO.DirectoryNotFoundException",
+            "sameErrorType": true,
+            "candidateCreatedFile": false,
+            "scope": "Emitted copies redirect only native Debug.LogException to a private recorder for this intentionally missing scratch directory"
+          }
+        },
+        "scratchFiles": [
+          {
+            "pass": 0,
+            "kind": "create",
+            "exactBytes": true,
+            "bytes": 2932547,
+            "nativeReturned": true,
+            "candidateReturned": true
+          },
+          {
+            "pass": 1,
+            "kind": "overwrite",
+            "exactBytes": true,
+            "bytes": 2932550,
+            "nativeReturned": true,
+            "candidateReturned": true
+          }
+        ],
+        "cloneMs": 12.802200000000001,
+        "cloneExactBytes": true,
+        "sharedMutableReferences": 0,
+        "worker": {
+          "exactBytes": true,
+          "elapsedMs": 93.3486,
+          "length": 2932547
+        }
+      },
+      "receiptSha256": {
+        "completion.json": "2C5C816E88116D057AEC612606F4DC43A56AB4E78E7FE103D9F4A9C104480D9A",
+        "native-save-probe.json": "7C59BE30C5040B9E16230C4D6162CD21B9A880FC7A317E961A175BC08302EE79",
+        "signal-results.json": "6A2EFF2FC73AFEFF679D83C7DE38129CAC2B1271E2E9C5C2D37F758118D19FBC",
+        "signal-shadow.json": "C710AC3C785301DFF259127BFD29F79777F194EFB0BBA6373724EC3ADD81711D",
+        "simulation-results.json": "4A48065115DA4CBB3FE32D954D5FE160CF0DED1D63A101B58A70BEC0B7B4FF9C"
+      },
+      "signalShadow": {
+        "passed": true,
+        "comparisons": 323576,
+        "unsupported": 0,
+        "mismatches": 0,
+        "errors": 0,
+        "firstError": null,
+        "shippingHelperCompared": true,
+        "planCacheSupported": true,
+        "scope": "Explicit instrumented running-world shadow. Native group evaluation and circuit operations execute normally; pure shipping/plan predictions are compared bitwise afterward. Instrumented frames are excluded from performance claims."
+      }
+    },
+    "Candidate03": {
+      "completion": {
+        "complete": true,
+        "phases": 1,
+        "failures": []
+      },
+      "system": {
+        "cpu": "AMD Ryzen 7 3800X 8-Core Processor ",
+        "gpu": "NVIDIA GeForce RTX 2070 SUPER",
+        "api": "Direct3D11",
+        "quality": 0
+      },
+      "loaded": {
+        "ships": 37,
+        "width": 2560,
+        "height": 1080,
+        "tickRate": 50
+      },
+      "moduleInstallation": {
+        "signal-reduction": "signal-reduction installed.",
+        "power-transfer-scan": "power-transfer-scan installed.",
+        "save-serialization": "save-serialization installed."
+      },
+      "originalFiles": {
+        "OriginalsUntouched": true,
+        "FilesVerified": 157,
+        "WorldFilesVerified": 135,
+        "Utc": "2026-10-23T12:02:12.4981994Z"
+      },
+      "runHashes": {
+        "Label": "Candidate03",
+        "WorldSHA256": "D97D4D83AB0E3E90693ED66D57A00FE5158BB2ED5881FCD829ACB5DF9EC9D47C",
+        "ModSHA256": "D7F4EED34557F1C8EEC5F989EACC0AD062EEA439B3A655547757655CB6E46CBF",
+        "DriverSHA256": "06BD1A4D75E4CF86E1E8597A1EC1ECFDDFEC0CA0F00A6C85EEBC1E9F3A0FC7DE",
+        "StartUtc": "2026-10-23T12:01:02.3165166Z"
+      },
+      "signals": {
+        "passed": true,
+        "shippingHelperCompared": true,
+        "planCacheSupported": true,
+        "synthetic": {
+          "projections": 1300,
+          "groups": 15901,
+          "pointerMutationComparisons": 9,
+          "bitwise": true,
+          "liveEmissionArrayMutation": true,
+          "derivedAndCustomFallback": true
+        },
+        "reports": [
+          {
+            "tracker": "ConnectionsServerTracker",
+            "liveGroups": 395,
+            "comparisons": 142602,
+            "unsupportedGroups": 0,
+            "loops": 75,
+            "planCacheEntriesAfterBenchmark": 395,
+            "controlMedianMs": 45.1134,
+            "fusedMedianMs": 35.6162,
+            "planMedianMs": 18.2944
+          },
+          {
+            "tracker": "ConnectionsClientTracker",
+            "liveGroups": 395,
+            "comparisons": 142602,
+            "unsupportedGroups": 0,
+            "loops": 75,
+            "planCacheEntriesAfterBenchmark": 395,
+            "controlMedianMs": 99.3281,
+            "fusedMedianMs": 89.622,
+            "planMedianMs": 118.11810000000001
+          }
+        ]
+      },
+      "power": {
+        "passed": true,
+        "comparedSteps": 2000,
+        "scalarComparisons": 12000,
+        "fallbackEventsCompared": 5093,
+        "duplicateIds": 103012,
+        "uniqueIds": 513,
+        "timings": {
+          "original": {
+            "medianMicroseconds": 2045.2849999999999,
+            "samplesMicroseconds": [
+              2043.67,
+              2045.9650000000001,
+              2045.8799999999999,
+              2049.3900000000003,
+              2044.97,
+              2045.0700000000002,
+              2045.2849999999999
+            ]
+          },
+          "shippingProjection": {
+            "medianMicroseconds": 10.334999999999999,
+            "samplesMicroseconds": [
+              10.405,
+              10.32,
+              10.57,
+              10.32,
+              10.32,
+              10.405,
+              10.334999999999999
+            ]
+          }
+        },
+        "liveObserversSupported": true,
+        "freshWorldGroups": 17,
+        "freshWorldNativeVisits": 65,
+        "freshWorldUniqueVisits": 65
+      },
+      "save": {
+        "bytes": 2931747,
+        "getStateMs": 0.8222,
+        "conversionMs": 25.716,
+        "nativeFixtureTimings": {
+          "cached-hull-segments": {
+            "warmedMedianMs": 36.1736,
+            "allBytesEqual": true
+          },
+          "cached-hull-writer": {
+            "warmedMedianMs": 59.4724,
+            "allBytesEqual": true
+          },
+          "cached-native": {
+            "warmedMedianMs": 181.8425,
+            "allBytesEqual": true
+          },
+          "fresh-hull-writer": {
+            "warmedMedianMs": 89.5018,
+            "allBytesEqual": true
+          },
+          "fresh-native": {
+            "warmedMedianMs": 211.0659,
+            "allBytesEqual": true
+          }
+        },
+        "shippingHelper": {
+          "available": true,
+          "observations": [
+            {
+              "run": 0,
+              "elapsedMs": 92.6312,
+              "exactBytes": true,
+              "settingsRestored": true
+            },
+            {
+              "run": 1,
+              "elapsedMs": 36.2476,
+              "exactBytes": true,
+              "settingsRestored": true
+            },
+            {
+              "run": 2,
+              "elapsedMs": 35.8328,
+              "exactBytes": true,
+              "settingsRestored": true
+            },
+            {
+              "run": 3,
+              "elapsedMs": 35.899100000000004,
+              "exactBytes": true,
+              "settingsRestored": true
+            },
+            {
+              "run": 4,
+              "elapsedMs": 36.5464,
+              "exactBytes": true,
+              "settingsRestored": true
+            },
+            {
+              "run": 5,
+              "elapsedMs": 37.042100000000005,
+              "exactBytes": true,
+              "settingsRestored": true
+            }
+          ],
+          "mutationExact": true,
+          "returnExact": true,
+          "policies": [
+            {
+              "policy": "types",
+              "exactBytes": true
+            },
+            {
+              "policy": "references",
+              "exactBytes": true
+            },
+            {
+              "policy": "ignore-defaults",
+              "exactBytes": true
+            }
+          ],
+          "errorCheck": {
+            "nativeReturnedNull": true,
+            "candidateReturnedNull": true,
+            "originalErrorType": "System.IO.DirectoryNotFoundException",
+            "candidateErrorType": "System.IO.DirectoryNotFoundException",
+            "sameErrorType": true,
+            "candidateCreatedFile": false,
+            "scope": "Emitted copies redirect only native Debug.LogException to a private recorder for this intentionally missing scratch directory"
+          }
+        },
+        "scratchFiles": [
+          {
+            "pass": 0,
+            "kind": "create",
+            "exactBytes": true,
+            "bytes": 2931747,
+            "nativeReturned": true,
+            "candidateReturned": true
+          },
+          {
+            "pass": 1,
+            "kind": "overwrite",
+            "exactBytes": true,
+            "bytes": 2931750,
+            "nativeReturned": true,
+            "candidateReturned": true
+          }
+        ],
+        "cloneMs": 12.662500000000001,
+        "cloneExactBytes": true,
+        "sharedMutableReferences": 0,
+        "worker": {
+          "exactBytes": true,
+          "elapsedMs": 89.4645,
+          "length": 2931747
+        }
+      },
+      "receiptSha256": {
+        "completion.json": "2C5C816E88116D057AEC612606F4DC43A56AB4E78E7FE103D9F4A9C104480D9A",
+        "native-save-probe.json": "0441D71164032E915B1B829943D9F21414A3AE580D114BE84B8B4FEF3EFC0AE5",
+        "signal-results.json": "6CEBFC8EE737EEAC75F10C6D556492E33F1CF83637D3A8ECAC92E490E71E13E3",
+        "simulation-results.json": "5BC4E67547F92D5D4E6D0B6B9F7DF1A5A7922CDFF5E1FF790E7E28ADB762F269"
+      }
+    },
+    "Candidate04": {
+      "completion": {
+        "complete": true,
+        "phases": 1,
+        "failures": []
+      },
+      "system": {
+        "cpu": "AMD Ryzen 7 3800X 8-Core Processor ",
+        "gpu": "NVIDIA GeForce RTX 2070 SUPER",
+        "api": "Direct3D11",
+        "quality": 0
+      },
+      "loaded": {
+        "ships": 37,
+        "width": 2560,
+        "height": 1080,
+        "tickRate": 50
+      },
+      "moduleInstallation": {
+        "signal-reduction": "signal-reduction installed.",
+        "power-transfer-scan": "power-transfer-scan installed.",
+        "save-serialization": "save-serialization skipped; native/previous mod behavior retained. InvalidOperationException: SaveFileWriter.WriteGameFile has a conflicting body or argument owner."
+      },
+      "originalFiles": {
+        "OriginalsUntouched": true,
+        "FilesVerified": 157,
+        "WorldFilesVerified": 135,
+        "Utc": "2026-10-23T12:11:03.3155009Z"
+      },
+      "runHashes": {
+        "Label": "Candidate04",
+        "WorldSHA256": "D97D4D83AB0E3E90693ED66D57A00FE5158BB2ED5881FCD829ACB5DF9EC9D47C",
+        "ModSHA256": "77B47392F9E7647C082AED3F1643A50B86E251D844E8DA60B7128162FC24E0B7",
+        "DriverSHA256": "2628215D24B3ADC0DED8E7A034BC52D1D1C248014557CE8E4C5D5E97C8944639",
+        "StartUtc": "2026-10-23T12:09:43.3167817Z"
+      },
+      "signals": {
+        "passed": true,
+        "shippingHelperCompared": true,
+        "planCacheSupported": true,
+        "synthetic": {
+          "projections": 1300,
+          "groups": 15901,
+          "pointerMutationComparisons": 9,
+          "actualShippingPointerPlanEntries": 1,
+          "topologyComparisonsAfterPlan": 1,
+          "customComparerFallbackChecks": 4,
+          "bitwise": true,
+          "liveEmissionArrayMutation": true,
+          "derivedAndCustomFallback": true
+        },
+        "reports": [
+          {
+            "tracker": "ConnectionsServerTracker",
+            "liveGroups": 396,
+            "comparisons": 142963,
+            "unsupportedGroups": 0,
+            "loops": 75,
+            "stableUnionIdentitiesBeforeBenchmark": 396,
+            "planCacheEntriesAfterBenchmark": 396,
+            "shippingPlanEntriesAfterBenchmark": 396,
+            "controlMedianMs": 44.3447,
+            "fusedMedianMs": 35.342,
+            "planMedianMs": 17.8289,
+            "shippingMedianMs": 19.5475
+          },
+          {
+            "tracker": "ConnectionsClientTracker",
+            "liveGroups": 396,
+            "comparisons": 142963,
+            "unsupportedGroups": 0,
+            "loops": 75,
+            "stableUnionIdentitiesBeforeBenchmark": 396,
+            "planCacheEntriesAfterBenchmark": 396,
+            "shippingPlanEntriesAfterBenchmark": 0,
+            "controlMedianMs": 45.8403,
+            "fusedMedianMs": 36.509,
+            "planMedianMs": 18.742800000000003,
+            "shippingMedianMs": 38.18
+          }
+        ]
+      },
+      "power": {
+        "passed": true,
+        "comparedSteps": 2000,
+        "scalarComparisons": 12000,
+        "fallbackEventsCompared": 5093,
+        "duplicateIds": 103012,
+        "uniqueIds": 513,
+        "timings": {
+          "original": {
+            "medianMicroseconds": 2038.44,
+            "samplesMicroseconds": [
+              2059.93,
+              2057.7349999999997,
+              2050.4700000000003,
+              2038.44,
+              2035.61,
+              2034.56,
+              2034.685
+            ]
+          },
+          "shippingProjection": {
+            "medianMicroseconds": 10.32,
+            "samplesMicroseconds": [
+              10.32,
+              10.309999999999999,
+              10.305,
+              10.305,
+              10.41,
+              10.325,
+              10.32
+            ]
+          }
+        },
+        "liveObserversSupported": true,
+        "freshWorldGroups": 17,
+        "freshWorldNativeVisits": 65,
+        "freshWorldUniqueVisits": 65
+      },
+      "save": {
+        "bytes": 2932560,
+        "getStateMs": 0.8773000000000001,
+        "conversionMs": 26.1479,
+        "nativeFixtureTimings": {
+          "cached-hull-segments": {
+            "warmedMedianMs": 35.8312,
+            "allBytesEqual": true
+          },
+          "cached-hull-writer": {
+            "warmedMedianMs": 59.403800000000004,
+            "allBytesEqual": true
+          },
+          "cached-native": {
+            "warmedMedianMs": 179.78050000000002,
+            "allBytesEqual": true
+          },
+          "fresh-hull-writer": {
+            "warmedMedianMs": 93.3147,
+            "allBytesEqual": true
+          },
+          "fresh-native": {
+            "warmedMedianMs": 214.0153,
+            "allBytesEqual": true
+          }
+        },
+        "shippingHelper": {
+          "available": true,
+          "observations": [
+            {
+              "run": 0,
+              "elapsedMs": 99.3193,
+              "exactBytes": true,
+              "settingsRestored": true
+            },
+            {
+              "run": 1,
+              "elapsedMs": 36.368900000000004,
+              "exactBytes": true,
+              "settingsRestored": true
+            },
+            {
+              "run": 2,
+              "elapsedMs": 36.0938,
+              "exactBytes": true,
+              "settingsRestored": true
+            },
+            {
+              "run": 3,
+              "elapsedMs": 35.995400000000004,
+              "exactBytes": true,
+              "settingsRestored": true
+            },
+            {
+              "run": 4,
+              "elapsedMs": 36.609,
+              "exactBytes": true,
+              "settingsRestored": true
+            },
+            {
+              "run": 5,
+              "elapsedMs": 36.7474,
+              "exactBytes": true,
+              "settingsRestored": true
+            }
+          ],
+          "mutationExact": true,
+          "returnExact": true,
+          "policies": [
+            {
+              "policy": "types",
+              "exactBytes": true
+            },
+            {
+              "policy": "references",
+              "exactBytes": true
+            },
+            {
+              "policy": "ignore-defaults",
+              "exactBytes": true
+            }
+          ],
+          "errorCheck": {
+            "nativeReturnedNull": true,
+            "candidateReturnedNull": true,
+            "originalErrorType": "System.IO.DirectoryNotFoundException",
+            "candidateErrorType": "System.IO.DirectoryNotFoundException",
+            "sameErrorType": true,
+            "candidateCreatedFile": false,
+            "scope": "Emitted copies redirect only native Debug.LogException to a private recorder for this intentionally missing scratch directory"
+          }
+        },
+        "scratchFiles": [
+          {
+            "pass": 0,
+            "kind": "create",
+            "exactBytes": true,
+            "bytes": 2932560,
+            "nativeReturned": true,
+            "candidateReturned": true
+          },
+          {
+            "pass": 1,
+            "kind": "overwrite",
+            "exactBytes": true,
+            "bytes": 2932563,
+            "nativeReturned": true,
+            "candidateReturned": true
+          }
+        ],
+        "cloneMs": 13.033700000000001,
+        "cloneExactBytes": true,
+        "sharedMutableReferences": 0,
+        "worker": {
+          "exactBytes": true,
+          "elapsedMs": 93.53280000000001,
+          "length": 2932560
+        }
+      },
+      "receiptSha256": {
+        "completion.json": "2C5C816E88116D057AEC612606F4DC43A56AB4E78E7FE103D9F4A9C104480D9A",
+        "native-save-probe.json": "4030B3E14C96E30BBE90CF5A5565F56D5E243F586975B9A1B1EF0967DF99E96C",
+        "signal-results.json": "57BABF64B7A971F14991E6A5F61B7085C8E925A325C071AFF3B8C4416DD14E6E",
+        "signal-shadow.json": "7017AD6C36CB7F1CD6628AB5300D87323E68AB4390CB92E96E4D15F5D5631FD6",
+        "simulation-results.json": "472FD265E1750258FE7F7479AFEB8F64973F79DE1EF752E90132A87789406E50"
+      },
+      "signalShadow": {
+        "passed": true,
+        "comparisons": 323532,
+        "unsupported": 0,
+        "mismatches": 0,
+        "errors": 0,
+        "firstError": null,
+        "shippingHelperCompared": true,
+        "planCacheSupported": true,
+        "scope": "Explicit instrumented running-world shadow. Native group evaluation and circuit operations execute normally; pure shipping/plan predictions are compared bitwise afterward. Instrumented frames are excluded from performance claims."
+      }
+    }
+  },
+  "previousPilot": {
+    "Candidate01": "Correctness checks passed; endpoint plan timing was cache-saturated and is not a warmed-plan result. Retained privately."
+  },
+  "followupEvidence": "cpu-followup-evidence.json"
+}

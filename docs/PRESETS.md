@@ -13,8 +13,12 @@ or reconnect.
 Balanced retains the current development defaults, including canvas culling,
 batch recovery and expanded replication deduplication. Existing individual core
 feature/compatibility overrides remain respected; presets change the room policy
-and the presentation settings below. Those startup overrides are separate from
-the live selector and are not reset by selecting Balanced.
+and the presentation settings below. SignalReduction, PowerTransferScan,
+SpatialClustering, EmptyWarpUpdates and SaveSerialization default on for new or
+missing preferences in every tier, including Faithful and Custom. Existing
+stored `false` values and compatibility fallbacks stay respected. These startup
+switches require a restart and are not reset by the live selector. Faithful keeps
+the selected core optimisations while using native room maths and presentation.
 
 | Setting | Faithful | Balanced (default) | Performance | Aggressive |
 | --- | --- | --- | --- | --- |
@@ -29,9 +33,9 @@ the live selector and are not reset by selecting Balanced.
 
 Performance and Aggressive never hide whole categories of scenery. Shadows stay
 soft and enabled, every label and readout stays visible, and the full landscape,
-sky and clouds are drawn. On the reference PC both levels measured about 11% above
-Balanced (see below). Aggressive's extra changes reduce graphics-card work; they
-did not add FPS on this CPU-limited PC.
+sky and clouds are drawn. Performance keeps a 33 ms cable-target interval and
+Aggressive about 67 ms. Numeric readouts stay native in both. Workload-specific
+measurements and historical results are recorded below.
 
 Custom retains the displayed policy when you begin editing. Controls cover room
 reconstruction, contour mode, shadow filtering/distance/cascades/resolution,
@@ -120,9 +124,104 @@ the preset ladder and retain their existing defaults.
 
 ## Validation
 
-The multiplayer, switching and selector checks in this section were performed on
-earlier builds. They were not rerun for the 22 October redesign, which was checked
-with offline tests and the single-player sessions described below.
+### Shared CPU baseline and tier check (23 October 2026)
+
+The five new guarded CPU features now default on for missing/new preferences in
+every tier. Existing opt-outs are preserved. This changes startup policy, not
+the CPU algorithms validated in [CPU research](CPU_RESEARCH.md). Faithful still
+uses native room maths; Balanced and the higher levels retain the documented
+incremental-room rounding tradeoff. Higher levels never weaken CPU guards or
+reduce simulation stepping.
+
+Before the stronger Aggressive retune, a fresh graphics-enabled process measured
+the shared CPU build with those five
+switches requested and the installed mod stack. The native-save module correctly
+skipped its conflicting replacement writer. The sequence was Balanced,
+Performance, Aggressive, Aggressive, Performance, Balanced, with 35 focused
+seconds of initial warm-up, a screenshot and five seconds settling per change,
+then 30 seconds of whole-frame intervals per phase. No profiler or comparison
+observer ran during the captures.
+
+| Level | Observations (FPS) | Mean FPS | Relative to Balanced |
+| --- | --- | ---: | ---: |
+| Balanced | 65.30, 65.90 | 65.60 | Reference |
+| Performance | 73.60, 76.12 | 74.86 | +14.1% |
+| Aggressive | 77.09, 75.75 | 76.42 | +16.5% |
+
+These are two observations per level in one ordinary 37-ship view, not universal
+gains or a comparison with an unmodified game. Aggressive's additional 2.1% over
+Performance is inside the practical noise band. Actual native physics endpoints
+advanced at approximately 50 Hz throughout. All six immediate transition
+fingerprints matched, captures retained focus and wrote no saves, and all 157
+original installation/configuration/save files remained hash-identical. Reviewed
+screenshots retained the distant forest, island, wall tops and correct sky depth.
+The updated source passed 113 mod tests and 15 trace-analysis tests; this does
+not rerun the earlier multiplayer/building acceptance.
+
+### Stronger Aggressive refresh limits (23 October 2026)
+
+The first private screen retained every other Aggressive setting and alternated
+15 Hz / 15 frames, 5 Hz / 30 frames, 5 Hz / 30 frames, 15 Hz / 15 frames. The
+previous limits measured 80.06 / 79.41 FPS; the stronger limits measured
+84.84 / 84.08 FPS: **79.74 → 84.46 FPS mean (+5.9%)**. All four windows retained
+focus, native 50 Hz stepping and unchanged save files. This motivated a candidate
+Aggressive mapping. The independent fresh-process follow-up did not reproduce
+the gain outside the noise band, so the named setting remains 15 Hz / 15 frames.
+
+The fresh-process confirmation used Balanced, Performance, previous Aggressive,
+candidate Aggressive, candidate Aggressive, previous Aggressive, Performance,
+Balanced, with the same 35-second focused warm-up and 30-second captures:
+
+| Policy | Observations (FPS) | Mean FPS |
+| --- | --- | ---: |
+| Balanced | 68.23, 67.16 | 67.69 |
+| Performance (30 Hz / 6 frames) | 76.87, 76.27 | 76.57 |
+| Retained Aggressive (15 Hz / 15 frames) | 78.53, 80.25 | 79.39 |
+| Rejected named candidate (5 Hz / 30 frames) | 80.50, 80.72 | 80.61 |
+
+The stronger candidate added only **1.5%** over the retained Aggressive policy in
+this independent run, inside the noise band. Its earlier +5.9% therefore does not
+establish a reliable gain. Performance and retained Aggressive were +13.1% and
++17.3% above Balanced here. Aggressive's extra benefit over Performance varied
+from 2.1% in the first process to 3.7% here; do not promise that small difference.
+All eight captures kept focus and native actual physics near 50 Hz, immediate
+transition checks passed, and all original files remained unchanged. The temporary
+candidate DLL's identity stays attached to this run; the final source restores
+the 15 Hz / 15-frame mapping.
+
+The stronger candidate remains available through Custom: cable glow/fluid-flow
+animation stays live, but targets can lag by up to 200 ms and nearly still terrain
+searches can reuse up to 30 frames. Performance remains at 30 Hz / 6 frames,
+Aggressive at 15 Hz / 15 frames, and Balanced/Faithful native. No simulation or
+numeric-readout cadence changes were considered for the higher tiers.
+
+Two additional private CPU experiments were screened. Empty typed-part dispatch
+preserved 296 emitted cases and 296 actual installed-wrapper cases, including
+ordered callbacks and exception outcomes. Its isolated 1,024-empty-ship update
+improved from about 2.36 to 1.26 ms, but whole-game stress FPS only improved from
+11.74 to 12.19 (+3.8%, paired observations +4.8% / +2.8%). It remains private
+pending stronger repeatable evidence. This measured path does not change room,
+mass, gyro preparation or simulation cadence.
+
+Skipping material writes whose input equalled the earlier readback was rejected.
+The native setter/readback round trip changed finite `_Color` values by one raw
+float bit; even finite-only write elision failed the native comparison. This was
+a private presentation fixture, not a shipping simulation change. No FPS gain is
+claimed for it. The offscreen-cable survey (82 of 97 hidden, no shadow/realtime-GI
+effects) and client endpoint plans remain research leads, not enabled features.
+
+A metadata comparison also found identical disassembled instructions in all 182
+method bodies across the five CPU features and signal-plan helper versus the
+previously validated CPU build. Their algorithms were unchanged by promotion.
+
+Run identities, raw-window summaries, native checks and preservation receipts are
+in [tier-frontier-evidence.json](tier-frontier-evidence.json). Private drivers,
+failed checks and detailed logs remain outside this repository.
+
+The historical multiplayer, switching and selector checks below were performed
+on earlier builds and were not rerun for the 22 October redesign or 23 October
+CPU/tier update. Those later changes were checked with offline tests and the
+single-player sessions documented here.
 
 The offline suite passes 83 cases, including the redesigned levels, depth declaration, native URP depth-copy scheduling, cosmetic-cap timing and terrain-reuse transpiler. The scheduling regressions cover every affected atmosphere/cloud pass and repeated restoration to native inputs without requiring a normals prepass. Coverage freezes Balanced's room and
 presentation defaults, bounds custom values and alternates native/optimised room
@@ -219,7 +318,8 @@ discussion are not benchmark claims.
 
 ## Redesigned preset measurements (22 October 2026)
 
-The levels above replace the earlier Performance/Aggressive settings. Those earlier
+The 22 October levels replaced the earlier Performance/Aggressive settings.
+Their Aggressive mapping uses 15 Hz / 15 frames. Those earlier
 settings disabled contours without the depth declaration, so sky and clouds
 overdrew geometry above the horizon. Their screenshots were accepted in error, and
 the "retuned" results below were measured on that defective rendering. They are

@@ -34,6 +34,24 @@ slot/vector field, unknown/malformed types and interaction/pickup exceptions.
 Native integration and frame evidence are separate from these offline passes;
 see [replication validation](REPLICATION_DEDUPLICATION.md).
 
+The 2.1.0 CPU changes add 30 cases (113 total): bitwise signal
+projections and ordered native reductions, power-list mutation/observer fallback
+contracts, and exact save JSON, resolver-policy, exception and storage contracts.
+Spatial tests compare emitted original native graph code against the actual
+shipping bridge, including exact BFS/center order, threshold rounding, custom
+equality fallback and scratch bounds. Runtime ownership guards remain separate
+from pure metadata binding, so these tests never query Harmony patch state.
+The five CPU switches default on for new or missing preferences across every
+tier, including Faithful and Custom; stored `false` overrides survive upgrades
+and live F8 changes. These switches remain startup-only, with all compatibility
+guards intact. The optional empty-warp adapter also has native paired
+wrapper/state/callback acceptance against its actual shipping helper. The
+default promotion changes the DLL hash without changing these CPU algorithms;
+keep measured hashes attached to the original explicit-switch runs rather than
+claiming new performance measurements. Native evidence and the replacement-save
+writer skip, including the inspected Foundations/Workshop async pipeline, are
+documented in [CPU research](CPU_RESEARCH.md).
+
 The standard-library raw-frame analysis tests run separately:
 
 ```powershell

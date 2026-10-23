@@ -1,5 +1,31 @@
 # Changelog
 
+## 2.1.0
+
+- Enable the five guarded CPU optimisations by default for new or missing
+  preferences across every tier, including Faithful and Custom. Preserve stored
+  `false` overrides; these startup switches require a restart and remain separate
+  from live F8 changes. Keep the existing algorithms and compatibility guards.
+- Recheck the tier ladder on the shared CPU baseline and screen stronger cosmetic
+  limits, empty dispatch and material-write candidates. Keep unconfirmed changes
+  private; preserve the existing named presentation settings.
+- Add `PowerTransferScan` to avoid repeated cable visits
+  accumulated by native power-group rebuilds, preserving native power math and
+  inspected notification behavior.
+- Add `SignalReduction` to remove temporary native endpoint
+  lists and repeated lookups while retaining live values and native evaluation rates.
+- Add `SaveSerialization` for byte-identical hull JSON reuse
+  on the native save path. Conflicting Workshop/Foundations save transactions retain
+  their existing behavior and receive no additional measured serialization gain.
+- Add `SpatialClustering`: replace large native adjacency
+  graphs and duplicate-heavy breadth-first queues with an exact ordered spatial
+  search. Preserve the native distance predicate, grouping and transfer order.
+- Add `EmptyWarpUpdates` for the inspected Foundations stack:
+  avoid repeated grounding/service work when the live native warp-part set is empty.
+  Keep native behavior for real warp drives and unsupported providers or hooks.
+- Add 30 offline preservation tests. Native CPU, focused gameplay FPS results and
+  validation limits are in [CPU research](docs/CPU_RESEARCH.md).
+
 ## 2.0.0
 
 - Update the mod-manager description and add `ai: vibecoded`, `development: active` and descriptive tags, following the current [manifest guidance](https://jollyname.dev/create/).

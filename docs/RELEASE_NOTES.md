@@ -1,5 +1,15 @@
 # Release notes
 
+## 2.1.0
+
+- Add guarded CPU optimisations for power-cable scans, live signal reduction, exact native save serialization, large surface-space clustering and empty warp-drive bookkeeping.
+- Enable all five for new or missing preferences in every preset. Preserve stored `false` overrides; these switches require a restart and remain independent of F8 changes.
+- Preserve native values, ordering, simulation rates and save/network formats. Unsupported inputs and conflicting mods retain their existing paths. The inspected Foundations/Workshop async writer receives no additional serialization gain.
+- Ordinary-world FPS results are modest and variable. The largest measured gains apply to a constructed dense-world stress test; see [CPU research](CPU_RESEARCH.md) for measured artifact hashes, native acceptance and limits. The release/version and default-policy rebuild is not a new FPS measurement.
+- Add 30 offline preservation cases (113 total). Multiplayer certification and arbitrary-mod compatibility remain outside the recorded acceptance.
+
+Requires Windows, StellarDrive Demo 0.8.2 and MelonLoader 0.7.3.
+
 ## 2.0.0
 
 - Add an F8/menu preset selector with Faithful, Balanced, Performance, Aggressive and Custom levels. Apply and save changes during play without restarting, reloading or reconnecting. Balanced keeps the current development defaults.

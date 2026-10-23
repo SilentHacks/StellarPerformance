@@ -56,6 +56,16 @@ The higher-preset trade-offs and measured gains are in
 Supported replication types, preservation rules and validation are documented in
 [replication deduplication](docs/REPLICATION_DEDUPLICATION.md).
 
+Five guarded CPU optimisations cover repeated power-cable visits, exact save
+serialization, signal evaluation, surface-space clustering and empty warp
+bookkeeping. They default on for new or missing preferences across every tier,
+including Faithful. Existing `false` overrides stay respected; changing these
+startup switches requires a restart, and the F8 selector does not reset them.
+Replacement save writers, including the inspected Foundations/Workshop async
+pipeline, keep their own path and receive no additional serialization gain.
+See [CPU research and native measurements](docs/CPU_RESEARCH.md) for workload
+results and compatibility limits.
+
 ## More information
 
 - [Release notes](docs/RELEASE_NOTES.md)

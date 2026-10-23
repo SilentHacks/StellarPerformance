@@ -3,6 +3,17 @@
 Measurements below apply to the released five-feature DLL;
 older audit percentages remain historical evidence.
 
+The current guarded CPU optimisations have separate [focused FPS and native
+preservation evidence](CPU_RESEARCH.md). Their five startup switches now default
+on for new or missing preferences across every tier; existing stored `false`
+values remain respected and F8 does not reset them. The promotion changes defaults
+and the resulting DLL hash, not those CPU algorithms or guards. Recorded runs
+retain their measured artifact hashes and explicit settings; they are not new
+measurements of the preference-policy revision. Replacement save pipelines retain
+their own writer, with no additional measured serialization gain on the installed
+Foundations/Workshop path. These workload-specific results do not change the
+historical released-build comparison below.
+
 ## Measured performance (2026-10-18)
 
 **The reduced build lowered mean frame time by 47.98%**
@@ -133,3 +144,8 @@ All 15 owned test worlds were moved to the private archive after validation. All
 pre-existing files (including 135 world files) matched their pre-test hashes. The
 original installed DLL and preferences were restored, private drivers were removed
 from the game installation, and no game process remained at final verification.
+
+The 23 October tier/default follow-up, stronger Aggressive refresh limits and
+rejected/private candidate screens are recorded in [live presets](PRESETS.md)
+and [tier evidence](tier-frontier-evidence.json). These are separate from the
+historical artifact measurements above.

@@ -1,0 +1,1062 @@
+{
+  "scope": "Private focused whole-frame FPS, native tick endpoints and immediate transition fingerprints. No simulation shadow comparators or sampler inside FPS windows. \u00b13% practical noise band; phase means are workload-specific, not universal gains.",
+  "cpuPolicy": "SignalReduction, PowerTransferScan, SpatialClustering, EmptyWarpUpdates and SaveSerialization default true for missing/new settings across every tier; stored opt-outs preserved. F8 changes room/presentation policy only. SaveSerialization skips installed replacement writer.",
+  "runs": [
+    {
+      "label": "Baseline-Tiers-01",
+      "identity": {
+        "Label": "Baseline-Tiers-01",
+        "WorldSHA256": "D97D4D83AB0E3E90693ED66D57A00FE5158BB2ED5881FCD829ACB5DF9EC9D47C",
+        "ModSHA256": "A4BE82DA7FD973048E53CE0826A83A3C3478C8DC379A2A550BEBF9F4D4641FED",
+        "DriverSHA256": "7BC37A3D272EE6639B41C1A39906DA815E6B9F3465D42D8188029565AA32797C",
+        "StartUtc": "2026-10-23T16:35:31.5280969Z"
+      },
+      "expectedShips": 37,
+      "warmupSeconds": 35.0,
+      "captureSeconds": 30.0,
+      "phases": [
+        {
+          "phase": "00-Balanced",
+          "frames": 1958,
+          "fps": 65.29659601441575,
+          "meanMs": 15.314734014300326,
+          "p95Ms": 19.7849,
+          "p99Ms": 32.6522,
+          "low1Fps": 23.441116409077587,
+          "unfocused": 0,
+          "saveWrite": false,
+          "tickRate": 50,
+          "ticks": 1495,
+          "averageDrawCalls": 2195.9055158324823,
+          "averageTriangles": 11390423.846782431,
+          "actualPhysicsHz": 49.85618541447991
+        },
+        {
+          "phase": "01-Performance",
+          "frames": 2207,
+          "fps": 73.60497241175914,
+          "meanMs": 13.586038649750787,
+          "p95Ms": 18.0695,
+          "p99Ms": 24.8723,
+          "low1Fps": 30.596163463619213,
+          "unfocused": 0,
+          "saveWrite": false,
+          "tickRate": 50,
+          "ticks": 1500,
+          "averageDrawCalls": 1264.426823742637,
+          "averageTriangles": 5756263.632985954,
+          "actualPhysicsHz": 50.02603471574012
+        },
+        {
+          "phase": "02-Aggressive",
+          "frames": 2312,
+          "fps": 77.09475896890501,
+          "meanMs": 12.971050346020728,
+          "p95Ms": 17.7092,
+          "p99Ms": 22.0605,
+          "low1Fps": 39.52669022571974,
+          "unfocused": 0,
+          "saveWrite": false,
+          "tickRate": 50,
+          "ticks": 1501,
+          "averageDrawCalls": 1226.98053633218,
+          "averageTriangles": 5750711.508217993,
+          "actualPhysicsHz": 50.051571458618575
+        },
+        {
+          "phase": "03-Aggressive",
+          "frames": 2272,
+          "fps": 75.74552129267958,
+          "meanMs": 13.202100704225332,
+          "p95Ms": 18.3844,
+          "p99Ms": 24.2472,
+          "low1Fps": 32.486359789683306,
+          "unfocused": 0,
+          "saveWrite": false,
+          "tickRate": 50,
+          "ticks": 1500,
+          "averageDrawCalls": 1224.96875,
+          "averageTriangles": 5750565.988116197,
+          "actualPhysicsHz": 50.0080466280895
+        },
+        {
+          "phase": "04-Performance",
+          "frames": 2283,
+          "fps": 76.12111878946,
+          "meanMs": 13.136958782303966,
+          "p95Ms": 17.1678,
+          "p99Ms": 21.6299,
+          "low1Fps": 39.089533688515054,
+          "unfocused": 0,
+          "saveWrite": false,
+          "tickRate": 50,
+          "ticks": 1501,
+          "averageDrawCalls": 1260.4476565922032,
+          "averageTriangles": 5755911.689881735,
+          "actualPhysicsHz": 50.047218266745276
+        },
+        {
+          "phase": "05-Balanced",
+          "frames": 1976,
+          "fps": 65.90208903952536,
+          "meanMs": 15.174025809716609,
+          "p95Ms": 19.2884,
+          "p99Ms": 25.2302,
+          "low1Fps": 34.93320036654119,
+          "unfocused": 0,
+          "saveWrite": false,
+          "tickRate": 50,
+          "ticks": 1500,
+          "averageDrawCalls": 2156.222165991903,
+          "averageTriangles": 11375445.413461538,
+          "actualPhysicsHz": 50.02688945308094
+        }
+      ],
+      "immediateTransitionsPreserved": true,
+      "originals": {
+        "OriginalsUntouched": true,
+        "FilesVerified": 157,
+        "WorldFilesVerified": 135,
+        "Utc": "2026-10-23T16:39:57.8366940Z"
+      }
+    },
+    {
+      "label": "Empty-Dispatch-Stress-01",
+      "identity": {
+        "Label": "Empty-Dispatch-Stress-01",
+        "WorldSHA256": "A64C3DEB6B44E04B092C71FC80DB46C840D97CED316C86D6352CF9B644E3ACE1",
+        "ModSHA256": "A4BE82DA7FD973048E53CE0826A83A3C3478C8DC379A2A550BEBF9F4D4641FED",
+        "DriverSHA256": "ADD97CE320F1E63F6B0C0E588106C3E811169A31B4883879069E4F943750ACAC",
+        "StartUtc": "2026-10-23T16:46:04.2148827Z"
+      },
+      "expectedShips": 1061,
+      "warmupSeconds": 35.0,
+      "captureSeconds": 30.0,
+      "phases": [
+        {
+          "phase": "00-Balanced",
+          "frames": 352,
+          "fps": 11.742544380854756,
+          "meanMs": 85.16041903409085,
+          "p95Ms": 117.8409,
+          "p99Ms": 132.0091,
+          "low1Fps": 7.538841998687739,
+          "unfocused": 0,
+          "saveWrite": false,
+          "tickRate": 50,
+          "ticks": 706,
+          "averageDrawCalls": 11607.082386363636,
+          "averageTriangles": 11585881.170454545,
+          "actualPhysicsHz": 23.55180776387344
+        },
+        {
+          "phase": "01-Balanced+empty-dispatch",
+          "frames": 369,
+          "fps": 12.308845218232793,
+          "meanMs": 81.242389701897,
+          "p95Ms": 103.7586,
+          "p99Ms": 124.6595,
+          "low1Fps": 7.683898748753927,
+          "unfocused": 0,
+          "saveWrite": false,
+          "tickRate": 50,
+          "ticks": 740,
+          "averageDrawCalls": 11416.219512195123,
+          "averageTriangles": 11576997.127371274,
+          "actualPhysicsHz": 24.684405044694486
+        },
+        {
+          "phase": "02-Balanced+empty-dispatch",
+          "frames": 361,
+          "fps": 12.070109145382952,
+          "meanMs": 82.84929224376725,
+          "p95Ms": 114.7028,
+          "p99Ms": 134.7254,
+          "low1Fps": 6.374749870751947,
+          "unfocused": 0,
+          "saveWrite": false,
+          "tickRate": 50,
+          "ticks": 724,
+          "averageDrawCalls": 11242.218836565096,
+          "averageTriangles": 11570836.426592797,
+          "actualPhysicsHz": 24.207088701543654
+        },
+        {
+          "phase": "03-Balanced",
+          "frames": 351,
+          "fps": 11.74301929861174,
+          "meanMs": 85.15697492877491,
+          "p95Ms": 118.2078,
+          "p99Ms": 128.8423,
+          "low1Fps": 7.124907465264295,
+          "unfocused": 0,
+          "saveWrite": false,
+          "tickRate": 50,
+          "ticks": 704,
+          "averageDrawCalls": 11084.737891737892,
+          "averageTriangles": 11564503.418803418,
+          "actualPhysicsHz": 23.55295038809876
+        }
+      ],
+      "immediateTransitionsPreserved": true,
+      "originals": {
+        "OriginalsUntouched": true,
+        "FilesVerified": 157,
+        "WorldFilesVerified": 135,
+        "Utc": "2026-10-23T16:50:35.6940591Z"
+      }
+    },
+    {
+      "label": "Final-Tiers-01",
+      "identity": {
+        "Label": "Final-Tiers-01",
+        "WorldSHA256": "D97D4D83AB0E3E90693ED66D57A00FE5158BB2ED5881FCD829ACB5DF9EC9D47C",
+        "ModSHA256": "3F333A359010D31A323A7509BFFDFCBFFA04DC10D5D651FA77F186D1EE870816",
+        "DriverSHA256": "F57BFAFC67422617879257594FFC944CF364083D8DBFF844D41F4CAC37BDE2A5",
+        "StartUtc": "2026-10-23T17:03:16.5541481Z"
+      },
+      "expectedShips": 37,
+      "warmupSeconds": 35.0,
+      "captureSeconds": 30.0,
+      "phases": [
+        {
+          "phase": "00-Balanced",
+          "frames": 2046,
+          "fps": 68.22542124679262,
+          "meanMs": 14.65729315738027,
+          "p95Ms": 17.7561,
+          "p99Ms": 24.8012,
+          "low1Fps": 35.08005092220192,
+          "unfocused": 0,
+          "saveWrite": false,
+          "tickRate": 50,
+          "ticks": 1501,
+          "averageDrawCalls": 2195.800586510264,
+          "averageTriangles": 11390404.999022482,
+          "actualPhysicsHz": 50.051983035892455
+        },
+        {
+          "phase": "01-Performance",
+          "frames": 2305,
+          "fps": 76.87335847240007,
+          "meanMs": 13.008407852494582,
+          "p95Ms": 17.0188,
+          "p99Ms": 22.7538,
+          "low1Fps": 33.42242589557932,
+          "unfocused": 0,
+          "saveWrite": false,
+          "tickRate": 50,
+          "ticks": 1500,
+          "averageDrawCalls": 1264.4511930585684,
+          "averageTriangles": 5756374.573535792,
+          "actualPhysicsHz": 50.026046728243024
+        },
+        {
+          "phase": "02-Aggressive+tier-previous",
+          "frames": 2355,
+          "fps": 78.5261057421001,
+          "meanMs": 12.734618513800452,
+          "p95Ms": 17.4094,
+          "p99Ms": 21.9509,
+          "low1Fps": 40.55765720632862,
+          "unfocused": 0,
+          "saveWrite": false,
+          "tickRate": 50,
+          "ticks": 1500,
+          "averageDrawCalls": 1226.9371549893842,
+          "averageTriangles": 5750747.808917197,
+          "actualPhysicsHz": 50.01662786121031
+        },
+        {
+          "phase": "03-Aggressive",
+          "frames": 2414,
+          "fps": 80.49698746693574,
+          "meanMs": 12.422825144987588,
+          "p95Ms": 16.0139,
+          "p99Ms": 22.2498,
+          "low1Fps": 35.03327431199758,
+          "unfocused": 0,
+          "saveWrite": false,
+          "tickRate": 50,
+          "ticks": 1501,
+          "averageDrawCalls": 1224.9971002485502,
+          "averageTriangles": 5750717.189312344,
+          "actualPhysicsHz": 50.052186490418684
+        },
+        {
+          "phase": "04-Aggressive",
+          "frames": 2421,
+          "fps": 80.71636093730758,
+          "meanMs": 12.389061999173876,
+          "p95Ms": 16.113,
+          "p99Ms": 21.7861,
+          "low1Fps": 37.849743457592986,
+          "unfocused": 0,
+          "saveWrite": false,
+          "tickRate": 50,
+          "ticks": 1501,
+          "averageDrawCalls": 1226.9202808756713,
+          "averageTriangles": 5751206.086741016,
+          "actualPhysicsHz": 50.04347697930553
+        },
+        {
+          "phase": "05-Aggressive+tier-previous",
+          "frames": 2407,
+          "fps": 80.24913947134058,
+          "meanMs": 12.461192812629854,
+          "p95Ms": 16.2668,
+          "p99Ms": 21.4492,
+          "low1Fps": 41.875988447810656,
+          "unfocused": 0,
+          "saveWrite": false,
+          "tickRate": 50,
+          "ticks": 1500,
+          "averageDrawCalls": 1227.5587868716245,
+          "averageTriangles": 5752765.550477773,
+          "actualPhysicsHz": 50.00985010677642
+        },
+        {
+          "phase": "06-Performance",
+          "frames": 2282,
+          "fps": 76.26686056585764,
+          "meanMs": 13.1118547765118,
+          "p95Ms": 17.8951,
+          "p99Ms": 23.0952,
+          "low1Fps": 37.835649505677246,
+          "unfocused": 0,
+          "saveWrite": false,
+          "tickRate": 50,
+          "ticks": 1498,
+          "averageDrawCalls": 1253.7361963190185,
+          "averageTriangles": 5755030.725679229,
+          "actualPhysicsHz": 50.06474896040954
+        },
+        {
+          "phase": "07-Balanced",
+          "frames": 2012,
+          "fps": 67.15551789387477,
+          "meanMs": 14.890809145129227,
+          "p95Ms": 18.4791,
+          "p99Ms": 24.7405,
+          "low1Fps": 31.395838575784293,
+          "unfocused": 0,
+          "saveWrite": false,
+          "tickRate": 50,
+          "ticks": 1500,
+          "averageDrawCalls": 2140.8573558648113,
+          "averageTriangles": 11372782.985586481,
+          "actualPhysicsHz": 50.0662409745587
+        }
+      ],
+      "immediateTransitionsPreserved": true,
+      "originals": {
+        "OriginalsUntouched": true,
+        "FilesVerified": 157,
+        "WorldFilesVerified": 135,
+        "Utc": "2026-10-23T17:08:52.8911683Z"
+      }
+    },
+    {
+      "label": "Stronger-Caps-01",
+      "identity": {
+        "Label": "Stronger-Caps-01",
+        "WorldSHA256": "D97D4D83AB0E3E90693ED66D57A00FE5158BB2ED5881FCD829ACB5DF9EC9D47C",
+        "ModSHA256": "A4BE82DA7FD973048E53CE0826A83A3C3478C8DC379A2A550BEBF9F4D4641FED",
+        "DriverSHA256": "D117F71A75F91B5DF361E1DF4451C69D68DEA4BF90CFFECA3A461707F7EFE6EA",
+        "StartUtc": "2026-10-23T16:55:24.1044919Z"
+      },
+      "expectedShips": 37,
+      "warmupSeconds": 35.0,
+      "captureSeconds": 30.0,
+      "phases": [
+        {
+          "phase": "00-Aggressive",
+          "frames": 2401,
+          "fps": 80.06210311634085,
+          "meanMs": 12.4903039150354,
+          "p95Ms": 16.4105,
+          "p99Ms": 21.4031,
+          "low1Fps": 38.99415867503048,
+          "unfocused": 0,
+          "saveWrite": false,
+          "tickRate": 50,
+          "ticks": 1500,
+          "averageDrawCalls": 1228.488129945856,
+          "averageTriangles": 5751060.7246980425,
+          "actualPhysicsHz": 50.01797362536914
+        },
+        {
+          "phase": "01-Aggressive+tier-max",
+          "frames": 2545,
+          "fps": 84.84334909069364,
+          "meanMs": 11.786427701375226,
+          "p95Ms": 15.6028,
+          "p99Ms": 20.2039,
+          "low1Fps": 43.63861570630583,
+          "unfocused": 0,
+          "saveWrite": false,
+          "tickRate": 50,
+          "ticks": 1501,
+          "averageDrawCalls": 1228.5170923379176,
+          "averageTriangles": 5751196.309626719,
+          "actualPhysicsHz": 50.03924046567036
+        },
+        {
+          "phase": "02-Aggressive+tier-max",
+          "frames": 2522,
+          "fps": 84.08295325443542,
+          "meanMs": 11.893017089611435,
+          "p95Ms": 16.1146,
+          "p99Ms": 20.7064,
+          "low1Fps": 43.92808445437805,
+          "unfocused": 0,
+          "saveWrite": false,
+          "tickRate": 50,
+          "ticks": 1501,
+          "averageDrawCalls": 1226.979381443299,
+          "averageTriangles": 5750911.147105472,
+          "actualPhysicsHz": 50.0430265007564
+        },
+        {
+          "phase": "03-Aggressive",
+          "frames": 2376,
+          "fps": 79.40967542458237,
+          "meanMs": 12.59292390572391,
+          "p95Ms": 16.4826,
+          "p99Ms": 22.4798,
+          "low1Fps": 34.502259898023325,
+          "unfocused": 0,
+          "saveWrite": false,
+          "tickRate": 50,
+          "ticks": 1494,
+          "averageDrawCalls": 1224.9785353535353,
+          "averageTriangles": 5750677.779040404,
+          "actualPhysicsHz": 49.931841365457075
+        }
+      ],
+      "immediateTransitionsPreserved": true,
+      "originals": {
+        "OriginalsUntouched": true,
+        "FilesVerified": 157,
+        "WorldFilesVerified": 135,
+        "Utc": "2026-10-23T16:58:39.9826639Z"
+      }
+    }
+  ],
+  "nativeChecks": [
+    {
+      "label": "Native-Tier-Checks-01",
+      "complete": false,
+      "cable-writes-results": {
+        "passed": false,
+        "scalarBits": 0,
+        "externalWrites": 0,
+        "materialSwaps": 0,
+        "firstGetterNativeInstanced": false,
+        "firstGetterCandidateInstanced": false,
+        "evidence": {
+          "ready": false,
+          "enabled": false,
+          "counters": false,
+          "unavailable": "",
+          "calls": 0,
+          "proposedWrites": 0,
+          "skippedWrites": 0,
+          "performedWrites": 0,
+          "rewrites": 0,
+          "shaderSurvey": []
+        },
+        "screens": [],
+        "errors": [
+          "System.ArgumentException: Return type can't be a byref type"
+        ],
+        "scope": "Exact native SignalCableVisual.UpdateGlow IL except writes equal in four raw float bits to the current color already read by that same invocation. Original arithmetic, Time reads, material getter/read calls and all client/server group evaluation retained. Native Unity material/state fixture comparison; no visible-frame, dynamic material semantics, multiplayer or FPS acceptance follows from this check."
+      },
+      "worldPreservation": {}
+    },
+    {
+      "label": "Native-Tier-Checks-02",
+      "complete": false,
+      "empty-dispatch": {
+        "passed": true,
+        "cases": 296,
+        "callbacks": 37,
+        "matchingExceptions": 68,
+        "positiveEmptyActions": 74,
+        "snapshot": {
+          "ready": true,
+          "enabled": false,
+          "unavailable": "",
+          "observing": false,
+          "queries": 296,
+          "empty": 74,
+          "fallback": 222
+        },
+        "timings": [
+          {
+            "ships": 37,
+            "nativeMedianMs": 0.0844,
+            "candidateMedianMs": 0.0466,
+            "nativeTimes": [
+              0.08310000000000001,
+              0.0835,
+              0.08370000000000001,
+              0.0838,
+              0.0844,
+              0.0849,
+              0.08650000000000001,
+              0.0898,
+              0.0925
+            ],
+            "candidateTimes": [
+              0.046,
+              0.0465,
+              0.0465,
+              0.0466,
+              0.0466,
+              0.0468,
+              0.0472,
+              0.0473,
+              0.0575
+            ]
+          },
+          {
+            "ships": 256,
+            "nativeMedianMs": 0.5877,
+            "candidateMedianMs": 0.323,
+            "nativeTimes": [
+              0.5624,
+              0.5665,
+              0.5812,
+              0.5836,
+              0.5877,
+              0.5888,
+              0.5956,
+              0.6024,
+              0.6309
+            ],
+            "candidateTimes": [
+              0.3073,
+              0.31010000000000004,
+              0.3176,
+              0.32170000000000004,
+              0.323,
+              0.32480000000000003,
+              0.3252,
+              0.3266,
+              0.364
+            ]
+          },
+          {
+            "ships": 1024,
+            "nativeMedianMs": 2.3004000000000002,
+            "candidateMedianMs": 1.2865,
+            "nativeTimes": [
+              2.2417000000000002,
+              2.2578,
+              2.2867,
+              2.2867,
+              2.3004000000000002,
+              2.3051,
+              2.3085,
+              2.3198000000000003,
+              2.3391
+            ],
+            "candidateTimes": [
+              1.2472,
+              1.2603,
+              1.2669000000000001,
+              1.2808000000000002,
+              1.2865,
+              1.2877,
+              1.3,
+              1.3058,
+              1.372
+            ]
+          }
+        ],
+        "scope": "PRIVATE emitted native UpdateParts versus guarded empty-dispatch copy. Native warp and gas-intake wrappers execute in original order; all nonempty or retained-key caches retain complete native body. Detached state/updater fixtures with read-only live providers; no Rooms/Mass/Gyro prep/cadence or nonempty arithmetic changes. Method timings are not FPS evidence."
+      },
+      "cable-writes-results": {
+        "passed": false,
+        "scalarBits": 0,
+        "externalWrites": 0,
+        "materialSwaps": 0,
+        "firstGetterNativeInstanced": false,
+        "firstGetterCandidateInstanced": false,
+        "evidence": {
+          "ready": false,
+          "enabled": false,
+          "counters": false,
+          "unavailable": "",
+          "calls": 0,
+          "proposedWrites": 0,
+          "skippedWrites": 0,
+          "performedWrites": 0,
+          "rewrites": 0,
+          "shaderSurvey": []
+        },
+        "screens": [],
+        "errors": [
+          "System.InvalidOperationException: Expected native current-color local"
+        ],
+        "scope": "Exact native SignalCableVisual.UpdateGlow IL except writes equal in four raw float bits to the current color already read by that same invocation. Original arithmetic, Time reads, material getter/read calls and all client/server group evaluation retained. Native Unity material/state fixture comparison; no visible-frame, dynamic material semantics, multiplayer or FPS acceptance follows from this check."
+      },
+      "cable-visibility-survey": {
+        "total": 97,
+        "invisible": 82,
+        "eligible": 97,
+        "eligibleInvisible": 82,
+        "groups": {
+          "Custom/PlanetObject|shadow=Off|gi=EmissiveIsBlack": 97
+        },
+        "scope": "Read-only actual signal-renderer admission survey. Eligibility only checks obvious no-shadow/no-realtime-GI/property gates. It does not prove camera callback ordering, reflection/XR coverage, first-visible repair, shader compatibility, pixels or FPS. No renderer, material, authoritative state or cadence is changed."
+      },
+      "worldPreservation": {
+        "TierFrontier.CableVisibilityProbe-world-preserved": true,
+        "TierFrontier.CableWritesProbe-world-preserved": true,
+        "TierFrontier.EmptyDispatchProbe-world-preserved": true
+      }
+    },
+    {
+      "label": "Native-Tier-Checks-03",
+      "complete": false,
+      "empty-dispatch": {
+        "passed": true,
+        "cases": 296,
+        "installedWrapperCases": 296,
+        "callbacks": 37,
+        "matchingExceptions": 68,
+        "positiveEmptyActions": 148,
+        "snapshot": {
+          "ready": true,
+          "enabled": false,
+          "unavailable": "",
+          "observing": false,
+          "queries": 592,
+          "empty": 148,
+          "fallback": 444
+        },
+        "originalModeRestored": true,
+        "timings": [
+          {
+            "ships": 37,
+            "nativeMedianMs": 0.08600000000000001,
+            "candidateMedianMs": 0.0468,
+            "nativeTimes": [
+              0.085,
+              0.08510000000000001,
+              0.0852,
+              0.0854,
+              0.08600000000000001,
+              0.08660000000000001,
+              0.0882,
+              0.0945,
+              0.0946
+            ],
+            "candidateTimes": [
+              0.0459,
+              0.046,
+              0.0465,
+              0.046700000000000005,
+              0.0468,
+              0.046900000000000004,
+              0.0473,
+              0.0492,
+              0.053700000000000005
+            ]
+          },
+          {
+            "ships": 256,
+            "nativeMedianMs": 0.5963,
+            "candidateMedianMs": 0.3191,
+            "nativeTimes": [
+              0.5897,
+              0.5910000000000001,
+              0.5935,
+              0.5954,
+              0.5963,
+              0.6055,
+              0.6061000000000001,
+              0.6102000000000001,
+              0.6202000000000001
+            ],
+            "candidateTimes": [
+              0.3146,
+              0.3168,
+              0.3171,
+              0.31820000000000004,
+              0.3191,
+              0.31920000000000004,
+              0.3194,
+              0.32630000000000003,
+              0.3463
+            ]
+          },
+          {
+            "ships": 1024,
+            "nativeMedianMs": 2.3567,
+            "candidateMedianMs": 1.2599,
+            "nativeTimes": [
+              2.3163,
+              2.3199,
+              2.3324000000000003,
+              2.3445,
+              2.3567,
+              2.3589,
+              2.3608000000000002,
+              2.3695,
+              2.3831
+            ],
+            "candidateTimes": [
+              1.2583,
+              1.2584,
+              1.2592,
+              1.2597,
+              1.2599,
+              1.2656,
+              1.2699,
+              1.2705,
+              1.276
+            ]
+          }
+        ],
+        "scope": "PRIVATE emitted native UpdateParts versus guarded emitted copy and actual installed wrapper. Native warp and gas-intake wrappers execute in original order; all nonempty or retained-key caches retain complete native body. Detached state/updater fixtures with read-only live providers; no Rooms/Mass/Gyro prep/cadence or nonempty arithmetic changes. Method timings are not FPS evidence."
+      },
+      "cable-writes-results": {
+        "passed": false,
+        "scalarBits": 48796,
+        "externalWrites": 28,
+        "materialSwaps": 8,
+        "firstGetterNativeInstanced": true,
+        "firstGetterCandidateInstanced": true,
+        "evidence": {
+          "ready": true,
+          "enabled": false,
+          "counters": true,
+          "unavailable": "",
+          "calls": 0,
+          "proposedWrites": 12200,
+          "skippedWrites": 7603,
+          "performedWrites": 4597,
+          "rewrites": 2,
+          "shaderSurvey": [
+            {
+              "shader": "Custom/PlanetObject",
+              "emissionType": "Color",
+              "colorType": "Color",
+              "accepted": true
+            }
+          ]
+        },
+        "screens": [],
+        "errors": [
+          "System.InvalidOperationException: Native material color bits differ: _Color"
+        ],
+        "scope": "Exact native SignalCableVisual.UpdateGlow IL except writes equal in four raw float bits to the current color already read by that same invocation. Original arithmetic, Time reads, material getter/read calls and all client/server group evaluation retained. Native Unity material/state fixture comparison; no visible-frame, dynamic material semantics, multiplayer or FPS acceptance follows from this check."
+      },
+      "cable-visibility-survey": {
+        "total": 97,
+        "invisible": 82,
+        "eligible": 97,
+        "eligibleInvisible": 82,
+        "groups": {
+          "Custom/PlanetObject|shadow=Off|gi=EmissiveIsBlack": 97
+        },
+        "scope": "Read-only actual signal-renderer admission survey. Eligibility only checks obvious no-shadow/no-realtime-GI/property gates. It does not prove camera callback ordering, reflection/XR coverage, first-visible repair, shader compatibility, pixels or FPS. No renderer, material, authoritative state or cadence is changed."
+      },
+      "worldPreservation": {
+        "TierFrontier.CableVisibilityProbe-world-preserved": true,
+        "TierFrontier.CableWritesProbe-world-preserved": true,
+        "TierFrontier.EmptyDispatchProbe-world-preserved": true
+      }
+    },
+    {
+      "label": "Native-Tier-Checks-04",
+      "complete": false,
+      "empty-dispatch": {
+        "passed": true,
+        "cases": 296,
+        "installedWrapperCases": 296,
+        "callbacks": 37,
+        "matchingExceptions": 68,
+        "positiveEmptyActions": 148,
+        "snapshot": {
+          "ready": true,
+          "enabled": false,
+          "unavailable": "",
+          "observing": false,
+          "queries": 592,
+          "empty": 148,
+          "fallback": 444
+        },
+        "originalModeRestored": true,
+        "timings": [
+          {
+            "ships": 37,
+            "nativeMedianMs": 0.0848,
+            "candidateMedianMs": 0.0468,
+            "nativeTimes": [
+              0.084,
+              0.08410000000000001,
+              0.08420000000000001,
+              0.08460000000000001,
+              0.0848,
+              0.0849,
+              0.0849,
+              0.0874,
+              0.1592
+            ],
+            "candidateTimes": [
+              0.0458,
+              0.046,
+              0.0461,
+              0.0465,
+              0.0468,
+              0.0473,
+              0.048,
+              0.0521,
+              0.0538
+            ]
+          },
+          {
+            "ships": 256,
+            "nativeMedianMs": 0.5925,
+            "candidateMedianMs": 0.3085,
+            "nativeTimes": [
+              0.5767,
+              0.5783,
+              0.5787,
+              0.5814,
+              0.5925,
+              0.5976,
+              0.6016,
+              0.6284000000000001,
+              0.6333000000000001
+            ],
+            "candidateTimes": [
+              0.3073,
+              0.3075,
+              0.3075,
+              0.308,
+              0.3085,
+              0.30870000000000003,
+              0.3093,
+              0.3116,
+              0.31270000000000003
+            ]
+          },
+          {
+            "ships": 1024,
+            "nativeMedianMs": 2.2694,
+            "candidateMedianMs": 1.2447000000000001,
+            "nativeTimes": [
+              2.2502,
+              2.2626,
+              2.2632000000000003,
+              2.2668,
+              2.2694,
+              2.2712000000000003,
+              2.2809,
+              2.3011,
+              2.3024
+            ],
+            "candidateTimes": [
+              1.2406000000000001,
+              1.2435,
+              1.244,
+              1.2442,
+              1.2447000000000001,
+              1.2458,
+              1.2473,
+              1.2545000000000002,
+              1.2581
+            ]
+          }
+        ],
+        "scope": "PRIVATE emitted native UpdateParts versus guarded emitted copy and actual installed wrapper. Native warp and gas-intake wrappers execute in original order; all nonempty or retained-key caches retain complete native body. Detached state/updater fixtures with read-only live providers; no Rooms/Mass/Gyro prep/cadence or nonempty arithmetic changes. Method timings are not FPS evidence."
+      },
+      "cable-writes-results": {
+        "passed": false,
+        "scalarBits": 50220,
+        "externalWrites": 28,
+        "materialSwaps": 10,
+        "firstGetterNativeInstanced": true,
+        "firstGetterCandidateInstanced": true,
+        "evidence": {
+          "ready": true,
+          "enabled": false,
+          "counters": true,
+          "unavailable": "",
+          "calls": 0,
+          "proposedWrites": 12556,
+          "skippedWrites": 7085,
+          "performedWrites": 5471,
+          "rewrites": 2,
+          "shaderSurvey": [
+            {
+              "shader": "Custom/PlanetObject",
+              "emissionType": "Color",
+              "colorType": "Color",
+              "accepted": true
+            }
+          ]
+        },
+        "screens": [],
+        "errors": [
+          "System.InvalidOperationException: Native material color bits differ at step 6276, property _Color: native=3F008083,3E808080,3E808080,00000000; candidate=3F008083,3E808081,3E808081,00000000"
+        ],
+        "failure": {
+          "step": 6276,
+          "input": "BF800000",
+          "nativeDelta": "3C898DE8",
+          "candidateDelta": "3C898DE8",
+          "property": "_Color",
+          "native": [
+            "3F008083",
+            "3E808080",
+            "3E808080",
+            "00000000"
+          ],
+          "candidate": [
+            "3F008083",
+            "3E808081",
+            "3E808081",
+            "00000000"
+          ],
+          "nativeEmissionBefore": [
+            "34872504",
+            "3407C5F1",
+            "34054246",
+            "3F7FFFFB"
+          ],
+          "nativeColorBefore": [
+            "3F008083",
+            "3E808081",
+            "3E808081",
+            "00000000"
+          ],
+          "candidateEmissionBefore": [
+            "34872504",
+            "3407C5F1",
+            "34054246",
+            "3F7FFFFB"
+          ],
+          "candidateColorBefore": [
+            "3F008083",
+            "3E808081",
+            "3E808081",
+            "00000000"
+          ]
+        },
+        "finiteOnlySkip": true,
+        "scope": "Native SignalCableVisual.UpdateGlow IL with finite-only writes equal in four raw float bits to the current color already read by that invocation omitted. Original arithmetic, Time reads, material getter/read calls and all client/server group evaluation retained. The diagnostic fixture adds read-only material probes around candidate writes and between paired actions; production mode has no such probes. Color-output comparison does not certify native material dirty/override bookkeeping, pixels, multiplayer or FPS.",
+        "nonidentityRoundTripExample": {
+          "step": 6265,
+          "property": "_Color",
+          "calculated": [
+            "3F0080AD",
+            "3E8080A8",
+            "3E8080A8",
+            "00000000"
+          ],
+          "readImmediatelyBefore": [
+            "3F0080B8",
+            "3E8080B2",
+            "3E8080B2",
+            "00000000"
+          ],
+          "readImmediatelyAfter": [
+            "3F0080AD",
+            "3E8080A7",
+            "3E8080A7",
+            "00000000"
+          ],
+          "finite": true,
+          "skipped": false
+        }
+      },
+      "cable-visibility-survey": {
+        "total": 97,
+        "invisible": 82,
+        "eligible": 97,
+        "eligibleInvisible": 82,
+        "groups": {
+          "Custom/PlanetObject|shadow=Off|gi=EmissiveIsBlack": 97
+        },
+        "scope": "Read-only actual signal-renderer admission survey. Eligibility only checks obvious no-shadow/no-realtime-GI/property gates. It does not prove camera callback ordering, reflection/XR coverage, first-visible repair, shader compatibility, pixels or FPS. No renderer, material, authoritative state or cadence is changed."
+      },
+      "worldPreservation": {
+        "TierFrontier.CableVisibilityProbe-world-preserved": true,
+        "TierFrontier.CableWritesProbe-world-preserved": true,
+        "TierFrontier.EmptyDispatchProbe-world-preserved": true
+      }
+    }
+  ],
+  "finalBuild": {
+    "sha256": "A4BE82DA7FD973048E53CE0826A83A3C3478C8DC379A2A550BEBF9F4D4641FED",
+    "matchesFirstTierCapture": true,
+    "modTestsPassed": 113,
+    "traceTestsPassed": 15,
+    "shippingWarnings": 0,
+    "shippingErrors": 0,
+    "retainedNamedPolicies": {
+      "Performance": {
+        "cableHz": 30,
+        "terrainFrames": 6
+      },
+      "Aggressive": {
+        "cableHz": 15,
+        "terrainFrames": 15
+      }
+    },
+    "cpuAlgorithmComparison": {
+      "referenceSha256": "EA06BAEE51B9AB3278731E0FA9E08BE9587EB827913E58C950CB6F7C5AD98F2B",
+      "methodBodies": [
+        {
+          "Type": "SignalReduction",
+          "Methods": 35,
+          "CurrentMethods": 35,
+          "Same": true,
+          "Changed": []
+        },
+        {
+          "Type": "SignalEndpointPlan",
+          "Methods": 20,
+          "CurrentMethods": 20,
+          "Same": true,
+          "Changed": []
+        },
+        {
+          "Type": "PowerTransferScan",
+          "Methods": 18,
+          "CurrentMethods": 18,
+          "Same": true,
+          "Changed": []
+        },
+        {
+          "Type": "SpatialClustering",
+          "Methods": 47,
+          "CurrentMethods": 47,
+          "Same": true,
+          "Changed": []
+        },
+        {
+          "Type": "EmptyWarpUpdates",
+          "Methods": 24,
+          "CurrentMethods": 24,
+          "Same": true,
+          "Changed": []
+        },
+        {
+          "Type": "SaveSerialization",
+          "Methods": 38,
+          "CurrentMethods": 38,
+          "Same": true,
+          "Changed": []
+        }
+      ],
+      "scope": "Disassembled method instructions and nested types; all six CPU classes match the previously validated reference. Not an additional whole-game equivalence proof."
+    }
+  }
+}

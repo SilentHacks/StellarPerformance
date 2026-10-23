@@ -83,6 +83,10 @@ internal static class SignalConnectionScan
         }
         return true;
     }
+    // Query only immediately after Read validated this group. A capacity/oversize
+    // fallback creates a fresh native union and must not build pointer plans.
+    internal static bool IsRetained(ConnectionGroup group, IReadOnlyCollection<SocketConnection> connections) =>
+        _cache.TryGetValue(group, out var snapshot) && ReferenceEquals(snapshot.Connections, connections);
     internal static void Clear()
     {
         _cache = new ConditionalWeakTable<ConnectionGroup, Snapshot>(); _entries = 0; _bytes = 0;

@@ -12,7 +12,7 @@ namespace StellarPerformance;
 
 public sealed class PerformancePlugin : MelonMod
 {
-    internal const string Version = "2.0.0";
+    internal const string Version = "2.1.0";
     private readonly List<string> _installed = new List<string>();
 
     public override void OnLateInitializeMelon()
@@ -29,6 +29,11 @@ public sealed class PerformancePlugin : MelonMod
         var reliable = preferences.CreateEntry("ReliableTransport", false, description: "Experimental: retain and retry Steam reliable packets during temporary congestion, with bounded queues and disconnect on sustained overload. Restart to change.");
         var capture = preferences.CreateEntry("NetworkCaptureSeconds", 0, description: "Explicit diagnostic capture at startup, up to 600 seconds. Zero disables observers and counters. Writes a CSV in UserData; restart to change.");
         var signalScan = preferences.CreateEntry("SignalConnectionScan", true, description: "Reuse exact signal connection unions while their socket sets are unchanged. Native signal values and circuit callbacks remain live. Restart to change.");
+        var signalReduction = preferences.CreateEntry("SignalReduction", true, description: "Fuse inspected native signal endpoint discovery and reduction, preserving exact values, order and native tick/callback rates. Unknown states retain native evaluation. Restart to change.");
+        var powerScan = preferences.CreateEntry("PowerTransferScan", true, description: "Avoid duplicate power-cable visits accumulated by native topology rebuilds. Preserve native power values, first-occurrence order and inspected notifications. Restart to change.");
+        var spatialClustering = preferences.CreateEntry("SpatialClustering", true, description: "Replace large surface-space adjacency graphs with an exact ordered spatial search. Preserve native distance tests, grouping, transfers and simulation cadence. Small or unsupported inputs retain native clustering. Restart to change.");
+        var emptyWarp = preferences.CreateEntry("EmptyWarpUpdates", true, description: "Avoid no-op warp and grounding work for inspected ships with no warp-drive parts. Requires the inspected Foundations version and native providers; real warp drives retain their current updates. Restart to change.");
+        var saveSerialization = preferences.CreateEntry("SaveSerialization", true, description: "Reuse exact unchanged hull JSON and native serializer contracts to reduce save stalls. Preserve native save flow and format; custom JSON policies fall back and replacement save writers retain their own path. Restart to change.");
         var canvases = preferences.CreateEntry("CanvasCulling", true, description: "Hide inspected offscreen ship-part canvases before rendering; retain native readout updates and focused controls. Restart to change.");
         Install("ship-grid-bounds", bounds.Value, h => ShipGridBounds.Install(h), "Ships", "Ships.Interface", "UnityEngine.CoreModule");
         Install("fluid-cable-topology", fluids.Value, h => FluidCableTopology.Install(h), "Ships", "Ships.Interface", "UnityEngine.CoreModule");
@@ -50,6 +55,14 @@ public sealed class PerformancePlugin : MelonMod
             ReplicationDeduplication.Install(h);
         }, "Assembly-CSharp", "Ships.Interface", "Players", "Items.Model", "FishNet.Runtime", "UnityEngine.CoreModule");
         Install("signal-connection-scan", signalScan.Value, SignalConnectionScan.Install, "Ships", "Ships.Interface");
+        Install("signal-reduction", signalReduction.Value, SignalReduction.Install, "Ships", "Ships.Interface");
+        Install("power-transfer-scan", powerScan.Value, PowerTransferScan.Install, "Assembly-CSharp", "Ships", "Ships.Interface");
+        Install("spatial-clustering", spatialClustering.Value, SpatialClustering.Install, "WorldTracking", "Core");
+        // Foundations installs its wrapper later in the loader's initialization
+        // sequence. Wait for the first update, after every mod has initialized.
+        _installEmptyWarp = emptyWarp.Value;
+        if (!emptyWarp.Value) LoggerInstance.Msg("empty-warp-updates disabled by configuration.");
+        Install("save-serialization", saveSerialization.Value, SaveSerialization.Install, "Saving", "Saving.Serialization", "Newtonsoft.Json", "Core");
         Install("canvas-culling", canvases.Value, h => { CanvasCulling.Log = message => LoggerInstance.Warning(message); CanvasCulling.Install(h); }, "Ships", "Ships.Interface", "Players", "Core", "UI", "UnityEngine.CoreModule", "UnityEngine.UI", "UnityEngine.UIModule", "Unity.TextMeshPro");
         Install("reliable-transport", reliable.Value, h => { ReliableTransport.Log = message => LoggerInstance.Warning(message); ReliableTransport.Install(h); }, "Assembly-CSharp", "FishNet.Runtime", "com.rlabrecque.steamworks.net");
         Install("scene-outlines", true, SceneOutlines.Install, "Rendering", "MKEdgeDetection", "MKEdgeDetectionUniversalRendererFeature", "Unity.RenderPipelines.Universal.Runtime", "Unity.RenderPipelines.Core.Runtime", "UnityEngine.CoreModule");
@@ -106,6 +119,9 @@ public sealed class PerformancePlugin : MelonMod
         if (_installed.Contains("reliable-transport")) ReliableTransport.Shutdown();
         NetworkCapture.Stop();
         if (_installed.Contains("signal-connection-scan")) SignalConnectionScan.Clear();
+        if (_installed.Contains("signal-reduction")) SignalEndpointPlan.Clear();
+        if (_installed.Contains("power-transfer-scan")) PowerTransferScan.Clear();
+        if (_installed.Contains("save-serialization")) SaveSerialization.Clear();
         if (_installed.Contains("canvas-culling")) CanvasCulling.Shutdown();
     }
     public override void OnSceneWasUnloaded(int buildIndex, string sceneName)
@@ -113,8 +129,20 @@ public sealed class PerformancePlugin : MelonMod
         PresetSelector.Close();
         if (VisualTuning.Available) VisualTuning.Change(Presets.Current);
         if (_installed.Contains("signal-connection-scan")) SignalConnectionScan.Clear();
+        if (_installed.Contains("signal-reduction")) SignalEndpointPlan.Clear();
+        if (_installed.Contains("power-transfer-scan")) PowerTransferScan.Clear();
+        if (_installed.Contains("save-serialization")) SaveSerialization.Clear();
         if (_installed.Contains("canvas-culling")) CanvasCulling.Clear();
     }
-    public override void OnUpdate() => PresetSelector.Update();
+    private bool _installEmptyWarp;
+    public override void OnUpdate()
+    {
+        if (_installEmptyWarp)
+        {
+            _installEmptyWarp = false;
+            Install("empty-warp-updates", true, EmptyWarpUpdates.Install, "Ships", "Ships.Interface", "WorldTracking", "Core", "UnityEngine.CoreModule");
+        }
+        PresetSelector.Update();
+    }
     public override void OnGUI() => PresetSelector.Draw();
 }

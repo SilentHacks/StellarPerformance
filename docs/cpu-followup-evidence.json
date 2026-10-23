@@ -1,0 +1,2346 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-23",
+  "scope": "Focused private-save whole-frame FPS comparisons and final Unity Mono native method-copy acceptance. Workload-specific practical repeats, not formal statistical confidence or unrestricted gameplay certification.",
+  "experimentalDefaults": {
+    "SignalReduction": false,
+    "PowerTransferScan": false,
+    "SaveSerialization": false,
+    "SpatialClustering": false,
+    "EmptyWarpUpdates": false
+  },
+  "finalShippingDllSha256": "EA06BAEE51B9AB3278731E0FA9E08BE9587EB827913E58C950CB6F7C5AD98F2B",
+  "nativeRunHashes": {
+    "Label": "Native-Final-05",
+    "WorldSHA256": "D97D4D83AB0E3E90693ED66D57A00FE5158BB2ED5881FCD829ACB5DF9EC9D47C",
+    "ModSHA256": "EA06BAEE51B9AB3278731E0FA9E08BE9587EB827913E58C950CB6F7C5AD98F2B",
+    "DriverSHA256": "A6C413C8065B64AB5DF7C55C7F09962072D9E774798A023C65686701E2FFC350",
+    "StartUtc": "2026-10-23T15:55:01.0729825Z"
+  },
+  "nativeOriginals": {
+    "OriginalsUntouched": true,
+    "FilesVerified": 157,
+    "WorldFilesVerified": 135,
+    "Utc": "2026-10-23T15:56:29.0627189Z"
+  },
+  "offlineTests": {
+    "modCasesPassed": 113,
+    "traceAnalysisCasesPassed": 15
+  },
+  "system": {
+    "cpu": "AMD Ryzen 7 3800X 8-Core Processor ",
+    "gpu": "NVIDIA GeForce RTX 2070 SUPER",
+    "api": "Direct3D11",
+    "quality": 0,
+    "vsync": 0,
+    "target": -1
+  },
+  "fpsGroups": [
+    {
+      "name": "fresh37",
+      "offMeanFps": 60.65293795420898,
+      "onMeanFps": 63.62984429951442,
+      "gainPercent": 4.908099171639302,
+      "pairs": [
+        {
+          "gainPercent": 4.21819106651431,
+          "off": {
+            "label": "Fresh-Off-02",
+            "fps": 61.381870751445426,
+            "frames": 1841,
+            "seconds": 29.99256910000007,
+            "p95Ms": 20.4198,
+            "p99Ms": 26.5158,
+            "low1Fps": 31.226888849450486,
+            "ticks": 1501,
+            "timedRowTicks": 1500,
+            "observedNetworkTicksPerSecond": 50.0123879017752,
+            "configuredTickRate": 50,
+            "renderingPositiveSamples": {
+              "Draw_Calls_Count": 2197.0059782608696,
+              "SetPass_Calls_Count": 962.5402173913044,
+              "Triangles_Count": 11396204.486956522
+            },
+            "hashes": {
+              "Label": "Fresh-Off-02",
+              "WorldSHA256": "D97D4D83AB0E3E90693ED66D57A00FE5158BB2ED5881FCD829ACB5DF9EC9D47C",
+              "ModSHA256": "77B47392F9E7647C082AED3F1643A50B86E251D844E8DA60B7128162FC24E0B7",
+              "DriverSHA256": "C5840182756ABF5E4511255051FA3BD573125AC8F21CEA8D21F3BA32FED63F71",
+              "StartUtc": "2026-10-23T14:30:09.6609474Z"
+            },
+            "originals": {
+              "OriginalsUntouched": true,
+              "FilesVerified": 157,
+              "WorldFilesVerified": 135,
+              "Utc": "2026-10-23T14:31:39.8514752Z"
+            }
+          },
+          "on": {
+            "label": "Fresh-On-02",
+            "fps": 63.97107533994225,
+            "frames": 1919,
+            "seconds": 29.997932499999965,
+            "p95Ms": 19.1661,
+            "p99Ms": 25.54,
+            "low1Fps": 31.65849349892836,
+            "ticks": 1499,
+            "timedRowTicks": 1498,
+            "observedNetworkTicksPerSecond": 49.93677480939734,
+            "configuredTickRate": 50,
+            "renderingPositiveSamples": {
+              "Draw_Calls_Count": 2197.0396246089676,
+              "SetPass_Calls_Count": 966.5662148070908,
+              "Triangles_Count": 11396338.629822733
+            },
+            "hashes": {
+              "Label": "Fresh-On-02",
+              "WorldSHA256": "D97D4D83AB0E3E90693ED66D57A00FE5158BB2ED5881FCD829ACB5DF9EC9D47C",
+              "ModSHA256": "77B47392F9E7647C082AED3F1643A50B86E251D844E8DA60B7128162FC24E0B7",
+              "DriverSHA256": "C5840182756ABF5E4511255051FA3BD573125AC8F21CEA8D21F3BA32FED63F71",
+              "StartUtc": "2026-10-23T14:28:31.4384525Z"
+            },
+            "originals": {
+              "OriginalsUntouched": true,
+              "FilesVerified": 157,
+              "WorldFilesVerified": 135,
+              "Utc": "2026-10-23T14:30:01.7466159Z"
+            }
+          }
+        },
+        {
+          "gainPercent": 5.614791757160376,
+          "off": {
+            "label": "Fresh-Off-03",
+            "fps": 59.92400515697253,
+            "frames": 1797,
+            "seconds": 29.987982199999994,
+            "p95Ms": 21.1273,
+            "p99Ms": 30.0269,
+            "low1Fps": 28.983980213148193,
+            "ticks": 1501,
+            "timedRowTicks": 1500,
+            "observedNetworkTicksPerSecond": 50.020037693633164,
+            "configuredTickRate": 50,
+            "renderingPositiveSamples": {
+              "Draw_Calls_Count": 2197.063474387528,
+              "SetPass_Calls_Count": 963.2806236080178,
+              "Triangles_Count": 11396320.73273942
+            },
+            "hashes": {
+              "Label": "Fresh-Off-03",
+              "WorldSHA256": "D97D4D83AB0E3E90693ED66D57A00FE5158BB2ED5881FCD829ACB5DF9EC9D47C",
+              "ModSHA256": "77B47392F9E7647C082AED3F1643A50B86E251D844E8DA60B7128162FC24E0B7",
+              "DriverSHA256": "C5840182756ABF5E4511255051FA3BD573125AC8F21CEA8D21F3BA32FED63F71",
+              "StartUtc": "2026-10-23T14:31:54.2921395Z"
+            },
+            "originals": {
+              "OriginalsUntouched": true,
+              "FilesVerified": 157,
+              "WorldFilesVerified": 135,
+              "Utc": "2026-10-23T14:33:24.6539443Z"
+            }
+          },
+          "on": {
+            "label": "Fresh-On-03",
+            "fps": 63.288613259086574,
+            "frames": 1898,
+            "seconds": 29.989596899999974,
+            "p95Ms": 19.603,
+            "p99Ms": 25.6991,
+            "low1Fps": 32.99806686324959,
+            "ticks": 1500,
+            "timedRowTicks": 1500,
+            "observedNetworkTicksPerSecond": 50.01734451455736,
+            "configuredTickRate": 50,
+            "renderingPositiveSamples": {
+              "Draw_Calls_Count": 2196.9504741833507,
+              "SetPass_Calls_Count": 967.0295202952029,
+              "Triangles_Count": 11396212.708487084
+            },
+            "hashes": {
+              "Label": "Fresh-On-03",
+              "WorldSHA256": "D97D4D83AB0E3E90693ED66D57A00FE5158BB2ED5881FCD829ACB5DF9EC9D47C",
+              "ModSHA256": "77B47392F9E7647C082AED3F1643A50B86E251D844E8DA60B7128162FC24E0B7",
+              "DriverSHA256": "C5840182756ABF5E4511255051FA3BD573125AC8F21CEA8D21F3BA32FED63F71",
+              "StartUtc": "2026-10-23T14:33:46.3403308Z"
+            },
+            "originals": {
+              "OriginalsUntouched": true,
+              "FilesVerified": 157,
+              "WorldFilesVerified": 135,
+              "Utc": "2026-10-23T14:35:16.6316335Z"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "nativePowerHistory1000",
+      "offMeanFps": 56.13562709332573,
+      "onMeanFps": 63.8179221832514,
+      "gainPercent": 13.685239637839652,
+      "pairs": [
+        {
+          "gainPercent": 15.108669706051892,
+          "off": {
+            "label": "Aged-Off-01",
+            "fps": 55.59160580225096,
+            "frames": 1667,
+            "seconds": 29.986541600000002,
+            "p95Ms": 23.4315,
+            "p99Ms": 31.0125,
+            "low1Fps": 27.634242833836332,
+            "ticks": 1500,
+            "timedRowTicks": 1499,
+            "observedNetworkTicksPerSecond": 49.9890924400565,
+            "configuredTickRate": 50,
+            "renderingPositiveSamples": {
+              "Draw_Calls_Count": 2195.9759903961585,
+              "SetPass_Calls_Count": 964.593637454982,
+              "Triangles_Count": 11394495.080432173
+            },
+            "hashes": {
+              "Label": "Aged-Off-01",
+              "WorldSHA256": "D97D4D83AB0E3E90693ED66D57A00FE5158BB2ED5881FCD829ACB5DF9EC9D47C",
+              "ModSHA256": "77B47392F9E7647C082AED3F1643A50B86E251D844E8DA60B7128162FC24E0B7",
+              "DriverSHA256": "E0F6ACBAC706FCF57E2974E24AFC4238A0408EE70F9EACB7FED73E3B02F4EAF1",
+              "StartUtc": "2026-10-23T14:44:31.5895845Z"
+            },
+            "originals": {
+              "OriginalsUntouched": true,
+              "FilesVerified": 157,
+              "WorldFilesVerified": 135,
+              "Utc": "2026-10-23T14:46:07.6867043Z"
+            }
+          },
+          "on": {
+            "label": "Aged-On-01",
+            "fps": 63.99075790720344,
+            "frames": 1919,
+            "seconds": 29.988705600000063,
+            "p95Ms": 18.8663,
+            "p99Ms": 25.5435,
+            "low1Fps": 35.87490006952178,
+            "ticks": 1500,
+            "timedRowTicks": 1500,
+            "observedNetworkTicksPerSecond": 50.01883108952848,
+            "configuredTickRate": 50,
+            "renderingPositiveSamples": {
+              "Draw_Calls_Count": 2195.92700729927,
+              "SetPass_Calls_Count": 965.1110531803962,
+              "Triangles_Count": 11394378.515119916
+            },
+            "hashes": {
+              "Label": "Aged-On-01",
+              "WorldSHA256": "D97D4D83AB0E3E90693ED66D57A00FE5158BB2ED5881FCD829ACB5DF9EC9D47C",
+              "ModSHA256": "77B47392F9E7647C082AED3F1643A50B86E251D844E8DA60B7128162FC24E0B7",
+              "DriverSHA256": "E0F6ACBAC706FCF57E2974E24AFC4238A0408EE70F9EACB7FED73E3B02F4EAF1",
+              "StartUtc": "2026-10-23T14:46:32.2402450Z"
+            },
+            "originals": {
+              "OriginalsUntouched": true,
+              "FilesVerified": 157,
+              "WorldFilesVerified": 135,
+              "Utc": "2026-10-23T14:48:07.3442040Z"
+            }
+          }
+        },
+        {
+          "gainPercent": 12.28913423678879,
+          "off": {
+            "label": "Aged-Off-02",
+            "fps": 56.6796483844005,
+            "frames": 1700,
+            "seconds": 29.993128899999984,
+            "p95Ms": 21.086,
+            "p99Ms": 27.0923,
+            "low1Fps": 31.541538907972548,
+            "ticks": 1500,
+            "timedRowTicks": 1500,
+            "observedNetworkTicksPerSecond": 50.01145445682397,
+            "configuredTickRate": 50,
+            "renderingPositiveSamples": {
+              "Draw_Calls_Count": 2195.97586815774,
+              "SetPass_Calls_Count": 965.1177163037081,
+              "Triangles_Count": 11394456.748675691
+            },
+            "hashes": {
+              "Label": "Aged-Off-02",
+              "WorldSHA256": "D97D4D83AB0E3E90693ED66D57A00FE5158BB2ED5881FCD829ACB5DF9EC9D47C",
+              "ModSHA256": "77B47392F9E7647C082AED3F1643A50B86E251D844E8DA60B7128162FC24E0B7",
+              "DriverSHA256": "E0F6ACBAC706FCF57E2974E24AFC4238A0408EE70F9EACB7FED73E3B02F4EAF1",
+              "StartUtc": "2026-10-23T14:50:08.0888385Z"
+            },
+            "originals": {
+              "OriginalsUntouched": true,
+              "FilesVerified": 157,
+              "WorldFilesVerified": 135,
+              "Utc": "2026-10-23T14:51:43.3462202Z"
+            }
+          },
+          "on": {
+            "label": "Aged-On-02",
+            "fps": 63.645086459299364,
+            "frames": 1909,
+            "seconds": 29.994460000000057,
+            "p95Ms": 18.9189,
+            "p99Ms": 25.8023,
+            "low1Fps": 32.595799053418,
+            "ticks": 1501,
+            "timedRowTicks": 1500,
+            "observedNetworkTicksPerSecond": 50.00923503873706,
+            "configuredTickRate": 50,
+            "renderingPositiveSamples": {
+              "Draw_Calls_Count": 2195.899895178197,
+              "SetPass_Calls_Count": 967.1090146750524,
+              "Triangles_Count": 11394350.396226415
+            },
+            "hashes": {
+              "Label": "Aged-On-02",
+              "WorldSHA256": "D97D4D83AB0E3E90693ED66D57A00FE5158BB2ED5881FCD829ACB5DF9EC9D47C",
+              "ModSHA256": "77B47392F9E7647C082AED3F1643A50B86E251D844E8DA60B7128162FC24E0B7",
+              "DriverSHA256": "E0F6ACBAC706FCF57E2974E24AFC4238A0408EE70F9EACB7FED73E3B02F4EAF1",
+              "StartUtc": "2026-10-23T14:48:23.5950248Z"
+            },
+            "originals": {
+              "OriginalsUntouched": true,
+              "FilesVerified": 157,
+              "WorldFilesVerified": 135,
+              "Utc": "2026-10-23T14:49:58.8055029Z"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "crafted1061ships",
+      "offMeanFps": 2.5022704953677737,
+      "onMeanFps": 8.63369923158997,
+      "gainPercent": 245.034609470589,
+      "pairs": [
+        {
+          "gainPercent": 244.06634009019038,
+          "off": {
+            "label": "Stress-Off-02",
+            "fps": 2.4904720261633653,
+            "frames": 74,
+            "seconds": 29.713242799999993,
+            "p95Ms": 496.5659,
+            "p99Ms": 809.5923,
+            "low1Fps": 1.235189613339949,
+            "ticks": 150,
+            "timedRowTicks": 148,
+            "observedNetworkTicksPerSecond": 4.9809440523267305,
+            "configuredTickRate": 50,
+            "renderingPositiveSamples": {
+              "Draw_Calls_Count": 11800.698630136987,
+              "SetPass_Calls_Count": 1035.0,
+              "Triangles_Count": 11634938.849315068
+            },
+            "hashes": {
+              "Label": "Stress-Off-02",
+              "WorldSHA256": "A64C3DEB6B44E04B092C71FC80DB46C840D97CED316C86D6352CF9B644E3ACE1",
+              "ModSHA256": "BAD073C530503CD6A9F9D464F6D406AC7861670D2AC9D45B8FAF388CBC34BF82",
+              "DriverSHA256": "F088F1F86BED9AD6C868DEAF1F2A89DFF171AA7DB74A9CA5E337EBDE68F983DF",
+              "StartUtc": "2026-10-23T15:08:35.5733230Z"
+            },
+            "originals": {
+              "OriginalsUntouched": true,
+              "FilesVerified": 157,
+              "WorldFilesVerified": 135,
+              "Utc": "2026-10-23T15:12:37.9312848Z"
+            },
+            "spatial-live-warmup": {
+              "nativeClusteringInvocations": 965,
+              "maxNativeNodes": 1041,
+              "shippingGraphQueries": 0,
+              "shippingSelected": 0,
+              "maxShippingNodes": 0,
+              "maxSelectedNodes": 0,
+              "observersRemoved": true,
+              "scope": "Warmup observation only; observer owners positively absent from both targets before FPS capture. Native invocation counts cover the nonempty node-array path. Native and shipping inputs/returns are not modified."
+            },
+            "scene-readiness": {
+              "ready": true,
+              "trackedVisuals": 17,
+              "pendingBatches": 0,
+              "elapsed": 199.0664,
+              "requiredQuietWarmup": 35.0
+            }
+          },
+          "on": {
+            "label": "Stress-On-02",
+            "fps": 8.5688759513903,
+            "frames": 257,
+            "seconds": 29.992265199999977,
+            "p95Ms": 155.2473,
+            "p99Ms": 183.3383,
+            "low1Fps": 4.817020653457754,
+            "ticks": 516,
+            "timedRowTicks": 514,
+            "observedNetworkTicksPerSecond": 17.1377519027806,
+            "configuredTickRate": 50,
+            "renderingPositiveSamples": {
+              "Draw_Calls_Count": 11704.96484375,
+              "SetPass_Calls_Count": 1036.96875,
+              "Triangles_Count": 11625420.859375
+            },
+            "hashes": {
+              "Label": "Stress-On-02",
+              "WorldSHA256": "A64C3DEB6B44E04B092C71FC80DB46C840D97CED316C86D6352CF9B644E3ACE1",
+              "ModSHA256": "BAD073C530503CD6A9F9D464F6D406AC7861670D2AC9D45B8FAF388CBC34BF82",
+              "DriverSHA256": "F088F1F86BED9AD6C868DEAF1F2A89DFF171AA7DB74A9CA5E337EBDE68F983DF",
+              "StartUtc": "2026-10-23T15:04:21.5810324Z"
+            },
+            "originals": {
+              "OriginalsUntouched": true,
+              "FilesVerified": 157,
+              "WorldFilesVerified": 135,
+              "Utc": "2026-10-23T15:07:17.3179843Z"
+            },
+            "spatial-live-warmup": {
+              "nativeClusteringInvocations": 1337,
+              "maxNativeNodes": 1041,
+              "shippingGraphQueries": 1337,
+              "shippingSelected": 1337,
+              "maxShippingNodes": 1041,
+              "maxSelectedNodes": 1041,
+              "observersRemoved": true,
+              "scope": "Warmup observation only; observer owners positively absent from both targets before FPS capture. Native invocation counts cover the nonempty node-array path. Native and shipping inputs/returns are not modified."
+            },
+            "scene-readiness": {
+              "ready": true,
+              "trackedVisuals": 17,
+              "pendingBatches": 0,
+              "elapsed": 132.060913,
+              "requiredQuietWarmup": 35.0
+            }
+          }
+        },
+        {
+          "gainPercent": 245.99379071806257,
+          "off": {
+            "label": "Stress-Off-03",
+            "fps": 2.5140689645721825,
+            "frames": 75,
+            "seconds": 29.8321172,
+            "p95Ms": 463.7804,
+            "p99Ms": 825.0329,
+            "low1Fps": 1.2120728761240915,
+            "ticks": 152,
+            "timedRowTicks": 150,
+            "observedNetworkTicksPerSecond": 5.028137929144365,
+            "configuredTickRate": 50,
+            "renderingPositiveSamples": {
+              "Draw_Calls_Count": 11802.418918918918,
+              "SetPass_Calls_Count": 1035.0,
+              "Triangles_Count": 11635340.64864865
+            },
+            "hashes": {
+              "Label": "Stress-Off-03",
+              "WorldSHA256": "A64C3DEB6B44E04B092C71FC80DB46C840D97CED316C86D6352CF9B644E3ACE1",
+              "ModSHA256": "BAD073C530503CD6A9F9D464F6D406AC7861670D2AC9D45B8FAF388CBC34BF82",
+              "DriverSHA256": "B745A875036709249BB2FFA8D58D7DC3959B715B1F2A65FC3D3F417B3EED69F6",
+              "StartUtc": "2026-10-23T15:14:38.3172540Z"
+            },
+            "originals": {
+              "OriginalsUntouched": true,
+              "FilesVerified": 157,
+              "WorldFilesVerified": 135,
+              "Utc": "2026-10-23T15:18:38.7492443Z"
+            },
+            "spatial-live-warmup": {
+              "nativeClusteringInvocations": 961,
+              "maxNativeNodes": 1041,
+              "shippingGraphQueries": 0,
+              "shippingSelected": 0,
+              "maxShippingNodes": 0,
+              "maxSelectedNodes": 0,
+              "observersRemoved": true,
+              "scope": "Warmup observation only; observer owners positively absent from both targets before FPS capture. Native invocation counts cover the nonempty node-array path. Native and shipping inputs/returns are not modified."
+            },
+            "scene-readiness": {
+              "ready": true,
+              "trackedVisuals": 17,
+              "pendingBatches": 0,
+              "elapsed": 198.092087,
+              "requiredQuietWarmup": 35.0
+            },
+            "00-control-native-physics": {
+              "start": 999,
+              "finish": 1151,
+              "steps": 152,
+              "scope": "Read-only native WorldPhysicsServerUpdater._myTick endpoints. No physics/tick hooks; counter increments in native PrePhysics."
+            }
+          },
+          "on": {
+            "label": "Stress-On-03",
+            "fps": 8.69852251178964,
+            "frames": 260,
+            "seconds": 29.89013360000001,
+            "p95Ms": 150.7386,
+            "p99Ms": 164.5773,
+            "low1Fps": 5.5465778030948245,
+            "ticks": 522,
+            "timedRowTicks": 520,
+            "observedNetworkTicksPerSecond": 17.39704502357928,
+            "configuredTickRate": 50,
+            "renderingPositiveSamples": {
+              "Draw_Calls_Count": 11707.864864864865,
+              "SetPass_Calls_Count": 1036.969111969112,
+              "Triangles_Count": 11625492.972972972
+            },
+            "hashes": {
+              "Label": "Stress-On-03",
+              "WorldSHA256": "A64C3DEB6B44E04B092C71FC80DB46C840D97CED316C86D6352CF9B644E3ACE1",
+              "ModSHA256": "BAD073C530503CD6A9F9D464F6D406AC7861670D2AC9D45B8FAF388CBC34BF82",
+              "DriverSHA256": "3DBAE90DAC09E6F1CB9FC895C770056342CB1CC3EC85D15B7B2CE4109C186985",
+              "StartUtc": "2026-10-23T15:21:47.9139486Z"
+            },
+            "originals": {
+              "OriginalsUntouched": true,
+              "FilesVerified": 157,
+              "WorldFilesVerified": 135,
+              "Utc": "2026-10-23T15:25:19.8964040Z"
+            },
+            "spatial-live-warmup": {
+              "nativeClusteringInvocations": 1327,
+              "maxNativeNodes": 1041,
+              "shippingGraphQueries": 1327,
+              "shippingSelected": 1327,
+              "maxShippingNodes": 1041,
+              "maxSelectedNodes": 1041,
+              "observersRemoved": true,
+              "scope": "Warmup observation only; observer owners positively absent from both targets before FPS capture. Native invocation counts cover the nonempty node-array path. Native and shipping inputs/returns are not modified."
+            },
+            "scene-readiness": {
+              "ready": true,
+              "trackedVisuals": 17,
+              "pendingBatches": 0,
+              "elapsed": 130.1655,
+              "requiredQuietWarmup": 35.0
+            },
+            "00-control-native-physics": {
+              "start": 1429,
+              "finish": 1951,
+              "steps": 522,
+              "scope": "Read-only native WorldPhysicsServerUpdater._myTick endpoints. No physics/tick hooks; counter increments in native PrePhysics."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "finalCombined1061",
+      "offMeanFps": 2.3971276954211174,
+      "onMeanFps": 11.391004154563104,
+      "gainPercent": 375.1938820915412,
+      "pairs": [
+        {
+          "gainPercent": 375.1938820915412,
+          "off": {
+            "label": "Final-Stress-Off-01",
+            "fps": 2.3971276954211174,
+            "frames": 71,
+            "seconds": 29.618780899999997,
+            "p95Ms": 514.3556,
+            "p99Ms": 801.6335,
+            "low1Fps": 1.2474528571972103,
+            "ticks": 144,
+            "timedRowTicks": 142,
+            "observedNetworkTicksPerSecond": 4.794255390842235,
+            "configuredTickRate": 50,
+            "renderingPositiveSamples": {
+              "Draw_Calls_Count": 11802.8,
+              "SetPass_Calls_Count": 1037.0,
+              "Triangles_Count": 11635740.057142857
+            },
+            "hashes": {
+              "Label": "Final-Stress-Off-01",
+              "WorldSHA256": "A64C3DEB6B44E04B092C71FC80DB46C840D97CED316C86D6352CF9B644E3ACE1",
+              "ModSHA256": "EA06BAEE51B9AB3278731E0FA9E08BE9587EB827913E58C950CB6F7C5AD98F2B",
+              "DriverSHA256": "A6C413C8065B64AB5DF7C55C7F09962072D9E774798A023C65686701E2FFC350",
+              "StartUtc": "2026-10-23T16:01:01.5900552Z"
+            },
+            "originals": {
+              "OriginalsUntouched": true,
+              "FilesVerified": 157,
+              "WorldFilesVerified": 135,
+              "Utc": "2026-10-23T16:05:06.2075604Z"
+            },
+            "spatial-live-warmup": {
+              "nativeClusteringInvocations": 959,
+              "maxNativeNodes": 1041,
+              "shippingGraphQueries": 0,
+              "shippingSelected": 0,
+              "maxShippingNodes": 0,
+              "maxSelectedNodes": 0,
+              "observersRemoved": true,
+              "scope": "Warmup observation only; observer owners positively absent from both targets before FPS capture. Native invocation counts cover the nonempty node-array path. Native and shipping inputs/returns are not modified."
+            },
+            "scene-readiness": {
+              "ready": true,
+              "trackedVisuals": 17,
+              "pendingBatches": 0,
+              "elapsed": 200.512772,
+              "requiredQuietWarmup": 35.0
+            },
+            "00-control-native-physics": {
+              "start": 996,
+              "finish": 1140,
+              "steps": 144,
+              "scope": "Read-only native WorldPhysicsServerUpdater._myTick endpoints. No physics/tick hooks; counter increments in native PrePhysics."
+            }
+          },
+          "on": {
+            "label": "Final-Stress-On-01",
+            "fps": 11.391004154563104,
+            "frames": 341,
+            "seconds": 29.935903400000022,
+            "p95Ms": 118.3938,
+            "p99Ms": 134.6811,
+            "low1Fps": 6.189316332244152,
+            "ticks": 684,
+            "timedRowTicks": 682,
+            "observedNetworkTicksPerSecond": 22.78200830912621,
+            "configuredTickRate": 50,
+            "renderingPositiveSamples": {
+              "Draw_Calls_Count": 11646.65,
+              "SetPass_Calls_Count": 1036.520588235294,
+              "Triangles_Count": 11619458.741176471
+            },
+            "hashes": {
+              "Label": "Final-Stress-On-01",
+              "WorldSHA256": "A64C3DEB6B44E04B092C71FC80DB46C840D97CED316C86D6352CF9B644E3ACE1",
+              "ModSHA256": "EA06BAEE51B9AB3278731E0FA9E08BE9587EB827913E58C950CB6F7C5AD98F2B",
+              "DriverSHA256": "A6C413C8065B64AB5DF7C55C7F09962072D9E774798A023C65686701E2FFC350",
+              "StartUtc": "2026-10-23T15:57:27.3995503Z"
+            },
+            "originals": {
+              "OriginalsUntouched": true,
+              "FilesVerified": 157,
+              "WorldFilesVerified": 135,
+              "Utc": "2026-10-23T16:00:16.0940833Z"
+            },
+            "spatial-live-warmup": {
+              "nativeClusteringInvocations": 1499,
+              "maxNativeNodes": 1041,
+              "shippingGraphQueries": 1499,
+              "shippingSelected": 1499,
+              "maxShippingNodes": 1041,
+              "maxSelectedNodes": 1041,
+              "observersRemoved": true,
+              "scope": "Warmup observation only; observer owners positively absent from both targets before FPS capture. Native invocation counts cover the nonempty node-array path. Native and shipping inputs/returns are not modified."
+            },
+            "scene-readiness": {
+              "ready": true,
+              "trackedVisuals": 17,
+              "pendingBatches": 0,
+              "elapsed": 122.81749,
+              "requiredQuietWarmup": 35.0
+            },
+            "00-control-native-physics": {
+              "start": 1628,
+              "finish": 2312,
+              "steps": 684,
+              "scope": "Read-only native WorldPhysicsServerUpdater._myTick endpoints. No physics/tick hooks; counter increments in native PrePhysics."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "finalFiveFlagsFresh37",
+      "offMeanFps": 63.577590904400104,
+      "onMeanFps": 66.24199004247811,
+      "gainPercent": 4.190783419403843,
+      "pairs": [
+        {
+          "gainPercent": 2.291582617679966,
+          "off": {
+            "label": "Final-Fresh-Off-01",
+            "fps": 63.38661527965003,
+            "frames": 1901,
+            "seconds": 29.990558600000007,
+            "p95Ms": 19.5214,
+            "p99Ms": 25.9533,
+            "low1Fps": 33.58619020708007,
+            "ticks": 1501,
+            "timedRowTicks": 1500,
+            "observedNetworkTicksPerSecond": 50.01574062044978,
+            "configuredTickRate": 50,
+            "renderingPositiveSamples": {
+              "Draw_Calls_Count": 2196.98,
+              "SetPass_Calls_Count": 973.2721052631579,
+              "Triangles_Count": 11396187.315789474
+            },
+            "hashes": {
+              "Label": "Final-Fresh-Off-01",
+              "WorldSHA256": "D97D4D83AB0E3E90693ED66D57A00FE5158BB2ED5881FCD829ACB5DF9EC9D47C",
+              "ModSHA256": "EA06BAEE51B9AB3278731E0FA9E08BE9587EB827913E58C950CB6F7C5AD98F2B",
+              "DriverSHA256": "A6C413C8065B64AB5DF7C55C7F09962072D9E774798A023C65686701E2FFC350",
+              "StartUtc": "2026-10-23T16:06:01.5604000Z"
+            },
+            "originals": {
+              "OriginalsUntouched": true,
+              "FilesVerified": 157,
+              "WorldFilesVerified": 135,
+              "Utc": "2026-10-23T16:07:31.5861154Z"
+            },
+            "00-control-native-physics": {
+              "start": 1628,
+              "finish": 3129,
+              "steps": 1501,
+              "scope": "Read-only native WorldPhysicsServerUpdater._myTick endpoints. No physics/tick hooks; counter increments in native PrePhysics."
+            }
+          },
+          "on": {
+            "label": "Final-Fresh-On-01",
+            "fps": 64.83917193733416,
+            "frames": 1944,
+            "seconds": 29.98187580000003,
+            "p95Ms": 19.809,
+            "p99Ms": 29.1472,
+            "low1Fps": 27.32529643632113,
+            "ticks": 1501,
+            "timedRowTicks": 1500,
+            "observedNetworkTicksPerSecond": 50.0302252602887,
+            "configuredTickRate": 50,
+            "renderingPositiveSamples": {
+              "Draw_Calls_Count": 2197.0231600617603,
+              "SetPass_Calls_Count": 965.2753474009264,
+              "Triangles_Count": 11396232.80288214
+            },
+            "hashes": {
+              "Label": "Final-Fresh-On-01",
+              "WorldSHA256": "D97D4D83AB0E3E90693ED66D57A00FE5158BB2ED5881FCD829ACB5DF9EC9D47C",
+              "ModSHA256": "EA06BAEE51B9AB3278731E0FA9E08BE9587EB827913E58C950CB6F7C5AD98F2B",
+              "DriverSHA256": "A6C413C8065B64AB5DF7C55C7F09962072D9E774798A023C65686701E2FFC350",
+              "StartUtc": "2026-10-23T16:08:23.9110557Z"
+            },
+            "originals": {
+              "OriginalsUntouched": true,
+              "FilesVerified": 157,
+              "WorldFilesVerified": 135,
+              "Utc": "2026-10-23T16:09:53.9228153Z"
+            },
+            "00-control-native-physics": {
+              "start": 1644,
+              "finish": 3145,
+              "steps": 1501,
+              "scope": "Read-only native WorldPhysicsServerUpdater._myTick endpoints. No physics/tick hooks; counter increments in native PrePhysics."
+            }
+          }
+        },
+        {
+          "gainPercent": 6.078608677364472,
+          "off": {
+            "label": "Final-Fresh-Off-02",
+            "fps": 63.76856652915018,
+            "frames": 1912,
+            "seconds": 29.983424499999977,
+            "p95Ms": 18.9834,
+            "p99Ms": 25.7795,
+            "low1Fps": 32.140394656980796,
+            "ticks": 1501,
+            "timedRowTicks": 1500,
+            "observedNetworkTicksPerSecond": 50.02764110550485,
+            "configuredTickRate": 50,
+            "renderingPositiveSamples": {
+              "Draw_Calls_Count": 2196.959706959707,
+              "SetPass_Calls_Count": 969.2679225536368,
+              "Triangles_Count": 11396144.246991104
+            },
+            "hashes": {
+              "Label": "Final-Fresh-Off-02",
+              "WorldSHA256": "D97D4D83AB0E3E90693ED66D57A00FE5158BB2ED5881FCD829ACB5DF9EC9D47C",
+              "ModSHA256": "EA06BAEE51B9AB3278731E0FA9E08BE9587EB827913E58C950CB6F7C5AD98F2B",
+              "DriverSHA256": "A6C413C8065B64AB5DF7C55C7F09962072D9E774798A023C65686701E2FFC350",
+              "StartUtc": "2026-10-23T16:13:19.9519666Z"
+            },
+            "originals": {
+              "OriginalsUntouched": true,
+              "FilesVerified": 157,
+              "WorldFilesVerified": 135,
+              "Utc": "2026-10-23T16:14:49.9892289Z"
+            },
+            "00-control-native-physics": {
+              "start": 1639,
+              "finish": 3140,
+              "steps": 1501,
+              "scope": "Read-only native WorldPhysicsServerUpdater._myTick endpoints. No physics/tick hooks; counter increments in native PrePhysics."
+            }
+          },
+          "on": {
+            "label": "Final-Fresh-On-02",
+            "fps": 67.64480814762204,
+            "frames": 2029,
+            "seconds": 29.99491100000003,
+            "p95Ms": 17.7741,
+            "p99Ms": 23.9018,
+            "low1Fps": 38.469062122342,
+            "ticks": 1501,
+            "timedRowTicks": 1500,
+            "observedNetworkTicksPerSecond": 50.008483105684114,
+            "configuredTickRate": 50,
+            "renderingPositiveSamples": {
+              "Draw_Calls_Count": 2196.950690335306,
+              "SetPass_Calls_Count": 967.2702169625246,
+              "Triangles_Count": 11396163.97633136
+            },
+            "hashes": {
+              "Label": "Final-Fresh-On-02",
+              "WorldSHA256": "D97D4D83AB0E3E90693ED66D57A00FE5158BB2ED5881FCD829ACB5DF9EC9D47C",
+              "ModSHA256": "EA06BAEE51B9AB3278731E0FA9E08BE9587EB827913E58C950CB6F7C5AD98F2B",
+              "DriverSHA256": "A6C413C8065B64AB5DF7C55C7F09962072D9E774798A023C65686701E2FFC350",
+              "StartUtc": "2026-10-23T16:11:12.4825205Z"
+            },
+            "originals": {
+              "OriginalsUntouched": true,
+              "FilesVerified": 157,
+              "WorldFilesVerified": 135,
+              "Utc": "2026-10-23T16:12:42.5855852Z"
+            },
+            "00-control-native-physics": {
+              "start": 1640,
+              "finish": 3141,
+              "steps": 1501,
+              "scope": "Read-only native WorldPhysicsServerUpdater._myTick endpoints. No physics/tick hooks; counter increments in native PrePhysics."
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "excluded": [
+    "Fresh-Off-01",
+    "Fresh-On-01",
+    "Stress-On-01",
+    "all checks/profile windows",
+    "all older hidden/unfocused/black captures"
+  ],
+  "simulation": {
+    "passed": true,
+    "runtime": "4.0.30319.42000",
+    "unity": "6000.3.24f1",
+    "circuits": {
+      "ticks": 2400,
+      "sameTickExtraPasses": 960,
+      "rewires": 276,
+      "partReplacements": 63,
+      "reentrantTicks": 343,
+      "derivedStateFallbackTicks": 25,
+      "maxRetainedShippingPlans": 41,
+      "initialOperationCount": 9,
+      "comparedCallbacks": 71914,
+      "allBinaryOperations": 10,
+      "allUnaryOperations": 10,
+      "comparer": {
+        "checks": 24,
+        "noCustomComparerCallbacksBeforeFallback": true,
+        "nativeComparerCallbackMultiplicityMatches": true
+      },
+      "nativeCallRewrites": 1,
+      "exactScalarBits": true,
+      "nativeFeedbackOperationOrder": true
+    },
+    "machines": {
+      "ticks": 1600,
+      "interruptions": 357,
+      "foreignObserverFallbackTicks": 229,
+      "comparedObserverEvents": 847,
+      "maximumNativeAccumulatedCableIds": 133,
+      "realGeneratorFuelAndElectrolyzerInventory": true,
+      "realFluidAdditionBits": true,
+      "reentrantForeignObserver": true,
+      "nativeObserverQueue": "Unknown/native network subscriber validation is separate; no live network queues or world cables are mutated."
+    },
+    "saves": {
+      "changingDtos": 320,
+      "checks": 640,
+      "exactUtf8Bytes": true,
+      "allHullScalarFieldsAndArrayOrderMutated": true,
+      "sourceFieldsUnchanged": true,
+      "nativeSaveTransactionInvoked": false,
+      "nativeDtoContentsPositivelyVerified": true,
+      "qualifiedFastPath": true,
+      "retainedHullSegments": 63,
+      "simulationMath": "Exact native JSON output for every public-field checkpoint, including gate history, pose/velocity scalar data and nonfinite values. Raw quaternion components avoid executing Euler getters or implying restore correctness from JSON roundtrip."
+    },
+    "totals": {
+      "GroupEvaluations": 33952,
+      "CandidateEvaluations": 16917,
+      "FallbackEvaluations": 59,
+      "StateComparisons": 41808,
+      "GroupComparisons": 78662,
+      "CallbackComparisons": 82513,
+      "PowerComparisons": 23980,
+      "CableComparisons": 3197,
+      "SaveComparisons": 640
+    },
+    "scope": "Isolated twin authoritative native circuits and machine state evolution in Unity Mono. Actual shipping group reducer, retained union/server endpoint caches and power transpiler. Native operation stack, gate maths, state/callback ordering, memory, rotor/reaction-wheel/wood-thruster consumers, generator fuel and electrolyzer production bodies preserved. Constructed workload; no multiplayer/chaotic long-term physics certification or FPS inference. No live-world mutation."
+  },
+  "spatial": {
+    "passed": true,
+    "scope": "Unmodified native emitted adjacency+BFS oracle; live transpose and transfer phases are excluded. Timings exclude fixture neighbor clearing; native lists have warmed capacities. Targeted algorithm timings, no FPS claim.",
+    "runtime": "4.0.30319.42000",
+    "nativeModuleMvid": "9e7dd5cb-71fb-4ad7-b191-2136eb4e6e60",
+    "nativeModuleSha256": "4B09EB0A0161C90B44D4ED110A9C8267C4CE5949406FB22A87633C94B531BC67",
+    "nativeMethod": "Void UpdateClustering(Planets.Interface.Model.IPlanetProperties, System.Collections.Generic.IReadOnlyCollection`1[WorldTracking.Spaces.Model.PlanetSurfaceSpaceServerState])",
+    "nativeInstructionsStart": 68,
+    "nativeInstructionsEndExclusive": 186,
+    "fixturesCompared": 222,
+    "orderedNodesCompared": 45919,
+    "centerScalarBitsCompared": 48546,
+    "fallbackFixtures": 2,
+    "shippingAvailable": true,
+    "shippingFixturesCompared": 222,
+    "shippingOrderedNodesCompared": 45919,
+    "runtimeClasses": [
+      {
+        "type": "Ships.TrackedShipServer",
+        "nativeDefaultEquality": true,
+        "count": 1024,
+        "shippingComparison": true
+      },
+      {
+        "type": "Players.TrackedPlayerServer",
+        "nativeDefaultEquality": true,
+        "count": 1024,
+        "shippingComparison": true
+      },
+      {
+        "type": "WorldObjects.TrackedWorldObjectServer",
+        "nativeDefaultEquality": true,
+        "count": 1024,
+        "shippingComparison": true
+      }
+    ],
+    "timedRows": [
+      {
+        "name": "dense-37",
+        "count": 37,
+        "components": 1,
+        "exactOrderedNodes": true,
+        "exactCenterBits": true,
+        "exactEmittedBridgeOrder": true,
+        "shippingSelected": false,
+        "nativePairPredicates": 666,
+        "sparsePredicates": 36,
+        "treePredicates": 36,
+        "nativeFallback": false,
+        "timings": {
+          "nativeMedianMs": 0.1496,
+          "candidateMedianMs": 0.0407,
+          "treeMedianMs": 0.0177,
+          "emittedBridgeMedianMs": 0.1506,
+          "shippingBridgeMedianMs": 0.15410000000000001,
+          "nativeSamplesMs": [
+            0.149,
+            0.14930000000000002,
+            0.1494,
+            0.1496,
+            0.1532,
+            0.1544,
+            0.1598
+          ],
+          "candidateSamplesMs": [
+            0.040400000000000005,
+            0.0405,
+            0.0405,
+            0.0407,
+            0.041100000000000005,
+            0.0412,
+            0.048100000000000004
+          ],
+          "treeSamplesMs": [
+            0.0176,
+            0.0177,
+            0.0177,
+            0.0177,
+            0.0178,
+            0.018600000000000002,
+            0.023200000000000002
+          ],
+          "emittedBridgeSamplesMs": [
+            0.1482,
+            0.149,
+            0.14980000000000002,
+            0.1506,
+            0.1514,
+            0.1517,
+            0.1526
+          ],
+          "shippingSamplesMs": [
+            0.14850000000000002,
+            0.15180000000000002,
+            0.1526,
+            0.15410000000000001,
+            0.1568,
+            0.16060000000000002,
+            0.17020000000000002
+          ]
+        }
+      },
+      {
+        "name": "scatter-37",
+        "count": 37,
+        "components": 37,
+        "exactOrderedNodes": true,
+        "exactCenterBits": true,
+        "exactEmittedBridgeOrder": true,
+        "shippingSelected": false,
+        "nativePairPredicates": 666,
+        "sparsePredicates": 0,
+        "treePredicates": 68,
+        "nativeFallback": false,
+        "timings": {
+          "nativeMedianMs": 0.0339,
+          "candidateMedianMs": 0.035300000000000005,
+          "treeMedianMs": 0.036500000000000005,
+          "emittedBridgeMedianMs": 0.033600000000000005,
+          "shippingBridgeMedianMs": 0.0342,
+          "nativeSamplesMs": [
+            0.0335,
+            0.0337,
+            0.0339,
+            0.0339,
+            0.0341,
+            0.0345,
+            0.037000000000000005
+          ],
+          "candidateSamplesMs": [
+            0.034,
+            0.034800000000000005,
+            0.034800000000000005,
+            0.035300000000000005,
+            0.0361,
+            0.0368,
+            0.0414
+          ],
+          "treeSamplesMs": [
+            0.035500000000000004,
+            0.0358,
+            0.036000000000000004,
+            0.036500000000000005,
+            0.0368,
+            0.0373,
+            0.0379
+          ],
+          "emittedBridgeSamplesMs": [
+            0.0324,
+            0.0328,
+            0.0332,
+            0.033600000000000005,
+            0.0337,
+            0.033800000000000004,
+            0.0346
+          ],
+          "shippingSamplesMs": [
+            0.0328,
+            0.033,
+            0.034,
+            0.0342,
+            0.034300000000000004,
+            0.0349,
+            0.0364
+          ]
+        }
+      },
+      {
+        "name": "chain-37",
+        "count": 37,
+        "components": 1,
+        "exactOrderedNodes": true,
+        "exactCenterBits": true,
+        "exactEmittedBridgeOrder": true,
+        "shippingSelected": false,
+        "nativePairPredicates": 666,
+        "sparsePredicates": 51,
+        "treePredicates": 101,
+        "nativeFallback": false,
+        "timings": {
+          "nativeMedianMs": 0.035300000000000005,
+          "candidateMedianMs": 0.032600000000000004,
+          "treeMedianMs": 0.0275,
+          "emittedBridgeMedianMs": 0.0347,
+          "shippingBridgeMedianMs": 0.035500000000000004,
+          "nativeSamplesMs": [
+            0.0345,
+            0.0349,
+            0.0352,
+            0.035300000000000005,
+            0.0359,
+            0.0383,
+            0.0385
+          ],
+          "candidateSamplesMs": [
+            0.0309,
+            0.0316,
+            0.0317,
+            0.032600000000000004,
+            0.0327,
+            0.033800000000000004,
+            0.0363
+          ],
+          "treeSamplesMs": [
+            0.0267,
+            0.027100000000000003,
+            0.027200000000000002,
+            0.0275,
+            0.027700000000000002,
+            0.0279,
+            0.028200000000000003
+          ],
+          "emittedBridgeSamplesMs": [
+            0.034300000000000004,
+            0.0346,
+            0.0346,
+            0.0347,
+            0.035,
+            0.0354,
+            0.0361
+          ],
+          "shippingSamplesMs": [
+            0.035,
+            0.035,
+            0.0354,
+            0.035500000000000004,
+            0.035500000000000004,
+            0.0358,
+            0.0359
+          ]
+        }
+      },
+      {
+        "name": "dense-512",
+        "count": 512,
+        "components": 1,
+        "exactOrderedNodes": true,
+        "exactCenterBits": true,
+        "exactEmittedBridgeOrder": true,
+        "shippingSelected": true,
+        "nativePairPredicates": 130816,
+        "sparsePredicates": 511,
+        "treePredicates": 511,
+        "nativeFallback": false,
+        "timings": {
+          "nativeMedianMs": 25.6915,
+          "candidateMedianMs": 0.5411,
+          "treeMedianMs": 0.4597,
+          "emittedBridgeMedianMs": 25.5717,
+          "shippingBridgeMedianMs": 0.5608000000000001,
+          "nativeSamplesMs": [
+            25.2071,
+            25.314600000000002,
+            25.5817,
+            25.6915,
+            25.881,
+            28.8349,
+            31.153100000000002
+          ],
+          "candidateSamplesMs": [
+            0.5354,
+            0.5359,
+            0.5364,
+            0.5411,
+            0.5497000000000001,
+            0.5517000000000001,
+            0.5563
+          ],
+          "treeSamplesMs": [
+            0.44870000000000004,
+            0.4494,
+            0.4516,
+            0.4597,
+            0.4652,
+            0.5289,
+            0.9931000000000001
+          ],
+          "emittedBridgeSamplesMs": [
+            25.2386,
+            25.447300000000002,
+            25.526200000000003,
+            25.5717,
+            26.0227,
+            28.2921,
+            43.4953
+          ],
+          "shippingSamplesMs": [
+            0.5419,
+            0.55,
+            0.5511,
+            0.5608000000000001,
+            0.5611,
+            0.5771000000000001,
+            0.6328
+          ]
+        }
+      },
+      {
+        "name": "scatter-512",
+        "count": 512,
+        "components": 511,
+        "exactOrderedNodes": true,
+        "exactCenterBits": true,
+        "exactEmittedBridgeOrder": true,
+        "shippingSelected": true,
+        "nativePairPredicates": 130816,
+        "sparsePredicates": 3,
+        "treePredicates": 1866,
+        "nativeFallback": false,
+        "timings": {
+          "nativeMedianMs": 4.133,
+          "candidateMedianMs": 0.5136000000000001,
+          "treeMedianMs": 0.9655,
+          "emittedBridgeMedianMs": 4.1273,
+          "shippingBridgeMedianMs": 1.1323,
+          "nativeSamplesMs": [
+            4.0839,
+            4.1083,
+            4.115,
+            4.133,
+            4.1332,
+            4.1385000000000005,
+            4.1977
+          ],
+          "candidateSamplesMs": [
+            0.5032,
+            0.505,
+            0.5073,
+            0.5136000000000001,
+            0.5147,
+            0.5221,
+            0.5265000000000001
+          ],
+          "treeSamplesMs": [
+            0.9564,
+            0.9649000000000001,
+            0.9652000000000001,
+            0.9655,
+            0.9671000000000001,
+            0.9849,
+            0.9931000000000001
+          ],
+          "emittedBridgeSamplesMs": [
+            4.1143,
+            4.1151,
+            4.1201,
+            4.1273,
+            4.1289,
+            4.1618,
+            4.1694
+          ],
+          "shippingSamplesMs": [
+            1.1112,
+            1.1145,
+            1.1283,
+            1.1323,
+            1.1326,
+            1.133,
+            1.1572
+          ]
+        }
+      },
+      {
+        "name": "chain-512",
+        "count": 512,
+        "components": 1,
+        "exactOrderedNodes": true,
+        "exactCenterBits": true,
+        "exactEmittedBridgeOrder": true,
+        "shippingSelected": true,
+        "nativePairPredicates": 130816,
+        "sparsePredicates": 734,
+        "treePredicates": 2296,
+        "nativeFallback": false,
+        "timings": {
+          "nativeMedianMs": 4.1367,
+          "candidateMedianMs": 0.4146,
+          "treeMedianMs": 0.6138,
+          "emittedBridgeMedianMs": 4.1305000000000005,
+          "shippingBridgeMedianMs": 0.6653,
+          "nativeSamplesMs": [
+            4.1295,
+            4.1309000000000005,
+            4.1345,
+            4.1367,
+            4.145700000000001,
+            4.1497,
+            4.1588
+          ],
+          "candidateSamplesMs": [
+            0.4116,
+            0.4118,
+            0.41190000000000004,
+            0.4146,
+            0.4157,
+            0.4158,
+            0.4202
+          ],
+          "treeSamplesMs": [
+            0.6085,
+            0.6091,
+            0.6118,
+            0.6138,
+            0.6162000000000001,
+            0.6192000000000001,
+            0.6436000000000001
+          ],
+          "emittedBridgeSamplesMs": [
+            4.0913,
+            4.1193,
+            4.1215,
+            4.1305000000000005,
+            4.1357,
+            4.1818,
+            4.1826
+          ],
+          "shippingSamplesMs": [
+            0.6574,
+            0.6581,
+            0.6626000000000001,
+            0.6653,
+            0.6702,
+            0.6846,
+            0.6966
+          ]
+        }
+      },
+      {
+        "name": "dense-2048",
+        "count": 2048,
+        "components": 1,
+        "exactOrderedNodes": true,
+        "exactCenterBits": true,
+        "exactEmittedBridgeOrder": true,
+        "shippingSelected": true,
+        "nativePairPredicates": 2096128,
+        "sparsePredicates": 2047,
+        "treePredicates": 2047,
+        "nativeFallback": false,
+        "timings": {
+          "nativeMedianMs": 438.0267,
+          "candidateMedianMs": 2.142,
+          "treeMedianMs": 2.3842000000000003,
+          "emittedBridgeMedianMs": 3.1376,
+          "shippingBridgeMedianMs": 2.6497,
+          "nativeSamplesMs": [
+            432.71070000000003,
+            432.9107,
+            436.9431,
+            438.0267,
+            443.1857,
+            477.5419,
+            489.81050000000005
+          ],
+          "candidateSamplesMs": [
+            2.0947,
+            2.0991,
+            2.1372,
+            2.142,
+            2.1442,
+            2.1485000000000003,
+            2.1589
+          ],
+          "treeSamplesMs": [
+            2.3702,
+            2.3709000000000002,
+            2.3808000000000002,
+            2.3842000000000003,
+            2.3877,
+            2.3973,
+            2.4193000000000002
+          ],
+          "emittedBridgeSamplesMs": [
+            3.1057,
+            3.1139,
+            3.1142000000000003,
+            3.1376,
+            3.1729000000000003,
+            3.2362,
+            5.293
+          ],
+          "shippingSamplesMs": [
+            2.6379,
+            2.6443000000000003,
+            2.6494,
+            2.6497,
+            2.6675,
+            2.6954000000000002,
+            4.2491
+          ]
+        }
+      },
+      {
+        "name": "scatter-2048",
+        "count": 2048,
+        "components": 2045,
+        "exactOrderedNodes": true,
+        "exactCenterBits": true,
+        "exactEmittedBridgeOrder": true,
+        "shippingSelected": true,
+        "nativePairPredicates": 2096128,
+        "sparsePredicates": 20,
+        "treePredicates": 7784,
+        "nativeFallback": false,
+        "timings": {
+          "nativeMedianMs": 63.376400000000004,
+          "candidateMedianMs": 1.9953,
+          "treeMedianMs": 4.8903,
+          "emittedBridgeMedianMs": 6.0407,
+          "shippingBridgeMedianMs": 5.487,
+          "nativeSamplesMs": [
+            63.3012,
+            63.3564,
+            63.366200000000006,
+            63.376400000000004,
+            63.3879,
+            63.4042,
+            63.6418
+          ],
+          "candidateSamplesMs": [
+            1.9814,
+            1.9822000000000002,
+            1.9944000000000002,
+            1.9953,
+            2.0064,
+            2.0107,
+            2.0359000000000003
+          ],
+          "treeSamplesMs": [
+            4.862,
+            4.886,
+            4.8876,
+            4.8903,
+            4.8998,
+            4.9307,
+            4.945
+          ],
+          "emittedBridgeSamplesMs": [
+            5.9910000000000005,
+            6.0198,
+            6.034400000000001,
+            6.0407,
+            6.0442,
+            6.0547,
+            6.1837
+          ],
+          "shippingSamplesMs": [
+            5.4743,
+            5.4811000000000005,
+            5.482,
+            5.487,
+            5.4918000000000005,
+            5.5303,
+            5.6433
+          ]
+        }
+      },
+      {
+        "name": "chain-2048",
+        "count": 2048,
+        "components": 1,
+        "exactOrderedNodes": true,
+        "exactCenterBits": true,
+        "exactEmittedBridgeOrder": true,
+        "shippingSelected": true,
+        "nativePairPredicates": 2096128,
+        "sparsePredicates": 2942,
+        "treePredicates": 9208,
+        "nativeFallback": false,
+        "timings": {
+          "nativeMedianMs": 63.7498,
+          "candidateMedianMs": 1.6441000000000001,
+          "treeMedianMs": 3.0442,
+          "emittedBridgeMedianMs": 3.7317,
+          "shippingBridgeMedianMs": 3.2071,
+          "nativeSamplesMs": [
+            63.689600000000006,
+            63.6944,
+            63.7443,
+            63.7498,
+            63.7577,
+            63.7918,
+            63.8654
+          ],
+          "candidateSamplesMs": [
+            1.6387,
+            1.641,
+            1.6429,
+            1.6441000000000001,
+            1.6457000000000002,
+            1.6465,
+            1.6593
+          ],
+          "treeSamplesMs": [
+            3.0295,
+            3.0386,
+            3.0439000000000003,
+            3.0442,
+            3.0524,
+            3.0537,
+            3.0787
+          ],
+          "emittedBridgeSamplesMs": [
+            3.6939,
+            3.7205000000000004,
+            3.7221,
+            3.7317,
+            3.7372,
+            3.7459000000000002,
+            3.7495000000000003
+          ],
+          "shippingSamplesMs": [
+            3.1944000000000004,
+            3.2024000000000004,
+            3.2029,
+            3.2071,
+            3.213,
+            3.214,
+            3.2378
+          ]
+        }
+      },
+      {
+        "name": "dense-4096",
+        "count": 4096,
+        "components": 1,
+        "exactOrderedNodes": true,
+        "exactCenterBits": true,
+        "exactEmittedBridgeOrder": true,
+        "shippingSelected": true,
+        "nativePairPredicates": 8386560,
+        "sparsePredicates": 4095,
+        "treePredicates": 4095,
+        "nativeFallback": false,
+        "timings": {
+          "nativeMedianMs": 2077.9433,
+          "candidateMedianMs": 4.2866,
+          "treeMedianMs": 5.5274,
+          "emittedBridgeMedianMs": 7.0375000000000005,
+          "shippingBridgeMedianMs": 6.0788,
+          "nativeSamplesMs": [
+            1920.3355000000001,
+            2049.3991,
+            2052.8781,
+            2077.9433,
+            2112.5638,
+            2127.1329,
+            2340.7433
+          ],
+          "candidateSamplesMs": [
+            4.2058,
+            4.2116,
+            4.2274,
+            4.2866,
+            4.456,
+            5.127800000000001,
+            6.397200000000001
+          ],
+          "treeSamplesMs": [
+            5.514600000000001,
+            5.5253000000000005,
+            5.526800000000001,
+            5.5274,
+            5.5895,
+            7.0732,
+            7.7959000000000005
+          ],
+          "emittedBridgeSamplesMs": [
+            6.9877,
+            7.0128,
+            7.0129,
+            7.0375000000000005,
+            7.0678,
+            7.212700000000001,
+            10.1067
+          ],
+          "shippingSamplesMs": [
+            6.0212,
+            6.0229,
+            6.050400000000001,
+            6.0788,
+            6.1084000000000005,
+            6.5869,
+            12.0372
+          ]
+        }
+      },
+      {
+        "name": "scatter-4096",
+        "count": 4096,
+        "components": 4084,
+        "exactOrderedNodes": true,
+        "exactCenterBits": true,
+        "exactEmittedBridgeOrder": true,
+        "shippingSelected": true,
+        "nativePairPredicates": 8386560,
+        "sparsePredicates": 62,
+        "treePredicates": 15829,
+        "nativeFallback": false,
+        "timings": {
+          "nativeMedianMs": 248.19490000000002,
+          "candidateMedianMs": 3.9967,
+          "treeMedianMs": 11.122900000000001,
+          "emittedBridgeMedianMs": 13.3696,
+          "shippingBridgeMedianMs": 12.248000000000001,
+          "nativeSamplesMs": [
+            247.7126,
+            247.82590000000002,
+            248.03580000000002,
+            248.19490000000002,
+            249.4499,
+            249.53130000000002,
+            258.0477
+          ],
+          "candidateSamplesMs": [
+            3.9831000000000003,
+            3.9871000000000003,
+            3.9947000000000004,
+            3.9967,
+            4.0032000000000005,
+            4.181900000000001,
+            4.2671
+          ],
+          "treeSamplesMs": [
+            11.0736,
+            11.078100000000001,
+            11.0812,
+            11.122900000000001,
+            11.1277,
+            11.5485,
+            11.5754
+          ],
+          "emittedBridgeSamplesMs": [
+            13.2325,
+            13.283800000000001,
+            13.3481,
+            13.3696,
+            13.424000000000001,
+            14.092,
+            14.233600000000001
+          ],
+          "shippingSamplesMs": [
+            12.1469,
+            12.1845,
+            12.245800000000001,
+            12.248000000000001,
+            12.341800000000001,
+            13.5457,
+            14.624600000000001
+          ]
+        }
+      },
+      {
+        "name": "chain-4096",
+        "count": 4096,
+        "components": 1,
+        "exactOrderedNodes": true,
+        "exactCenterBits": true,
+        "exactEmittedBridgeOrder": true,
+        "shippingSelected": true,
+        "nativePairPredicates": 8386560,
+        "sparsePredicates": 5886,
+        "treePredicates": 18424,
+        "nativeFallback": false,
+        "timings": {
+          "nativeMedianMs": 253.02620000000002,
+          "candidateMedianMs": 3.2845,
+          "treeMedianMs": 6.7654000000000005,
+          "emittedBridgeMedianMs": 8.1417,
+          "shippingBridgeMedianMs": 7.063700000000001,
+          "nativeSamplesMs": [
+            252.34720000000002,
+            252.67800000000003,
+            252.9136,
+            253.02620000000002,
+            253.1862,
+            254.58110000000002,
+            255.6841
+          ],
+          "candidateSamplesMs": [
+            3.2775000000000003,
+            3.2827,
+            3.2835,
+            3.2845,
+            3.3001,
+            3.3035,
+            3.3691
+          ],
+          "treeSamplesMs": [
+            6.7428,
+            6.7571,
+            6.7648,
+            6.7654000000000005,
+            6.7682,
+            6.7832,
+            6.8087
+          ],
+          "emittedBridgeSamplesMs": [
+            8.0931,
+            8.1234,
+            8.1256,
+            8.1417,
+            8.1494,
+            8.2345,
+            8.252
+          ],
+          "shippingSamplesMs": [
+            7.0280000000000005,
+            7.043500000000001,
+            7.0436000000000005,
+            7.063700000000001,
+            7.109,
+            7.370100000000001,
+            7.3899
+          ]
+        }
+      },
+      {
+        "name": "same-cell-eight-corner-clouds-4096",
+        "count": 4096,
+        "components": 8,
+        "exactOrderedNodes": true,
+        "exactCenterBits": true,
+        "exactEmittedBridgeOrder": true,
+        "shippingSelected": true,
+        "nativePairPredicates": 8386560,
+        "sparsePredicates": 7344120,
+        "treePredicates": 4088,
+        "nativeFallback": false,
+        "timings": {
+          "nativeMedianMs": 466.3168,
+          "candidateMedianMs": 717.2109,
+          "treeMedianMs": 4.566,
+          "emittedBridgeMedianMs": 6.0659,
+          "shippingBridgeMedianMs": 4.9892,
+          "nativeSamplesMs": [
+            461.2724,
+            461.90290000000005,
+            461.99620000000004,
+            466.3168,
+            467.34000000000003,
+            467.49460000000005,
+            467.8165
+          ],
+          "candidateSamplesMs": [
+            699.6398,
+            699.6403,
+            714.5498,
+            717.2109,
+            718.2453,
+            720.3795,
+            721.2774000000001
+          ],
+          "treeSamplesMs": [
+            4.5298,
+            4.534800000000001,
+            4.5654,
+            4.566,
+            4.5872,
+            4.6178,
+            4.6265
+          ],
+          "emittedBridgeSamplesMs": [
+            5.9739,
+            6.0091,
+            6.0397,
+            6.0659,
+            6.0662,
+            6.0678,
+            6.070200000000001
+          ],
+          "shippingSamplesMs": [
+            4.9341,
+            4.937600000000001,
+            4.954400000000001,
+            4.9892,
+            5.0120000000000005,
+            5.0152,
+            5.2334000000000005
+          ]
+        }
+      }
+    ]
+  },
+  "emptyWarpActualHelper": {
+    "passed": true,
+    "cases": 296,
+    "transitions": 296,
+    "grounded": 6,
+    "connected": 0,
+    "ungrounded": 31,
+    "callbackEventsCompared": 24,
+    "successfulNonempty": 74,
+    "malformedExceptions": 31,
+    "installedWrapperCases": 296,
+    "shippingGuardCases": 6,
+    "actualShippingDispatch": {
+      "shippingQueries": 299,
+      "shippingSkipped": 185,
+      "shippingFallbacks": 114,
+      "contextRestored": true,
+      "diagnosticRestored": true
+    },
+    "evidence": {
+      "ready": true,
+      "enabled": false,
+      "unavailable": "",
+      "shippingHelperCompared": true,
+      "calls": 299,
+      "empty": 185,
+      "nonempty": 74,
+      "unsupported": 40
+    },
+    "completedScreens": [],
+    "errors": [],
+    "scope": "Composed Foundations BeforeWarp + emitted native UpdateStates comparison on detached ship/state/cache fixtures, read-only live root graph/providers. If shippingHelperCompared=true, the emitted candidate calls the actual installed StellarPerformance.EmptyWarpUpdates.CanSkip helper; no private runtime hooks install over it. Otherwise it uses the private prototype. Empty exact-type sets skip no-op actions; nonempty executes original Foundations IL. Bool/runOriginal can differ on ungrounded empty ships, so unknown native warp wrapper observers are rejected. Native malformed/missing space falls back. No topology/ground/provider cache, cadence change for nonempty parts, live mutation, FPS claim or multiplayer certification."
+  },
+  "emptyWarpPrivatePrototype": {
+    "scope": "Private prototype, one process with alternating20s control/candidate/control/candidate. SpatialClustering on throughout. Other three experimental CPU flags off. No formal confidence or shipping adapter claim.",
+    "controlFps": 8.598531743591533,
+    "candidateFps": 11.846016121387642,
+    "gainPercent": 37.767894271210345,
+    "phases": [
+      {
+        "phase": "00-control",
+        "fps": 8.608106555226788,
+        "frames": 172,
+        "seconds": 19.981165299999997,
+        "timedNetworkTicksPerSecond": 17.216213110453577,
+        "nativePhysics": {
+          "start": 1406,
+          "finish": 1752,
+          "steps": 346,
+          "scope": "Read-only native WorldPhysicsServerUpdater._myTick endpoints. No physics/tick hooks; counter increments in native PrePhysics."
+        },
+        "drawCalls": 11736.023391812865,
+        "triangles": 11626448.935672514,
+        "probe": {
+          "ready": false,
+          "enabled": false,
+          "unavailable": "",
+          "calls": 0,
+          "empty": 0,
+          "nonempty": 0,
+          "unsupported": 0
+        }
+      },
+      {
+        "phase": "01-foundations-warp",
+        "fps": 11.798152330021368,
+        "frames": 235,
+        "seconds": 19.918373100000004,
+        "timedNetworkTicksPerSecond": 23.596304660042737,
+        "nativePhysics": {
+          "start": 1872,
+          "finish": 2344,
+          "steps": 472,
+          "scope": "Read-only native WorldPhysicsServerUpdater._myTick endpoints. No physics/tick hooks; counter increments in native PrePhysics."
+        },
+        "drawCalls": 11615.92735042735,
+        "triangles": 11616005.76068376,
+        "probe": {
+          "ready": true,
+          "enabled": true,
+          "unavailable": "",
+          "calls": 616272,
+          "empty": 616272,
+          "nonempty": 0,
+          "unsupported": 0
+        }
+      },
+      {
+        "phase": "02-control",
+        "fps": 8.588956931956275,
+        "frames": 171,
+        "seconds": 19.909285999999998,
+        "timedNetworkTicksPerSecond": 17.17791386391255,
+        "nativePhysics": {
+          "start": 2434,
+          "finish": 2778,
+          "steps": 344,
+          "scope": "Read-only native WorldPhysicsServerUpdater._myTick endpoints. No physics/tick hooks; counter increments in native PrePhysics."
+        },
+        "drawCalls": 11490.6,
+        "triangles": 11609519.05882353,
+        "probe": {
+          "ready": true,
+          "enabled": false,
+          "unavailable": "",
+          "calls": 616272,
+          "empty": 616272,
+          "nonempty": 0,
+          "unsupported": 0
+        }
+      },
+      {
+        "phase": "03-foundations-warp",
+        "fps": 11.893879912753915,
+        "frames": 237,
+        "seconds": 19.926214300000016,
+        "timedNetworkTicksPerSecond": 23.78775982550783,
+        "nativePhysics": {
+          "start": 2896,
+          "finish": 3372,
+          "steps": 476,
+          "scope": "Read-only native WorldPhysicsServerUpdater._myTick endpoints. No physics/tick hooks; counter increments in native PrePhysics."
+        },
+        "drawCalls": 11385.75847457627,
+        "triangles": 11606987.305084746,
+        "probe": {
+          "ready": true,
+          "enabled": true,
+          "unavailable": "",
+          "calls": 618354,
+          "empty": 618354,
+          "nonempty": 0,
+          "unsupported": 0
+        }
+      }
+    ],
+    "hashes": {
+      "Label": "Stress-EmptyWarp-01",
+      "WorldSHA256": "A64C3DEB6B44E04B092C71FC80DB46C840D97CED316C86D6352CF9B644E3ACE1",
+      "ModSHA256": "C6E9C5D3B4FBE5F75BE0BB5C39F936E3A1C56654FCA9ADDFEDA8ED86E5F0EB86",
+      "DriverSHA256": "F1BE796260B3A13C1E7C44DE7E8417B50DA432F7557FA4A890940A0D0E290CA7",
+      "StartUtc": "2026-10-23T15:42:43.0664347Z"
+    },
+    "originals": {
+      "OriginalsUntouched": true,
+      "FilesVerified": 157,
+      "WorldFilesVerified": 135,
+      "Utc": "2026-10-23T15:46:48.7583279Z"
+    },
+    "qualifications": [
+      "Native296fixture paired composed actions passed on37shipworld, raw scalar bits and24orderedcallbacks,74positive nonempty updates,31malformed-space exceptions. No connected-root fixture present.",
+      "Fastpath changes otherwise-unobserved shared root-query scratch contents and bypasses errors in corrupt/teardown service graphs; no inspected consumer retains the scratch list. Arbitrary mods and corrupt scenes are not certified.",
+      "These phases predate shipping integration and measure the private prototype. The final adapter has additional BCL/provider guards and separate native/FPS acceptance.",
+      "Control mode removes all three probe hooks; mode counters do not advance during disabled phase."
+    ]
+  },
+  "serviceQueryNativeProbe": {
+    "passed": true,
+    "runtime": "4.0.30319.42000",
+    "unity": "6000.3.24f1",
+    "componentQueriesCompared": 302,
+    "componentElementsCompared": 953,
+    "globalLookupChecks": 80,
+    "nativeOnDestroyChecks": 1,
+    "installedServiceObjectsInspected": 61,
+    "rawNullArrayEntriesObserved": 0,
+    "unityFakeNullArrayEntriesObserved": 0,
+    "actualNullSlotCoverage": false,
+    "prepopulatedNullAndStaleListReplacement": true,
+    "destroyedGameObjectError": "System.NullReferenceException:Object reference not set to an instance of an object.",
+    "cases": [
+      {
+        "context": "initial",
+        "objectName": "PrivateCpuServiceLookupFixture-0"
+      },
+      {
+        "context": "initial",
+        "objectName": "PrivateCpuServiceLookupFixture-1"
+      },
+      {
+        "context": "initial",
+        "objectName": "PrivateCpuServiceLookupFixture-2"
+      },
+      {
+        "context": "disabled components",
+        "objectName": "PrivateCpuServiceLookupFixture-0"
+      },
+      {
+        "context": "inactive GameObject",
+        "objectName": "PrivateCpuServiceLookupFixture-0"
+      },
+      {
+        "context": "remove middle matching component",
+        "objectName": "PrivateCpuServiceLookupFixture-0"
+      },
+      {
+        "context": "re-add matching component at end",
+        "objectName": "PrivateCpuServiceLookupFixture-0"
+      },
+      {
+        "context": "reparent",
+        "objectName": "PrivateCpuServiceLookupFixture-1"
+      },
+      {
+        "context": "inside native OnDestroy",
+        "objectName": "PrivateCpuServiceLookupFixture-0"
+      },
+      {
+        "context": "after component destruction",
+        "objectName": "PrivateCpuServiceLookupFixture-0"
+      }
+    ],
+    "scope": "Native array-vs-list component order/identity and full service-object scan acceptance only. List overload invokes the same inspected GetComponentsInternal native binding with identical search flags. No generic method detour, no service-result cache, no game state/physics/cadence patch, no performance claim. Fresh caller-owned scratch lists are reused only within one lookup and cleared in finally.",
+    "nullSlotLimit": "Public runtime APIs cannot safely create a missing-MonoScript serialized slot. Prepopulated null/stale list entries, actual destruction windows and installed service arrays are checked; actualNullSlotCoverage reports whether a native null slot was observed. Zero observed slots must not be advertised as an empirical missing-script fixture."
+  },
+  "thresholdCalibration": {
+    "passed": true,
+    "scope": "Detached copy of ACTUAL shipping TryBuildGraph: only its unique1024 MinimumNodes literal lowered to32. No real detour, shipping constant, game state or simulation cadence changed. Original emitted native graph oracle; fixture clearing excluded; native adjacency capacities warmed; identical output capture included.",
+    "shippingAssemblySha256": "BAD073C530503CD6A9F9D464F6D406AC7861670D2AC9D45B8FAF388CBC34BF82",
+    "originalHelperIlSha256": "9E1C6C5EAD5B058F63F4115C2AAE34F35F72AFFF2D6A35F27D04267F784F3F5C",
+    "originalMinimumNodes": 1024,
+    "emittedMinimumNodes": 32,
+    "changedConstants": 1,
+    "fixtures": 24,
+    "nodesCompared": 8084,
+    "centerScalarBitsCompared": 6240,
+    "rows": [
+      {
+        "layout": "dense",
+        "count": 37,
+        "components": 1,
+        "exactOrderedMembers": true,
+        "exactCenterBits": true,
+        "nativeMedianMs": 0.1582,
+        "loweredGuardedMedianMs": 0.0317,
+        "speedRatio": 4.990536277602524,
+        "gcCollections": 0
+      },
+      {
+        "layout": "scatter",
+        "count": 37,
+        "components": 37,
+        "exactOrderedMembers": true,
+        "exactCenterBits": true,
+        "nativeMedianMs": 0.0364,
+        "loweredGuardedMedianMs": 0.0577,
+        "speedRatio": 0.6308492201039861,
+        "gcCollections": 0
+      },
+      {
+        "layout": "chain",
+        "count": 37,
+        "components": 1,
+        "exactOrderedMembers": true,
+        "exactCenterBits": true,
+        "nativeMedianMs": 0.0362,
+        "loweredGuardedMedianMs": 0.0379,
+        "speedRatio": 0.9551451187335093,
+        "gcCollections": 0
+      },
+      {
+        "layout": "corners",
+        "count": 37,
+        "components": 8,
+        "exactOrderedMembers": true,
+        "exactCenterBits": true,
+        "nativeMedianMs": 0.0453,
+        "loweredGuardedMedianMs": 0.052500000000000005,
+        "speedRatio": 0.8628571428571428,
+        "gcCollections": 0
+      },
+      {
+        "layout": "dense",
+        "count": 64,
+        "components": 1,
+        "exactOrderedMembers": true,
+        "exactCenterBits": true,
+        "nativeMedianMs": 0.4307,
+        "loweredGuardedMedianMs": 0.0448,
+        "speedRatio": 9.613839285714286,
+        "gcCollections": 0
+      },
+      {
+        "layout": "scatter",
+        "count": 64,
+        "components": 64,
+        "exactOrderedMembers": true,
+        "exactCenterBits": true,
+        "nativeMedianMs": 0.0878,
+        "loweredGuardedMedianMs": 0.1004,
+        "speedRatio": 0.8745019920318725,
+        "gcCollections": 0
+      },
+      {
+        "layout": "chain",
+        "count": 64,
+        "components": 1,
+        "exactOrderedMembers": true,
+        "exactCenterBits": true,
+        "nativeMedianMs": 0.08710000000000001,
+        "loweredGuardedMedianMs": 0.0648,
+        "speedRatio": 1.344135802469136,
+        "gcCollections": 0
+      },
+      {
+        "layout": "corners",
+        "count": 64,
+        "components": 8,
+        "exactOrderedMembers": true,
+        "exactCenterBits": true,
+        "nativeMedianMs": 0.11950000000000001,
+        "loweredGuardedMedianMs": 0.057100000000000005,
+        "speedRatio": 2.092819614711033,
+        "gcCollections": 0
+      },
+      {
+        "layout": "dense",
+        "count": 128,
+        "components": 1,
+        "exactOrderedMembers": true,
+        "exactCenterBits": true,
+        "nativeMedianMs": 1.6931,
+        "loweredGuardedMedianMs": 0.09620000000000001,
+        "speedRatio": 17.599792099792097,
+        "gcCollections": 0
+      },
+      {
+        "layout": "scatter",
+        "count": 128,
+        "components": 128,
+        "exactOrderedMembers": true,
+        "exactCenterBits": true,
+        "nativeMedianMs": 0.29510000000000003,
+        "loweredGuardedMedianMs": 0.2167,
+        "speedRatio": 1.3617904937701892,
+        "gcCollections": 0
+      },
+      {
+        "layout": "chain",
+        "count": 128,
+        "components": 1,
+        "exactOrderedMembers": true,
+        "exactCenterBits": true,
+        "nativeMedianMs": 0.2977,
+        "loweredGuardedMedianMs": 0.1409,
+        "speedRatio": 2.1128459900638754,
+        "gcCollections": 0
+      },
+      {
+        "layout": "corners",
+        "count": 128,
+        "components": 8,
+        "exactOrderedMembers": true,
+        "exactCenterBits": true,
+        "nativeMedianMs": 0.458,
+        "loweredGuardedMedianMs": 0.115,
+        "speedRatio": 3.982608695652174,
+        "gcCollections": 0
+      },
+      {
+        "layout": "dense",
+        "count": 256,
+        "components": 1,
+        "exactOrderedMembers": true,
+        "exactCenterBits": true,
+        "nativeMedianMs": 6.7404,
+        "loweredGuardedMedianMs": 0.2291,
+        "speedRatio": 29.421213443910958,
+        "gcCollections": 0
+      },
+      {
+        "layout": "scatter",
+        "count": 256,
+        "components": 256,
+        "exactOrderedMembers": true,
+        "exactCenterBits": true,
+        "nativeMedianMs": 1.0722,
+        "loweredGuardedMedianMs": 0.49610000000000004,
+        "speedRatio": 2.1612578109252167,
+        "gcCollections": 0
+      },
+      {
+        "layout": "chain",
+        "count": 256,
+        "components": 1,
+        "exactOrderedMembers": true,
+        "exactCenterBits": true,
+        "nativeMedianMs": 1.0975000000000001,
+        "loweredGuardedMedianMs": 0.3043,
+        "speedRatio": 3.6066381860006573,
+        "gcCollections": 0
+      },
+      {
+        "layout": "corners",
+        "count": 256,
+        "components": 8,
+        "exactOrderedMembers": true,
+        "exactCenterBits": true,
+        "nativeMedianMs": 1.7782,
+        "loweredGuardedMedianMs": 0.2338,
+        "speedRatio": 7.605645851154833,
+        "gcCollections": 0
+      },
+      {
+        "layout": "dense",
+        "count": 512,
+        "components": 1,
+        "exactOrderedMembers": true,
+        "exactCenterBits": true,
+        "nativeMedianMs": 27.012700000000002,
+        "loweredGuardedMedianMs": 0.5851000000000001,
+        "speedRatio": 46.167663647239785,
+        "gcCollections": 0
+      },
+      {
+        "layout": "scatter",
+        "count": 512,
+        "components": 512,
+        "exactOrderedMembers": true,
+        "exactCenterBits": true,
+        "nativeMedianMs": 4.4957,
+        "loweredGuardedMedianMs": 1.8949,
+        "speedRatio": 2.3725262546836245,
+        "gcCollections": 0
+      },
+      {
+        "layout": "chain",
+        "count": 512,
+        "components": 1,
+        "exactOrderedMembers": true,
+        "exactCenterBits": true,
+        "nativeMedianMs": 4.4036,
+        "loweredGuardedMedianMs": 1.2291,
+        "speedRatio": 3.5827841510048,
+        "gcCollections": 1
+      },
+      {
+        "layout": "corners",
+        "count": 512,
+        "components": 8,
+        "exactOrderedMembers": true,
+        "exactCenterBits": true,
+        "nativeMedianMs": 7.1287,
+        "loweredGuardedMedianMs": 0.5076,
+        "speedRatio": 14.043932230102442,
+        "gcCollections": 0
+      },
+      {
+        "layout": "dense",
+        "count": 1024,
+        "components": 1,
+        "exactOrderedMembers": true,
+        "exactCenterBits": true,
+        "nativeMedianMs": 110.7124,
+        "loweredGuardedMedianMs": 1.2213,
+        "speedRatio": 90.65127323343978,
+        "gcCollections": 0
+      },
+      {
+        "layout": "scatter",
+        "count": 1024,
+        "components": 1023,
+        "exactOrderedMembers": true,
+        "exactCenterBits": true,
+        "nativeMedianMs": 16.0438,
+        "loweredGuardedMedianMs": 2.5224,
+        "speedRatio": 6.360529654297494,
+        "gcCollections": 0
+      },
+      {
+        "layout": "chain",
+        "count": 1024,
+        "components": 1,
+        "exactOrderedMembers": true,
+        "exactCenterBits": true,
+        "nativeMedianMs": 16.1023,
+        "loweredGuardedMedianMs": 1.5085000000000002,
+        "speedRatio": 10.674378521710306,
+        "gcCollections": 0
+      },
+      {
+        "layout": "corners",
+        "count": 1024,
+        "components": 8,
+        "exactOrderedMembers": true,
+        "exactCenterBits": true,
+        "nativeMedianMs": 28.4649,
+        "loweredGuardedMedianMs": 1.0955000000000001,
+        "speedRatio": 25.983477863989044,
+        "gcCollections": 0
+      }
+    ]
+  },
+  "privatePrototypeTerrain": {
+    "scope": "Private native empty-delta reuse. Full ordered raw/tree/generated guards; corrected dictionary, scratch results and fresh empty output lists retained. Traversal and simulation remain native. Structural mesh decisions are compared, not GPU pixel acceptance.",
+    "completedScreens": [],
+    "runtime": {
+      "hits": 0,
+      "misses": 0,
+      "fallbacks": 0,
+      "entries": 0,
+      "retainedBytes": 0,
+      "maxEntries": 8,
+      "maxBytes": 8388608,
+      "maxRaw": 4096,
+      "maxFinal": 8192,
+      "maxGenerated": 8192
+    },
+    "checks": [
+      {
+        "passed": true,
+        "input": 362,
+        "compared": 80,
+        "cacheHits": 29,
+        "guardMisses": 40,
+        "cacheRetainedSteps": 70,
+        "timing": {
+          "available": true,
+          "repetitions": 25,
+          "nativeMedianMs": 13.5794,
+          "candidateMedianMs": 11.89625,
+          "nativeMs": [
+            13.5062,
+            13.5075,
+            13.5186,
+            13.5235,
+            13.6353,
+            13.7539,
+            13.8982,
+            15.0957
+          ],
+          "candidateMs": [
+            11.5426,
+            11.7622,
+            11.8534,
+            11.8794,
+            11.9131,
+            11.928,
+            12.5646,
+            14.9155
+          ],
+          "scope": "Native-runtime method fixture including identical raw dictionary/ChunkMesh reconstruction on both sides. Not FPS; traversal and rendering excluded."
+        }
+      }
+    ]
+  },
+  "hullSurvey": {
+    "scope": "Read-only native hull survey after FPS capture. No materials, meshes, renderers, transforms, colliders or game state modified. Duplicate geometry requires full raw byte equality after SHA256 prefilter; this is not a batching or pixel equivalence result.",
+    "summary": {
+      "chunks": 4206,
+      "sources": 5348,
+      "uniqueMeshes": 5348,
+      "provenGeometryGroups": 230,
+      "classifiedMeshes": 5348,
+      "duplicateMeshes": 5118,
+      "duplicatedGroups": 8,
+      "largestDuplicateGroup": 1024,
+      "retainedRawBytes": 3112448,
+      "unclassified": 0,
+      "propertyBlocks": 0,
+      "nativeCacheMeshMismatches": 0,
+      "nativeSliceColliders": 0
+    },
+    "shader": "Custom/PlanetHull",
+    "actualCompiledInstancedPrograms": 0,
+    "shippingRendererRewrite": false
+  },
+  "qualifications": [
+    "Initial fresh37/nativePowerHistory1000 groups use the preceding77B4 artifact and request the three preexisting experiments together. FinalFiveFlagsFresh37 uses the final artifact and requests all five. Installed async writer conflicts, so SaveSerialization skips in each; no installed-stack saving gain is credited.",
+    "Spatial stress comparisons use BAD0 artifact and isolate SpatialClustering only. C6E9 lowers its activation gate from1024 to128; the1041-node spatial path is otherwise unchanged. The final artifact also adds the independent optional EmptyWarpUpdates adapter.",
+    "Stress fixture adds1024 native single-hull ship copies,1041 active clustering nodes,1061 total ships. Original entities and original private seed preserved. This is constructed severe load, not typical play.",
+    "Native physics counter endpoints independently confirm152 vs522 steps in the reversed stress pair. Configured50Hz is not achieved under stress; no tick divisor or physics cadence patch is used.",
+    "Thirty-second focused captures follow35 quiet focused seconds. Stress readiness checks17 stateful batching records, not all client visuals. Warmup clustering observers positively removed before FPS.",
+    "Frame intervals use the same monotonic Stopwatch. All stress timestamp deltas reconstruct elapsed intervals exactly. Initial sample clock origin prevents exact sampler/frame joining; whole-capture stack distribution remains usable, and sampled phases are excluded from FPS gains.",
+    "Corrected public-field save DTO positively verifies nonempty hull output and actual cache use. Anonymous DTO save subchecks in Native-Maths01 and Native-Final02 are superseded.",
+    "Constructed bitwise comparisons do not certify long-term chaotic physics, building interactions or remote multiplayer.",
+    "Final ordinary-world pairs gain2.29% and6.08%; the first is inside the practical3% noise band. Their4.19% aggregate is modest/variable. Final combined stress result is one direct fresh-process pair, supported by separate repeated constituent experiments, not itself a repeated confidence estimate.",
+    "No permanent game install, configuration or save change.157 originals including135 world files hash-verified after every run."
+  ]
+}

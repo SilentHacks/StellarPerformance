@@ -10,6 +10,10 @@ internal static class Compatibility
     {
         ["Assembly-CSharp"] = "0379aaca-5dff-430e-b4db-aa2538738891",
         ["Core"] = "3bb6ad46-50a6-4469-9cce-fce9952fdd7d",
+        ["WorldTracking"] = "9e7dd5cb-71fb-4ad7-b191-2136eb4e6e60",
+        ["Saving"] = "2a99be51-4517-4b4f-82c8-f553c7c99567",
+        ["Saving.Serialization"] = "95dcd6cc-8154-47a9-adfe-94b4b7e34608",
+        ["Newtonsoft.Json"] = "29e3dfd7-379d-434c-a988-1f8263fe42fe",
         ["Players"] = "e20d6376-9433-4ae4-b34a-857934659cb5",
         ["Ships"] = "f1589ce1-5692-4187-a0d8-d2d85bb4aa43",
         ["Ships.Interface"] = "ebf1fc59-7637-4f52-9fec-0ff2589c6bc0",

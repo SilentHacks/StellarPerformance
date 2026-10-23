@@ -50,8 +50,8 @@ internal sealed class PresetPolicy
     {
         switch (name)
         {
-            case "Faithful": return "Native room reconstruction and gas arithmetic. Keep the other selected optimisations and native presentation.";
-            case "Balanced": return "Recommended. Current defaults, native presentation and live values. Incremental rooms can introduce small gas rounding differences.";
+            case "Faithful": return "Native room reconstruction, gas arithmetic and presentation. Keep your selected CPU optimisations.";
+            case "Balanced": return "Recommended. Native presentation and live values, with your selected CPU optimisations. Incremental rooms can introduce small gas rounding differences.";
             case "Performance": return "Silhouette outlines, 150 m shadows, 75% vegetation range. Cable glow/flow refreshes at 30 Hz and terrain detail is reused while still. Simulation stays native.";
             case "Aggressive": return "No scene contours, 100 m shadows, 50% vegetation range, half exhaust. Cable effects refresh at 15 Hz and terrain detail is reused longer. Simulation stays native.";
             default: return "Your room and presentation settings. Focused controls and interaction feedback stay native. Simulation and genuine network updates stay live.";

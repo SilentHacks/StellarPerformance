@@ -1,6 +1,6 @@
 # Configuration and compatibility
 
-Version 1.0.1 targets the inspected Windows StellarDrive Demo 0.8.2 / Unity
+Version 2.0.0 targets the inspected Windows StellarDrive Demo 0.8.2 / Unity
 6000.3.24f1 assemblies and MelonLoader 0.7.3. SDModKit support is optional;
 fluid topology checks SDModKit's inspected assembly identity when present and permits its known connection hook.
 
@@ -36,11 +36,26 @@ The existing `IncrementalRooms` preference is also updated by the live selector.
 | `DistillerReplication` | `true` | Suppress consecutive distiller notifications only when native serialized contents are identical. |
 | `PartReplicationDeduplication` | `true` | Suppress identical native payloads for the other inspected part types; retain native calculations and genuine encoded changes. |
 | `SignalConnectionScan` | `true` | Reuse exact native signal connection unions; retain live classification and circuit operations. |
+| `SignalReduction` | `true` | Exact native-state signal reduction without temporary endpoint lists. |
+| `PowerTransferScan` | `true` | Avoid repeated cable IDs accumulated by native power-group rebuilds. |
+| `SpatialClustering` | `true` | Exact spatial search for surface-space object groups; native clustering below 128 objects or outside supported guards. |
+| `EmptyWarpUpdates` | `true` | Avoid no-op warp/ground lookups when the live native warp-part set is empty. Requires the exact inspected Foundations binary and native providers; real warp-drive updates remain unchanged. |
+| `SaveSerialization` | `true` | Exact hull-JSON and native-contract reuse on the compatible native save writer; replacement save writers retain their own path. |
 | `CanvasCulling` | `true` | Hide inspected offscreen world-space part canvases before UI rendering; keep native readout updates and focused controls. |
 | `ReliableTransport` | `false` | Experimental bounded retention/retry of reliable Steam packets after temporary congestion. |
 | `NetworkCaptureSeconds` | `0` | Explicit startup capture, up to 600 seconds; writes aggregate and peer CSVs to `UserData`. Zero installs no diagnostic observers. |
 
 Each module logs installed, disabled or skipped in `MelonLoader/Latest.log`.
+The five CPU switches default on for new or missing preferences in every tier,
+including Faithful and Custom. Existing stored `false` values remain respected;
+an upgrade does not distinguish an old saved default from an explicit opt-out.
+These are startup settings requiring a restart, independent of the live F8
+selector. Selecting a tier does not reset them or retry skipped modules.
+Compatibility guards remain active even when a setting is enabled. The inspected
+Foundations/Workshop async save pipeline replaces the native writer, so
+`SaveSerialization` skips it and adds no measured gain on that path. Their
+preservation contracts, targeted measurements and limits are in
+[CPU optimisation research](CPU_RESEARCH.md). Gains depend on the workload.
 Replication uses the `replication-deduplication` module. `DistillerReplication`
 retains its existing meaning; the new switch independently controls the additional
 types. Set both to `false` for native replication. These switches have no timer,

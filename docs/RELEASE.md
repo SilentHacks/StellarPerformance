@@ -1,5 +1,18 @@
 # Releases and packaging
 
+## 2.1.0 preparation
+
+The 2.1.0 release adds five guarded CPU optimisations, enabled for new or missing
+preferences in every tier while preserving stored opt-outs. See
+[CPU research](CPU_RESEARCH.md) for measured artifact identities, native acceptance,
+workload-specific results and compatibility limits. The release/version and
+default-policy rebuild is not an additional FPS measurement.
+
+The net472 Release build passed without warnings; all 113 offline preservation
+cases and all 15 frame-analysis cases passed. Packaging uses `scripts/Package.ps1`
+and includes only `Mods/StellarPerformance.dll` and root `mod.json`. The root
+[release notes](../RELEASE_NOTES.md) describe the defaults and upgrade behavior.
+
 ## Published 2.0.0
 
 [Release v2.0.0](https://github.com/SilentHacks/StellarPerformance/releases/tag/v2.0.0)
