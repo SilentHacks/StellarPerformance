@@ -1,5 +1,29 @@
 # Releases and packaging
 
+## Published 2.1.0
+
+[Release v2.1.0](https://github.com/SilentHacks/StellarPerformance/releases/tag/v2.1.0)
+was published on 2026-10-23 as the latest stable release, with
+[StellarPerformance.zip](https://github.com/SilentHacks/StellarPerformance/releases/download/v2.1.0/StellarPerformance.zip)
+and its SHA-256 checksum file. The annotated tag identifies source commit
+`24c19efd244b5fba240ab59ab1dbdc6f3762dfd9`.
+
+The package passed a warning-free net472 Release build, all 113 offline cases and
+all 15 frame-analysis cases. A fresh Git source archive reproduced the identical
+DLL. Both public assets were downloaded anonymously after publication; their
+hashes, the complete manifest bytes and the two allowlisted ZIP entries matched
+the prepared package. GitHub reports v2.1.0 as the latest stable release.
+
+```text
+5C842411FB1FA5E02A6C7A835C109D7B71DC8E3D5D7F642F03F999D5D1CA4D7B  StellarPerformance.zip
+8C9B3F3F3EF507B99A6B4FBC75571F97D5515E516D7019312DA8DA0D1C69311A  Mods/StellarPerformance.dll
+```
+
+Publication did not deploy to the local game or modify its settings or worlds.
+No new native runtime or FPS measurement is claimed for the release rebuild.
+Later publication documentation on `main` does not change the release source or
+assets. Mod-listing submission was not performed.
+
 ## 2.1.0 preparation
 
 The 2.1.0 release adds five guarded CPU optimisations, enabled for new or missing
